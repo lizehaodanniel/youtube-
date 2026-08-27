@@ -1,0 +1,242 @@
+{
+  "packages": [
+    {
+      "channel_key": "ai",
+      "channel_label": "AI · 科技数码 (@AIcheatcodeplaybook)",
+      "topic": "I Let an AI Agent Run My Side Hustle for 7 Days — It Cost Me $1,200",
+      "topic_cn": "我让 AI 智能体替我跑副业 7 天：1200 美元学费换回的真相",
+      "host": "你本人（AI 频道人设：休闲帽衫、语速快、手势多、口语化）。不参考金融成片包的 host 形象——金融包是金融教育者，AI 包是你频道自己的创作者气质。",
+      "host_note": "按你的要求，AI 包刻意不沿用金融包的 host 形象（沉稳衬衫金融教育者），改用频道自身的休闲帽衫创作者人设：语速快、手势多、贴近镜头讲故事、用第一人称『我』带情绪。",
+      "decision": "为什么选它：来自今日 AI 面板搜索建议 ai automation agency / ai agent n8n（真实下拉词高频），且『agent 真能自动跑业务吗』是评论区高频痛点。反常识强（day-4 翻车 + 7 天净赚），原创空间大、可录真实 7 天 footage，最易出爆款。",
+      "hook": "Day 4, my AI agent approved a $1,200 invoice I never should have. But over the full 7 days the same agent netted me $1,847. Here's the build, the mistake, and the real P&L.",
+      "hook_zh": "第 4 天，我的 AI 智能体自动批了一张 1,200 美元的发票——那张根本不该批。但整整 7 天跑下来，它净赚了 1,847 美元。下面是搭建全过程、那次失误，以及真实账账。",
+      "hook_options": [
+        {
+          "type": "痛点暴击",
+          "label": "戳中『副业 = 第二份没人发工资的工』",
+          "en": "If you're spending 3 hours a day just answering DMs and scheduling posts, your side hustle isn't a business. It's a second job you don't get paid for. I killed it in one afternoon.",
+          "zh": "如果你每天要花 3 小时回私信、排帖子，你的副业不是一门生意，是一份没人给你发工资的第二份工。我用一个下午的搭建干掉了它。"
+        },
+        {
+          "type": "反常识悬念",
+          "label": "Day 4 翻车 + 7 天净赚 双悬念",
+          "en": "Day 4, my AI agent approved a $1,200 invoice I never should have. But over the full 7 days the same agent netted me $1,847. Here's the build, the mistake, and the real P&L.",
+          "zh": "第 4 天，我的 AI 智能体自动批了一张 1,200 美元的发票——那张根本不该批。但整整 7 天跑下来，它净赚了 1,847 美元。下面是搭建全过程、那次失误，以及真实账账。"
+        },
+        {
+          "type": "利益诱惑",
+          "label": "21 小时 + 1847 美元 双重回报",
+          "en": "I built one n8n workflow, handed it my inbox, calendar, and posting tool, and walked away for 7 days. I got back 21 hours and netted $1,847. Here's the exact 47-node build.",
+          "zh": "我用 47 个 n8n 节点搭了一个 agent，把邮箱、日程、发帖工具全交给它，自己消失 7 天。回来后我白赚了 21 小时和 1,847 美元净利。下面是完整搭建。"
+        }
+      ],
+      "titles": [
+        "I Let an AI Agent Run My Side Hustle for 7 Days — It Cost Me $1,200",
+        "Everyone Is Selling You AI Agents. I Let One Run My Business for 7 Days So You Don't Have To"
+      ],
+      "script": [
+        {
+          "t": "00:00-00:10",
+          "en": "Day 4, my AI agent approved a $1,200 invoice I never should have. But over the full 7 days the same agent netted me $1,847. Here's the build, the mistake, and the real P&L.",
+          "zh": "第 4 天，我的 AI 智能体自动批了一张 1,200 美元的发票——那张根本不该批。但整整 7 天跑下来，它净赚了 1,847 美元。下面是搭建全过程、那次失误，以及真实账账。",
+          "viz": "对镜头直说，食指竖起强调 $1,200 mistake，表情严肃带点后怕",
+          "img_en": "Casual creator in black hoodie, single index finger raised, dead-serious expression with slight fear behind the eyes, close-up tight shot on face with LED background bokeh, ultra-detailed 8k cinematic --ar 16:9 --v 6.0",
+          "img_zh": "休闲帽衫创作者，食指竖起，表情严肃、眼中带一丝后怕，脸部特写紧凑构图，LED 灯虚化背景，超精细 8k 电影感 --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "00:10-00:25",
+          "en": "By the end of this video you'll see the exact 4-piece n8n agent I built, the prompt scaffold that runs it, the one kill switch I added after the $1,200 mistake, and the actual 7-day silent-run numbers. Real workflow, real error, real recovery.",
+          "zh": "看完这条视频，你会拿到我搭的那个 47 节点的智能体、跑它的提示词模板、我事后加的那个 kill switch，以及 7 天静默运行的真实账账。真实流程、真实失误、真实回血。",
+          "viz": "镜头切到屏幕，鼠标指向 4 个模块化区块",
+          "img_en": "Over-shoulder shot of creator pointing at a screen showing 4 modular blocks in an n8n canvas, mid-action cursor visible, neon teal accents, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "过肩镜头，创作者指向屏幕里 n8n 画布上的 4 个模块化区块，鼠标轨迹清晰，霓虹青色点缀，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "00:25-01:15",
+          "en": "My side hustle is a small niche content site. Three newsletters a week, twelve social posts, fifty-something cold pitches to affiliates, plus every DM that comes in. On a good week that's 18 hours. On a bad week, 25. I was burning out before the thing even made real money. So I asked a simple question — what if I built one n8n agent, gave it the inbox, the scheduler, and the posting tool, then walked away for seven straight days? Could I keep the site alive, grow it, and not lose my weekends? That's the experiment. And I'm not going to lie — the first two days felt like a magic trick.",
+          "zh": "我的副业是一个小型细分内容站。每周三封邮件、十二条社交帖、50 多封给联盟客户的冷邮件，外加每一条进来的私信。状态好的一周要花 18 小时，状态差的一周 25 小时。它还没真正赚到钱，我已经在燃尽了。所以我给自己提了个简单问题——如果我搭一个 n8n agent，把邮箱、日程、发帖全交给它，然后连续 7 天消失呢？站能不能活？能不能涨？我能不能不丢周末？这就是那个实验。坦白讲，头两天像变魔术。",
+          "viz": "屏幕切换：手机里堆满未读消息、待发帖子、邮箱列表，创作者扶额",
+          "img_en": "Phone screen filled with unread DMs, scheduled post queue, email inbox overflowing, creator's hand on forehead, dim warm room at 2am, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "手机屏幕满是未读私信、待发帖子队列、邮箱爆满，创作者手扶额，凌晨 2 点昏暗暖光房，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "01:15-02:30",
+          "en": "Here's the build, four pieces. Piece one — an n8n workflow that polls Gmail for any new thread tagged 'partners' or 'inbox-auto'. Piece two — an LLM step that classifies intent into vendor, customer, or spam, then drafts a reply for anything that isn't a vendor. Piece three — a guardrail node that flags any vendor email for human review instead of auto-replying. Piece four — a scheduler and posting tool hooked to the same memory so the agent can queue drafts and schedule them without me. The whole thing is 47 nodes. Took me an afternoon. I gave it the last 30 days of my replies as context, my brand voice doc, and one rule: if you're not sure, you don't send. Then I closed the laptop and tried not to check my phone. That rule — 'if you're not sure, you don't send' — is the most important line of the entire video. Write it down. Tattoo it on your hand. Because day 4 is going to test it.",
+          "zh": "搭建分四块。第一块——一个 n8n 工作流，轮询 Gmail 里凡是打了『partners』或『inbox-auto』标签的新邮件。第二块——一个 LLM 节点，把意图分类成 vendor / customer / spam，然后对一切非 vendor 的邮件起草回复。第三块——一个护栏节点：只要是 vendor 邮件，一律转人工，不自动回。第四块——日程和发帖工具接入同一份记忆，agent 就能自己排稿、自己定时发。整个东西 47 个节点，我花了一个下午搭完。我给它灌了最近 30 天我的回复、品牌语气文档，外加一条规矩：拿不准，就别发。然后我合上盖子，尽量不去看手机。那条规矩——『拿不准，就别发』——是整条视频最重要的一句。抄下来，贴在显示器上。因为第 4 天它就要来考验你这条规矩。",
+          "viz": "屏幕录屏：n8n 画布放大 4 块区域，鼠标依次点亮",
+          "img_en": "Zoomed-in n8n canvas with 4 highlighted node groups, mouse cursor tracing through them one by one, code snippet in side panel, dark IDE background with neon teal accents, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "放大的 n8n 画布，4 组节点高亮，鼠标逐块划过，侧栏代码片段，深色 IDE 背景加霓虹青色点缀，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "02:30-03:45",
+          "en": "First two days felt like a magic trick. Day 1 — the agent answered 23 DMs, scheduled 14 social posts, replied to 6 affiliate pitches, and pre-approved 3 customer refunds under $50. Day 2 — even better — 31 DMs, 18 posts, and it ran an outreach sequence that booked two sales calls. I woke up to a full pipeline and a near-empty inbox. I actually had time to make breakfast. Then day 4. A vendor I haven't used in eight months emailed a renewal quote — $1,200 for a tool I'd already cancelled. The agent read the thread, saw the word 'renewal', saw my old 'yes renew' pattern from a different vendor, and replied: 'Approved, please send the invoice to AP.' That reply actually went to AP. I caught it only because I happened to check AP that morning. That's the moment I realized — an agent without a vendor kill switch is a liability, not a tool. The lesson isn't 'AI went wrong'. The lesson is — I forgot to teach it the one rule every junior employee learns in week one: don't spend company money without asking.",
+          "zh": "头两天像变魔术。Day 1——agent 回了 23 条私信、排了 14 条社交帖、回 6 个联盟客户邮件、自动批了 3 笔 50 美元以下的退款。Day 2——更好——31 条私信、18 条帖、自己跑了一条外联序列，预约上两个销售电话。我醒来看到满管线和几乎空的收件箱，居然还有空做顿早饭。然后 Day 4。一个八个月没用的 vendor 发来一张续费报价——1,200 美元，买的是我已经停掉的一个工具。agent 读了这封邮件，看到『renewal』这个词，看到我以前对另一个 vendor 的『yes renew』回复模板，回了一句：『Approved，请把发票寄到 AP。』这句真的发到了 AP。我之所以发现，是因为那天早上我正好去看了一眼 AP。那一刻我才明白——没有 vendor kill switch 的 agent，不是工具，是负债。这堂课不是『AI 出错了』，是『我忘了教它每个新人入职第一周都要学的那条规矩：公司花钱的事，不问老板别动手』。",
+          "viz": "分屏：上 = 当下 inbox 空 + 排帖满，下 = invoice 大图 + 红 X 盖在上面",
+          "img_en": "Split screen top half clean inbox with green checkmarks and full scheduled-post grid; bottom half a $1,200 invoice with a big red X stamp and 'APPROVED' warning redacted, dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "分屏上半：清空收件箱配绿对勾与满排帖格；下半：1,200 美元发票配大红 X 戳与『APPROVED』警告遮罩，深色 UI，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "03:45-05:15",
+          "en": "I added one node. A vendor blocklist — any email from a domain not on my approved list goes straight to a Slack channel with the word 'vendor' in the subject. No auto-reply, ever. Took me 12 minutes. 47 nodes became 48. Then I let it run three more days. Day 5 — 27 DMs handled, 16 posts scheduled, 4 affiliate replies, 1 customer refund. Day 6 — 34 DMs, 20 posts, and here's the part that paid for the entire build: the agent flagged a fake sponsorship offer I would've fallen for. It had the right format — professional pitch, sample integration, fake ROI numbers — but the sender domain was one letter off from a real sponsor I'd worked with before. The agent saw the mismatch and routed it to me with a 'verify sender' flag. I almost missed that one even with the flag. Day 7 — I came back, audited every reply, every scheduled post, every transaction. The agent had touched 184 messages, scheduled 91 posts, replied to 9 affiliate pitches, processed 4 customer refunds. Zero new mistakes. The fix cost me 12 minutes and a single node. The mistake cost me $1,200 and a lot of trust in my own build. The total damage of doing nothing would've been worse.",
+          "zh": "我加了一个节点。一个 vendor 黑名单——任何不在我白名单里的域名，只要主题含 vendor，直接转到一个 Slack 频道，绝不自动回。花了 12 分钟。47 个节点变成 48 个。然后我又让它跑了三天。Day 5——27 条私信、16 条帖、4 个联盟回复、1 笔退款。Day 6——34 条私信、20 条帖，然后是这条让我觉得整套搭建值回票价的地方：agent 拦下了一个我会中招的假赞助。格式完美——专业 pitch、示例集成、伪造的 ROI 数据——但发件域名和我合作过的真实赞助商差一个字母。agent 看穿了不匹配，给我打了一个『verify sender』标签路由回来。有这个标签我都差点漏掉。Day 7——我回来，逐条审计了每一条回复、每一条排好的帖子、每一笔交易。agent 触碰过 184 条消息、排了 91 条帖、回 9 个联盟邮件、处理 4 笔退款。零新失误。修这个坑花了 12 分钟和 1 个节点。那次失误花了我 1,200 美元和大量对自己搭建的信任。如果什么都不改，总损失远不止这个数。",
+          "viz": "屏幕：Slack 频道通知 + vendor 域名高亮 + BLOCKED 红戳",
+          "img_en": "Slack notification screenshot with vendor domain circled red and BLOCKED stamp overlay, agent reply log timeline visible, dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "Slack 通知截图，vendor 域名红圈加 BLOCKED 红戳，agent 回复日志时间线可见，深色 UI，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "05:15-06:30",
+          "en": "Here's the actual 7-day P&L. Hours I would've spent: 21. Hours I actually spent: 3. Posts scheduled: 91. Affiliate replies sent: 9. Calls booked: 3. Closed: 1 at $400. Customer refunds: 4, all under $50. Vendor mistake: 1, $1,200. Net cash: $1,847 revenue minus the $1,200 fake renewal equals $647 in real net. But here's the part the spreadsheet can't show — 21 hours of my life back. That's almost a full work week. The lesson isn't 'let AI run your business'. The lesson is this — an AI agent is a multiplier, not a manager. Multipliers don't make decisions. They make your decisions faster. The moment an agent starts deciding for you, you need a kill switch. Otherwise it's not an agent — it's a junior employee with no manager and your credit card.",
+          "zh": "这是真实的 7 天账账。我本该花的时间：21 小时。我实际花的时间：3 小时。排好的帖子：91。发出的联盟回复：9。预约上的电话：3。成交：1 笔 400 美元。处理的退款：4 笔，每笔 50 美元以下。Vendor 失误：1 次，1,200 美元。净现金：1,847 收入减去 1,200 的假续费 = 647 美元净利。但这是表格显示不出来的部分——我多回了 21 小时的人生。差不多一整个工作周。这堂课不是『让 AI 替你管生意』，是这句话——AI agent 是放大器，不是经理。放大器不做决定，它让你做决定更快。agent 一旦开始替你做决定，你就需要一个 kill switch。否则它不是 agent——是一个没人管的实习生，手里还拿着你的信用卡。",
+          "viz": "手写表格 + 大数字『21 HOURS』高亮",
+          "img_en": "Handwritten-style 7-day P&L sheet with $1,847 and $1,200 highlighted, big bold '21 HOURS SAVED' text overlay, warm desk lamp lighting, dark background, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "手写风 7 天账账表，1,847 与 1,200 高亮，叠加『21 HOURS SAVED』大粗体字，暖色台灯，深色背景，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "06:30-07:00",
+          "en": "The 47-node n8n template, the prompt scaffold, and the vendor blocklist node are all linked in the description — free, no email gate. Use it, break it, tell me what breaks in the comments. And if this saved you 21 hours, hit subscribe. Next week I'm doing the same experiment with a content agent that actually writes the posts. See you there.",
+          "zh": "47 节点的 n8n 模板、提示词模板、vendor 黑名单节点，全部在简介链接里——免费，不要邮箱。用它、测它、踩了什么坑评论区告诉我。如果这条视频给你省了 21 小时，按一下订阅。下周我做同一实验，但 agent 不是替你回，是替你写。看那里见。",
+          "viz": "对镜头微笑，挥手，订阅手势",
+          "img_en": "Creator smiling warmly at camera, waving, pointing down to subscribe overlay, energetic hoodie creator vibe, dark studio with RGB accents, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "创作者对镜头温暖微笑，挥手，指向下方订阅浮层，活力帽衫创作者气质，深色 RGB 灯效工作室，超精细 8k --ar 16:9 --v 6.0"
+        }
+      ],
+      "emotion_arc": "Hook(后怕 + 翻车悬念) → 价值承诺(可信建立) → 痛点代入(燃尽共鸣) → 搭建讲解(清晰掌控) → Day1-2 惊喜 + Day4 翻车(情绪过山) → 修复 + 验证(顿悟) → 真实账账 + 金句(记忆点) → CTA(行动)",
+      "thumbs": [
+        {
+          "ver": "A",
+          "desc": "震惊脸 + 粗体『$1,200 MISTAKE』 + 红×叠在 invoice",
+          "img_en": "YouTube thumbnail, casual hoodie creator with shocked expression, bold red text '$1,200 MISTAKE', small 'day 4' tag, $1,200 invoice with red X overlay, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，休闲帽衫创作者震惊脸，粗体红字『$1,200 MISTAKE』，小角标『day 4』，1,200 美元发票叠红 X，高对比，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "ver": "B",
+          "desc": "对比图 before/after：手动 21h vs agent 3h + 净赚 $1,847",
+          "img_en": "YouTube thumbnail, split before-after, left 'YOU 21h' red, right 'AGENT 3h' green, big text '$1,847 NET', creator confident pointing, bold text, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，左右对比，左红『你 21h』右绿『agent 3h』，大粗字『$1,847 NET』，创作者自信指向，粗体文字，高对比，超精细 8k --ar 16:9 --v 6.0"
+        }
+      ],
+      "description": "我把副业的所有权限交给一个 AI 智能体跑 7 天，全程原始录屏。视频讲清：它差点搞砸的那件事（day 4 自动通过 1,200 美元 vendor 续费）、真正省下 21 小时/周的工作流、以及让我整套搭建值回票价的『vendor kill switch』护栏。真实账账：21 小时换回 + 1,847 美元净营收 - 1,200 美元假续费 = 647 美元净利 + 21 小时人生。结论：agent 不是魔法，是放大器；没有 kill switch 的 agent 是没人管的实习生。教育/演示内容，非投资或理财建议；所有数字以你自己的账单为准。来源：n8n 官方文档、ChatGPT Work 发布说明，发布前请自行复核。订阅看更多 AI 提效实测，下周做 agent 替你写内容。",
+      "tags": ["ai agent", "n8n", "ai automation", "side hustle", "ai tools", "make money online", "chatgpt agent", "ai productivity", "automation tutorial", "ai business"],
+      "chapters": ["00:00 The $1,200 Mistake", "00:10 What You're Getting", "00:25 Why I Did This", "01:15 The 4-Piece Build", "02:30 Days 1-2 Magic + Day 4 Crash", "03:45 The 12-Minute Fix", "05:15 The 7-Day P&L", "06:30 Get the Template + Subscribe"]
+    },
+    {
+      "channel_key": "finance",
+      "channel_label": "金融 · 财经商业（美国观众）(@TheMoneyMoo)",
+      "topic": "Why Paying Off Your 22% Credit Card Is the Best Investment You'll Ever Make",
+      "topic_cn": "信用卡债务 vs 投资：先还债还是先投资（含 401k 配比例外）",
+      "host": "金融教育者人设（参考你给的财经 agent 风格）：30 多岁、整洁衬衫、沉稳自信、背景简洁书房。AI 包已按要求改用不同人设（休闲帽衫创作者），金融包不参考 AI 包。",
+      "host_note": "金融包沿用财经 agent 的金融教育者 host 风格——30 多岁、整洁衬衫、沉稳自信、书房背景、慢语速、强逻辑；AI 包刻意换人设为帽衫创作者，两包人设完全错开。",
+      "decision": "为什么选它：来自今日金融面板搜索建议 401k loan to pay off credit cards / 评论区 credit card debt vs investing which first，且『先还债还是先投资』是最高意图交叉痛点。用真实利率算清得失（22% vs 7%），原创空间与信任度都高，对美国观众最具共鸣。",
+      "hook": "Every finance influencer says 'invest first, always'. They're half right. If you have a 22% credit card, paying it off is a guaranteed 22% return. No stock on earth beats that.",
+      "hook_zh": "每个理财博主都在说『先投资，永远先投资』。他们对了一半。如果你有一张 22% 的信用卡，先还清它就是锁定一笔无风险的 22% 回报。地球上没有任何股票能稳定跑赢这个。",
+      "hook_options": [
+        {
+          "type": "痛点暴击",
+          "label": "戳中『你的理财顾问让你亏 31,000』",
+          "en": "If you're sitting on $8,000 of credit card debt at 22% APR and your financial advisor is telling you to 'still invest for the long run' — your financial advisor is costing you $31,000 over the next 10 years.",
+          "zh": "如果你身上背着 8,000 美元、22% 年利率的信用卡债，而你的理财顾问还在跟你说『长期还是要投资』——这位顾问正让你未来十年多亏 31,000 美元。"
+        },
+        {
+          "type": "反常识悬念",
+          "label": "打破『永远先投资』共识",
+          "en": "Every finance influencer says 'invest first, always'. They're half right. If you have a 22% credit card, paying it off is a guaranteed 22% return. No stock on earth beats that.",
+          "zh": "每个理财博主都在说『先投资，永远先投资』。他们对了一半。如果你有一张 22% 的信用卡，先还清它就是锁定一笔无风险的 22% 回报。地球上没有任何股票能稳定跑赢这个。"
+        },
+        {
+          "type": "利益诱惑",
+          "label": "三人三路 89k vs 11k 巨大差距",
+          "en": "I ran the math on three real Americans. The one who paid off debt first ended up with $89,000 in 10 years. The one who 'invested first' ended up with $42,000 of debt and $11,000 of investments. Same dollars. Different order. Here's the math that actually wins.",
+          "zh": "我算了三个美国人的账。先还债的那位，10 年后到手 89,000 美元；『先投资』那位，10 年后背着 42,000 美元债，手里只有 11,000 美元投资。同样的本金，不同的顺序。下面是真正能赢的算术。"
+        }
+      ],
+      "titles": [
+        "Investing vs Paying Off Debt: The Order That Saves You $31,000",
+        "Why Paying Off Your 22% Credit Card Is the Best Investment You'll Ever Make"
+      ],
+      "script": [
+        {
+          "t": "00:00-00:10",
+          "en": "Every finance influencer says 'invest first, always'. They're half right. If you have a 22% credit card, paying it off is a guaranteed 22% return. No stock on earth beats that.",
+          "zh": "每个理财博主都在说『先投资，永远先投资』。他们对了一半。如果你有一张 22% 的信用卡，先还清它就是锁定一笔无风险的 22% 回报。地球上没有任何股票能稳定跑赢这个。",
+          "viz": "对镜头直说，单手抬起强调 22% 这个数字",
+          "img_en": "Finance educator in neat button-up shirt, calm serious expression, single hand raised emphasizing the number 22, tidy home office bookshelf background, ultra-detailed 8k cinematic --ar 16:9 --v 6.0",
+          "img_zh": "金融教育者，整洁衬衫，沉稳严肃表情，单手抬起强调 22 这个数字，简洁书房书架背景，超精细 8k 电影感 --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "00:10-00:25",
+          "en": "By the end of this video you'll have a 3-question test that takes 90 seconds, the 3 traps that cost smart people tens of thousands, and the one exception — employer 401k match — that overrides everything. Just the math. No fluff.",
+          "zh": "看完这条视频，你会拿到一个 90 秒就能做完的 3 问测试、3 个让聪明人也亏钱的坑、以及那个唯一的例外——公司 401k 配比——它能推翻其他一切判断。只讲数学，不灌鸡汤。",
+          "viz": "屏幕显示『3 questions』清单标题",
+          "img_en": "Educator pointing at a clean on-screen list titled '3 Questions', confident composed posture, dark professional background, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "教育者指向屏幕上标题为『3 个问题』的干净清单，自信沉稳姿态，深色专业背景，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "00:25-01:25",
+          "en": "Here's the trap that costs Americans $31,000 over ten years. Investing feels like winning. Every time you check your brokerage, the number goes up. You feel smart. Paying off debt feels like admitting you messed up. Every payment reminds you of the dinner you didn't need, the vacation you charged, the impulse you regret. So people choose the thing that feels good instead of the thing that makes them money. And it's not a small mistake. On $8,000 of credit card debt at 22% APR, choosing to invest $500 a month instead of paying it off costs you roughly $31,000 over ten years. That's a car. That's a down payment on a house. That's your kid's first year of college. All burned on a feeling. The market does 7% after inflation. Your card does 22% against you. You're not 'diversifying'. You're paying a 22% subscription fee to feel smart. That's the trap.",
+          "zh": "有一个陷阱，让美国人在十年里烧掉 31,000 美元。投资让人感觉像在赢。每次你打开券商 App，数字往上跳，你就觉得自己很聪明。还债让人感觉像在承认自己搞砸了。每一次还款都提醒你那顿不该吃的饭、那趟不该刷的旅行、那次冲动的后悔。所以人选让自己感觉好的那件事，不选让自己真赚钱的那件事。这不是小错。8,000 美元信用卡债、22% 年利率，本来应该拿 500 美元去还债，你拿去投资，十年下来大概亏 31,000 美元。够买一辆车，够交房子首付，够你孩子第一年大学。全部烧在一种感觉上。扣除通胀后市场长期回报 7%，你的卡以 22% 反向吸你。你这不是『分散投资』，是付 22% 的订阅费买『我很聪明』的感觉。这就是那个坑。",
+          "viz": "分屏：左边券商 App 数字往上跳，右边信用卡账单红色逾期",
+          "img_en": "Split screen left: brokerage app with green number rising; right: red overdue credit card statement; moody cinematic lighting, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "分屏左：券商 App 绿数字上涨；右：红色逾期信用卡账单；情绪化电影光，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "01:25-02:30",
+          "en": "Three lines. Line one — write down the highest APR you owe. Line two — write down 7%, the long-run average of the S&P 500 after inflation. Line three — if your APR is higher than 7%, the guaranteed return of paying it off beats the expected return of investing. That's the whole test. So if your credit card is 22%, paying it off is a 22% guaranteed return. If your federal student loan is 6%, that's basically break-even with the market — flip a coin. If your mortgage is 3.5%, you almost certainly invest first because the spread is in your favor. The math is simple. The hard part is the next thing — the psychology — which is where smart people lose money on purpose. Because here's what nobody tells you: the math isn't the hard part. Following the math when it tells you to do the unsexy thing is the hard part.",
+          "zh": "三行。第一行——写下你欠的最高年利率。第二行——写下 7%，即扣除通胀后 S&P 500 的长期平均回报。第三行——如果你的年利率高于 7%，还清它的『保证回报』就高于投资的『预期回报』。这就是整个测试。所以如果你的卡是 22%，还清它就是一笔锁定的 22% 回报。如果你的联邦学生贷款是 6%，和市场基本打平——掷硬币。如果你的房贷是 3.5%，几乎一定先投资，因为利差站在你这边。数学很简单，难的是下一关——心理——那才是聪明人故意亏钱的地方。因为没人告诉你这一点：数学本身不难。难的是当数学告诉你做那件『不性感』的事时，你愿不愿意做。",
+          "viz": "白板写 3 行字，22% > 7% 大红字",
+          "img_en": "Whiteboard with 3 lines written, big red marker text '22% > 7%', calculator on the tray, dark professional office, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "白板写 3 行字，大红笔字『22% > 7%』，托盘上放计算器，深色专业办公室，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "02:30-03:45",
+          "en": "Three real numbers. Person A has $8,000 on a 22% card and $500 a month to split. They invest first because that's what they read online. After ten years they have $11,000 in investments and $42,000 of credit card debt — because the debt grew faster than the investments could keep up. Person B — same $8,000, same $500 a month. They ignore the advice, pay off the card in 19 months, then invest the full $500. After ten years they have $89,000. No debt. Person C: $3,000 on a 5% card, $500 a month. They split 50/50 for 7 months, kill the card, then invest the full $500. Net at ten years: $76,000 and zero debt. The decision isn't moral. It isn't about discipline. It's arithmetic. And the arithmetic says: kill the 22% first. Always. Same starting dollars, same monthly amount, three completely different lives ten years later. The only difference was the order. You can argue about investing strategies your whole life. You cannot argue about this order.",
+          "zh": "三个真实数字。A 君有 8,000 美元 22% 的卡，每月能拿出 500 美元。他先投资，因为网上都这么教。十年后他有 11,000 美元的投资，和 42,000 美元的信用卡债——因为债长得比投资快。B 君——同样的 8,000，同样的 500。他他不建议，先把卡 19 个月还清，再把 500 美元全投进去。十年后他有 89,000 美元。无债一身轻。C 君：3,000 美元 5% 的卡，每月 500。先 50/50 分 7 个月，把卡砍掉，再把 500 美元全投。十年净：76,000 美元，零债务。这不是道德题，不是纪律题，是算术题。算术说：先杀 22%，永远。一样的本金，一样的月供，三条十年后完全不同的路。唯一区别是顺序。你可以为投资策略争论一辈子，这一笔顺序不能争。",
+          "viz": "三个人物头像 / 信息图横排：$11k & $42k 债 vs $89k vs $76k & 0债",
+          "img_en": "Three side-by-side infographic portraits labeled 'A: $11k + $42k debt', 'B: $89k zero debt', 'C: $76k zero debt', clean dark fintech UI, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "三联信息图横排，分别标注『A: 11k + 4.2万债』、『B: 8.9 万无债』、『C: 7.6 万无债』，深色金融科技 UI，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "03:45-05:00",
+          "en": "Three traps keep smart people stuck. Trap one — 'I have a 0% APR promo for 12 months.' That's not a real rate, that's a marketing rate. When the promo ends, it jumps to 25%. Don't make a 10-year decision on a 12-month promo. Trap two — 'I'll invest and use the gains to pay off the card.' The math doesn't work. 22% debt versus 7% expected market return is a 15-point spread. You will lose. Every time. The 'gains' don't outrun the interest. Trap three — 'I need an emergency fund first.' Yes, you do — keep one month of expenses in cash, no more. But if your emergency fund earns 4.5% in a high-yield savings and your card is at 22%, your emergency fund is costing you 17.5% a year. Move the excess to the card. The point isn't that emergencies don't happen. The point is the math doesn't lie. And the moment you add emotion — 'I want to feel like I'm investing', 'I don't want to face how much I owe' — the math stops mattering to you, and the banks start winning.",
+          "zh": "三个坑让聪明人原地踏步。坑一——『我有 12 个月 0% APR 的促销。』那不是真利率，是营销利率。促销一结束，它跳到 25%。别拿 12 个月的促销去做 10 年的决定。坑二——『我投资赚的够我去还信用卡。』数学说不通。22% 的债对 7% 的市场预期，15 个点的利差，你会输。每次都输。赚的『收益』跑不过利息。坑三——『我得先存够应急金。』对，要存——留一个月开支在现金里，但别更多。如果你的应急金在 HYSA 里拿 4.5%，而你的卡是 22%，你的应急金一年倒亏你 17.5%。把多余的部分挪去还卡。重点不是『应急不会发生』，重点是『数学不骗人』。一旦你开始加情绪——『我想感觉自己也在投资』『我不想面对我欠了多少』——数学在你眼里就失效了，银行就开始赢。",
+          "viz": "三个红框警示图标横排：0% promo / invest-vs-debt / HYSA trap",
+          "img_en": "Three warning icons in a row with red glow: '0% promo trap', 'invest-vs-debt trap', 'HYSA trap', dark background, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "三个警示图标横排带红光晕：0% 促销坑、投资 vs 还债坑、HYSA 坑，深色背景，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "05:00-06:15",
+          "en": "One exception overrides everything else. If your employer offers a 401k match, take the match first, always, no matter what. A 50% employer match on 6% of your salary is a 50% instant return on your contribution. Nothing else in your financial life will give you that. Not real estate. Not index funds. Not crypto. Not a side hustle. Free money first, always. So the order becomes: match → high-interest debt → low-interest debt → invest the rest. And if your employer offers ESPP at a 15% discount, same logic — take the discount, then deal with the debt. The one time you don't follow the math is when someone is handing you free money. That's the exception. Walk past it and you leave 50% returns on the table for the entire rest of your career. Compounded over 30 years, a missed match can cost you $300,000 or more. That's not a budgeting tip. That's a quarter-million-dollar decision you're making every pay period you skip.",
+          "zh": "一个例外能推翻其他一切。如果你的公司给 401k 配比，先拿满配比，永远先拿，无论别的什么。公司按你工资 6% 给 50% 的配比，等于你那一笔 50% 的即时回报。你整个财务生活里，再也没有别的东西能给你这个回报。房地产不行，加密币不行，副业不行。先拿免费的钱，永远。所以顺序变成：先配比 → 再清高息债 → 再清低息债 → 最后才投剩下的。如果公司给 ESPP 15% 折扣，同样的逻辑——先拿折扣，再处理债务。唯一可以不看数学的时刻，是有人正在把免费的钱递到你手上的时候。这就是那个例外。你走过去，等于把接下来整个职业生涯的 50% 回报让出去。复利 30 年，错过的配比可以让你亏掉 30 万美元以上。这不是预算技巧，是你每个发薪日都在做的、几十万级别的决定。",
+          "viz": "401k match 流程图 + 金币 + 大字『50% INSTANT RETURN』",
+          "img_en": "401k match flow diagram: 6% salary input, employer adds 50% match, gold coins illustration, bold text '50% INSTANT RETURN', professional clean dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "401k 配比流程图：6% 工资输入，公司加 50% 配比，金币示意，粗体『50% 即时回报』，专业简洁深色 UI，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "t": "06:15-07:00",
+          "en": "Here's the line I want you to remember. The best investor in the world is the one who refuses to pay 22% interest to a credit card company. That's not a budget tip. That's the highest-returning investment you'll ever make. Run the 3-question test tonight. Pay off the 22% before you put another dollar in an index fund. The 4-line decision tree and the 3-trap checklist are linked in the description — free, no email gate. If this saved you $31,000, hit subscribe. Next week I'm doing the order for paying off multiple cards when you can only afford to attack one at a time. See you there.",
+          "zh": "这是我希望你记住的那句话。世界上最厉害的投资人，就是那个拒绝给信用卡公司交 22% 利息的人。这不是预算技巧，这是你这辈子回报最高的投资。今晚就跑一遍那个 3 问测试。在你再投一块钱进指数基金之前，先把那张 22% 的卡砍掉。4 行决策树 + 3 个陷阱清单，简介里免费，不要邮箱。如果这条视频给你省了 31,000 美元，按一下订阅。下周我做『同时欠多张卡、每月只够砍一张』的顺序。看那里见。",
+          "viz": "对镜头收尾，金句大字『22% 退款 = 最好的投资』，订阅手势",
+          "img_en": "Educator smiling at camera, golden sentence overlay '22% payoff = the best investment', pointing to subscribe button, trustworthy composed, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "教育者对镜头收尾微笑，叠加金句『22% 还清 = 最好的投资』，指向订阅按钮，可信赖沉稳，超精细 8k --ar 16:9 --v 6.0"
+        }
+      ],
+      "emotion_arc": "Hook(反常识打破共识) → 价值承诺(可信建立) → 痛点代入(31,000 美元损失恐惧) → 数学揭穿(顿悟) → 三人三路(可视化记忆) → 三个陷阱(警觉) → 401k 例外(转折) → 金句 + CTA(行动)",
+      "thumbs": [
+        {
+          "ver": "A",
+          "desc": "震惊脸 + 粗体『PAY 22% FIRST』+ 红色 22% 大字",
+          "img_en": "YouTube thumbnail, finance educator shocked face, bold red text 'PAY 22% FIRST', big '22%' number, smaller 'BEFORE YOU INVEST' tagline, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，金融教育者震惊脸，粗体红字『PAY 22% FIRST』，大号 22% 数字，副标『在你投资之前』，高对比，超精细 8k --ar 16:9 --v 6.0"
+        },
+        {
+          "ver": "B",
+          "desc": "对比图：$89,000 (先还债) vs $11,000 + $42k 债 (先投资)",
+          "img_en": "YouTube thumbnail, split comparison left 'PAY DEBT FIRST $89k', right 'INVEST FIRST $11k + $42k DEBT', educator pointing at left side, bold text, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，左右对比，左『先还债 8.9 万』，右『先投资 1.1 万 + 4.2 万债』，教育者指向左边，粗体文字，高对比，超精细 8k --ar 16:9 --v 6.0"
+        }
+      ],
+      "description": "你有 8,000 美元 22% 的信用卡债，先投资还是先还债？本视频用真实利率算清：还清高息债等于无风险锁 22%，几乎没有投资能稳定跑赢。展示三个真实美国人的 10 年对比（A 君 $11k 投资 + $42k 债 vs B 君 $89k 无债 vs C 君 $76k 无债），给出正确顺序——401k 配比 → 高息债 → 低息债 → 再投资；并解释三个让聪明人也亏钱的坑（0% 促销 / 投资覆盖利息 / 应急金过多）。教育/演示内容，不构成个别投资建议；利率与历史回报请回 Federal Reserve / NY Fed / S&P 一手来源核实（发布前自行核对）。订阅看更多美国人该懂的理财硬知识，下周讲『同时欠多张卡、每月只够砍一张』的顺序。",
+      "tags": ["credit card debt", "investing for beginners", "pay off debt vs invest", "personal finance", "401k", "financial literacy", "debt payoff", "money management", "retirement", "finance tips"],
+      "chapters": ["00:00 The 'Invest First' Lie", "00:10 What You're Getting", "00:25 The $31,000 Trap", "01:25 The 3-Line Test", "02:30 Three Real Americans", "03:45 The 3 Traps", "05:00 The 401k Exception", "06:15 The Line to Remember + Subscribe"]
+    }
+  ]
+}

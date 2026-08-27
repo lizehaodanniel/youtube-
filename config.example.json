@@ -1,0 +1,32 @@
+{
+  "youtube_api_key": "YOUR_YOUTUBE_API_KEY_OR_BLANK",
+  "webhook_url": "YOUR_WEBHOOK_URL",
+  "webhook_type": "feishu",
+  "report_url": "",
+  "timezone": "America/New_York",
+  "output_dir": "output",
+  "channels": {
+    "ai": {
+      "handle": "@AIcheatcodeplaybook",
+      "url": "https://www.youtube.com/@AIcheatcodeplaybook",
+      "label": "AI · 科技数码",
+      "audience": "AI/科技数码爱好者、独立开发者、用 AI 提效的创作者",
+      "interests": ["AI 新模型与工具", "科技数码", "生产力/自动化", "开发者生态", "国际科技时事", "深度观点"]
+    },
+    "finance": {
+      "handle": "@TheMoneyMoo",
+      "url": "https://www.youtube.com/@TheMoneyMoo",
+      "label": "金融 · 财经商业（美国观众）",
+      "audience": "美国 YouTube 观众：个人投资者、关注美股/宏观/个人理财/退休/房产/加密的美国人",
+      "interests": ["美股行情", "美联储与利率", "美国个人理财", "退休账户(IRA/401k)", "房地产投资", "加密货币", "深度宏观"]
+    }
+  },
+  "platforms": ["YouTube", "Bilibili", "抖音"],
+  "notes": {
+    "youtube_api_key": "留空则自动改用 WebSearch 兜底。填入后也仅用于官方 Data API 配额查询，下拉词用 Autocomplete 免 key。",
+    "webhook_url": "飞书：群设置 → 群机器人 → 自定义机器人 → 复制 Webhook 地址填这里。企微同理。启用签名校验需改 push_webhook.py。",
+    "webhook_type": "feishu 或 wecom。",
+    "report_url": "部署后的公开链接，会自动拼到推送消息里。",
+    "timezone": "用于定时任务时区对齐。America/New_York 下 BYHOUR=8 即纽约 08:00。"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "title": "每日热点看台 · 选题推荐",
+  "date": "2026-08-26",
+  "type": "daily",
+  "subtitle": "基于 YouTube 真实搜索下拉词（美国区）+ 公开宏观数据，直接推荐你该做的视频类型 · 上：AI 科技数码 / 下：金融财经（美国观众）",
+  "panels": [
+    {
+      "key": "ai",
+      "label": "AI · 科技数码",
+      "handle": "@AIcheatcodeplaybook",
+      "audience": "AI/科技数码爱好者、独立开发者、用 AI 提效的创作者、想用 AI 赚钱的人",
+      "signals": [
+        {
+          "topic": "AI 工具（变现 / 分职业）",
+          "tags": ["常青", "升温"],
+          "items": ["ai tools to make money", "ai tools for video editing", "ai tools for content creation", "ai tools for business"],
+          "insight": "「用 AI 赚钱」与「按职业场景（视频/营销/商业）」需求极强，适合做行业应用盘点与 ROI 实测。"
+        },
+        {
+          "topic": "ChatGPT / 大模型对比",
+          "tags": ["升温"],
+          "items": ["chatgpt 5", "chatgpt vs gemini", "chatgpt vs grok", "chatgpt plus vs pro", "chatgpt agent"],
+          "insight": "版本/竞品对比是稳定高点击；agent 模式与 GPT-5.6 是新热点（2026-07 发布）。"
+        },
+        {
+          "topic": "AI 自动化 / 智能体",
+          "tags": ["升温", "Breakout"],
+          "items": ["ai automation agency", "ai automation for small business", "ai agent n8n", "ai agents use cases", "ai agent trading"],
+          "insight": "「自动化代运营 / 小企业落地」是变现向高热；n8n 是具体可抄的落地工具。"
+        },
+        {
+          "topic": "AI 编程",
+          "tags": ["常青"],
+          "items": ["ai coding agent", "ai coding tools", "ai coding workflow", "ai coding assistant"],
+          "insight": "编程 agent 是开发者最关心的效率话题，新手「可抄工作流」需求大。"
+        },
+        {
+          "topic": "AI 视频生成",
+          "tags": ["升温"],
+          "items": ["best ai video generator", "ai video generator free", "ai videos that look real", "ai video editing"],
+          "insight": "「以假乱真 + 免费方案」是病毒传播点，工具迭代快适合蹭热点。"
+        },
+        {
+          "topic": "Prompt / 上下文工程",
+          "tags": ["升温", "争议"],
+          "items": ["prompt engineering is dead", "prompt engineering vs context engineering", "prompt engineering for beginners"],
+          "insight": "「prompt 已死 / 上下文工程」是强势反常识钩子，适合观点型视频。"
+        }
+      ],
+      "trends": [
+        {"topic": "AI 工具变现", "signal": "下拉词 ai tools to make money / how to use ai to make money 高频出现", "type": "Rising / 升温", "note": "高度竞争但长尾极多，做「具体场景 + 算 ROI」可避同质。"},
+        {"topic": "大模型横评（GPT-5.6 / Gemini / Grok）", "signal": "chatgpt 5、chatgpt vs gemini、chatgpt vs grok 持续高频", "type": "Rising / 事件驱动", "note": "每次新模型发布即热点，横评类常青且易获搜索流量。"},
+        {"topic": "AI 智能体 / Agent（ChatGPT Work 2026-07 发布）", "signal": "ai agent n8n / ai agent trading / ai automation agency 上升", "type": "Rising / Breakout", "note": "新蓝海，原创空间大，竞品少。"},
+        {"topic": "AI 编程助手", "signal": "ai coding agent 持续稳定", "type": "常青", "note": "头部视频稳定获播放，需强原创角度避免同质。"},
+        {"topic": "AI 视频生成", "signal": "best ai video generator / ai videos that look real", "type": "Rising / 升温", "note": "讲「免费 / 以假乱真」易爆，工具迭代快需追新。"},
+        {"topic": "上下文工程", "signal": "prompt engineering is dead / context engineering 争议", "type": "Rising / 争议", "note": "反常识钩子强，适合做「真相」类观点视频。"}
+      ],
+      "painpoints": {
+        "headline": "「到底哪个 AI 真能帮我赚钱 / 省时间，而不是又交智商税？」",
+        "points": [
+          "下拉直接出现：ai tools to make money / how to use ai to make money",
+          "评论区反复出现：哪个 AI 工具值得付费？免费够用吗？agent 真能自动跑业务吗？",
+          "竞品视频多，但「按场景 + 算 ROI + 踩坑记录」的直观版本很少"
+        ],
+        "angles": [
+          {"problem": "免费 AI 工具和付费的到底差在哪？", "idea": "同一任务跑 5 个工具，对比产出质量 + 隐性时间成本，算清「省下的时间值不值订阅费」", "title": "I Tested 5 Paid AI Tools So You Don't Waste $100"},
+          {"problem": "agent 真能帮我自动跑业务吗？", "idea": "用 n8n / ChatGPT Work 搭一个真实自动化跑一周，如实记录踩坑与节省的时间", "title": "I Let an AI Agent Run My Side Hustle for 7 Days"},
+          {"problem": "GPT-5.6 和 Gemini / Grok 到底选谁？", "idea": "同一批真实 prompt 横评 3 家输出 + 价格，给出「谁更适合什么」", "title": "GPT-5.6 vs Gemini vs Grok: The Honest 2026 Showdown"}
+        ]
+      },
+      "screening": [
+        {"topic": "5 个付费 AI 工具实测（算 ROI / 智商税预警）", "source": "搜索建议 + 评论区", "hot": "是", "pain": "是", "original": "是", "verdict": "做"},
+        {"topic": "让 AI Agent 自动跑我的副业 7 天（n8n 实录）", "source": "搜索建议(ai automation agency) + 评论区", "hot": "是", "pain": "是", "original": "是", "verdict": "做"},
+        {"topic": "GPT-5.6 vs Gemini vs Grok 横评（同一 prompt）", "source": "搜索建议(chatgpt vs gemini) + 新模型热点", "hot": "是", "pain": "中", "original": "是", "verdict": "做"},
+        {"topic": "最好用的免费 AI 视频生成器（以假乱真）", "source": "搜索建议(best ai video generator)", "hot": "是", "pain": "是", "original": "中", "verdict": "做·需强角度"},
+        {"topic": "AI 编程 agent 工作流（新手可抄）", "source": "搜索建议(ai coding agent)", "hot": "是", "pain": "是", "original": "中", "verdict": "做"},
+        {"topic": "上下文工程 vs Prompt（「prompt 已死」真相）", "source": "搜索建议(prompt engineering is dead)", "hot": "是", "pain": "中", "original": "是", "verdict": "做"},
+        {"topic": "用 AI 赚钱的 N 种真实路子（避坑）", "source": "搜索建议(ai tools to make money)", "hot": "是", "pain": "是", "original": "中", "verdict": "做·需避收益保证红线"},
+        {"topic": "「某个 AI 必让你月入过万」类选题", "source": "热门标题", "hot": "是", "pain": "弱", "original": "否", "verdict": "不做"}
+      ],
+      "ratio": {
+        "ratios": [
+          {"pct": "60%", "name": "常青需求", "items": "AI 工具实测 / 编程提效 / 免费方案盘点 / 大模型横评"},
+          {"pct": "25%", "name": "热点解释", "items": "新模型发布(GPT-5.6) / Agent 新能力 / AI 视频爆款"},
+          {"pct": "15%", "name": "反常识 / 钱心理", "items": "「prompt 已死」 / AI 智商税 / 自动化能否真替代人力"}
+        ],
+        "compliance": [
+          "所有工具价格 / 能力回到官网核实（OpenAI、Google、xAI、各工具站），发布前确认最新版。",
+          "明确标注「教育 / 演示内容，不构成个别工具推荐或收益保证」。",
+          "不把任何频道的播放 / 收益等后台指标当已知事实，除非该频道本人公开。"
+        ]
+      }
+    },
+    {
+      "key": "finance",
+      "label": "金融 · 财经商业（美国观众）",
+      "handle": "@TheMoneyMoo",
+      "audience": "美国 YouTube 观众：个人投资者、关注美股 / 宏观 / 个人理财 / 退休 / 房产 / 加密的美国人",
+      "signals": [
+        {
+          "topic": "投资入门",
+          "tags": ["常青"],
+          "items": ["how to invest for beginners with little money", "how to invest in s&p 500", "how to invest in real estate", "how to invest in gold"],
+          "insight": "新手「小钱起步 + 具体标的」需求强，年度刷新词稳定。"
+        },
+        {
+          "topic": "信用卡债务",
+          "tags": ["升温", "痛点"],
+          "items": ["credit card debt is exploding", "credit card debt payoff strategy", "credit card debt consolidation", "credit card debt dave ramsey"],
+          "insight": "「exploding」痛点是媒体带动的高情绪词，脱债策略需求大。"
+        },
+        {
+          "topic": "退休储蓄",
+          "tags": ["常青", "焦虑升温"],
+          "items": ["retirement savings crisis", "retirement savings by age", "retirement savings at 40 / 50 / 60"],
+          "insight": "「按年龄算退休金」是高意图需求；crisis 焦虑词高频。"
+        },
+        {
+          "topic": "美联储 / 利率",
+          "tags": ["升温", "事件驱动"],
+          "items": ["fed rate cut", "fed rate decision", "fed rate cut explained", "fed rate cut impact on stock market"],
+          "insight": "降息叙事是月度热点，每次 FOMC 即流量窗口。"
+        },
+        {
+          "topic": "401k",
+          "tags": ["常青", "交叉痛点"],
+          "items": ["401k loan to pay off credit cards", "401k withdrawal to pay off debt", "401k vs roth ira", "401k is a scam"],
+          "insight": "「用 401k 清债」是蓝海交叉选题；「401k 是骗局」是反常识钩子。"
+        },
+        {
+          "topic": "指数基金 / 月股息",
+          "tags": ["常青"],
+          "items": ["index funds vs etf", "index funds vs mutual funds", "dividend etfs that pay monthly", "dividend investing for beginners"],
+          "insight": "对比类稳定；月股息是具体可落地的钩子。"
+        }
+      ],
+      "trends": [
+        {"topic": "信用卡债务", "signal": "下拉 credit card debt is exploding + NY Fed $1.26T(2026-08)、Fed 循环信用 $1.35T(2026-06)", "type": "Rising / 热点+常青", "note": "数据原创角度空间大，可做「爆炸」数据图。"},
+        {"topic": "指数基金 / 新手投资", "signal": "how to invest for beginners 年度刷新（2025/2026/little money）", "type": "常青高位", "note": "高度饱和，需强原创角度避免同质。"},
+        {"topic": "401k / 退休", "signal": "retirement savings crisis + 401k 余额波动", "type": "焦虑升温 + 常青", "note": "「按年龄算」竞争中等意图高；401k 清债蓝海。"},
+        {"topic": "美联储降息", "signal": "fed rate cut explained / impact on stock market（当前目标区间 3.50%-3.75%）", "type": "Rising / 事件驱动", "note": "每次 FOMC 即热点，需时效核实。"},
+        {"topic": "被动收入 / 月股息", "signal": "passive income ideas 2026 / dividend etfs that pay monthly", "type": "常青", "note": "2026 刷新词稳定，月股息是具体钩子。"},
+        {"topic": "加密", "signal": "crypto news today / crypto trading bot（高波动）", "type": "热点(高波动)", "note": "「必涨」类违规，只做教育解释。"}
+      ],
+      "painpoints": {
+        "headline": "「先还债还是先投资？」+「我的 401k 到底该不该动？」",
+        "points": [
+          "下拉直接出现：401k loan to pay off credit cards / 401k withdrawal to pay off debt",
+          "Reddit / 理财论坛反复：credit card debt vs investing which first",
+          "权威方（Fidelity、Investopedia）写过，但缺「用真实利率算清得失」的直观版本"
+        ],
+        "angles": [
+          {"problem": "Should I pay off debt or invest?", "idea": "用 22-25% 信用卡 APR 对比历史市场回报，算清「先还债几乎总赢」的边界条件", "title": "Investing vs Paying Off Debt: The Order That Saves You More Money"},
+          {"problem": "用 401k 贷款还清信用卡债该不该？", "idea": "算税、10% 罚款、错过的复利机会成本，给明确框架", "title": "Should You Use a 401k Loan to Kill Credit Card Debt?"},
+          {"problem": "401k 余额跌了 / 有人说「是骗局」？", "idea": "用 Fidelity 数据讲长期视角与费用真相，破除谣言", "title": "Your 401k Isn't a Scam — Here's the Math"}
+        ]
+      },
+      "screening": [
+        {"topic": "信用卡债务 vs 投资：先还债还是先投资（含 401k 清债）", "source": "搜索建议 + 评论区", "hot": "是", "pain": "是", "original": "是", "verdict": "做"},
+        {"topic": "信用卡债务为何「爆炸」：$1.26T 与逾期数据图", "source": "搜索建议 + NY Fed / FRED", "hot": "是", "pain": "是", "original": "是", "verdict": "做"},
+        {"topic": "低收入 / 小钱如何快速脱债（真实案例）", "source": "搜索建议", "hot": "是", "pain": "是", "original": "中", "verdict": "做"},
+        {"topic": "美联储降息对你的影响（explained + 股市 / 房贷）", "source": "搜索建议(fed rate) + FOMC", "hot": "是", "pain": "是", "original": "是", "verdict": "做"},
+        {"topic": "我需要多少钱退休（按年龄 40/50/60 自算）", "source": "搜索建议", "hot": "是", "pain": "是", "original": "是", "verdict": "做"},
+        {"topic": "401k 余额波动 / 「是骗局」真相", "source": "搜索建议 + 评论区", "hot": "是", "pain": "是", "original": "是", "verdict": "做"},
+        {"topic": "指数基金 vs ETF vs 共同基金（对比表）", "source": "搜索建议", "hot": "是", "pain": "中", "original": "中", "verdict": "做"},
+        {"topic": "月股息 ETF 组合（被动收入 2026）", "source": "搜索建议(dividend / monthly)", "hot": "是", "pain": "是", "original": "中", "verdict": "做"},
+        {"topic": "用 $1,000 怎么开始投资（新手）", "source": "搜索建议", "hot": "是", "pain": "是", "original": "中", "verdict": "做·需强角度"},
+        {"topic": "「某只股票 / 币必涨」类选题", "source": "热门标题", "hot": "是", "pain": "弱", "original": "否", "verdict": "不做"}
+      ],
+      "ratio": {
+        "ratios": [
+          {"pct": "60%", "name": "常青需求", "items": "脱债计划 / 新手投资 / 指数基金 / 按年龄算退休 / 月股息"},
+          {"pct": "25%", "name": "热点解释", "items": "信用卡债务爆炸 / 美联储降息 / 401k 波动"},
+          {"pct": "15%", "name": "钱心理 / 反常识", "items": "先还债还是先投资 / 401k 是骗局真相"}
+        ],
+        "compliance": [
+          "所有数字回一手来源核对：FRED、Federal Reserve、NY Fed、Fidelity、SEC。",
+          "明确标注「教育内容，不构成个别投资建议」。",
+          "不把公开频道的播放 / 收益等后台指标当已知事实，除非该频道本人公开。"
+        ]
+      }
+    }
+  ]
+}
