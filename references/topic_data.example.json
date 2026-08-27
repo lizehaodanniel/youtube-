@@ -132,17 +132,17 @@
         }
       ],
       "painpoints": {
-        "headline": "「到底哪个 AI 真能帮我赚钱 / 省时间，而不是又交智商税？」",
+        "headline": "“我知道 AI 能做事，但我不知道能交付什么、怎么报价、怎么拿到第一单？”",
         "points": [
           "下拉直接出现：ai tools to make money / how to use ai to make money",
-          "评论区反复出现：哪个 AI 工具值得付费？免费够用吗？agent 真能自动跑业务吗？",
-          "竞品视频多，但「按场景 + 算 ROI + 踩坑记录」的直观版本很少"
+          "评论区真正卡住的不是“哪个工具最强”，而是“我能用这工具给客户交付什么具体文件？”",
+          "泛泛的 AI 赚钱视频缺少完整案例：需求单 → 生成 → 人工修改 → 导出 → 报价 → 交付"
         ],
         "angles": [
           {
-            "problem": "免费 AI 工具和付费的到底差在哪？",
-            "idea": "同一任务跑 5 个工具，对比产出质量 + 隐性时间成本，算清「省下的时间值不值订阅费」",
-            "title": "I Tested 5 Paid AI Tools So You Don't Waste $100"
+            "problem": "哪个付费 AI 工具真的值得订阅、哪个只是智商税？",
+            "idea": "把问题落到一个能验收的服务：用 ChatGPT、Canva、CapCut 做 7 张社媒图 + 7 条文案 + 1 条短视频，展示完整制作、时间成本和报价边界。",
+            "title": "I Used 3 AI Tools to Build a $100 Social Media Package"
           },
           {
             "problem": "哪个付费 AI 工具真的值得订阅、哪个是智商税？",
@@ -158,8 +158,8 @@
       },
       "screening": [
         {
-          "topic": "5 个付费 AI 工具实测（算 ROI / 智商税预警）",
-          "source": "搜索建议 + 评论区",
+          "topic": "用 ChatGPT + Canva + CapCut 做一个 $100 社媒服务包（全流程实操）",
+          "source": "搜索建议(ai tools to make money) + 评论区",
           "hot": "是",
           "pain": "是",
           "original": "是",

@@ -99,7 +99,14 @@ push_webhook.py report.html topic_data.json       (推送摘要到飞书/企微)
   "topic_cn": "中文副标题",
   "host": "人设描述（口语化）",
   "host_note": "（重要）本包与另一频道人设的差异点，避免 drift",
+  "character_card": "虚拟主人公/画面一致性规范",
   "decision": "为什么选这个题（来自哪条下拉词/痛点）",
+  "operator_breakdown": {
+    "retention_curve": "设局→冲突→实操→结果→CTA",
+    "emotion_triggers": ["时间点+情绪"],
+    "demand_anchor": "搜索/评论区需求",
+    "operator_checklist": ["具体执行规则"]
+  },
 
   "hook": "主用 Hook（英文，黄金前 15 秒）",
   "hook_zh": "主用 Hook 中文",
@@ -117,6 +124,13 @@ push_webhook.py report.html topic_data.json       (推送摘要到飞书/企微)
       "en": "英文口播（词数 ≈ 时长×2.4）",
       "zh": "中文翻译",
       "viz": "分镜/情绪（给拍摄看）",
+      "demo": {
+        "need": true,
+        "label": "必须实操：这一段要展示什么",
+        "screen": "具体软件/网页/文件",
+        "steps": ["点击/输入/修改/导出步骤"],
+        "proof": "观众如何验收结果"
+      },
       "img_en": "Midjourney 英文提示词 --ar 16:9 --v 6.0",
       "img_zh": "中文提示词"
     }
@@ -124,6 +138,10 @@ push_webhook.py report.html topic_data.json       (推送摘要到飞书/企微)
   ],
 
   "emotion_arc": "Hook(...) → 价值承诺 → 痛点 → 核心 → 金句+CTA",
+  "reference_videos": [
+    {"title":"可借鉴视频/搜索页", "url":"https://www.youtube.com/results?search_query=...", "use_for":"借鉴实操镜头结构", "do_not_copy":"不复制台词和案例"}
+  ],
+  "source_links": [{"label":"一手来源", "url":"https://..."}],
   "thumbs": [                        // A/B 两版封面
     { "ver":"A", "desc":"（视觉概念）", "img_en":"...", "img_zh":"..." },
     { "ver":"B", "desc":"...", "img_en":"...", "img_zh":"..." }

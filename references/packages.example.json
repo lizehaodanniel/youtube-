@@ -3,279 +3,612 @@
     {
       "channel_key": "ai",
       "channel_label": "AI · 科技数码 (@AIcheatcodeplaybook)",
-      "topic": "I Tested 5 Paid AI Tools to Make Money — Only 2 Actually Paid For Themselves",
-      "topic_cn": "我花 240 刀实测 5 个『能搞钱』的付费 AI 工具：只有 2 个真回本",
-      "host": "你本人（AI 频道人设：休闲帽衫、语速快、手势多、口语化、像跟朋友吐槽）。不参考金融包 host。",
-      "host_note": "AI 包沿用频道自身休闲帽衫创作者人设；与金融包（沉稳衬衫教育者）完全错开。本包选题从之前的 n8n/LLM agent 高门槛方向，换成『AI 工具实测搞钱』——具体、能拍、观众一眼看懂，创作者本人也能真的买 5 个工具实测，不再踩『看不懂』的雷。",
-      "decision": "为什么选它：来自 AI 面板真实下拉词 ai tools to make money / how to use ai to make money（高频痛点），且『哪个付费 AI 工具真的值得订阅』是评论区反复出现的问题。相比此前 n8n agent 选题，这个方向具体、可实操、观众一眼能懂，最容易出爆款且最不易踩雷。",
-      "hook": "I spent $240 on five AI tools that all promise to make you money. Three were a total waste. Two actually paid for themselves — and one free tool beat a $40-a-month paid one. Here's the exact breakdown, with receipts.",
-      "hook_zh": "我花了 240 刀买了 5 个都说能帮你搞钱的 AI 工具。3 个纯纯智商税，2 个真回本了——其中还有一个免费工具，吊打了 40 刀/月的付费版。下面是带账单的完整拆解。",
+      "topic": "I Used 3 AI Tools to Build a $100 Social Media Package — Here's the Exact Workflow",
+      "topic_cn": "我用 3 个 AI 工具做出一个 100 美元社媒服务包：从零到交付",
+      "host": "你本人：休闲帽衫、语速快、像在给朋友现场演示；全程打开真实工具和文件，不用抽象术语。",
+      "host_note": "AI 包不再讲 n8n、LLM、agent 等观众难懂的后台概念，改成人人看得懂的具体结果：7 张社媒图 + 7 条文案 + 1 条短视频。工具只用 ChatGPT、Canva、CapCut 三个大众工具；每个关键步骤都标注必须录屏的实操画面。金融包则保持沉稳的金融教育者人设。",
+      "decision": "为什么选它：来自 AI 面板真实下拉词 ai tools to make money / how to use ai to make money，但把泛泛的“用 AI 赚钱”压缩成一个可拍、可验证、观众看得懂的服务案例。视频不承诺收入；只展示如何把一个具体交付物做出来、如何算成本、如何写一封不骚扰的报价邮件，让观众能复刻流程。",
+      "character_card": "虚拟主人公：30 岁左右的独立创作者，黑色帽衫，短深色头发，明亮 RGB 工作室；语气像朋友现场拆解，不装专家。屏幕录制时保持同一桌面和同一文件命名。",
+      "hook": "I used ChatGPT, Canva, and CapCut to build a real social-media package I could offer to a local business for $100. No AI agency, no coding, no magic automation. You'll see the brief, the prompts, the files, the time it took, and the exact message I would send to a real client.",
+      "hook_zh": "我用 ChatGPT、Canva 和 CapCut，做了一套可以报价 100 美元给本地商家的真实社媒服务包。不做 AI agency，不写代码，也没有魔法自动化。你会看到客户需求、提示词、成品文件、耗时，以及我会发给真实客户的报价信息。",
       "hook_options": [
         {
           "type": "痛点暴击",
-          "label": "戳中『每月被 AI 订阅吸血』",
-          "en": "If you're paying twenty, forty, sixty dollars a month for AI tools that promise to make you rich, and you're still living paycheck to paycheck, you're not using AI to make money — you're paying a subscription fee to feel like you are. I stopped guessing and tested five of them for real.",
-          "zh": "如果你每个月都在给那些『能让你搞钱』的 AI 工具交 20、40、60 刀的订阅费，结果你还是靠工资过日子——你不是在用 AI 搞钱，你是在交一笔『感觉自己在搞钱』的订阅税。我不再瞎猜，直接实测了 5 个。"
+          "label": "戳中『看了很多 AI 赚钱视频，却不知道第一单交付什么』",
+          "en": "If you've watched twenty videos about making money with AI but still couldn't tell a client what you actually sell, this is the missing piece. I'm building one specific $100 deliverable from a blank page, and I'm showing every file instead of reading you another list of tools.",
+          "zh": "如果你看了 20 个『用 AI 赚钱』的视频，却还是说不清楚自己到底卖给客户什么，这就是缺的那一块。我从一张白纸做出一个具体的 100 美元交付包，所有文件都给你看，不再念一串工具名单。"
         },
         {
           "type": "反常识悬念",
-          "label": "打破『付费=更好』",
-          "en": "Everyone sells you the $40-a-month AI tool that'll make you rich. I bought five of the most hyped ones, ran them for thirty days, and the free tool beat two of the paid ones. The expensive one was the worst. Here's what actually happened.",
-          "zh": "所有人都向你推销那个 40 刀/月、能让你暴富的 AI 工具。我买了 5 个最火的，实跑 30 天，结果免费工具吊打了其中两个付费的。最贵的那个反而最坑。下面是真实发生的事。"
+          "label": "打破『AI 工具越多越能赚钱』",
+          "en": "You do not need ten AI tools to start a side hustle. I used three familiar tools to build seven branded posts and one short video for a $100 offer. The hard part wasn't the prompt. It was turning the output into something a real business could use tomorrow.",
+          "zh": "开始一项 AI 副业，你不需要 10 个 AI 工具。我只用 3 个常见工具，做出 7 张有品牌感的帖子和 1 条短视频，组成一个 100 美元服务包。难点不是提示词，而是把输出变成一家真实商家明天就能用的东西。"
         },
         {
           "type": "利益诱惑",
-          "label": "240 刀换一份避坑账本",
-          "en": "I burned $240 and thirty days testing five paid AI money-making tools so you don't have to. The result: three cancellations, two keepers, and one free tool that outperformed a paid one. Here's the full ledger, down to the cent.",
-          "zh": "我花了 240 刀和 30 天，实测 5 个付费 AI 搞钱工具，就为了让你不用踩坑。结果：3 个退订、2 个留下、1 个免费工具比付费的还猛。下面是精确到分的完整账本。"
+          "label": "明确交付物、报价、耗时",
+          "en": "In this video I'll build a complete $100 social-media starter pack in one afternoon: seven posts, seven captions, one short video, and a clean delivery folder. You'll see the exact prompts, the edits, the time log, and the client message you can adapt.",
+          "zh": "这条视频里，我会用一个下午做出一套完整的 100 美元社媒起步包：7 张帖子、7 条文案、1 条短视频和一个整洁的交付文件夹。你会看到完整提示词、修改过程、时间记录，以及可以改写的客户消息。"
         }
       ],
       "titles": [
-        "I Tested 5 Paid AI Tools to Make Money — Only 2 Actually Paid For Themselves",
-        "Stop Paying for AI Tools That Don't Make You Money (I Learned the Hard Way)"
+        "I Used 3 AI Tools to Build a $100 Client Package (Exact Workflow)",
+        "Stop Saying 'Make Money With AI' — Sell This One Simple Deliverable"
       ],
+      "operator_breakdown": {
+        "retention_curve": "0–15s 先亮最终交付物和报价；15–45s 展示观众会拿到哪些文件；45s–2:00 代入『看了很多教程仍不知道卖什么』；2:00–5:45 三个工具逐一实操，每分钟公布一个实际结果或返工；5:45–6:30 算时间成本与报价边界；6:30–7:00 给模板与明确 CTA。",
+        "emotion_triggers": [
+          "00:00 好奇：100 美元服务包到底长什么样",
+          "00:45 共鸣：订阅很多工具却没有交付物",
+          "02:30 掌控感：屏幕上真的做出第一张图",
+          "04:45 反转：第一次 AI 输出不能直接交付，必须改",
+          "06:15 解脱：用时间成本而不是幻想收入定价"
+        ],
+        "demand_anchor": "AI tools to make money / how to use AI to make money；具体痛点是『我有工具，但没有可以卖给客户的成品』。",
+        "operator_checklist": [
+          "开场 3 秒先展示成品文件夹和 $100，不先讲工具历史",
+          "所有收入都说成报价/实验，不承诺必赚",
+          "每个工具必须录真实屏幕：输入、输出、修改、导出",
+          "展示至少一次 AI 失败并解释为什么不能原样交付",
+          "报价前展示成本：工具月费、耗时、修改轮次、交付范围",
+          "不批量骚扰商家；只做一封个性化示例邮件并说明先征得同意"
+        ]
+      },
       "script": [
         {
           "t": "00:00-00:10",
-          "en": "I spent $240 on five AI tools that all promise to make you money. Three were a total waste. Two actually paid for themselves — and one free tool beat a $40-a-month paid one. Here's the exact breakdown, with receipts.",
-          "zh": "我花了 240 刀买了 5 个都说能帮你搞钱的 AI 工具。3 个纯纯智商税，2 个真回本了——其中还有一个免费工具，吊打了 40 刀/月的付费版。下面是带账单的完整拆解。",
-          "viz": "对镜头直说，手比 5 根手指，哭笑不得的表情",
-          "img_en": "Casual creator in black hoodie, hand showing five fingers, wry half-laughing expression, close-up face with LED bokeh, ultra-detailed 8k cinematic --ar 16:9 --v 6.0",
-          "img_zh": "休闲帽衫创作者，手比五根手指，哭笑不得的表情，脸部特写带 LED 虚化背景，超精细 8k 电影感 --ar 16:9 --v 6.0"
+          "en": "I used ChatGPT, Canva, and CapCut to build a real social-media package I could offer to a local business for $100. No coding, no agency jargon. You'll see the brief, the prompts, the files, the time log, and the exact client message.",
+          "zh": "我用 ChatGPT、Canva 和 CapCut 做了一套可以报价 100 美元给本地商家的真实社媒服务包。不写代码，不讲 agency 黑话。你会看到需求单、提示词、文件、时间记录和完整报价消息。",
+          "viz": "先把最终文件夹拖进画面：7 张 PNG、7 条文案、1 个 MP4、报价单；主持人指向文件名",
+          "img_en": "Casual black-hoodie creator pointing at a desktop folder containing seven social post PNGs, seven captions, one MP4 and a $100 quote sheet, close-up studio shot, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "黑色帽衫创作者指向桌面文件夹，里面有 7 张社媒 PNG、7 条文案、1 个 MP4 和 100 美元报价单，工作室近景，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：先展示最终交付物",
+            "screen": "Finder/文件管理器 + 报价单",
+            "steps": [
+              "打开最终交付文件夹",
+              "依次点开 7 张图、文案文档、MP4",
+              "把报价单放在旁边，标出交付范围"
+            ],
+            "proof": "观众在前 10 秒看到不是概念，而是一套具体文件。"
+          }
         },
         {
           "t": "00:10-00:25",
-          "en": "By the end of this video you'll see the exact five tools I tested, what each one claims to do, which three I already cancelled, which two I'm keeping, and the free tool that quietly outperformed a paid one. Real accounts, real cancellations, zero affiliate links — I'm not getting paid to say any of this.",
-          "zh": "看完这条视频，你会看到我实测的这 5 个工具到底是什么、各自号称能干什么、我已经退掉哪 3 个、留下哪 2 个，还有那个悄悄吊打付费版的免费工具。真实账号、真实退订、零 affiliate 链接——我说这些没人给我一分钱。",
-          "viz": "屏幕显示 5 个工具图标，部分标退订/保留",
-          "img_en": "Over-shoulder shot of creator pointing at screen with 5 app icons, some tagged CANCEL some KEEP, neon teal accents, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "过肩镜头，创作者指向屏幕里 5 个 App 图标，部分标『退订』部分标『保留』，霓虹青色点缀，超精细 8k --ar 16:9 --v 6.0"
+          "en": "By the end, you'll know how to turn a vague request like 'help me get more customers' into one small offer: seven branded posts, seven usable captions, and one thirty-second video. I'll build it for a fictional neighborhood coffee shop, show every edit I make, and calculate whether the $100 price even makes sense after my time and software costs.",
+          "zh": "看完你会知道，怎么把『帮我多获客』这种模糊需求，变成一个小而清楚的服务：7 张品牌化帖子、7 条能直接用的文案和 1 条 30 秒视频。我会给一家虚构的社区咖啡店做完整案例，展示每次修改，还会扣掉时间和软件成本，算清 100 美元到底合不合理。",
+          "viz": "屏幕左边显示模糊需求，右边变成三项交付清单；用箭头连接",
+          "img_en": "Screen recording showing a vague coffee shop request transformed into a three-item deliverables checklist, creator pointing between columns, clean dark interface, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "屏幕录制：把模糊的咖啡店需求变成三项交付清单，创作者在两列之间指示，简洁深色界面，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：把需求拆成交付清单",
+            "screen": "Notion/Google Docs 需求单",
+            "steps": [
+              "输入客户原话：想要更多到店客人",
+              "圈出目标受众、活动、品牌语气三个变量",
+              "写成 7 posts + 7 captions + 1 short 的交付范围"
+            ],
+            "proof": "展示服务不是『帮你用 AI』，而是客户拿得到的文件。"
+          }
         },
         {
           "t": "00:25-01:15",
-          "en": "Here's the trap I was in, and maybe you are too. Every single week a new AI tool drops with a thumbnail screaming 'make ten thousand dollars with AI' or 'this one tool replaced my whole job.' So I'd sign up, pay the free trial, forget to cancel, and a month later there's another twenty bucks gone that I genuinely cannot explain. By January I was paying for seven different AI subscriptions at once, and not one of them had made me a single actual dollar. I wasn't running a business. I was collecting receipts for somebody else's startup. That's the exact moment I stopped trusting the marketing and decided to test, for real, what these tools actually do when you actually use them.",
-          "zh": "先说我掉进的坑，可能你也在里面。每周都有新 AI 工具冒出来，缩略图写着『用 AI 月入一万刀』『这一个工具替你干了全公司的活』。于是我注册、付试用、忘记取消，一个月后又是 20 刀莫名其妙没了。到一月份我同时在付 7 个 AI 订阅，没一个真给我赚到一毛钱。我不是在搞事业，我是在给别人的创业公司攒收据。就是那一刻我决定不再信营销，真的去测这些工具到底能干嘛。",
-          "viz": "手机里一排 AI 订阅扣款通知，创作者扶额",
-          "img_en": "Phone screen full of AI subscription charge notifications, creator hand on forehead, dim warm 2am room, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "手机屏幕满是 AI 订阅扣款通知，创作者手扶额，凌晨昏暗暖光房，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Most people get stuck here. They buy another AI subscription, watch another tutorial, and still have nothing to sell. The problem is not a lack of tools. It is that 'make money with AI' is not an offer. A local business cannot buy a tool list from you. It can buy seven posts for next week's promotion. So I am setting three rules before I touch any AI: one audience, one business problem, and one delivery folder. No promise of viral reach, no promise of guaranteed sales, and no pretending the AI draft is client-ready. That constraint is what makes this experiment useful, because if the work cannot survive a simple client review, it is not a business offer yet.",
+          "zh": "大多数人就卡在这里。他又买一个 AI 订阅，又看一个教程，最后还是没有任何能卖的东西。问题不是工具不够，而是『用 AI 赚钱』根本不是一个服务报价。本地商家买的不是一串工具名单，而是下周活动要用的 7 张帖子。所以我在打开 AI 前先定 3 条规则：一个受众、一个生意问题、一个交付文件夹。不承诺爆款，不承诺保证成交，也不把 AI 初稿冒充客户可交付稿。这些限制才让实验有用——如果一份作品经不起简单的客户审核，它还不是生意。",
+          "viz": "黑板写三条规则：Audience / Problem / Deliverables；划掉 Make Money With AI",
+          "img_en": "Black hoodie creator writing three rules on a whiteboard: one audience, one problem, one delivery folder, the phrase 'make money with AI' crossed out, cinematic studio, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "黑色帽衫创作者在白板写三条规则：一个受众、一个问题、一个交付文件夹，划掉『用 AI 赚钱』，电影感工作室，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：创建案例需求单",
+            "screen": "Google Docs/Notion",
+            "steps": [
+              "新建文件：Coffee Shop Content Sprint",
+              "填写受众：附近上班族和学生",
+              "填写问题：下周新品冷萃需要 7 天社媒内容",
+              "锁定交付物和不包含的事项"
+            ],
+            "proof": "这一步把抽象题目变成可以验收的任务。"
+          }
         },
         {
           "t": "01:15-02:30",
-          "en": "Here are the five tools, in the order I bought them. Tool one, a twenty-nine-dollar-a-month AI writing assistant that promises to write your client emails and land you freelance gigs. Tool two, a thirty-nine-dollar AI video generator that claims to make faceless YouTube videos while you sleep. Tool three, a nineteen-dollar AI resume and cover-letter builder for job hunts. Tool four, a forty-nine-dollar 'AI business in a box' that says it'll build you a whole online store with one prompt. And tool five, a completely free AI spreadsheet analyzer I threw in as my control group. My test method was deliberately simple and fair: for thirty full days I used each tool for its exact advertised job, tracked every hour it saved me and every dollar it earned me, and wrote down what really happened. No tricks, no scripting the outcome. Just honest daily use. Let me walk you through what each one actually did, starting with the most disappointing.",
-          "zh": "这 5 个工具，按我买的顺序。第一个，29 刀/月的 AI 写作助手，号称帮你写客户邮件、接自由职业活。第二个，39 刀的 AI 视频生成器，号称你睡着它替你做无人出镜 YouTube。第三个，19 刀的 AI 简历/求职信生成器。第四个，49 刀的『AI 一键开店盒子』，说一个 prompt 就给你搭好网店。第五个，一个完全免费的 AI 表格分析器，我拿来当对照组。我的测试方法故意简单公平：整整 30 天，每个工具只干它广告里说的那个活，记录省下的每一小时和赚到的每一块钱，把真实发生的事写下来。不耍花招，不篡改结果，就是老实用。下面从最让人失望的那个讲起。",
-          "viz": "屏幕列出 5 个工具卡片带价格，鼠标依次点亮",
-          "img_en": "Screen showing 5 tool cards in a row with prices, mouse cursor tracing through them, dark IDE background neon teal, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "屏幕里横排 5 张工具卡片带价格，鼠标依次划过，深色 IDE 背景霓虹青，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Tool one is ChatGPT, but I am not asking it to 'write viral posts.' I paste a short brief: the shop sells cold brew, opens at seven, has a student discount on Tuesdays, and wants people within two miles to visit next week. Then I ask for seven post ideas in a table with five columns: hook, customer situation, one proof point, call to action, and what the owner must verify. I reject any line that invents a review, a price, or a health claim. Then I choose three ideas and ask for captions in the shop's plainspoken voice. Watch the screen: first output, red corrections, final version. The value is not the first paragraph ChatGPT gives me. The value is the repeatable brief-to-draft process and the fact that I manually check every claim before a client sees it. For the screen recording, pause after the first output and zoom in on one bad sentence. Show the prompt change, regenerate only that row, and compare the two versions side by side. That small correction is the skill a client pays for.",
+          "zh": "第一个工具是 ChatGPT，但我不会对它说『写 7 条爆款帖子』就结束。我先贴一份短需求：咖啡店卖冷萃，早上 7 点开门，周二有学生折扣，希望下周吸引两英里内的人到店。然后要求它用表格给出 7 个选题，列出钩子、客户场景、一个可验证信息、行动号召和老板必须核实的地方。凡是编造评价、价格或健康功效的句子全部删掉。再挑 3 条，让它改成店铺的日常口吻。屏幕上要展示：第一版、红色修改、最终版。价值不是 ChatGPT 第一段废话，而是可重复的『需求到初稿』流程，以及每个事实都人工核对。录屏时，第一版输出后暂停，放大一条有问题的句子。展示你怎么改提示词、只重新生成那一行，再把前后两版并排比较。客户真正愿意付钱的，正是这种小而明确的修改能力。",
+          "viz": "屏幕录制 ChatGPT：粘贴 brief → 生成表格 → 标红虚构内容 → 重写 3 条 caption",
+          "img_en": "Screen recording of ChatGPT with a coffee shop brief, seven-row content table, red annotations crossing out invented claims, creator typing a revision prompt, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "屏幕录制 ChatGPT：咖啡店需求、7 行内容表、红色批注划掉虚构说法，创作者输入修改提示词，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：ChatGPT 从 brief 生成可审核文案",
+            "screen": "ChatGPT 对话窗口",
+            "steps": [
+              "粘贴咖啡店 brief",
+              "要求输出 hook / 场景 / 证据 / CTA / 待核实字段",
+              "把虚构评价、价格、功效逐条标红",
+              "选 3 条生成最终 caption 并复制到文案表"
+            ],
+            "proof": "展示提示词、输出、人工改稿三步，观众能照抄工作流。"
+          }
         },
         {
           "t": "02:30-03:45",
-          "en": "Tool one, the writing assistant — total waste. It produced emails that sounded like a robot pretending to be confident, and two of my clients literally asked if I'd been replaced by software. Zero freelance gigs landed. Tool three, the resume builder — also a waste. It spat out a generic template I ended up rewriting from scratch anyway, so it saved me nothing and just cost me nineteen dollars. And tool four, the forty-nine-dollar business-in-a-box, was the biggest letdown of all. It generated a storefront stuffed with placeholder products and a checkout button that didn't even work, and when I messaged support they sent me a link to a YouTube tutorial. I paid forty-nine dollars a month to be told to watch a video. So there it is: three tools, a hundred and seven dollars a month combined, and not one single dollar earned back. That's the part that should make you a little angry.",
-          "zh": "第一个，写作助手——纯浪费。它写的邮件像机器人假装自信，两个客户直接问我是不是被软件取代了。零单自由职业。第三个，简历生成器——也浪费。吐出来一个通用模板，我最后还是从头重写，啥也没省，白交 19 刀。最坑的是第四个，49 刀的开店盒子。它生成的店铺塞满占位商品，结账按钮根本点不动，我找客服，对方丢给我一个 YouTube 教程链接。我一个月交 49 刀，就为了被人叫去看视频。所以结论：3 个工具，一个月合计 107 刀，一分钱没赚回来。这地方该让你有点火大。",
-          "viz": "分屏：3 张红 X 收据 vs 退订页面，翻白眼",
-          "img_en": "Split screen three red-X receipts labeled $29/$19/$49 vs a cancellation page, creator rolling eyes, dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "分屏：三张红 X 收据标 29/19/49 刀 vs 退订页面，创作者翻白眼，深色 UI，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Now I move to Canva. I create one 1080-by-1080 template with the shop's two colors, one typeface, the logo in the same corner, and a reserved area for the offer. I do not generate seven random designs. I duplicate the template seven times and change only the photo, headline, and call to action. On screen, you should see me import one real product photo, remove a distracting background, adjust the headline so it is readable on a phone, and export the seven files with clean names: 01-monday-cold-brew.png through 07-sunday-reminder.png. If the design needs a stock photo, I label it. If the shop has no permission to use an image, I do not put it in the client folder. This is where the output becomes a usable asset instead of an AI mood board. I also create a tiny approval checklist beside the Canva file: logo correct, colors correct, offer correct, spelling checked, image licensed. If one box is empty, the page is not finished. The checklist prevents a pretty design from becoming an embarrassing client delivery.",
+          "zh": "现在打开 Canva。我先做一个 1080×1080 模板：店铺两种主色、一个字体、Logo 固定在同一角落，留出活动信息位置。我不生成 7 张随机图，而是复制模板 7 次，只替换照片、标题和 CTA。屏幕要拍到：导入一张真实产品照片、去掉干扰背景、把标题改到手机上能看清，再按 01-monday-cold-brew.png 到 07-sunday-reminder.png 规范导出。如果需要图库图，就标明来源；如果店里没有授权，就不放进交付文件夹。这里才是把 AI 草稿变成可用素材，而不是一堆灵感图。我还会在 Canva 文件旁边建一张很小的验收清单：Logo 对不对、颜色对不对、活动信息对不对、拼写检查没有、图片有授权没有。只要有一格没勾，这页就不算完成。它能防止漂亮设计变成尴尬交付。",
+          "viz": "Canva 录屏：建品牌模板 → 导入照片 → 复制 7 页 → 手机预览 → 批量导出",
+          "img_en": "Canva screen recording with a square coffee shop template, two-color brand palette, logo corner, seven duplicated pages and a phone preview, creator adjusting typography, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "Canva 屏幕录制：方形咖啡店模板、双色品牌调色板、固定 Logo 角落、复制出的 7 页和手机预览，创作者调整字体，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：Canva 做出 7 张可交付图片",
+            "screen": "Canva 编辑器 + 手机预览",
+            "steps": [
+              "新建 1080×1080 画布",
+              "设置 2 个品牌色和 1 个字体",
+              "放入 Logo 和一张已获授权的产品图",
+              "复制页面 7 次，分别替换 headline / photo / CTA",
+              "手机预览后导出并规范命名"
+            ],
+            "proof": "至少展示 1 张从空白到成品的完整过程，其余 6 张展示复制和改内容。"
+          }
         },
         {
           "t": "03:45-05:00",
-          "en": "Now the two that actually paid for themselves. Tool two, the thirty-nine-dollar video generator — this one genuinely earned its keep. I used it to produce five short faceless videos for a tiny affiliate page I'd abandoned, and two of them started trickling in around forty dollars in commission over the month. Not life-changing money, but it more than covered its own subscription. But the real shock was tool five, the free spreadsheet analyzer. I fed it my affiliate earnings and my ad spend, and within seconds it flagged a tracking mistake that had been quietly draining about sixty dollars a month from me for almost a year. The free tool caught a leak that the paid forty-nine-dollar 'business in a box' never even mentioned. So here's the final scoreboard: two tools paid off, the free one beat a paid one, and I'm hitting cancel on the other three right after this video.",
-          "zh": "现在说那两个真回本的。第二个，39 刀的视频生成器——这个真值回票价。我用它给我一个荒废的小联盟页做了 5 条无人出镜短视频，其中 2 条一个月陆续带来约 40 刀佣金。不算改变人生，但够 cover 它自己的订阅还有余。真正的震惊是第五个，免费的表格分析器。我把联盟收入和广告支出喂进去，它几秒就揪出一个追踪错误——这个错误悄悄每个月吞掉我约 60 刀，快一年了。免费工具发现的漏洞，那个 49 刀『开店盒子』提都没提。最终战绩：2 个回本、免费的干翻付费的、剩下 3 个我今天就退订。",
-          "viz": "左手举『+40 佣金』便签，右手举『免费工具赢』卡片",
-          "img_en": "Creator holding '+$40 commission' sticky in left hand and 'FREE tool wins' card in right, confident smile, dark studio RGB, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "创作者左手举『+40 刀佣金』便签、右手举『免费工具赢』卡片，自信微笑，深色 RGB 工作室，超精细 8k --ar 16:9 --v 6.0"
+          "en": "The third tool is CapCut, and this is where I make one asset a client can actually post. I import three phone clips: pouring the cold brew, opening the shop door, and a close-up of the finished cup. I cut the first second so the cup appears immediately, add on-screen text that matches the offer, generate captions, and remove any sentence the auto-caption tool gets wrong. Then I export a thirty-second vertical video and check it on my phone with the sound off. The failure point is important: AI can assemble a video, but it cannot know whether the product name, price, or opening hours are correct. I keep the project file, the MP4, and a plain text caption together. That is the difference between demonstrating a tool and demonstrating a deliverable. Before exporting, I show the raw clip, the timeline, the caption correction, and the final phone preview as four separate cuts. That lets the audience verify the transformation instead of trusting a polished montage. It also tells a future client exactly what they are buying: edited media, not an AI button.",
+          "zh": "第三个工具是 CapCut，我要做出一个客户真能发布的素材。我导入 3 段手机视频：倒冷萃、推开店门、成品杯特写。第一秒就让杯子出现，加入和活动一致的屏幕文字，生成字幕，再把自动字幕里错的句子全部改掉。导出 30 秒竖屏视频后，用手机静音检查一遍。这里的失败点很重要：AI 可以帮你拼视频，但不知道商品名、价格和营业时间是不是正确。我把工程文件、MP4 和纯文本文案放在一起交付。这就是『演示工具』和『演示交付物』的区别。导出前，我会把原始素材、时间线、字幕纠错和手机最终预览剪成 4 个独立镜头。观众能验证素材怎样变成成品，而不是只相信一段精修混剪。对未来客户来说也很清楚：他买的是编辑后的媒体文件，不是一个 AI 按钮。",
+          "viz": "CapCut 录屏：导入 3 段素材 → 剪掉前 1 秒空镜 → 自动字幕 → 手动纠错 → 静音手机检查 → 导出",
+          "img_en": "CapCut editing timeline with three coffee shop phone clips, auto captions being corrected manually, vertical 9:16 preview on a smartphone, creator hand on mouse, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "CapCut 剪辑时间线：3 段咖啡店手机素材、正在手动修正自动字幕、手机里预览 9:16 竖屏，创作者手握鼠标，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：CapCut 从素材到可发布短视频",
+            "screen": "CapCut 时间线 + 手机静音预览",
+            "steps": [
+              "导入 3 段手机素材",
+              "第一秒放产品画面",
+              "加入 CTA 和自动字幕",
+              "逐句核对商品名/价格/营业时间",
+              "静音看一遍后导出 MP4 和工程文件"
+            ],
+            "proof": "必须展示至少一次字幕纠错和手机静音检查。"
+          }
         },
         {
           "t": "05:00-06:15",
-          "en": "So what's the actual rule for not lighting money on fire with AI tools? Here's what thirty days taught me. First, if a tool promises to make you money without you doing any of the work, it is lying to your face — every single tool that paid off simply saved me time on work I was already doing, not one of them magically printed cash. Second, always keep one free tool as your control group, because the paid ones are literally counting on you never running the comparison. And third, the part that really stings: the most expensive tool was the worst value, not the best. So before you subscribe to anything, ask yourself one brutal question — 'What specific task am I already doing that this thing will actually save me time on?' If you cannot name that task in five seconds, that is your answer, and it's don't buy. The AI gold rush is absolutely real, but most of the gold is being sold, not found.",
-          "zh": "那到底怎么才能不在 AI 工具上烧钱？30 天教会我三件事。第一，凡是号称『不用你干活就能搞钱』的工具，都是在当面骗你——每个回本的工具，都只是帮我省下了我本来就在做的工作的时间，没一个凭空印钞。第二，永远留一个免费工具当对照组，因为付费工具赌的就是你从不比较。第三，最扎心的一点：最贵的那个价值最低，不是最高。所以订阅任何东西前，问自己一个狠问题——『我已经在做的、这个能帮我省时间的，具体是哪件事？』如果 5 秒答不上来，答案就是别买。AI 淘金热是真的，但大部分金子是被卖出来的，不是被挖出来的。",
-          "viz": "白板写『能命名具体任务才买』大字",
-          "img_en": "Whiteboard with big marker text 'only buy if you can name the task', calculator on tray, dark professional office, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "白板写粗体『能说出具体任务才买』，托盘放计算器，深色专业办公室，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Here is the part most 'make money with AI' videos skip: the offer and the math. My time log says fifteen minutes for the brief, thirty-five for the captions, fifty-five for the Canva set, forty-five for the short video, and twenty minutes for quality control. That is two hours and fifty minutes before revisions. At a $100 price, the gross rate is about $35 an hour before software, taxes, and a second revision. So I would write the offer narrowly: one round of revisions, client supplies the logo and approved photos, delivery in three days, no promise of followers or sales. If the client wants five videos and daily posting, that is a different price. The experiment earns credibility because I show the boundary, not because I wave a fake income screenshot. I would also put a revision counter on the sheet. If the first revision takes another ninety minutes, the original $100 offer is no longer the same job. That is the moment to reduce the scope, raise the price, or stop. Showing that decision protects the audience from copying a fantasy hourly rate.",
+          "zh": "这是大多数『AI 赚钱』视频跳过的部分：报价和算账。我的时间表是：需求单 15 分钟，文案 35 分钟，Canva 套图 55 分钟，短视频 45 分钟，质检 20 分钟。还没算修改，就已经 2 小时 50 分。报价 100 美元，毛时薪大约 35 美元，还要扣软件、税和第二轮修改。所以我的报价必须写窄：包含 1 轮修改，客户提供 Logo 和已授权照片，3 天交付，不承诺涨粉或成交。如果客户要 5 条视频和每天代发，那是另一档价格。这个实验可信，不是因为我甩一张假的收入截图，而是因为我把边界和成本都展示出来。我还会在表格里加一列修改次数。如果第一轮修改又花了 90 分钟，原来的 100 美元就已经不是同一份工作了。这时要么缩小范围、要么提高报价、要么停止。把这个决定展示出来，才能防止观众照抄一个幻想中的时薪。",
+          "viz": "打开时间表，逐项相加；屏幕显示 $100 ÷ 2.83h ≈ $35/h；旁边是服务范围卡片",
+          "img_en": "Spreadsheet showing time log entries totaling 2 hours 50 minutes, calculator displaying 100 divided by 2.83 equals 35 dollars per hour, narrow service-scope card beside it, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "电子表格显示各项耗时合计 2 小时 50 分，计算器显示 100 除以 2.83 约等于每小时 35 美元，旁边放窄范围服务卡，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：真实计时与报价计算",
+            "screen": "Google Sheets/计算器",
+            "steps": [
+              "录入每个任务的开始和结束时间",
+              "用公式汇总总工时",
+              "用报价 ÷ 工时计算毛时薪",
+              "加入软件/税/修改轮次备注",
+              "把包含与不包含写进报价单"
+            ],
+            "proof": "观众能看到报价不是凭空喊 100 美元，而是从交付范围和工时算出来。"
+          }
         },
         {
           "t": "06:15-07:00",
-          "en": "Here's the one line I want you to remember: the best AI tool for making money is the one that saves you time on work you're already good at — never the one with the loudest thumbnail. The full ledger, with every tool, its real price, and exactly what it earned or lost, is linked in the description, free, no email gate. If this video just saved you two hundred bucks, smash that subscribe button. Next week I'm testing the completely free alternatives to all five tools, so you literally never have to pay again. I'll see you there.",
-          "zh": "记住这一句：最能帮你搞钱的 AI 工具，是帮你省下『你本来就很擅长的工作』时间的那个——绝不是缩略图喊得最响的那个。完整账本，每个工具、真实价格、赚或亏多少，都在简介链接里，免费、不要邮箱。如果这条视频帮你省了 200 刀，按一下订阅。下周我测这 5 个工具的完全免费平替，让你再也不用花钱。那里见。",
-          "viz": "对镜头微笑，指向下方订阅，金句浮层",
-          "img_en": "Creator smiling at camera, pointing down to subscribe overlay, golden sentence overlay, energetic hoodie vibe, dark studio RGB, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "创作者对镜头微笑，指向下方订阅浮层，金句叠加，活力帽衫气质，深色 RGB 工作室，超精细 8k --ar 16:9 --v 6.0"
+          "en": "The line to remember is simple: do not sell 'AI.' Sell a finished file that removes a specific task from someone's week. I put the brief template, the prompt skeleton, the file-naming checklist, and the time-log sheet in the description when this video is published. Use them on one fictional business first. Then make one sample, ask a real owner for permission before using their brand, and send one personalized message instead of blasting fifty strangers. If you want the next experiment, comment with the kind of local business you would build this for. And subscribe — next time I will show the client feedback and the revision that changed the price.",
+          "zh": "记住这句话：不要卖『AI』，要卖一个能替别人从一周工作里拿走具体任务的成品文件。视频发布时，我会把需求单模板、提示词骨架、文件命名清单和时间记录表放进简介。先用一家虚构商家练习，再做一个样品；想用真实商家的品牌，先征得同意；发一封个性化消息，不要群发给 50 个陌生人。你想看我给哪类本地商家做下一套？评论告诉我。顺手订阅，下期我展示客户反馈，以及哪一次修改让报价发生了变化。",
+          "viz": "镜头回到交付文件夹，鼠标点开 4 个模板；最后显示一封个性化报价邮件草稿",
+          "img_en": "Casual hoodie creator reviewing a clean delivery folder with four templates and one personalized client email draft on screen, warm confident expression, dark RGB studio, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "帽衫创作者查看包含 4 个模板的整洁交付文件夹，屏幕显示一封个性化客户邮件草稿，温暖自信表情，深色 RGB 工作室，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：交付文件夹 + 一封个性化报价邮件",
+            "screen": "文件夹 + 邮件草稿",
+            "steps": [
+              "展示 4 个可复用模板",
+              "打开一封只针对一家商家的邮件",
+              "用一项真实观察替换泛泛夸奖",
+              "明确不承诺结果、不群发、不使用未授权素材"
+            ],
+            "proof": "把 CTA 落到下一步动作，而不是只说『关注我学赚钱』。"
+          }
         }
       ],
-      "emotion_arc": "Hook(240 刀踩坑悬念) → 价值承诺(诚实实测) → 痛点代入(订阅税共鸣) → 5 工具+测试方法(清晰) → 3 个智商税(愤怒) → 2 个回本+免费吊打付费(反转惊喜) → 避坑法则+引导提问(顿悟) → 金句+CTA(行动)",
+      "emotion_arc": "Hook(成品+报价) → 价值承诺(交付物) → 痛点代入(工具多但没产品) → ChatGPT 需求到文案 → Canva 模板到 7 图 → CapCut 素材到 MP4 → 时间成本与报价边界 → 金句+CTA",
+      "reference_videos": [
+        {
+          "title": "YouTube 搜索：ChatGPT freelance client workflow step by step",
+          "url": "https://www.youtube.com/results?search_query=ChatGPT+freelance+client+workflow+step+by+step",
+          "use_for": "借鉴屏幕录制节奏：brief → prompt → output → human edit",
+          "do_not_copy": "只借鉴镜头顺序和实操密度，不复制台词、案例或收入数字"
+        },
+        {
+          "title": "YouTube 搜索：Canva social media content client workflow tutorial",
+          "url": "https://www.youtube.com/results?search_query=Canva+social+media+content+client+workflow+tutorial",
+          "use_for": "借鉴模板复制、手机预览、批量导出的展示方法",
+          "do_not_copy": "不要照搬对方模板、品牌或客户素材"
+        },
+        {
+          "title": "YouTube 搜索：CapCut short form video editing tutorial for business",
+          "url": "https://www.youtube.com/results?search_query=CapCut+short+form+video+editing+tutorial+for+business",
+          "use_for": "借鉴时间线、字幕纠错、静音检查的录屏结构",
+          "do_not_copy": "素材必须自己拍或使用有授权素材"
+        },
+        {
+          "title": "Upwork：How to make money with AI",
+          "url": "https://www.upwork.com/resources/make-money-with-ai",
+          "use_for": "借鉴把 AI 包装成具体服务的方向，不作为收入证明",
+          "do_not_copy": "不复制文章文案，不把平台案例当自己的结果"
+        }
+      ],
       "thumbs": [
         {
           "ver": "A",
-          "desc": "震惊脸 + 粗体『$240 WASTED』+ 3 个红 X 覆盖订阅卡片",
-          "img_en": "YouTube thumbnail, casual hoodie creator shocked face, bold red text '$240 WASTED', three red X marks over subscription cards, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "YouTube 封面，休闲帽衫创作者震惊脸，粗体红字『$240 WASTED』，3 个红 X 盖在订阅卡片上，高对比，超精细 8k --ar 16:9 --v 6.0"
+          "desc": "帽衫创作者举起最终文件夹，粗体 '$100 PACKAGE'，旁边 3 个工具图标",
+          "img_en": "YouTube thumbnail, casual black-hoodie creator holding a folder labeled '$100 PACKAGE', ChatGPT Canva CapCut icons, shocked but confident face, bold white and yellow text, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，黑色帽衫创作者举起标注『$100 PACKAGE』的文件夹，旁边是 ChatGPT Canva CapCut 图标，震惊又自信的表情，白黄粗体字，高对比，超精细 8k --ar 16:9 --v 6.0"
         },
         {
           "ver": "B",
-          "desc": "对比图：免费工具 ✓ vs $49 付费 ✗ + 大字『FREE WON』",
-          "img_en": "YouTube thumbnail, split comparison left 'FREE TOOL ✓' green, right '$49 PAID ✗' red, big text 'FREE WON', creator pointing, bold text, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "YouTube 封面，左右对比，左绿『免费工具 ✓』右红『$49 付费 ✗』，大粗字『FREE WON』，创作者指向，高对比，超精细 8k --ar 16:9 --v 6.0"
+          "desc": "前后对比：空白页面 → 7 posts + 1 video，粗体 'SELL THE FILE'",
+          "img_en": "YouTube thumbnail, split screen blank page on left and seven branded posts plus one short video on right, creator pointing at the finished files, bold text 'SELL THE FILE', green versus red contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，左边空白页面右边 7 张品牌帖子加 1 条短视频，创作者指向成品，粗体『SELL THE FILE』，绿红对比，超精细 8k --ar 16:9 --v 6.0"
         }
       ],
-      "description": "我花 240 刀、30 天实测 5 个『能搞钱』的付费 AI 工具，带账单公开结果：3 个退订（29刀写作助手/19刀简历生成/49刀建站盒子）、2 个留下（39刀视频生成器赚回约40刀佣金、免费表格分析器揪出每月60刀追踪漏洞）。结论：能搞钱的 AI 工具是帮你省下『你本来就在做的工作』时间的，不是帮你印钞的；最贵的最坑；永远留一个免费工具当对照组。教育/演示内容，非理财或收益保证；价格与功能以各工具官网为准，发布前自行核实。订阅看更多 AI 提效实测，下周测 5 个工具的免费平替。",
+      "description": "我用 ChatGPT、Canva、CapCut 做一套面向社区咖啡店的社媒起步包：7 张 1080×1080 帖子、7 条 caption、1 条 30 秒竖屏视频、4 个交付模板。视频展示从 brief、提示词、人工改稿、设计模板、剪辑字幕到报价计算的完整录屏。$100 只是示例报价，不是收入保证；真实价格应按工时、软件、税费、修改次数和客户范围决定。不得使用未授权素材，不得群发骚扰，不承诺涨粉或成交。教育/演示内容，工具价格与功能发布前请回官网核实。",
       "tags": [
-        "ai tools",
-        "make money online",
         "ai tools to make money",
-        "best ai tools",
+        "make money with ai",
+        "chatgpt freelance",
+        "canva social media",
+        "capcut tutorial",
         "ai side hustle",
+        "freelance services",
         "ai productivity",
-        "passive income",
-        "ai video generator",
-        "chatgpt",
-        "ai automation"
+        "content creation",
+        "small business marketing"
       ],
       "chapters": [
-        "00:00 The $240 Experiment",
-        "00:10 What You're Getting",
-        "00:25 The Subscription Trap",
-        "01:15 The 5 Tools + How I Tested",
-        "02:30 The 3 Wastes",
-        "03:45 The 2 That Paid Off",
-        "05:00 The Rule for Not Wasting Money",
-        "06:15 The Line to Remember + Subscribe"
+        "00:00 The $100 Deliverable",
+        "00:10 What You Will See",
+        "00:25 Why Tool Lists Do Not Sell",
+        "01:15 ChatGPT: Brief to Captions",
+        "02:30 Canva: Seven Branded Posts",
+        "03:45 CapCut: One Publishable Short",
+        "05:00 Time Log and Pricing",
+        "06:15 Sell the File, Not the AI"
+      ],
+      "source_links": [
+        {
+          "label": "ChatGPT official",
+          "url": "https://chatgpt.com/"
+        },
+        {
+          "label": "Canva official",
+          "url": "https://www.canva.com/"
+        },
+        {
+          "label": "CapCut official",
+          "url": "https://www.capcut.com/"
+        }
       ]
     },
     {
       "channel_key": "finance",
       "channel_label": "金融 · 财经商业（美国观众）(@TheMoneyMoo)",
-      "topic": "Why Paying Off Your 22% Credit Card Is the Best Investment You'll Ever Make",
-      "topic_cn": "信用卡债务 vs 投资：先还债还是先投资（含 401k 配比例外）",
-      "host": "金融教育者人设（参考你给的财经 agent 风格）：30 多岁、整洁衬衫、沉稳自信、背景简洁书房。AI 包已按要求改用不同人设（休闲帽衫创作者），金融包不参考 AI 包。",
-      "host_note": "金融包沿用财经 agent 的金融教育者 host 风格——30 多岁、整洁衬衫、沉稳自信、书房背景、慢语速、强逻辑；AI 包刻意换人设为帽衫创作者，两包人设完全错开。",
-      "decision": "为什么选它：来自今日金融面板搜索建议 401k loan to pay off credit cards / 评论区 credit card debt vs investing which first，且『先还债还是先投资』是最高意图交叉痛点。用真实利率算清得失（22% vs 7%），原创空间与信任度都高，对美国观众最具共鸣。",
-      "hook": "Every finance influencer says 'invest first, always'. They're half right. If you have a 22% credit card, paying it off is a guaranteed 22% return. No stock on earth beats that.",
-      "hook_zh": "每个理财博主都在说『先投资，永远先投资』。他们对了一半。如果你有一张 22% 的信用卡，先还清它就是锁定一笔无风险的 22% 回报。地球上没有任何股票能稳定跑赢这个。",
+      "topic": "Should You Pay Off Debt or Invest First? I Run the Numbers on 3 Real Situations",
+      "topic_cn": "先还债还是先投资？我把 3 种真实情况放进计算器算给你看",
+      "host": "金融教育者：30 多岁、整洁衬衫、语速稳、背景简洁书房；不是喊口号，而是打开官方数据页和计算器当场演示。",
+      "host_note": "金融包按用户提供的 youtube-finance-topic-research.html 模式重做：先设局，再用真实数字和屏幕实操完成数学揭穿，给出决策框架、陷阱和唯一例外。每一段都明确『口播』和『必须录屏的实操』，不让观众只听概念。所有收益数字均为示例计算，发布前回 Federal Reserve / NY Fed / Investor.gov / 401(k) 计划文件核对。",
+      "decision": "为什么选它：用户提供的研究报告把“先还债还是先投资”列为搜索建议+评论区+Reddit 的交叉痛点，且原创空间正是“用真实利率算清得失”。本包不只说 22% > 7%，而是现场打开信用卡账单、Federal Reserve G.19、债务还款计算器、复利计算器和 401(k) 配比示例，把 3 个家庭场景跑出可验证结果。",
+      "character_card": "虚拟主人公：30 多岁美国金融教育者，整洁蓝色衬衫，短深色头发，简洁书房，桌面有计算器、白板和笔记本；镜头以中近景+屏幕录制为主，语气克制，不使用“稳赚”“保证跑赢”。",
+      "hook": "Before you invest another dollar, open your credit-card statement. If the APR is 22% and your realistic long-term after-inflation return assumption is 7%, I can show you in under two minutes why the order matters — and the one 401(k) exception that changes the answer.",
+      "hook_zh": "在你再投一美元之前，先打开信用卡账单。如果 APR 是 22%，而你对长期扣除通胀后的投资回报只按 7% 做保守假设，我用不到两分钟算给你看为什么顺序重要，以及唯一会改变答案的 401(k) 例外。",
       "hook_options": [
         {
           "type": "痛点暴击",
-          "label": "戳中『你的理财顾问让你亏 31,000』",
-          "en": "If you're sitting on $8,000 of credit card debt at 22% APR and your financial advisor is telling you to 'still invest for the long run' — your financial advisor is costing you $31,000 over the next 10 years.",
-          "zh": "如果你身上背着 8,000 美元、22% 年利率的信用卡债，而你的理财顾问还在跟你说『长期还是要投资』——这位顾问正让你未来十年多亏 31,000 美元。"
+          "label": "戳中『一边投资一边被利息吸血』",
+          "en": "If your brokerage balance is going up but your credit-card balance is growing faster, you are not getting ahead. You are watching one account climb while another account charges you 22% for the privilege. Open your statement — we are going to run your numbers, not mine.",
+          "zh": "如果你的券商账户在涨，但信用卡债涨得更快，你并没有变富。你只是看着一个账户往上走，同时让另一个账户收你 22% 的利息。打开你的账单，我们算你的数字，不算我的。"
         },
         {
           "type": "反常识悬念",
-          "label": "打破『永远先投资』共识",
-          "en": "Every finance influencer says 'invest first, always'. They're half right. If you have a 22% credit card, paying it off is a guaranteed 22% return. No stock on earth beats that.",
-          "zh": "每个理财博主都在说『先投资，永远先投资』。他们对了一半。如果你有一张 22% 的信用卡，先还清它就是锁定一笔无风险的 22% 回报。地球上没有任何股票能稳定跑赢这个。"
+          "label": "打破『永远先投资』",
+          "en": "'Invest first, always' is incomplete advice. A 401(k) match can come first. A 22% credit-card balance usually should not. I will put both rules on one decision tree and show you exactly where the answer changes.",
+          "zh": "『永远先投资』是一句不完整的建议。401(k) 的公司配比可以优先，但 22% 的信用卡债通常不该优先投资。我把两条规则放进一张决策树，现场告诉你答案在哪一步改变。"
         },
         {
           "type": "利益诱惑",
-          "label": "三人三路 89k vs 11k 巨大差距",
-          "en": "I ran the math on three real Americans. The one who paid off debt first ended up with $89,000 in 10 years. The one who 'invested first' ended up with $42,000 of debt and $11,000 of investments. Same dollars. Different order. Here's the math that actually wins.",
-          "zh": "我算了三个美国人的账。先还债的那位，10 年后到手 89,000 美元；『先投资』那位，10 年后背着 42,000 美元债，手里只有 11,000 美元投资。同样的本金，不同的顺序。下面是真正能赢的算术。"
+          "label": "90 秒三问测试 + 三个案例",
+          "en": "Give me ninety seconds and three numbers: your APR, your monthly extra cash, and your employer match. I will show you which line to follow, what to type into a payoff calculator, and which mistake can cost you thousands over time.",
+          "zh": "给我 90 秒和 3 个数字：你的 APR、每月能多拿出的现金、以及公司 401(k) 配比。我会告诉你该走哪条线、还款计算器里怎么填，以及哪个错误可能让你长期多付几千美元。"
         }
       ],
       "titles": [
-        "Investing vs Paying Off Debt: The Order That Saves You $31,000",
-        "Why Paying Off Your 22% Credit Card Is the Best Investment You'll Ever Make"
+        "Pay Off Debt or Invest First? Put Your Numbers in This 3-Step Test",
+        "The 'Invest First' Advice Fails at 22% — Except for This 401(k) Rule"
       ],
+      "operator_breakdown": {
+        "retention_curve": "0–15s 先展示账单 APR 和计算器结果；15–45s 亮出 3 个数字测试；45s–1:45 放大观众真实困境；1:45–3:00 现场查官方利率口径并输入计算器；3:00–4:30 跑 3 个案例；4:30–5:45 拆 3 个陷阱；5:45–6:30 401(k) 配比反转；6:30–7:00 金句、模板和 CTA。",
+        "emotion_triggers": [
+          "00:00 紧张：账单上的 APR",
+          "00:45 不甘：投资上涨却被利息吃掉",
+          "01:45 顿悟：22% 确定成本 vs 7% 预期回报",
+          "03:00 掌控：观众把自己的数字输入计算器",
+          "04:30 警觉：0% 促销和应急金陷阱",
+          "05:45 反转：401(k) match 先拿免费钱"
+        ],
+        "demand_anchor": "how to get out of debt / credit card debt payoff strategy / 401k loan to pay off credit cards / credit card debt vs investing which first。",
+        "operator_checklist": [
+          "每个数字旁边显示来源与日期/口径",
+          "用示例计算，不把结果包装成个人化投资建议",
+          "画面必须出现账单 APR、计算器输入和结果，不只念公式",
+          "清楚区分确定的利息节省与不确定的市场预期回报",
+          "先讲 401(k) employer match 例外，再讲高息债决策",
+          "结尾给观众可复制的 3 问表和评论互动，不给买卖个股建议"
+        ]
+      },
       "script": [
         {
           "t": "00:00-00:10",
-          "en": "Every finance influencer says 'invest first, always'. They're half right. If you have a 22% credit card, paying it off is a guaranteed 22% return. No stock on earth beats that.",
-          "zh": "每个理财博主都在说『先投资，永远先投资』。他们对了一半。如果你有一张 22% 的信用卡，先还清它就是锁定一笔无风险的 22% 回报。地球上没有任何股票能稳定跑赢这个。",
-          "viz": "对镜头直说，单手抬起强调 22% 这个数字",
-          "img_en": "Finance educator in neat button-up shirt, calm serious expression, single hand raised emphasizing the number 22, tidy home office bookshelf background, ultra-detailed 8k cinematic --ar 16:9 --v 6.0",
-          "img_zh": "金融教育者，整洁衬衫，沉稳严肃表情，单手抬起强调 22 这个数字，简洁书房书架背景，超精细 8k 电影感 --ar 16:9 --v 6.0"
+          "en": "Before you invest another dollar, open your credit-card statement. If the APR is 22% and your long-term after-inflation return assumption is 7%, the order matters. And one 401(k) exception changes the answer.",
+          "zh": "在你再投一美元之前，先打开信用卡账单。如果 APR 是 22%，而长期扣除通胀后的投资回报假设是 7%，顺序就很重要。而且有一个 401(k) 例外会改变答案。",
+          "viz": "账单上圈出 APR，右侧计算器输入 22% 和 7%，最后闪出 401(k) MATCH",
+          "img_en": "Finance educator in blue button-up shirt pointing at a credit-card statement with APR circled 22%, calculator showing 22% versus 7%, clean study background, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "蓝色衬衫金融教育者指向圈出 22% APR 的信用卡账单，计算器显示 22% 对比 7%，简洁书房背景，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：从真实账单找 APR",
+            "screen": "账单 PDF/银行 App（敏感信息打码）",
+            "steps": [
+              "遮住姓名、卡号和地址",
+              "放大展示 Purchase APR / Interest Charge",
+              "把 APR 抄进屏幕上的测试表",
+              "旁边标注示例投资回报是假设，不是保证"
+            ],
+            "proof": "观众知道自己第一步该找哪个数字，而不是只听 22% 口号。"
+          }
         },
         {
           "t": "00:10-00:25",
-          "en": "By the end of this video you'll have a 3-question test that takes 90 seconds, the 3 traps that cost smart people tens of thousands, and the one exception — employer 401k match — that overrides everything. Just the math. No fluff.",
-          "zh": "看完这条视频，你会拿到一个 90 秒就能做完的 3 问测试、3 个让聪明人也亏钱的坑、以及那个唯一的例外——公司 401k 配比——它能推翻其他一切判断。只讲数学，不灌鸡汤。",
-          "viz": "屏幕显示『3 questions』清单标题",
-          "img_en": "Educator pointing at a clean on-screen list titled '3 Questions', confident composed posture, dark professional background, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "教育者指向屏幕上标题为『3 个问题』的干净清单，自信沉稳姿态，深色专业背景，超精细 8k --ar 16:9 --v 6.0"
+          "en": "In this video you will run a three-question test: what is your highest APR, how much extra cash can you put toward the problem each month, and does your employer match a 401(k)? Then I will run three examples on screen — a 22% card, a 7% loan, and a 3.5% mortgage — so you can see where the rule changes instead of memorizing a slogan.",
+          "zh": "这条视频你要做一个三问测试：你最高的 APR 是多少？每月能多拿多少现金解决问题？公司有没有 401(k) 配比？然后我会在屏幕上跑 3 个案例——22% 信用卡、7% 贷款和 3.5% 房贷——让你看到规则到底在哪改变，而不是背一句口号。",
+          "viz": "屏幕出现 3 个问题输入框，随后出现 3 张案例卡片",
+          "img_en": "Clean dark finance dashboard with three input fields labeled APR, monthly extra cash, employer match, and three case cards for 22%, 7%, and 3.5%, educator pointing, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "简洁深色金融仪表盘，三个输入框标注 APR、每月额外现金、雇主配比，下面是 22%、7%、3.5% 三张案例卡，教育者指向屏幕，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：建立三问测试表",
+            "screen": "Google Sheets/白板",
+            "steps": [
+              "建立 APR / monthly extra cash / employer match 三列",
+              "输入一个示例家庭，不输入用户隐私",
+              "把答案连接到后面的决策树",
+              "标记每个案例的假设"
+            ],
+            "proof": "观众可以暂停视频，把自己的 3 个数字填进去。"
+          }
         },
         {
           "t": "00:25-01:25",
-          "en": "Here's the trap that costs Americans $31,000 over ten years. Investing feels like winning. Every time you check your brokerage, the number goes up. You feel smart. Paying off debt feels like admitting you messed up. Every payment reminds you of the dinner you didn't need, the vacation you charged, the impulse you regret. So people choose the thing that feels good instead of the thing that makes them money. And it's not a small mistake. On $8,000 of credit card debt at 22% APR, choosing to invest $500 a month instead of paying it off costs you roughly $31,000 over ten years. That's a car. That's a down payment on a house. That's your kid's first year of college. All burned on a feeling. The market does 7% after inflation. Your card does 22% against you. You're not 'diversifying'. You're paying a 22% subscription fee to feel smart. That's the trap.",
-          "zh": "有一个陷阱，让美国人在十年里烧掉 31,000 美元。投资让人感觉像在赢。每次你打开券商 App，数字往上跳，你就觉得自己很聪明。还债让人感觉像在承认自己搞砸了。每一次还款都提醒你那顿不该吃的饭、那趟不该刷的旅行、那次冲动的后悔。所以人选让自己感觉好的那件事，不选让自己真赚钱的那件事。这不是小错。8,000 美元信用卡债、22% 年利率，本来应该拿 500 美元去还债，你拿去投资，十年下来大概亏 31,000 美元。够买一辆车，够交房子首付，够你孩子第一年大学。全部烧在一种感觉上。扣除通胀后市场长期回报 7%，你的卡以 22% 反向吸你。你这不是『分散投资』，是付 22% 的订阅费买『我很聪明』的感觉。这就是那个坑。",
-          "viz": "分屏：左边券商 App 数字往上跳，右边信用卡账单红色逾期",
-          "img_en": "Split screen left: brokerage app with green number rising; right: red overdue credit card statement; moody cinematic lighting, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "分屏左：券商 App 绿数字上涨；右：红色逾期信用卡账单；情绪化电影光，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Here is why this question feels so confusing. Your investment account gives you a green number every time the market rises, while your credit-card statement hides the cost in a minimum payment. Suppose the balance is $8,000 and the APR is 22%. A rough annual interest charge is about $1,760 before the balance changes. Now compare that with a 7% long-term after-inflation assumption on $8,000: about $560 in expected growth, not guaranteed, and possibly negative in a bad year. The emotional mistake is treating those two numbers as if they have the same certainty. They do not. Paying down the card removes a known cost. Investing accepts an uncertain result. That does not mean every debt must be paid before every investment. It means you need to compare the rate, the tax treatment, the time horizon, and the employer match instead of repeating 'invest first' or 'pay debt first' for everyone.",
+          "zh": "这个问题让人困惑，是因为投资账户在市场上涨时每次都给你一个绿色上涨数字，而信用卡账单把成本藏在最低还款额里。假设欠 8,000 美元、APR 22%，粗略算一年利息约 1,760 美元，先不考虑余额变化。再看 8,000 美元按长期扣除通胀后 7% 的假设，大约是 560 美元的预期增长，不是保证，坏年份还可能是负数。真正的心理错误，是把这两个数字当成同样确定。它们不是一回事。还卡是在消除已知成本，投资是在接受不确定结果。这不代表所有债务都必须排在所有投资前，而是你要比较利率、税务、时间期限和雇主配比，不要对所有人重复『先投资』或『先还债』。",
+          "viz": "左右分屏：投资曲线波动 vs 信用卡账单利息；计算器逐步显示 8,000×22% 与 8,000×7%",
+          "img_en": "Split screen of a volatile investment chart and a credit-card statement, calculator showing 8000 times 22 percent versus 8000 times 7 percent, educator explaining with hand gestures, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "分屏显示波动的投资曲线和信用卡账单，计算器演示 8000 乘 22% 对比 8000 乘 7%，教育者手势讲解，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：现场计算确定成本 vs 预期回报",
+            "screen": "计算器/电子表格",
+            "steps": [
+              "输入 8000 × 22%",
+              "输入 8000 × 7%",
+              "在结果旁标记 guaranteed cost / expected return",
+              "加入备注：未计余额变化、税和市场波动"
+            ],
+            "proof": "观众看到公式和口径，知道这个数字只是解释框架，不是承诺。"
+          }
         },
         {
           "t": "01:25-02:30",
-          "en": "Three lines. Line one — write down the highest APR you owe. Line two — write down 7%, the long-run average of the S&P 500 after inflation. Line three — if your APR is higher than 7%, the guaranteed return of paying it off beats the expected return of investing. That's the whole test. So if your credit card is 22%, paying it off is a 22% guaranteed return. If your federal student loan is 6%, that's basically break-even with the market — flip a coin. If your mortgage is 3.5%, you almost certainly invest first because the spread is in your favor. The math is simple. The hard part is the next thing — the psychology — which is where smart people lose money on purpose. Because here's what nobody tells you: the math isn't the hard part. Following the math when it tells you to do the unsexy thing is the hard part.",
-          "zh": "三行。第一行——写下你欠的最高年利率。第二行——写下 7%，即扣除通胀后 S&P 500 的长期平均回报。第三行——如果你的年利率高于 7%，还清它的『保证回报』就高于投资的『预期回报』。这就是整个测试。所以如果你的卡是 22%，还清它就是一笔锁定的 22% 回报。如果你的联邦学生贷款是 6%，和市场基本打平——掷硬币。如果你的房贷是 3.5%，几乎一定先投资，因为利差站在你这边。数学很简单，难的是下一关——心理——那才是聪明人故意亏钱的地方。因为没人告诉你这一点：数学本身不难。难的是当数学告诉你做那件『不性感』的事时，你愿不愿意做。",
-          "viz": "白板写 3 行字，22% > 7% 大红字",
-          "img_en": "Whiteboard with 3 lines written, big red marker text '22% > 7%', calculator on the tray, dark professional office, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "白板写 3 行字，大红笔字『22% > 7%』，托盘上放计算器，深色专业办公室，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Now open the source instead of trusting a thumbnail. On the Federal Reserve G.19 page, show the difference between the average rate across all credit-card accounts and the rate on accounts assessed interest. Use the assessed-interest figure only as a current reference for people carrying a balance, and put the publication date on screen. Then open Investor.gov's compound-interest calculator. Enter a sample starting balance, a monthly contribution, a conservative return assumption, and a five-year period. Do not type 'the market returns 10%' as if it were a promise. The viewer should see four boxes: starting balance, monthly contribution, assumed return, and years. Screenshot the input and result. That is the moment your video becomes verifiable: anyone can replace your sample numbers with their own and reproduce the calculation.",
+          "zh": "现在打开来源页面，不要相信缩略图。在 Federal Reserve 的 G.19 页面里，展示『全部信用卡账户平均利率』和『正在计息账户利率』的区别。对真正背着余额的人，只把计息账户数字当当前参考，并把发布日期放在画面上。然后打开 Investor.gov 的复利计算器，输入示例初始金额、每月投入、保守回报假设和 5 年期限。不要把『市场回报 10%』写得像保证。让观众看到 4 个输入框：初始金额、每月投入、假设回报、年数。截下输入和结果。这样视频才可验证：任何人都能替换示例数字，复算一遍。",
+          "viz": "录屏打开 Federal Reserve G.19 → 标出 assessed interest → 打开 Investor.gov calculator → 输入 4 个参数",
+          "img_en": "Browser screen recording of Federal Reserve G.19 consumer credit page with assessed-interest line highlighted, then Investor.gov compound interest calculator with four input fields, finance educator beside screen, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "浏览器录屏打开 Federal Reserve G.19 消费信贷页面，计息账户一行高亮，然后切到 Investor.gov 复利计算器四个输入框，金融教育者在屏幕旁，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：打开官方数据页和计算器",
+            "screen": "Federal Reserve G.19 + Investor.gov calculator",
+            "steps": [
+              "打开官方页面并显示 URL",
+              "圈出正确利率口径和发布日期",
+              "打开复利计算器",
+              "填入起始金额/月投入/假设回报/期限",
+              "截图输入与结果并在描述中放链接"
+            ],
+            "proof": "用户不是听你报数字，而是能看到来源和复算入口。"
+          }
         },
         {
           "t": "02:30-03:45",
-          "en": "Three real numbers. Person A has $8,000 on a 22% card and $500 a month to split. They invest first because that's what they read online. After ten years they have $11,000 in investments and $42,000 of credit card debt — because the debt grew faster than the investments could keep up. Person B — same $8,000, same $500 a month. They ignore the advice, pay off the card in 19 months, then invest the full $500. After ten years they have $89,000. No debt. Person C: $3,000 on a 5% card, $500 a month. They split 50/50 for 7 months, kill the card, then invest the full $500. Net at ten years: $76,000 and zero debt. The decision isn't moral. It isn't about discipline. It's arithmetic. And the arithmetic says: kill the 22% first. Always. Same starting dollars, same monthly amount, three completely different lives ten years later. The only difference was the order. You can argue about investing strategies your whole life. You cannot argue about this order.",
-          "zh": "三个真实数字。A 君有 8,000 美元 22% 的卡，每月能拿出 500 美元。他先投资，因为网上都这么教。十年后他有 11,000 美元的投资，和 42,000 美元的信用卡债——因为债长得比投资快。B 君——同样的 8,000，同样的 500。他他不建议，先把卡 19 个月还清，再把 500 美元全投进去。十年后他有 89,000 美元。无债一身轻。C 君：3,000 美元 5% 的卡，每月 500。先 50/50 分 7 个月，把卡砍掉，再把 500 美元全投。十年净：76,000 美元，零债务。这不是道德题，不是纪律题，是算术题。算术说：先杀 22%，永远。一样的本金，一样的月供，三条十年后完全不同的路。唯一区别是顺序。你可以为投资策略争论一辈子，这一笔顺序不能争。",
-          "viz": "三个人物头像 / 信息图横排：$11k & $42k 债 vs $89k vs $76k & 0债",
-          "img_en": "Three side-by-side infographic portraits labeled 'A: $11k + $42k debt', 'B: $89k zero debt', 'C: $76k zero debt', clean dark fintech UI, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "三联信息图横排，分别标注『A: 11k + 4.2万债』、『B: 8.9 万无债』、『C: 7.6 万无债』，深色金融科技 UI，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Let's run three households. Case A has $8,000 on a 22% card and $500 a month. In the payoff calculator, enter the balance, APR, and payment, then record months to payoff and total interest. Case B has the same $500 but a 7% loan, so we compare the payoff schedule with investing the same monthly amount. Case C has a 3.5% mortgage, where the spread is much smaller and liquidity may matter more. The point is not that one calculator can predict the future. The point is that the viewer can see the decision variables. On screen, keep a table with APR, payment, payoff date, interest, assumed investment return, and ending balance. Never hide the assumptions in narration. If the answer changes when you move from 22% to 7%, that change is the lesson. For the video, I would click the calculator result open, not just flash a final number. First show the 22% case, then change only the APR to 7%, then change it to 3.5%. Keeping the balance and payment visible makes the comparison fair and teaches the audience which variable is doing the work.",
+          "zh": "我们跑 3 个家庭。案例 A：8,000 美元、22% 信用卡债，每月 500 美元。在还款计算器里输入余额、APR 和月供，记录多久还清、总利息多少。案例 B：同样每月 500 美元，但债务利率是 7%，把还款计划和把同样金额拿去投资放在一起比较。案例 C：3.5% 房贷，利差更小，流动性可能更重要。重点不是某个计算器能预测未来，而是让观众看到决策变量。屏幕上保留一张表：APR、月供、还清日期、利息、投资回报假设和期末余额。不要把假设藏在旁白里。如果从 22% 换成 7% 后答案发生变化，这个变化本身就是知识点。拍视频时，我会把计算器结果完整展开，而不是只闪过最后一个数字。先展示 22% 案例，再只把 APR 改成 7%，最后改成 3.5%。余额和月供始终留在画面里，比较才公平，观众也能看出究竟是哪一个变量改变了结果。",
+          "viz": "三联表格：Case A/B/C；每次输入后截取 payoff months / total interest / ending balance",
+          "img_en": "Three-column personal finance spreadsheet comparing a 22 percent credit card, 7 percent loan, and 3.5 percent mortgage, payoff calculator results visible, educator pointing at changed assumptions, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "三列个人理财表格比较 22% 信用卡、7% 贷款和 3.5% 房贷，还款计算器结果可见，教育者指向变化的假设，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：同一月现金跑 3 个案例",
+            "screen": "债务还款计算器 + Google Sheets",
+            "steps": [
+              "建立 Case A/B/C 三行",
+              "逐行输入余额、APR、月供",
+              "复制 payoff months 和 total interest",
+              "再输入投资回报假设做对照",
+              "把假设写在表头，避免观众误认为预测"
+            ],
+            "proof": "观众能直观看到 22% / 7% / 3.5% 的边界，而不是听一条绝对结论。"
+          }
         },
         {
           "t": "03:45-05:00",
-          "en": "Three traps keep smart people stuck. Trap one — 'I have a 0% APR promo for 12 months.' That's not a real rate, that's a marketing rate. When the promo ends, it jumps to 25%. Don't make a 10-year decision on a 12-month promo. Trap two — 'I'll invest and use the gains to pay off the card.' The math doesn't work. 22% debt versus 7% expected market return is a 15-point spread. You will lose. Every time. The 'gains' don't outrun the interest. Trap three — 'I need an emergency fund first.' Yes, you do — keep one month of expenses in cash, no more. But if your emergency fund earns 4.5% in a high-yield savings and your card is at 22%, your emergency fund is costing you 17.5% a year. Move the excess to the card. The point isn't that emergencies don't happen. The point is the math doesn't lie. And the moment you add emotion — 'I want to feel like I'm investing', 'I don't want to face how much I owe' — the math stops mattering to you, and the banks start winning.",
-          "zh": "三个坑让聪明人原地踏步。坑一——『我有 12 个月 0% APR 的促销。』那不是真利率，是营销利率。促销一结束，它跳到 25%。别拿 12 个月的促销去做 10 年的决定。坑二——『我投资赚的够我去还信用卡。』数学说不通。22% 的债对 7% 的市场预期，15 个点的利差，你会输。每次都输。赚的『收益』跑不过利息。坑三——『我得先存够应急金。』对，要存——留一个月开支在现金里，但别更多。如果你的应急金在 HYSA 里拿 4.5%，而你的卡是 22%，你的应急金一年倒亏你 17.5%。把多余的部分挪去还卡。重点不是『应急不会发生』，重点是『数学不骗人』。一旦你开始加情绪——『我想感觉自己也在投资』『我不想面对我欠了多少』——数学在你眼里就失效了，银行就开始赢。",
-          "viz": "三个红框警示图标横排：0% promo / invest-vs-debt / HYSA trap",
-          "img_en": "Three warning icons in a row with red glow: '0% promo trap', 'invest-vs-debt trap', 'HYSA trap', dark background, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "三个警示图标横排带红光晕：0% 促销坑、投资 vs 还债坑、HYSA 坑，深色背景，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Three traps make otherwise smart people ignore the result. Trap one is a 0% promotional APR. Open the offer and show the expiration date, balance-transfer fee, and regular APR after the promotion. Trap two is 'I'll invest the gains and use them to pay the card.' Put the two rates side by side and label the market return expected, not guaranteed. Trap three is keeping a giant emergency fund in a low-yield account while the card compounds at a much higher rate. Do not tell the viewer to empty their cash. Show a conservative rule: keep a basic cash buffer, then compare the yield on excess cash with the card APR. The practical shot is the important shot: highlight the exact field in the statement or offer that changes the calculation. A trap is useful only when viewers know where to look. Put a red box around each trap and a green box around the field that must be checked. For a promotional card, the audience should be able to pause and find the end date. For savings, they should see APY. For debt, they should see APR. A useful finance video teaches the viewer how to inspect a document.",
+          "zh": "三个坑会让聪明人忽略结果。第一个是 0% 促销 APR。打开 offer，展示结束日期、转账手续费，以及促销结束后的常规 APR。第二个是『我先投资，拿收益来还卡』。把两个利率并排，给市场回报标上『预期，不保证』。第三个是把大额应急金放在低收益账户里，而信用卡以高得多的利率复利。不要告诉观众把现金全部拿走，而是展示一个保守规则：先留基本现金缓冲，再把多余现金的存款收益和信用卡 APR 放在一起比较。实操画面最重要：把账单或 offer 上真正改变计算的字段圈出来。一个陷阱只有在观众知道该看哪里时，才有用。每个陷阱用红框，必须核对的字段用绿框。促销卡要让观众暂停后找到结束日期；储蓄账户要找到 APY；债务账单要找到 APR。真正有用的财经视频，教观众怎么读一份文件，而不只是告诉观众一个结论。",
+          "viz": "依次打开 0% offer、账单和储蓄账户页面，圈出 expiration / fee / regular APR / APY",
+          "img_en": "Close-up browser and statement screens with 0 percent promo expiration, balance transfer fee, regular APR and savings APY fields circled in different colors, educator warning calmly, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "浏览器和账单特写，分别圈出 0% 促销到期日、转账费、常规 APR 和储蓄 APY，教育者冷静警示，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：在 offer/账单上圈出陷阱字段",
+            "screen": "信用卡 offer PDF + 账单 + 储蓄账户示例",
+            "steps": [
+              "圈 0% 到期日",
+              "圈 balance-transfer fee",
+              "圈 promo 后 regular APR",
+              "圈储蓄 APY",
+              "把每个字段对应到计算表"
+            ],
+            "proof": "观众学会读文件，而不是只记住『0% 有坑』。"
+          }
         },
         {
           "t": "05:00-06:15",
-          "en": "One exception overrides everything else. If your employer offers a 401k match, take the match first, always, no matter what. A 50% employer match on 6% of your salary is a 50% instant return on your contribution. Nothing else in your financial life will give you that. Not real estate. Not index funds. Not crypto. Not a side hustle. Free money first, always. So the order becomes: match → high-interest debt → low-interest debt → invest the rest. And if your employer offers ESPP at a 15% discount, same logic — take the discount, then deal with the debt. The one time you don't follow the math is when someone is handing you free money. That's the exception. Walk past it and you leave 50% returns on the table for the entire rest of your career. Compounded over 30 years, a missed match can cost you $300,000 or more. That's not a budgeting tip. That's a quarter-million-dollar decision you're making every pay period you skip.",
-          "zh": "一个例外能推翻其他一切。如果你的公司给 401k 配比，先拿满配比，永远先拿，无论别的什么。公司按你工资 6% 给 50% 的配比，等于你那一笔 50% 的即时回报。你整个财务生活里，再也没有别的东西能给你这个回报。房地产不行，加密币不行，副业不行。先拿免费的钱，永远。所以顺序变成：先配比 → 再清高息债 → 再清低息债 → 最后才投剩下的。如果公司给 ESPP 15% 折扣，同样的逻辑——先拿折扣，再处理债务。唯一可以不看数学的时刻，是有人正在把免费的钱递到你手上的时候。这就是那个例外。你走过去，等于把接下来整个职业生涯的 50% 回报让出去。复利 30 年，错过的配比可以让你亏掉 30 万美元以上。这不是预算技巧，是你每个发薪日都在做的、几十万级别的决定。",
-          "viz": "401k match 流程图 + 金币 + 大字『50% INSTANT RETURN』",
-          "img_en": "401k match flow diagram: 6% salary input, employer adds 50% match, gold coins illustration, bold text '50% INSTANT RETURN', professional clean dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "401k 配比流程图：6% 工资输入，公司加 50% 配比，金币示意，粗体『50% 即时回报』，专业简洁深色 UI，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Now the exception that can override the debt rule: an employer 401(k) match. Open a sample pay stub or plan document and find the exact match formula. If the plan matches 50 cents for every dollar you contribute up to 6% of pay, contributing enough to capture the full match can create an immediate employer contribution. The screen should show the formula, not just a gold-coin animation. Then draw the order: minimum cash buffer, capture the full match, attack high-interest debt, handle lower-rate debt according to the spread and your risk, then invest the remaining money. If your plan has vesting rules, fees, or a different match formula, show those too. This is not a universal prescription. It is a checklist for reading your own plan before making a decision. If the plan document is unclear, the correct on-camera move is to stop and say so, then tell viewers to call the plan administrator. Never fill the blank with a guessed match formula. The credibility moment is admitting that a personal plan can differ from the example.",
+          "zh": "现在讲唯一可能推翻高息债规则的例外：公司 401(k) 配比。打开一张示例工资单或计划文件，找到准确的配比公式。如果公司是你缴工资 6% 以内的每 1 美元配 0.5 美元，那么缴到拿满配比，就会收到一笔即时的公司缴款。画面要展示公式，不要只放金币动画。然后画出顺序：基本现金缓冲 → 拿满配比 → 攻击高息债 → 根据利差和风险处理低息债 → 把剩余资金拿去投资。如果计划有归属期、费用或不同配比公式，也要展示。这里不是给所有人一条处方，而是教你在做决定前先读懂自己的计划文件。如果计划文件写得不清楚，镜头前正确的做法是停下来说明，然后告诉观众联系计划管理员。不要猜一个配比公式填空。真正建立可信度的时刻，是承认每个人的计划都可能和示例不同。",
+          "viz": "屏幕录制计划文件中的 match formula，白板画出 match → high APR debt → low APR debt → invest",
+          "img_en": "Finance educator pointing at a 401k plan document with employer match formula highlighted, whiteboard showing match then high-interest debt then low-interest debt then invest, professional study, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "金融教育者指向高亮雇主配比公式的 401k 计划文件，白板画出配比→高息债→低息债→投资，专业书房，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：从计划文件找 match 公式",
+            "screen": "401(k) plan document/pay stub（示例或打码）",
+            "steps": [
+              "打开 plan document",
+              "找到 employer match 章节",
+              "抄下匹配比例和工资上限",
+              "检查 vesting/fees 等限制",
+              "用工资示例计算拿满配比需要缴多少"
+            ],
+            "proof": "观众知道『先拿免费钱』不是口号，而是读自己的计划文件。"
+          }
         },
         {
           "t": "06:15-07:00",
-          "en": "Here's the line I want you to remember. The best investor in the world is the one who refuses to pay 22% interest to a credit card company. That's not a budget tip. That's the highest-returning investment you'll ever make. Run the 3-question test tonight. Pay off the 22% before you put another dollar in an index fund. The 4-line decision tree and the 3-trap checklist are linked in the description — free, no email gate. If this saved you $31,000, hit subscribe. Next week I'm doing the order for paying off multiple cards when you can only afford to attack one at a time. See you there.",
-          "zh": "这是我希望你记住的那句话。世界上最厉害的投资人，就是那个拒绝给信用卡公司交 22% 利息的人。这不是预算技巧，这是你这辈子回报最高的投资。今晚就跑一遍那个 3 问测试。在你再投一块钱进指数基金之前，先把那张 22% 的卡砍掉。4 行决策树 + 3 个陷阱清单，简介里免费，不要邮箱。如果这条视频给你省了 31,000 美元，按一下订阅。下周我做『同时欠多张卡、每月只够砍一张』的顺序。看那里见。",
-          "viz": "对镜头收尾，金句大字『22% 退款 = 最好的投资』，订阅手势",
-          "img_en": "Educator smiling at camera, golden sentence overlay '22% payoff = the best investment', pointing to subscribe button, trustworthy composed, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "教育者对镜头收尾微笑，叠加金句『22% 还清 = 最好的投资』，指向订阅按钮，可信赖沉稳，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Here is the sentence to remember: paying off a high-interest balance is not anti-investing — it is removing a known drag before you take an uncertain risk. Tonight, write down your APR, your monthly extra cash, and your employer match. Put them into the three-question sheet, open the official source links, and save the assumptions next to the result. Do not copy my example as personal advice. If you want the next calculator walkthrough, comment with the word MATH. Subscribe, because next week I will show how to choose which card to attack when you have three balances and only one extra payment. The goal is not a louder opinion. It is a decision you can reproduce.",
+          "zh": "记住这句话：还清高息债不是反对投资，而是在承担不确定风险之前，先移除一个确定的拖累。今晚写下你的 APR、每月额外现金和公司配比，把它们填进三问表，打开官方来源链接，并把假设和结果放在一起保存。不要把我的示例当成对你的个人建议。如果你想看下一期计算器实操，评论区打 MATH。订阅频道，下周我展示同时有 3 张卡、每月只能多还一张时，到底先攻哪张。目标不是更响亮的观点，而是一套你能自己复算的决定。",
+          "viz": "回到三问表和来源清单，主持人逐项打勾，最后出现 MATH 评论 CTA",
+          "img_en": "Trustworthy finance educator checking three boxes on a debt-versus-investing worksheet beside official source links, calm smile, golden sentence overlay, clean study, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "可信赖的金融教育者在债务对比投资工作表旁勾选三项，旁边是官方来源链接，平静微笑，叠加金句，简洁书房，超精细 8k --ar 16:9 --v 6.0",
+          "demo": {
+            "need": true,
+            "label": "必须实操：让观众复算自己的决定",
+            "screen": "三问表 + 来源链接清单",
+            "steps": [
+              "展示可复制的三问表",
+              "展示来源链接和日期字段",
+              "提醒观众替换自己的 APR/现金/配比",
+              "把假设、结果和免责声明放在同一页"
+            ],
+            "proof": "CTA 是让观众完成一个动作，不是空泛地说『关注获取更多知识』。"
+          }
         }
       ],
-      "emotion_arc": "Hook(反常识打破共识) → 价值承诺(可信建立) → 痛点代入(31,000 美元损失恐惧) → 数学揭穿(顿悟) → 三人三路(可视化记忆) → 三个陷阱(警觉) → 401k 例外(转折) → 金句 + CTA(行动)",
+      "emotion_arc": "Hook(账单 APR) → 价值承诺(三问测试) → 痛点代入(投资涨但利息更快) → 官方数据+计算器 → 三案例边界 → 三陷阱读表 → 401(k) 配比反转 → 可复算金句+CTA",
+      "reference_videos": [
+        {
+          "title": "YouTube 搜索：credit card debt vs investing which first",
+          "url": "https://www.youtube.com/results?search_query=credit+card+debt+vs+investing+which+first",
+          "use_for": "借鉴财经频道如何用账单/白板/分屏讲顺序问题",
+          "do_not_copy": "只借鉴结构和镜头，不抄任何频道的案例、台词或结论包装"
+        },
+        {
+          "title": "YouTube 搜索：credit card payoff calculator walkthrough",
+          "url": "https://www.youtube.com/results?search_query=credit+card+payoff+calculator+walkthrough",
+          "use_for": "借鉴计算器录屏：输入 APR、余额、月供、读取利息和时间",
+          "do_not_copy": "必须用自己的示例并标出假设"
+        },
+        {
+          "title": "YouTube 搜索：401k employer match explained personal finance",
+          "url": "https://www.youtube.com/results?search_query=401k+employer+match+explained+personal+finance",
+          "use_for": "借鉴用工资单/计划文件解释 match 公式的视觉方式",
+          "do_not_copy": "不要把他人的雇主计划当成观众的计划"
+        },
+        {
+          "title": "Federal Reserve G.19 Consumer Credit",
+          "url": "https://www.federalreserve.gov/releases/g19/current/",
+          "use_for": "发布前核对信用卡利率口径与日期",
+          "do_not_copy": "数据只能按当前发布版本更新，不能把旧快照说成最新"
+        },
+        {
+          "title": "Investor.gov Compound Interest Calculator",
+          "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+          "use_for": "视频中现场演示复利假设和输入字段",
+          "do_not_copy": "回报率是情景假设，不是保证"
+        }
+      ],
       "thumbs": [
         {
           "ver": "A",
-          "desc": "震惊脸 + 粗体『PAY 22% FIRST』+ 红色 22% 大字",
-          "img_en": "YouTube thumbnail, finance educator shocked face, bold red text 'PAY 22% FIRST', big '22%' number, smaller 'BEFORE YOU INVEST' tagline, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "YouTube 封面，金融教育者震惊脸，粗体红字『PAY 22% FIRST』，大号 22% 数字，副标『在你投资之前』，高对比，超精细 8k --ar 16:9 --v 6.0"
+          "desc": "教育者举账单，粗体 '22% FIRST?'，右侧红色 APR 圈选",
+          "img_en": "YouTube thumbnail, finance educator in blue shirt holding a credit-card statement, huge red circled '22% APR', bold text 'PAY THIS FIRST?', high contrast yellow and red, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，蓝衬衫金融教育者举起信用卡账单，巨大红圈『22% APR』，粗体『PAY THIS FIRST?』，黄红高对比，超精细 8k --ar 16:9 --v 6.0"
         },
         {
           "ver": "B",
-          "desc": "对比图：$89,000 (先还债) vs $11,000 + $42k 债 (先投资)",
-          "img_en": "YouTube thumbnail, split comparison left 'PAY DEBT FIRST $89k', right 'INVEST FIRST $11k + $42k DEBT', educator pointing at left side, bold text, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "YouTube 封面，左右对比，左『先还债 8.9 万』，右『先投资 1.1 万 + 4.2 万债』，教育者指向左边，粗体文字，高对比，超精细 8k --ar 16:9 --v 6.0"
+          "desc": "决策树对比：MATCH → DEBT → INVEST，数字 22% vs 7%",
+          "img_en": "YouTube thumbnail, clean split-screen decision tree MATCH then DEBT then INVEST, giant numbers 22% versus 7%, educator pointing at the turning point, bold white and green text, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，简洁分屏决策树 MATCH→DEBT→INVEST，大字 22% 对比 7%，教育者指向转折点，白绿粗体字，超精细 8k --ar 16:9 --v 6.0"
         }
       ],
-      "description": "你有 8,000 美元 22% 的信用卡债，先投资还是先还债？本视频用真实利率算清：还清高息债等于无风险锁 22%，几乎没有投资能稳定跑赢。展示三个真实美国人的 10 年对比（A 君 $11k 投资 + $42k 债 vs B 君 $89k 无债 vs C 君 $76k 无债），给出正确顺序——401k 配比 → 高息债 → 低息债 → 再投资；并解释三个让聪明人也亏钱的坑（0% 促销 / 投资覆盖利息 / 应急金过多）。教育/演示内容，不构成个别投资建议；利率与历史回报请回 Federal Reserve / NY Fed / S&P 一手来源核实（发布前自行核对）。订阅看更多美国人该懂的理财硬知识，下周讲『同时欠多张卡、每月只够砍一张』的顺序。",
+      "description": "先还债还是先投资？本视频按用户自己的三组数字现场演示：APR、每月额外现金、雇主 401(k) 配比。通过 Federal Reserve G.19、Investor.gov 复利计算器、债务还款计算器和三个示例场景，区分确定的利息节省与不确定的市场回报；再演示 0% 促销、转账费、应急金和 401(k) match 这些会改变答案的字段。示例仅用于教育演示，不构成个别投资建议；发布前回官方来源核对最新数据、日期、利率和个人计划条款。",
       "tags": [
+        "pay off debt or invest",
         "credit card debt",
-        "investing for beginners",
-        "pay off debt vs invest",
+        "debt payoff calculator",
         "personal finance",
-        "401k",
-        "financial literacy",
-        "debt payoff",
+        "investing for beginners",
+        "401k employer match",
         "money management",
-        "retirement",
-        "finance tips"
+        "financial literacy",
+        "credit card APR",
+        "debt free journey",
+        "compound interest"
       ],
       "chapters": [
-        "00:00 The 'Invest First' Lie",
-        "00:10 What You're Getting",
-        "00:25 The $31,000 Trap",
-        "01:25 The 3-Line Test",
-        "02:30 Three Real Americans",
-        "03:45 The 3 Traps",
-        "05:00 The 401k Exception",
-        "06:15 The Line to Remember + Subscribe"
+        "00:00 Open Your Credit-Card Statement",
+        "00:10 The Three-Question Test",
+        "00:25 Why the Order Feels Confusing",
+        "01:25 Official Data and Calculator",
+        "02:30 Three Households, Three Answers",
+        "03:45 The Three Traps",
+        "05:00 The 401(k) Match Exception",
+        "06:15 The Decision You Can Reproduce"
+      ],
+      "source_links": [
+        {
+          "label": "Federal Reserve G.19",
+          "url": "https://www.federalreserve.gov/releases/g19/current/"
+        },
+        {
+          "label": "NY Fed Household Debt and Credit",
+          "url": "https://www.newyorkfed.org/microeconomics/hhdc"
+        },
+        {
+          "label": "Investor.gov Compound Interest Calculator",
+          "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+        },
+        {
+          "label": "Bankrate Credit Card Payoff Calculator",
+          "url": "https://www.bankrate.com/credit-cards/tools/credit-card-payoff-calculator/"
+        },
+        {
+          "label": "Vanguard Employer Match explainer",
+          "url": "https://investor.vanguard.com/investor-resources-education/retirement/saving-for-retirement/employer-match"
+        }
       ]
     }
   ]

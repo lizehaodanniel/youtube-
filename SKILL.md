@@ -53,7 +53,10 @@ See `references/methodology.md` § "topic_data schema" and `references/topic_dat
 
 ### Step 3 — Build `packages.json` (the pinned 成片包)
 For the top 1–2 "做" topics, write a full 成片包 per channel using `viral-short-script`. Each package:
-`channel_key, channel_label, topic, topic_cn, host, host_note, decision, hook, hook_zh, hook_options[3] (痛点暴击 / 反常识悬念 / 利益诱惑), titles[2], script[8 beats × {t,en,zh,viz,img_en,img_zh}], emotion_arc, thumbs[2], description, tags[≥8], chapters[≥8]`.
+`channel_key, channel_label, topic, topic_cn, host, host_note, character_card, decision, operator_breakdown, hook, hook_zh, hook_options[3] (痛点暴击 / 反常识悬念 / 利益诱惑), titles[2], script[8 beats × {t,en,zh,viz,demo,img_en,img_zh}], emotion_arc, reference_videos[], source_links[], thumbs[2], description, tags[≥8], chapters[≥8]`.
+
+**CRITICAL — practical-proof discipline:**
+Every beat must have a `demo` object. `demo.need=true` means the video must show a real screen recording or physical operation; include `label`, `screen`, `steps[]`, and `proof`. Good AI examples: paste a brief into ChatGPT, manually reject hallucinated claims, build a Canva template, export files, edit a CapCut timeline, calculate time cost. Good finance examples: open the Federal Reserve source, highlight the correct rate field, enter APR/balance/payment in a payoff calculator, compare three cases, read a 401(k) plan's match formula. Do not let the host merely read a list of tools or rules.
 
 **CRITICAL — word-count discipline (the logic-hole rule):**
 words ≈ `duration_seconds × 2.4` (~140–160 wpm). Enforce per beat; reject any beat below 80% of target. Example targets: 10s≈30w, 15s≈45w, 45s≈110w, 60s≈150w, 75s≈180w, 90s≈220w. See `references/methodology.md` § "word-count" and the `viral-short-script` skill.

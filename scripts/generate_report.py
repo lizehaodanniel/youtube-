@@ -195,17 +195,78 @@ def script_table(beats):
           <td class="en">{esc(en)}</td>
           <td class="zh">{esc(b.get('zh',''))}</td>
           <td>{esc(b.get('viz',''))}</td>
+          <td class="demo-cell">{demo_summary(b.get('demo'))}</td>
           <td class="img-en">{esc(b.get('img_en',''))}</td>
           <td class="img-zh">{esc(b.get('img_zh',''))}</td>
         </tr>"""
     return f"""<div class="script-wrap"><table class="script">
       <colgroup>
         <col style="width:90px"><col style="width:56px"><col style="width:330px">
-        <col style="width:330px"><col style="width:170px"><col style="width:230px"><col style="width:230px">
+        <col style="width:330px"><col style="width:170px"><col style="width:360px"><col style="width:230px"><col style="width:230px">
       </colgroup>
-      <tr><th>时间段</th><th class="ctr">词数</th><th>英文口播(左)</th><th>中文翻译(右)</th><th>分镜/情绪</th><th>图片提示词·英</th><th>图片提示词·中</th></tr>
+      <tr><th>时间段</th><th class="ctr">词数</th><th>英文口播(左)</th><th>中文翻译(右)</th><th>分镜/情绪</th><th>实操展示（必须拍）</th><th>图片提示词·英</th><th>图片提示词·中</th></tr>
       {rows}
     </table></div>"""
+
+
+def demo_summary(demo):
+    if not demo or not demo.get("need"):
+        return '<span class="demo-no">口播 / 普通画面</span>'
+    label = esc(demo.get("label", "必须实操"))
+    screen = esc(demo.get("screen", ""))
+    steps = "".join(f"<li>{esc(x)}</li>" for x in (demo.get("steps") or []))
+    proof = esc(demo.get("proof", ""))
+    return f'''<div class="demo-yes"><b>{label}</b>
+      <div class="demo-screen">录屏：{screen}</div>
+      <ol>{steps}</ol>
+      <div class="demo-proof">验收：{proof}</div>
+    </div>'''
+
+
+def operator_block(op):
+    if not op:
+        return ""
+    curve = esc(op.get("retention_curve", ""))
+    emotions = "".join(f"<li>{esc(x)}</li>" for x in (op.get("emotion_triggers") or []))
+    anchor = esc(op.get("demand_anchor", ""))
+    checklist = "".join(f"<li>{esc(x)}</li>" for x in (op.get("operator_checklist") or []))
+    return f'''<div class="operator-grid">
+      <div class="operator-card"><h4>Retention 曲线</h4><p>{curve}</p></div>
+      <div class="operator-card"><h4>情绪触发点</h4><ul>{emotions}</ul></div>
+      <div class="operator-card"><h4>需求锚定</h4><p>{anchor}</p></div>
+      <div class="operator-card"><h4>编导执行清单</h4><ul>{checklist}</ul></div>
+    </div>'''
+
+
+def demo_plan_block(beats):
+    rows = ""
+    for b in beats:
+        d = b.get("demo") or {}
+        need = d.get("need", False)
+        label = esc(d.get("label", "普通口播/画面"))
+        screen = esc(d.get("screen", ""))
+        steps = "".join(f"<li>{esc(x)}</li>" for x in (d.get("steps") or []))
+        proof = esc(d.get("proof", ""))
+        cls = "demo-plan-yes" if need else "demo-plan-no"
+        rows += f'''<div class="demo-plan {cls}">
+          <div class="demo-plan-head"><b>{esc(b.get("t", ""))}</b> · {label}</div>
+          <div><b>录屏对象：</b>{screen or "无"}</div>
+          {f'<ol>{steps}</ol>' if steps else '<div class="src">这一段不需要软件实操，可用口播+图示。</div>'}
+          {f'<div class="demo-proof">验收：{proof}</div>' if proof else ''}
+        </div>'''
+    return f'<div class="demo-plan-list">{rows}</div>'
+
+
+def reference_block(refs):
+    if not refs:
+        return ""
+    rows = ""
+    for r in refs:
+        rows += f'''<li><a href="{esc(r.get("url", ""))}" target="_blank" rel="noopener">{esc(r.get("title", r.get("label", "参考链接")))}</a>
+          <span class="ref-use">借鉴：{esc(r.get("use_for", ""))}</span>
+          <span class="ref-no-copy">边界：{esc(r.get("do_not_copy", "只借鉴结构，不复制内容"))}</span>
+        </li>'''
+    return f'''<div class="reference-block"><h3>可借鉴的实操视频 / 工具链接（只借鉴镜头结构，不抄台词）</h3><ul>{rows}</ul></div>'''
 
 
 def package_block(pkg):
@@ -217,6 +278,7 @@ def package_block(pkg):
     host = esc(pkg.get("host", ""))
     host_note = esc(pkg.get("host_note", ""))
     decision = esc(pkg.get("decision", ""))
+    character = esc(pkg.get("character_card", ""))
     hook = esc(pkg.get("hook", ""))
     hook_zh = esc(pkg.get("hook_zh", ""))
     titles = "".join(f"<li>{esc(t)}</li>" for t in (pkg.get("titles") or []))
@@ -246,6 +308,10 @@ def package_block(pkg):
     desc = esc(pkg.get("description", ""))
     tags = "  ".join(f"<code>{esc(t)}</code>" for t in (pkg.get("tags") or []))
     chapters = "".join(f"<li>{esc(c)}</li>" for c in (pkg.get("chapters") or []))
+    source_links = "  ".join(f'<a href="{esc(x.get("url", ""))}" target="_blank" rel="noopener">{esc(x.get("label", "来源"))}</a>' for x in (pkg.get("source_links") or []))
+    op_html = operator_block(pkg.get("operator_breakdown") or {})
+    demo_plan_html = demo_plan_block(pkg.get("script") or [])
+    refs_html = reference_block(pkg.get("reference_videos") or [])
     return f"""
     <section class="pkg" style="--c1:{c1};--c2:{c2}">
       <div class="pkg-head">
@@ -256,21 +322,26 @@ def package_block(pkg):
       </div>
       <div class="pkg-sub">Host：{host}</div>
       {f'<div class="host-note">⚠️ {host_note}</div>' if host_note else ''}
+      {f'<div class="pkg-sec"><h3>虚拟主人公 / 画面统一规范</h3><div>{character}</div></div>' if character else ''}
       <div class="pkg-sec"><h3>选题决策</h3><div>{decision}</div></div>
+      {f'<div class="pkg-sec"><h3>运营拆解：为什么观众会继续看</h3>{op_html}</div>' if op_html else ''}
       <div class="pkg-sec"><h3>黄金前 15 秒 Hook（推荐 / 主用）</h3>
         <div class="hook-en">{hook}</div>
         {f'<div class="hook-zh" style="margin-top:6px;color:var(--mut)">{hook_zh}</div>' if hook_zh else ''}
         {f'<h4 style="margin:14px 0 8px;color:var(--mut);font-size:13px;font-weight:600">三个 Hook 备选（按类型，可任选其一替换主用）</h4><div class="hook-options">{hook_options_html}</div>' if hook_options_html else ''}
       </div>
       <div class="pkg-sec"><h3>两个炸裂标题</h3><ul class="titles">{titles}</ul></div>
-      <div class="pkg-sec"><h3>分镜脚本表（句子级·英中分栏 + 图片提示词）</h3>{script_html}</div>
+      <div class="pkg-sec"><h3>分镜脚本表（句子级·英中分栏 + 图片提示词 + 实操标注）</h3>{script_html}</div>
+      <div class="pkg-sec"><h3>实操执行清单（哪一段必须录屏、怎么录、验收什么）</h3>{demo_plan_html}</div>
       <div class="pkg-sec"><h3>情绪弧（Hook→Aha→Payoff）</h3><div>{arc}</div></div>
+      {refs_html}
       <div class="pkg-sec"><h3>YouTube 封面缩略图（A/B 两版·英中双语）</h3><div class="thumbs">{thumbs}</div></div>
       <div class="pkg-sec"><h3>自动三件套</h3>
         <ul class="triple">
           <li><b>视频简介：</b>{desc}</li>
           <li><b>标签：</b>{tags}</li>
           <li><b>章节：</b><ul>{chapters}</ul></li>
+          {f'<li><b>一手来源：</b><span class="source-links">{source_links}</span></li>' if source_links else ''}
         </ul>
       </div>
     </section>"""
@@ -396,6 +467,34 @@ def render(spec, base_dir=None):
   .thumb {{ background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:12px 14px; }}
   .thumb .ver {{ font-weight:800; color:var(--c1); }}
   .triple li {{ margin:5px 0; }}
+  .operator-grid {{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }}
+  @media(max-width:820px){{ .operator-grid {{ grid-template-columns:1fr; }} }}
+  .operator-card {{ background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:11px 13px; }}
+  .operator-card h4 {{ margin:0 0 5px; color:var(--c1); font-size:13px; }}
+  .operator-card p, .operator-card li {{ font-size:12.5px; }}
+  .operator-card ul {{ margin-top:4px; }}
+  .demo-cell {{ min-width:320px; }}
+  .demo-yes {{ background:#152b25; border:1px solid #28614d; border-radius:8px; padding:8px 9px; color:#d4f6e7; }}
+  .demo-no {{ color:var(--mut); font-size:12px; }}
+  .demo-screen {{ color:#9fe4c5; font-size:11.5px; margin-top:3px; }}
+  .demo-yes ol {{ margin:5px 0 0; padding-left:18px; }}
+  .demo-yes li {{ font-size:11.5px; margin:2px 0; }}
+  .demo-proof {{ color:#b8d9cd; font-size:11px; margin-top:5px; }}
+  .demo-plan-list {{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }}
+  @media(max-width:820px){{ .demo-plan-list {{ grid-template-columns:1fr; }} }}
+  .demo-plan {{ background:var(--panel2); border:1px solid var(--line); border-left:4px solid var(--mut); border-radius:9px; padding:10px 12px; font-size:12px; }}
+  .demo-plan-yes {{ border-left-color:#3fb950; }}
+  .demo-plan-no {{ border-left-color:#64748b; }}
+  .demo-plan-head {{ color:var(--txt); margin-bottom:4px; }}
+  .demo-plan ol {{ margin:5px 0 0; padding-left:18px; }}
+  .demo-plan li {{ font-size:12px; margin:3px 0; }}
+  .reference-block {{ background:#111d2c; border:1px solid #2f5c7a; border-radius:10px; padding:12px 15px; margin:14px 0; }}
+  .reference-block h3 {{ color:#9fd0ff; font-size:14px; margin:0 0 5px; }}
+  .reference-block li {{ margin:8px 0; }}
+  .reference-block a, .source-links a {{ color:#9fd0ff; }}
+  .ref-use, .ref-no-copy {{ display:block; color:var(--mut); font-size:11.5px; margin-top:2px; }}
+  .ref-no-copy {{ color:#d9b98e; }}
+  .source-links a {{ margin-right:8px; }}
   code {{ background:#0c1118; padding:1px 6px; border-radius:5px; color:#9fd0ff; font-size:12px; }}
   footer {{ text-align:center; color:var(--mut); font-size:12px; margin-top:10px; line-height:1.8; }}
 </style>
