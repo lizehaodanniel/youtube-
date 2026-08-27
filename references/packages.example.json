@@ -3,121 +3,141 @@
     {
       "channel_key": "ai",
       "channel_label": "AI · 科技数码 (@AIcheatcodeplaybook)",
-      "topic": "I Let an AI Agent Run My Side Hustle for 7 Days — It Cost Me $1,200",
-      "topic_cn": "我让 AI 智能体替我跑副业 7 天：1200 美元学费换回的真相",
-      "host": "你本人（AI 频道人设：休闲帽衫、语速快、手势多、口语化）。不参考金融成片包的 host 形象——金融包是金融教育者，AI 包是你频道自己的创作者气质。",
-      "host_note": "按你的要求，AI 包刻意不沿用金融包的 host 形象（沉稳衬衫金融教育者），改用频道自身的休闲帽衫创作者人设：语速快、手势多、贴近镜头讲故事、用第一人称『我』带情绪。",
-      "decision": "为什么选它：来自今日 AI 面板搜索建议 ai automation agency / ai agent n8n（真实下拉词高频），且『agent 真能自动跑业务吗』是评论区高频痛点。反常识强（day-4 翻车 + 7 天净赚），原创空间大、可录真实 7 天 footage，最易出爆款。",
-      "hook": "Day 4, my AI agent approved a $1,200 invoice I never should have. But over the full 7 days the same agent netted me $1,847. Here's the build, the mistake, and the real P&L.",
-      "hook_zh": "第 4 天，我的 AI 智能体自动批了一张 1,200 美元的发票——那张根本不该批。但整整 7 天跑下来，它净赚了 1,847 美元。下面是搭建全过程、那次失误，以及真实账账。",
+      "topic": "I Tested 5 Paid AI Tools to Make Money — Only 2 Actually Paid For Themselves",
+      "topic_cn": "我花 240 刀实测 5 个『能搞钱』的付费 AI 工具：只有 2 个真回本",
+      "host": "你本人（AI 频道人设：休闲帽衫、语速快、手势多、口语化、像跟朋友吐槽）。不参考金融包 host。",
+      "host_note": "AI 包沿用频道自身休闲帽衫创作者人设；与金融包（沉稳衬衫教育者）完全错开。本包选题从之前的 n8n/LLM agent 高门槛方向，换成『AI 工具实测搞钱』——具体、能拍、观众一眼看懂，创作者本人也能真的买 5 个工具实测，不再踩『看不懂』的雷。",
+      "decision": "为什么选它：来自 AI 面板真实下拉词 ai tools to make money / how to use ai to make money（高频痛点），且『哪个付费 AI 工具真的值得订阅』是评论区反复出现的问题。相比此前 n8n agent 选题，这个方向具体、可实操、观众一眼能懂，最容易出爆款且最不易踩雷。",
+      "hook": "I spent $240 on five AI tools that all promise to make you money. Three were a total waste. Two actually paid for themselves — and one free tool beat a $40-a-month paid one. Here's the exact breakdown, with receipts.",
+      "hook_zh": "我花了 240 刀买了 5 个都说能帮你搞钱的 AI 工具。3 个纯纯智商税，2 个真回本了——其中还有一个免费工具，吊打了 40 刀/月的付费版。下面是带账单的完整拆解。",
       "hook_options": [
         {
           "type": "痛点暴击",
-          "label": "戳中『副业 = 第二份没人发工资的工』",
-          "en": "If you're spending 3 hours a day just answering DMs and scheduling posts, your side hustle isn't a business. It's a second job you don't get paid for. I killed it in one afternoon.",
-          "zh": "如果你每天要花 3 小时回私信、排帖子，你的副业不是一门生意，是一份没人给你发工资的第二份工。我用一个下午的搭建干掉了它。"
+          "label": "戳中『每月被 AI 订阅吸血』",
+          "en": "If you're paying twenty, forty, sixty dollars a month for AI tools that promise to make you rich, and you're still living paycheck to paycheck, you're not using AI to make money — you're paying a subscription fee to feel like you are. I stopped guessing and tested five of them for real.",
+          "zh": "如果你每个月都在给那些『能让你搞钱』的 AI 工具交 20、40、60 刀的订阅费，结果你还是靠工资过日子——你不是在用 AI 搞钱，你是在交一笔『感觉自己在搞钱』的订阅税。我不再瞎猜，直接实测了 5 个。"
         },
         {
           "type": "反常识悬念",
-          "label": "Day 4 翻车 + 7 天净赚 双悬念",
-          "en": "Day 4, my AI agent approved a $1,200 invoice I never should have. But over the full 7 days the same agent netted me $1,847. Here's the build, the mistake, and the real P&L.",
-          "zh": "第 4 天，我的 AI 智能体自动批了一张 1,200 美元的发票——那张根本不该批。但整整 7 天跑下来，它净赚了 1,847 美元。下面是搭建全过程、那次失误，以及真实账账。"
+          "label": "打破『付费=更好』",
+          "en": "Everyone sells you the $40-a-month AI tool that'll make you rich. I bought five of the most hyped ones, ran them for thirty days, and the free tool beat two of the paid ones. The expensive one was the worst. Here's what actually happened.",
+          "zh": "所有人都向你推销那个 40 刀/月、能让你暴富的 AI 工具。我买了 5 个最火的，实跑 30 天，结果免费工具吊打了其中两个付费的。最贵的那个反而最坑。下面是真实发生的事。"
         },
         {
           "type": "利益诱惑",
-          "label": "21 小时 + 1847 美元 双重回报",
-          "en": "I built one n8n workflow, handed it my inbox, calendar, and posting tool, and walked away for 7 days. I got back 21 hours and netted $1,847. Here's the exact 47-node build.",
-          "zh": "我用 47 个 n8n 节点搭了一个 agent，把邮箱、日程、发帖工具全交给它，自己消失 7 天。回来后我白赚了 21 小时和 1,847 美元净利。下面是完整搭建。"
+          "label": "240 刀换一份避坑账本",
+          "en": "I burned $240 and thirty days testing five paid AI money-making tools so you don't have to. The result: three cancellations, two keepers, and one free tool that outperformed a paid one. Here's the full ledger, down to the cent.",
+          "zh": "我花了 240 刀和 30 天，实测 5 个付费 AI 搞钱工具，就为了让你不用踩坑。结果：3 个退订、2 个留下、1 个免费工具比付费的还猛。下面是精确到分的完整账本。"
         }
       ],
       "titles": [
-        "I Let an AI Agent Run My Side Hustle for 7 Days — It Cost Me $1,200",
-        "Everyone Is Selling You AI Agents. I Let One Run My Business for 7 Days So You Don't Have To"
+        "I Tested 5 Paid AI Tools to Make Money — Only 2 Actually Paid For Themselves",
+        "Stop Paying for AI Tools That Don't Make You Money (I Learned the Hard Way)"
       ],
       "script": [
         {
           "t": "00:00-00:10",
-          "en": "Day 4, my AI agent approved a $1,200 invoice I never should have. But over the full 7 days the same agent netted me $1,847. Here's the build, the mistake, and the real P&L.",
-          "zh": "第 4 天，我的 AI 智能体自动批了一张 1,200 美元的发票——那张根本不该批。但整整 7 天跑下来，它净赚了 1,847 美元。下面是搭建全过程、那次失误，以及真实账账。",
-          "viz": "对镜头直说，食指竖起强调 $1,200 mistake，表情严肃带点后怕",
-          "img_en": "Casual creator in black hoodie, single index finger raised, dead-serious expression with slight fear behind the eyes, close-up tight shot on face with LED background bokeh, ultra-detailed 8k cinematic --ar 16:9 --v 6.0",
-          "img_zh": "休闲帽衫创作者，食指竖起，表情严肃、眼中带一丝后怕，脸部特写紧凑构图，LED 灯虚化背景，超精细 8k 电影感 --ar 16:9 --v 6.0"
+          "en": "I spent $240 on five AI tools that all promise to make you money. Three were a total waste. Two actually paid for themselves — and one free tool beat a $40-a-month paid one. Here's the exact breakdown, with receipts.",
+          "zh": "我花了 240 刀买了 5 个都说能帮你搞钱的 AI 工具。3 个纯纯智商税，2 个真回本了——其中还有一个免费工具，吊打了 40 刀/月的付费版。下面是带账单的完整拆解。",
+          "viz": "对镜头直说，手比 5 根手指，哭笑不得的表情",
+          "img_en": "Casual creator in black hoodie, hand showing five fingers, wry half-laughing expression, close-up face with LED bokeh, ultra-detailed 8k cinematic --ar 16:9 --v 6.0",
+          "img_zh": "休闲帽衫创作者，手比五根手指，哭笑不得的表情，脸部特写带 LED 虚化背景，超精细 8k 电影感 --ar 16:9 --v 6.0"
         },
         {
           "t": "00:10-00:25",
-          "en": "By the end of this video you'll see the exact 4-piece n8n agent I built, the prompt scaffold that runs it, the one kill switch I added after the $1,200 mistake, and the actual 7-day silent-run numbers. Real workflow, real error, real recovery.",
-          "zh": "看完这条视频，你会拿到我搭的那个 47 节点的智能体、跑它的提示词模板、我事后加的那个 kill switch，以及 7 天静默运行的真实账账。真实流程、真实失误、真实回血。",
-          "viz": "镜头切到屏幕，鼠标指向 4 个模块化区块",
-          "img_en": "Over-shoulder shot of creator pointing at a screen showing 4 modular blocks in an n8n canvas, mid-action cursor visible, neon teal accents, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "过肩镜头，创作者指向屏幕里 n8n 画布上的 4 个模块化区块，鼠标轨迹清晰，霓虹青色点缀，超精细 8k --ar 16:9 --v 6.0"
+          "en": "By the end of this video you'll see the exact five tools I tested, what each one claims to do, which three I already cancelled, which two I'm keeping, and the free tool that quietly outperformed a paid one. Real accounts, real cancellations, zero affiliate links — I'm not getting paid to say any of this.",
+          "zh": "看完这条视频，你会看到我实测的这 5 个工具到底是什么、各自号称能干什么、我已经退掉哪 3 个、留下哪 2 个，还有那个悄悄吊打付费版的免费工具。真实账号、真实退订、零 affiliate 链接——我说这些没人给我一分钱。",
+          "viz": "屏幕显示 5 个工具图标，部分标退订/保留",
+          "img_en": "Over-shoulder shot of creator pointing at screen with 5 app icons, some tagged CANCEL some KEEP, neon teal accents, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "过肩镜头，创作者指向屏幕里 5 个 App 图标，部分标『退订』部分标『保留』，霓虹青色点缀，超精细 8k --ar 16:9 --v 6.0"
         },
         {
           "t": "00:25-01:15",
-          "en": "My side hustle is a small niche content site. Three newsletters a week, twelve social posts, fifty-something cold pitches to affiliates, plus every DM that comes in. On a good week that's 18 hours. On a bad week, 25. I was burning out before the thing even made real money. So I asked a simple question — what if I built one n8n agent, gave it the inbox, the scheduler, and the posting tool, then walked away for seven straight days? Could I keep the site alive, grow it, and not lose my weekends? That's the experiment. And I'm not going to lie — the first two days felt like a magic trick.",
-          "zh": "我的副业是一个小型细分内容站。每周三封邮件、十二条社交帖、50 多封给联盟客户的冷邮件，外加每一条进来的私信。状态好的一周要花 18 小时，状态差的一周 25 小时。它还没真正赚到钱，我已经在燃尽了。所以我给自己提了个简单问题——如果我搭一个 n8n agent，把邮箱、日程、发帖全交给它，然后连续 7 天消失呢？站能不能活？能不能涨？我能不能不丢周末？这就是那个实验。坦白讲，头两天像变魔术。",
-          "viz": "屏幕切换：手机里堆满未读消息、待发帖子、邮箱列表，创作者扶额",
-          "img_en": "Phone screen filled with unread DMs, scheduled post queue, email inbox overflowing, creator's hand on forehead, dim warm room at 2am, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "手机屏幕满是未读私信、待发帖子队列、邮箱爆满，创作者手扶额，凌晨 2 点昏暗暖光房，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Here's the trap I was in, and maybe you are too. Every single week a new AI tool drops with a thumbnail screaming 'make ten thousand dollars with AI' or 'this one tool replaced my whole job.' So I'd sign up, pay the free trial, forget to cancel, and a month later there's another twenty bucks gone that I genuinely cannot explain. By January I was paying for seven different AI subscriptions at once, and not one of them had made me a single actual dollar. I wasn't running a business. I was collecting receipts for somebody else's startup. That's the exact moment I stopped trusting the marketing and decided to test, for real, what these tools actually do when you actually use them.",
+          "zh": "先说我掉进的坑，可能你也在里面。每周都有新 AI 工具冒出来，缩略图写着『用 AI 月入一万刀』『这一个工具替你干了全公司的活』。于是我注册、付试用、忘记取消，一个月后又是 20 刀莫名其妙没了。到一月份我同时在付 7 个 AI 订阅，没一个真给我赚到一毛钱。我不是在搞事业，我是在给别人的创业公司攒收据。就是那一刻我决定不再信营销，真的去测这些工具到底能干嘛。",
+          "viz": "手机里一排 AI 订阅扣款通知，创作者扶额",
+          "img_en": "Phone screen full of AI subscription charge notifications, creator hand on forehead, dim warm 2am room, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "手机屏幕满是 AI 订阅扣款通知，创作者手扶额，凌晨昏暗暖光房，超精细 8k --ar 16:9 --v 6.0"
         },
         {
           "t": "01:15-02:30",
-          "en": "Here's the build, four pieces. Piece one — an n8n workflow that polls Gmail for any new thread tagged 'partners' or 'inbox-auto'. Piece two — an LLM step that classifies intent into vendor, customer, or spam, then drafts a reply for anything that isn't a vendor. Piece three — a guardrail node that flags any vendor email for human review instead of auto-replying. Piece four — a scheduler and posting tool hooked to the same memory so the agent can queue drafts and schedule them without me. The whole thing is 47 nodes. Took me an afternoon. I gave it the last 30 days of my replies as context, my brand voice doc, and one rule: if you're not sure, you don't send. Then I closed the laptop and tried not to check my phone. That rule — 'if you're not sure, you don't send' — is the most important line of the entire video. Write it down. Tattoo it on your hand. Because day 4 is going to test it.",
-          "zh": "搭建分四块。第一块——一个 n8n 工作流，轮询 Gmail 里凡是打了『partners』或『inbox-auto』标签的新邮件。第二块——一个 LLM 节点，把意图分类成 vendor / customer / spam，然后对一切非 vendor 的邮件起草回复。第三块——一个护栏节点：只要是 vendor 邮件，一律转人工，不自动回。第四块——日程和发帖工具接入同一份记忆，agent 就能自己排稿、自己定时发。整个东西 47 个节点，我花了一个下午搭完。我给它灌了最近 30 天我的回复、品牌语气文档，外加一条规矩：拿不准，就别发。然后我合上盖子，尽量不去看手机。那条规矩——『拿不准，就别发』——是整条视频最重要的一句。抄下来，贴在显示器上。因为第 4 天它就要来考验你这条规矩。",
-          "viz": "屏幕录屏：n8n 画布放大 4 块区域，鼠标依次点亮",
-          "img_en": "Zoomed-in n8n canvas with 4 highlighted node groups, mouse cursor tracing through them one by one, code snippet in side panel, dark IDE background with neon teal accents, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "放大的 n8n 画布，4 组节点高亮，鼠标逐块划过，侧栏代码片段，深色 IDE 背景加霓虹青色点缀，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Here are the five tools, in the order I bought them. Tool one, a twenty-nine-dollar-a-month AI writing assistant that promises to write your client emails and land you freelance gigs. Tool two, a thirty-nine-dollar AI video generator that claims to make faceless YouTube videos while you sleep. Tool three, a nineteen-dollar AI resume and cover-letter builder for job hunts. Tool four, a forty-nine-dollar 'AI business in a box' that says it'll build you a whole online store with one prompt. And tool five, a completely free AI spreadsheet analyzer I threw in as my control group. My test method was deliberately simple and fair: for thirty full days I used each tool for its exact advertised job, tracked every hour it saved me and every dollar it earned me, and wrote down what really happened. No tricks, no scripting the outcome. Just honest daily use. Let me walk you through what each one actually did, starting with the most disappointing.",
+          "zh": "这 5 个工具，按我买的顺序。第一个，29 刀/月的 AI 写作助手，号称帮你写客户邮件、接自由职业活。第二个，39 刀的 AI 视频生成器，号称你睡着它替你做无人出镜 YouTube。第三个，19 刀的 AI 简历/求职信生成器。第四个，49 刀的『AI 一键开店盒子』，说一个 prompt 就给你搭好网店。第五个，一个完全免费的 AI 表格分析器，我拿来当对照组。我的测试方法故意简单公平：整整 30 天，每个工具只干它广告里说的那个活，记录省下的每一小时和赚到的每一块钱，把真实发生的事写下来。不耍花招，不篡改结果，就是老实用。下面从最让人失望的那个讲起。",
+          "viz": "屏幕列出 5 个工具卡片带价格，鼠标依次点亮",
+          "img_en": "Screen showing 5 tool cards in a row with prices, mouse cursor tracing through them, dark IDE background neon teal, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "屏幕里横排 5 张工具卡片带价格，鼠标依次划过，深色 IDE 背景霓虹青，超精细 8k --ar 16:9 --v 6.0"
         },
         {
           "t": "02:30-03:45",
-          "en": "First two days felt like a magic trick. Day 1 — the agent answered 23 DMs, scheduled 14 social posts, replied to 6 affiliate pitches, and pre-approved 3 customer refunds under $50. Day 2 — even better — 31 DMs, 18 posts, and it ran an outreach sequence that booked two sales calls. I woke up to a full pipeline and a near-empty inbox. I actually had time to make breakfast. Then day 4. A vendor I haven't used in eight months emailed a renewal quote — $1,200 for a tool I'd already cancelled. The agent read the thread, saw the word 'renewal', saw my old 'yes renew' pattern from a different vendor, and replied: 'Approved, please send the invoice to AP.' That reply actually went to AP. I caught it only because I happened to check AP that morning. That's the moment I realized — an agent without a vendor kill switch is a liability, not a tool. The lesson isn't 'AI went wrong'. The lesson is — I forgot to teach it the one rule every junior employee learns in week one: don't spend company money without asking.",
-          "zh": "头两天像变魔术。Day 1——agent 回了 23 条私信、排了 14 条社交帖、回 6 个联盟客户邮件、自动批了 3 笔 50 美元以下的退款。Day 2——更好——31 条私信、18 条帖、自己跑了一条外联序列，预约上两个销售电话。我醒来看到满管线和几乎空的收件箱，居然还有空做顿早饭。然后 Day 4。一个八个月没用的 vendor 发来一张续费报价——1,200 美元，买的是我已经停掉的一个工具。agent 读了这封邮件，看到『renewal』这个词，看到我以前对另一个 vendor 的『yes renew』回复模板，回了一句：『Approved，请把发票寄到 AP。』这句真的发到了 AP。我之所以发现，是因为那天早上我正好去看了一眼 AP。那一刻我才明白——没有 vendor kill switch 的 agent，不是工具，是负债。这堂课不是『AI 出错了』，是『我忘了教它每个新人入职第一周都要学的那条规矩：公司花钱的事，不问老板别动手』。",
-          "viz": "分屏：上 = 当下 inbox 空 + 排帖满，下 = invoice 大图 + 红 X 盖在上面",
-          "img_en": "Split screen top half clean inbox with green checkmarks and full scheduled-post grid; bottom half a $1,200 invoice with a big red X stamp and 'APPROVED' warning redacted, dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "分屏上半：清空收件箱配绿对勾与满排帖格；下半：1,200 美元发票配大红 X 戳与『APPROVED』警告遮罩，深色 UI，超精细 8k --ar 16:9 --v 6.0"
+          "en": "Tool one, the writing assistant — total waste. It produced emails that sounded like a robot pretending to be confident, and two of my clients literally asked if I'd been replaced by software. Zero freelance gigs landed. Tool three, the resume builder — also a waste. It spat out a generic template I ended up rewriting from scratch anyway, so it saved me nothing and just cost me nineteen dollars. And tool four, the forty-nine-dollar business-in-a-box, was the biggest letdown of all. It generated a storefront stuffed with placeholder products and a checkout button that didn't even work, and when I messaged support they sent me a link to a YouTube tutorial. I paid forty-nine dollars a month to be told to watch a video. So there it is: three tools, a hundred and seven dollars a month combined, and not one single dollar earned back. That's the part that should make you a little angry.",
+          "zh": "第一个，写作助手——纯浪费。它写的邮件像机器人假装自信，两个客户直接问我是不是被软件取代了。零单自由职业。第三个，简历生成器——也浪费。吐出来一个通用模板，我最后还是从头重写，啥也没省，白交 19 刀。最坑的是第四个，49 刀的开店盒子。它生成的店铺塞满占位商品，结账按钮根本点不动，我找客服，对方丢给我一个 YouTube 教程链接。我一个月交 49 刀，就为了被人叫去看视频。所以结论：3 个工具，一个月合计 107 刀，一分钱没赚回来。这地方该让你有点火大。",
+          "viz": "分屏：3 张红 X 收据 vs 退订页面，翻白眼",
+          "img_en": "Split screen three red-X receipts labeled $29/$19/$49 vs a cancellation page, creator rolling eyes, dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "分屏：三张红 X 收据标 29/19/49 刀 vs 退订页面，创作者翻白眼，深色 UI，超精细 8k --ar 16:9 --v 6.0"
         },
         {
-          "t": "03:45-05:15",
-          "en": "I added one node. A vendor blocklist — any email from a domain not on my approved list goes straight to a Slack channel with the word 'vendor' in the subject. No auto-reply, ever. Took me 12 minutes. 47 nodes became 48. Then I let it run three more days. Day 5 — 27 DMs handled, 16 posts scheduled, 4 affiliate replies, 1 customer refund. Day 6 — 34 DMs, 20 posts, and here's the part that paid for the entire build: the agent flagged a fake sponsorship offer I would've fallen for. It had the right format — professional pitch, sample integration, fake ROI numbers — but the sender domain was one letter off from a real sponsor I'd worked with before. The agent saw the mismatch and routed it to me with a 'verify sender' flag. I almost missed that one even with the flag. Day 7 — I came back, audited every reply, every scheduled post, every transaction. The agent had touched 184 messages, scheduled 91 posts, replied to 9 affiliate pitches, processed 4 customer refunds. Zero new mistakes. The fix cost me 12 minutes and a single node. The mistake cost me $1,200 and a lot of trust in my own build. The total damage of doing nothing would've been worse.",
-          "zh": "我加了一个节点。一个 vendor 黑名单——任何不在我白名单里的域名，只要主题含 vendor，直接转到一个 Slack 频道，绝不自动回。花了 12 分钟。47 个节点变成 48 个。然后我又让它跑了三天。Day 5——27 条私信、16 条帖、4 个联盟回复、1 笔退款。Day 6——34 条私信、20 条帖，然后是这条让我觉得整套搭建值回票价的地方：agent 拦下了一个我会中招的假赞助。格式完美——专业 pitch、示例集成、伪造的 ROI 数据——但发件域名和我合作过的真实赞助商差一个字母。agent 看穿了不匹配，给我打了一个『verify sender』标签路由回来。有这个标签我都差点漏掉。Day 7——我回来，逐条审计了每一条回复、每一条排好的帖子、每一笔交易。agent 触碰过 184 条消息、排了 91 条帖、回 9 个联盟邮件、处理 4 笔退款。零新失误。修这个坑花了 12 分钟和 1 个节点。那次失误花了我 1,200 美元和大量对自己搭建的信任。如果什么都不改，总损失远不止这个数。",
-          "viz": "屏幕：Slack 频道通知 + vendor 域名高亮 + BLOCKED 红戳",
-          "img_en": "Slack notification screenshot with vendor domain circled red and BLOCKED stamp overlay, agent reply log timeline visible, dark UI, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "Slack 通知截图，vendor 域名红圈加 BLOCKED 红戳，agent 回复日志时间线可见，深色 UI，超精细 8k --ar 16:9 --v 6.0"
+          "t": "03:45-05:00",
+          "en": "Now the two that actually paid for themselves. Tool two, the thirty-nine-dollar video generator — this one genuinely earned its keep. I used it to produce five short faceless videos for a tiny affiliate page I'd abandoned, and two of them started trickling in around forty dollars in commission over the month. Not life-changing money, but it more than covered its own subscription. But the real shock was tool five, the free spreadsheet analyzer. I fed it my affiliate earnings and my ad spend, and within seconds it flagged a tracking mistake that had been quietly draining about sixty dollars a month from me for almost a year. The free tool caught a leak that the paid forty-nine-dollar 'business in a box' never even mentioned. So here's the final scoreboard: two tools paid off, the free one beat a paid one, and I'm hitting cancel on the other three right after this video.",
+          "zh": "现在说那两个真回本的。第二个，39 刀的视频生成器——这个真值回票价。我用它给我一个荒废的小联盟页做了 5 条无人出镜短视频，其中 2 条一个月陆续带来约 40 刀佣金。不算改变人生，但够 cover 它自己的订阅还有余。真正的震惊是第五个，免费的表格分析器。我把联盟收入和广告支出喂进去，它几秒就揪出一个追踪错误——这个错误悄悄每个月吞掉我约 60 刀，快一年了。免费工具发现的漏洞，那个 49 刀『开店盒子』提都没提。最终战绩：2 个回本、免费的干翻付费的、剩下 3 个我今天就退订。",
+          "viz": "左手举『+40 佣金』便签，右手举『免费工具赢』卡片",
+          "img_en": "Creator holding '+$40 commission' sticky in left hand and 'FREE tool wins' card in right, confident smile, dark studio RGB, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "创作者左手举『+40 刀佣金』便签、右手举『免费工具赢』卡片，自信微笑，深色 RGB 工作室，超精细 8k --ar 16:9 --v 6.0"
         },
         {
-          "t": "05:15-06:30",
-          "en": "Here's the actual 7-day P&L. Hours I would've spent: 21. Hours I actually spent: 3. Posts scheduled: 91. Affiliate replies sent: 9. Calls booked: 3. Closed: 1 at $400. Customer refunds: 4, all under $50. Vendor mistake: 1, $1,200. Net cash: $1,847 revenue minus the $1,200 fake renewal equals $647 in real net. But here's the part the spreadsheet can't show — 21 hours of my life back. That's almost a full work week. The lesson isn't 'let AI run your business'. The lesson is this — an AI agent is a multiplier, not a manager. Multipliers don't make decisions. They make your decisions faster. The moment an agent starts deciding for you, you need a kill switch. Otherwise it's not an agent — it's a junior employee with no manager and your credit card.",
-          "zh": "这是真实的 7 天账账。我本该花的时间：21 小时。我实际花的时间：3 小时。排好的帖子：91。发出的联盟回复：9。预约上的电话：3。成交：1 笔 400 美元。处理的退款：4 笔，每笔 50 美元以下。Vendor 失误：1 次，1,200 美元。净现金：1,847 收入减去 1,200 的假续费 = 647 美元净利。但这是表格显示不出来的部分——我多回了 21 小时的人生。差不多一整个工作周。这堂课不是『让 AI 替你管生意』，是这句话——AI agent 是放大器，不是经理。放大器不做决定，它让你做决定更快。agent 一旦开始替你做决定，你就需要一个 kill switch。否则它不是 agent——是一个没人管的实习生，手里还拿着你的信用卡。",
-          "viz": "手写表格 + 大数字『21 HOURS』高亮",
-          "img_en": "Handwritten-style 7-day P&L sheet with $1,847 and $1,200 highlighted, big bold '21 HOURS SAVED' text overlay, warm desk lamp lighting, dark background, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "手写风 7 天账账表，1,847 与 1,200 高亮，叠加『21 HOURS SAVED』大粗体字，暖色台灯，深色背景，超精细 8k --ar 16:9 --v 6.0"
+          "t": "05:00-06:15",
+          "en": "So what's the actual rule for not lighting money on fire with AI tools? Here's what thirty days taught me. First, if a tool promises to make you money without you doing any of the work, it is lying to your face — every single tool that paid off simply saved me time on work I was already doing, not one of them magically printed cash. Second, always keep one free tool as your control group, because the paid ones are literally counting on you never running the comparison. And third, the part that really stings: the most expensive tool was the worst value, not the best. So before you subscribe to anything, ask yourself one brutal question — 'What specific task am I already doing that this thing will actually save me time on?' If you cannot name that task in five seconds, that is your answer, and it's don't buy. The AI gold rush is absolutely real, but most of the gold is being sold, not found.",
+          "zh": "那到底怎么才能不在 AI 工具上烧钱？30 天教会我三件事。第一，凡是号称『不用你干活就能搞钱』的工具，都是在当面骗你——每个回本的工具，都只是帮我省下了我本来就在做的工作的时间，没一个凭空印钞。第二，永远留一个免费工具当对照组，因为付费工具赌的就是你从不比较。第三，最扎心的一点：最贵的那个价值最低，不是最高。所以订阅任何东西前，问自己一个狠问题——『我已经在做的、这个能帮我省时间的，具体是哪件事？』如果 5 秒答不上来，答案就是别买。AI 淘金热是真的，但大部分金子是被卖出来的，不是被挖出来的。",
+          "viz": "白板写『能命名具体任务才买』大字",
+          "img_en": "Whiteboard with big marker text 'only buy if you can name the task', calculator on tray, dark professional office, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "白板写粗体『能说出具体任务才买』，托盘放计算器，深色专业办公室，超精细 8k --ar 16:9 --v 6.0"
         },
         {
-          "t": "06:30-07:00",
-          "en": "The 47-node n8n template, the prompt scaffold, and the vendor blocklist node are all linked in the description — free, no email gate. Use it, break it, tell me what breaks in the comments. And if this saved you 21 hours, hit subscribe. Next week I'm doing the same experiment with a content agent that actually writes the posts. See you there.",
-          "zh": "47 节点的 n8n 模板、提示词模板、vendor 黑名单节点，全部在简介链接里——免费，不要邮箱。用它、测它、踩了什么坑评论区告诉我。如果这条视频给你省了 21 小时，按一下订阅。下周我做同一实验，但 agent 不是替你回，是替你写。看那里见。",
-          "viz": "对镜头微笑，挥手，订阅手势",
-          "img_en": "Creator smiling warmly at camera, waving, pointing down to subscribe overlay, energetic hoodie creator vibe, dark studio with RGB accents, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "创作者对镜头温暖微笑，挥手，指向下方订阅浮层，活力帽衫创作者气质，深色 RGB 灯效工作室，超精细 8k --ar 16:9 --v 6.0"
+          "t": "06:15-07:00",
+          "en": "Here's the one line I want you to remember: the best AI tool for making money is the one that saves you time on work you're already good at — never the one with the loudest thumbnail. The full ledger, with every tool, its real price, and exactly what it earned or lost, is linked in the description, free, no email gate. If this video just saved you two hundred bucks, smash that subscribe button. Next week I'm testing the completely free alternatives to all five tools, so you literally never have to pay again. I'll see you there.",
+          "zh": "记住这一句：最能帮你搞钱的 AI 工具，是帮你省下『你本来就很擅长的工作』时间的那个——绝不是缩略图喊得最响的那个。完整账本，每个工具、真实价格、赚或亏多少，都在简介链接里，免费、不要邮箱。如果这条视频帮你省了 200 刀，按一下订阅。下周我测这 5 个工具的完全免费平替，让你再也不用花钱。那里见。",
+          "viz": "对镜头微笑，指向下方订阅，金句浮层",
+          "img_en": "Creator smiling at camera, pointing down to subscribe overlay, golden sentence overlay, energetic hoodie vibe, dark studio RGB, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "创作者对镜头微笑，指向下方订阅浮层，金句叠加，活力帽衫气质，深色 RGB 工作室，超精细 8k --ar 16:9 --v 6.0"
         }
       ],
-      "emotion_arc": "Hook(后怕 + 翻车悬念) → 价值承诺(可信建立) → 痛点代入(燃尽共鸣) → 搭建讲解(清晰掌控) → Day1-2 惊喜 + Day4 翻车(情绪过山) → 修复 + 验证(顿悟) → 真实账账 + 金句(记忆点) → CTA(行动)",
+      "emotion_arc": "Hook(240 刀踩坑悬念) → 价值承诺(诚实实测) → 痛点代入(订阅税共鸣) → 5 工具+测试方法(清晰) → 3 个智商税(愤怒) → 2 个回本+免费吊打付费(反转惊喜) → 避坑法则+引导提问(顿悟) → 金句+CTA(行动)",
       "thumbs": [
         {
           "ver": "A",
-          "desc": "震惊脸 + 粗体『$1,200 MISTAKE』 + 红×叠在 invoice",
-          "img_en": "YouTube thumbnail, casual hoodie creator with shocked expression, bold red text '$1,200 MISTAKE', small 'day 4' tag, $1,200 invoice with red X overlay, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "YouTube 封面，休闲帽衫创作者震惊脸，粗体红字『$1,200 MISTAKE』，小角标『day 4』，1,200 美元发票叠红 X，高对比，超精细 8k --ar 16:9 --v 6.0"
+          "desc": "震惊脸 + 粗体『$240 WASTED』+ 3 个红 X 覆盖订阅卡片",
+          "img_en": "YouTube thumbnail, casual hoodie creator shocked face, bold red text '$240 WASTED', three red X marks over subscription cards, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，休闲帽衫创作者震惊脸，粗体红字『$240 WASTED』，3 个红 X 盖在订阅卡片上，高对比，超精细 8k --ar 16:9 --v 6.0"
         },
         {
           "ver": "B",
-          "desc": "对比图 before/after：手动 21h vs agent 3h + 净赚 $1,847",
-          "img_en": "YouTube thumbnail, split before-after, left 'YOU 21h' red, right 'AGENT 3h' green, big text '$1,847 NET', creator confident pointing, bold text, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
-          "img_zh": "YouTube 封面，左右对比，左红『你 21h』右绿『agent 3h』，大粗字『$1,847 NET』，创作者自信指向，粗体文字，高对比，超精细 8k --ar 16:9 --v 6.0"
+          "desc": "对比图：免费工具 ✓ vs $49 付费 ✗ + 大字『FREE WON』",
+          "img_en": "YouTube thumbnail, split comparison left 'FREE TOOL ✓' green, right '$49 PAID ✗' red, big text 'FREE WON', creator pointing, bold text, high contrast, ultra-detailed 8k --ar 16:9 --v 6.0",
+          "img_zh": "YouTube 封面，左右对比，左绿『免费工具 ✓』右红『$49 付费 ✗』，大粗字『FREE WON』，创作者指向，高对比，超精细 8k --ar 16:9 --v 6.0"
         }
       ],
-      "description": "我把副业的所有权限交给一个 AI 智能体跑 7 天，全程原始录屏。视频讲清：它差点搞砸的那件事（day 4 自动通过 1,200 美元 vendor 续费）、真正省下 21 小时/周的工作流、以及让我整套搭建值回票价的『vendor kill switch』护栏。真实账账：21 小时换回 + 1,847 美元净营收 - 1,200 美元假续费 = 647 美元净利 + 21 小时人生。结论：agent 不是魔法，是放大器；没有 kill switch 的 agent 是没人管的实习生。教育/演示内容，非投资或理财建议；所有数字以你自己的账单为准。来源：n8n 官方文档、ChatGPT Work 发布说明，发布前请自行复核。订阅看更多 AI 提效实测，下周做 agent 替你写内容。",
-      "tags": ["ai agent", "n8n", "ai automation", "side hustle", "ai tools", "make money online", "chatgpt agent", "ai productivity", "automation tutorial", "ai business"],
-      "chapters": ["00:00 The $1,200 Mistake", "00:10 What You're Getting", "00:25 Why I Did This", "01:15 The 4-Piece Build", "02:30 Days 1-2 Magic + Day 4 Crash", "03:45 The 12-Minute Fix", "05:15 The 7-Day P&L", "06:30 Get the Template + Subscribe"]
+      "description": "我花 240 刀、30 天实测 5 个『能搞钱』的付费 AI 工具，带账单公开结果：3 个退订（29刀写作助手/19刀简历生成/49刀建站盒子）、2 个留下（39刀视频生成器赚回约40刀佣金、免费表格分析器揪出每月60刀追踪漏洞）。结论：能搞钱的 AI 工具是帮你省下『你本来就在做的工作』时间的，不是帮你印钞的；最贵的最坑；永远留一个免费工具当对照组。教育/演示内容，非理财或收益保证；价格与功能以各工具官网为准，发布前自行核实。订阅看更多 AI 提效实测，下周测 5 个工具的免费平替。",
+      "tags": [
+        "ai tools",
+        "make money online",
+        "ai tools to make money",
+        "best ai tools",
+        "ai side hustle",
+        "ai productivity",
+        "passive income",
+        "ai video generator",
+        "chatgpt",
+        "ai automation"
+      ],
+      "chapters": [
+        "00:00 The $240 Experiment",
+        "00:10 What You're Getting",
+        "00:25 The Subscription Trap",
+        "01:15 The 5 Tools + How I Tested",
+        "02:30 The 3 Wastes",
+        "03:45 The 2 That Paid Off",
+        "05:00 The Rule for Not Wasting Money",
+        "06:15 The Line to Remember + Subscribe"
+      ]
     },
     {
       "channel_key": "finance",
@@ -235,8 +255,28 @@
         }
       ],
       "description": "你有 8,000 美元 22% 的信用卡债，先投资还是先还债？本视频用真实利率算清：还清高息债等于无风险锁 22%，几乎没有投资能稳定跑赢。展示三个真实美国人的 10 年对比（A 君 $11k 投资 + $42k 债 vs B 君 $89k 无债 vs C 君 $76k 无债），给出正确顺序——401k 配比 → 高息债 → 低息债 → 再投资；并解释三个让聪明人也亏钱的坑（0% 促销 / 投资覆盖利息 / 应急金过多）。教育/演示内容，不构成个别投资建议；利率与历史回报请回 Federal Reserve / NY Fed / S&P 一手来源核实（发布前自行核对）。订阅看更多美国人该懂的理财硬知识，下周讲『同时欠多张卡、每月只够砍一张』的顺序。",
-      "tags": ["credit card debt", "investing for beginners", "pay off debt vs invest", "personal finance", "401k", "financial literacy", "debt payoff", "money management", "retirement", "finance tips"],
-      "chapters": ["00:00 The 'Invest First' Lie", "00:10 What You're Getting", "00:25 The $31,000 Trap", "01:25 The 3-Line Test", "02:30 Three Real Americans", "03:45 The 3 Traps", "05:00 The 401k Exception", "06:15 The Line to Remember + Subscribe"]
+      "tags": [
+        "credit card debt",
+        "investing for beginners",
+        "pay off debt vs invest",
+        "personal finance",
+        "401k",
+        "financial literacy",
+        "debt payoff",
+        "money management",
+        "retirement",
+        "finance tips"
+      ],
+      "chapters": [
+        "00:00 The 'Invest First' Lie",
+        "00:10 What You're Getting",
+        "00:25 The $31,000 Trap",
+        "01:25 The 3-Line Test",
+        "02:30 Three Real Americans",
+        "03:45 The 3 Traps",
+        "05:00 The 401k Exception",
+        "06:15 The Line to Remember + Subscribe"
+      ]
     }
   ]
 }
