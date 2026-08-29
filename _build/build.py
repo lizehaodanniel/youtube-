@@ -22,6 +22,7 @@ import ai_ch1_4, ai_ch5_6, ai_ch7_8, ai_demos          # noqa: E402
 import fin_ch1_4, fin_ch5_6, fin_ch7_8, fin_demos      # noqa: E402
 import fin_videos                                      # noqa: E402
 import ai_videos                                       # noqa: E402
+import ai_assets                                       # noqa: E402
 
 # ---------------------------------------------------------------- 角色卡前缀
 HOST_PREFIX = {
@@ -162,6 +163,7 @@ def main():
     ai = by_key["ai"]
     ai["script"] = ai_script
     ai["demo_cards"] = attach_videos(ai_demos.DEMOS, ai_videos.VIDEOS)
+    ai["asset_manifest"] = ai_assets.CARDS
     ai["chapters"] = refresh_chapters(ai["chapters"], AI_STARTS)
     ai["sentence_count"] = len(ai_script)
     ai["word_count"] = sum(r["wc"] for r in ai_script)

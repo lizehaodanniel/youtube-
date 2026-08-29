@@ -320,6 +320,89 @@ def demo_plan_block(cards, ns="pkg"):
     return f'<div class="demo-card-list">{rows}</div>'
 
 
+KIND_LABEL = {
+    "image": ("图片", "#7c5cff", "图片提示词（可喂 Midjourney）"),
+    "video": ("视频", "#22d3ee", "视频提示词（可喂 Runway / Kling / Veo）"),
+    "doc": ("文档", "#3fb950", "全文（可直接复制使用）"),
+    "sheet": ("表格", "#e0c07a", "全文（可直接复制使用）"),
+}
+
+
+def asset_manifest_block(cards, ns="pkg"):
+    """实操素材清单：每张实操卡需要准备的具体文件。
+
+    image / video → 给提示词；doc / sheet → 给完整可抄的全文。
+    """
+    if not cards:
+        return ""
+    out = []
+    for c in cards:
+        cid = c.get("id")
+        items_html = ""
+        for it in (c.get("items") or []):
+            no = esc(str(it.get("no", "")))
+            kind = it.get("kind", "doc")
+            klabel, kcolor, khint = KIND_LABEL.get(kind, ("文件", "#8b98a9", ""))
+            name = esc(it.get("name", ""))
+            spec = esc(it.get("spec", ""))
+            brief = esc(it.get("brief_zh", ""))
+            onimg = esc(it.get("on_image_zh", ""))
+            payload_id = f"ap-{esc(ns)}-{no}"
+            # 可复制内容：image/video 主推英文提示词（生成器直接吃），doc/sheet 推全文
+            if kind in ("image", "video"):
+                payload_en = it.get("img_en") or it.get("vid_en") or ""
+                payload_zh = it.get("img_zh") or it.get("vid_zh") or ""
+                body = ""
+                if payload_en:
+                    body += f'<div class="am-p en"><span class="am-tag">EN</span>{esc(payload_en)}</div>'
+                if payload_zh:
+                    body += f'<div class="am-p zh"><span class="am-tag">中</span>{esc(payload_zh)}</div>'
+                btns = (
+                    f'<button type="button" class="am-copy" data-ap="{payload_id}" onclick="copyAsset(this)" title="{esc(khint)}">'
+                    f'<span class="asset-copy-label">复制英文提示词</span></button>'
+                    f'<button type="button" class="am-copy ghost" data-ap="{payload_id}-zh" onclick="copyAsset(this)">'
+                    f'<span class="asset-copy-label">中文</span></button>'
+                )
+                payloads = (
+                    f'<textarea class="asset-payload" id="{payload_id}" hidden>{html.escape(payload_en)}</textarea>'
+                    f'<textarea class="asset-payload" id="{payload_id}-zh" hidden>{html.escape(payload_zh)}</textarea>'
+                )
+            else:
+                content = it.get("content") or ""
+                body = f'<pre class="am-pre">{esc(content)}</pre>'
+                btns = (
+                    f'<button type="button" class="am-copy" data-ap="{payload_id}" onclick="copyAsset(this)" title="{esc(khint)}">'
+                    f'<span class="asset-copy-label">复制全文</span></button>'
+                )
+                payloads = f'<textarea class="asset-payload" id="{payload_id}" hidden>{html.escape(content)}</textarea>'
+            items_html += f'''<div class="am-item">
+              <div class="am-item-head">
+                <span class="am-no">{no}</span>
+                <span class="am-kind" style="--kc:{kcolor}">{klabel}</span>
+                <code class="am-name">{name}</code>
+                <span class="am-spec">{spec}</span>
+                <span class="am-btns">{btns}</span>
+              </div>
+              <div class="am-brief">{brief}</div>
+              {f'<div class="am-onimg">🖼 图上文字：{onimg}</div>' if onimg else ''}
+              <div class="am-body">{body}</div>
+              {payloads}
+            </div>'''
+        note = esc(c.get("note", ""))
+        out.append(f'''<div class="am-card" id="{esc(ns)}-assets-{cid}">
+          <div class="am-card-head">
+            <span class="am-card-no">实操卡 {esc(cid)}</span>
+            <span class="am-card-title">{esc(c.get("title", ""))}</span>
+            <button type="button" class="am-copy-all" data-card="{esc(ns)}-assets-{cid}" onclick="copyAssets(this)">
+              <span class="asset-copy-label">复制本卡全部素材</span>
+            </button>
+          </div>
+          {f'<div class="am-note">{note}</div>' if note else ''}
+          <div class="am-items">{items_html}</div>
+        </div>''')
+    return f'<div class="am-list">{"".join(out)}</div>'
+
+
 def video_prompts_block(shots, neg_map):
     """镜头级视频提示词。mode=ai-video 可直接喂视频模型；mode=screen 建议实拍录屏 + AE。"""
     if not shots:
@@ -405,6 +488,7 @@ def package_block(pkg):
     source_links = "  ".join(f'<a href="{esc(x.get("url", ""))}" target="_blank" rel="noopener">{esc(x.get("label", "来源"))}</a>' for x in (pkg.get("source_links") or []))
     op_html = operator_block(pkg.get("operator_breakdown") or {})
     demo_plan_html = demo_plan_block(pkg.get("demo_cards") or legacy_demo_cards(pkg.get("script") or []), ns=key)
+    assets_html = asset_manifest_block(pkg.get("asset_manifest") or [], ns=key)
     refs_html = reference_block(pkg.get("reference_videos") or [])
     word_count = pkg.get("word_count")
     sentence_count = pkg.get("sentence_count") or len(pkg.get("script") or [])
@@ -441,6 +525,7 @@ def package_block(pkg):
       <div class="pkg-sec"><h3>两个炸裂标题</h3><ul class="titles">{titles}</ul></div>
       <div class="pkg-sec"><h3>分镜脚本表（句子级 · 一句一图 · 英中分栏）</h3>{stats_html}{script_html}</div>
       <div class="pkg-sec"><h3>实操执行卡（镜头语言 + 逐步动作 + 验收 + 常见坑）</h3>{demo_plan_html}</div>
+      {f'<div class="pkg-sec"><h3>实操素材清单（每张卡要准备什么 · 提示词 / 文案全文全部给你）</h3>{assets_html}</div>' if assets_html else ''}
       <div class="pkg-sec"><h3>情绪弧（Hook→Aha→Payoff）</h3><div>{arc}</div></div>
       {refs_html}
       <div class="pkg-sec"><h3>YouTube 封面缩略图（A/B 两版·英中双语）</h3><div class="thumbs">{thumbs}</div></div>
@@ -645,6 +730,65 @@ def render(spec, base_dir=None):
   }}
   .pkg-stats .stat b {{ color:var(--txt); font-size:13px; }}
   .demo-card-list {{ display:grid; gap:12px; }}
+  /* ---- 实操素材清单 ---- */
+  .am-list {{ display:grid; gap:14px; }}
+  .am-card {{
+    background:var(--panel2); border:1px solid var(--line); border-left:4px solid #7c5cff;
+    border-radius:10px; padding:12px 14px; scroll-margin-top:12px;
+  }}
+  .am-card-head {{ display:flex; align-items:baseline; flex-wrap:wrap; gap:9px; margin-bottom:7px; }}
+  .am-card-no {{
+    background:#221a3d; border:1px solid #4b3a8f; color:#c3b2ff;
+    font-size:11px; font-weight:800; padding:2px 8px; border-radius:6px; white-space:nowrap;
+  }}
+  .am-card-title {{ font-size:14px; font-weight:700; color:var(--txt); }}
+  .am-note {{ font-size:12.5px; color:var(--mut); line-height:1.6; margin-bottom:9px; }}
+  .am-items {{ display:grid; gap:9px; }}
+  .am-item {{
+    background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px 12px;
+  }}
+  .am-item-head {{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px; }}
+  .am-no {{ font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--mut); background:var(--panel2); padding:2px 6px; border-radius:5px; }}
+  .am-kind {{
+    font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:5px; white-space:nowrap;
+    color:var(--kc,#8b98a9); border:1px solid var(--kc,#8b98a9); background:transparent;
+  }}
+  .am-name {{ font-family:ui-monospace,Menlo,monospace; font-size:12px; color:#9fd0ff; }}
+  .am-spec {{ font-size:11px; color:var(--mut); }}
+  .am-btns {{ margin-left:auto; display:flex; gap:6px; }}
+  .am-copy, .am-copy-all {{
+    display:inline-flex; align-items:center; padding:4px 10px; border-radius:7px; cursor:pointer;
+    background:var(--c1,var(--acc)); border:1px solid var(--c1,var(--acc)); color:#0b0e14;
+    font-size:11.5px; font-weight:700; transition:all .15s ease; white-space:nowrap;
+  }}
+  .am-copy-all {{ background:transparent; color:var(--mut); border-color:var(--line); font-weight:600; margin-left:auto; }}
+  .am-copy-all:hover {{ background:#1c2434; border-color:var(--c1,var(--acc)); color:var(--c1,var(--acc)); }}
+  .am-copy.ghost {{ background:transparent; border-color:var(--line); color:var(--mut); font-weight:600; }}
+  .am-copy.ghost:hover {{ background:#1c2434; color:var(--txt); }}
+  .am-copy:hover, .am-copy-all:hover {{ filter:brightness(1.12); }}
+  .am-copy:active, .am-copy-all:active {{ transform:scale(0.97); }}
+  .am-copy.is-ok, .am-copy-all.is-ok {{ background:#152b25 !important; border-color:#28614d !important; color:#8ee9bd !important; }}
+  .am-copy.is-err, .am-copy-all.is-err {{ background:#2a1212 !important; border-color:#7a2222 !important; color:#ff9aa2 !important; }}
+  .am-brief {{ font-size:12.5px; color:var(--txt); line-height:1.6; margin-bottom:7px; }}
+  .am-onimg {{ font-size:12px; color:#e0c07a; background:#1f1a10; border:1px solid #4a3c12; border-radius:6px; padding:5px 9px; margin-bottom:7px; line-height:1.55; }}
+  .am-body {{ display:grid; gap:6px; }}
+  .am-p {{
+    font-size:12px; line-height:1.6; padding:7px 10px; border-radius:6px;
+    background:#0f1520; border:1px solid var(--line);
+  }}
+  .am-p.en {{ color:#cfe3ff; font-family:ui-monospace,Menlo,monospace; font-size:11.5px; }}
+  .am-p.zh {{ color:#a8b6c8; }}
+  .am-tag {{
+    display:inline-block; font-size:9.5px; font-weight:800; padding:1px 5px; border-radius:4px;
+    margin-right:7px; vertical-align:1px; background:#1c2434; color:var(--mut); border:1px solid var(--line);
+  }}
+  .am-p.en .am-tag {{ color:#9fd0ff; }}
+  .am-p.zh .am-tag {{ color:#e0c07a; }}
+  .am-pre {{
+    margin:0; padding:10px 12px; border-radius:6px; background:#0f1520; border:1px solid var(--line);
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px; line-height:1.6;
+    color:#c8d4e4; white-space:pre-wrap; word-break:break-word; max-height:520px; overflow-y:auto;
+  }}
   .demo-card {{
     background:var(--panel2); border:1px solid var(--line); border-left:4px solid #3fb950;
     border-radius:10px; padding:12px 14px; font-size:12.5px; scroll-margin-top:12px;
@@ -767,6 +911,84 @@ def render(spec, base_dir=None):
       if (navigator.clipboard && navigator.clipboard.writeText) {{
           navigator.clipboard.writeText(text).then(success).catch(fallback);
       }} else {{ fallback(); }}
+  }}
+
+  function copyAsset(btn) {{
+      const el = document.getElementById(btn.getAttribute('data-ap'));
+      const lbl = btn.querySelector('.asset-copy-label');
+      const old = lbl ? lbl.textContent : '';
+      if (!el || !el.value) {{
+          btn.classList.add('is-err'); if (lbl) lbl.textContent = '复制失败';
+          setTimeout(() => {{ btn.classList.remove('is-err'); if (lbl) lbl.textContent = old; }}, 1800);
+          return;
+      }}
+      const text = el.value;
+      const n = (text.match(/\\n/g) || []).length + 1;
+      const done = (ok) => {{
+          btn.classList.add(ok ? 'is-ok' : 'is-err');
+          if (lbl) lbl.textContent = ok ? ('已复制 ' + (n > 1 ? n + ' 行' : '✓')) : '复制失败';
+          setTimeout(() => {{
+              btn.classList.remove('is-ok'); btn.classList.remove('is-err');
+              if (lbl) lbl.textContent = old;
+          }}, 1800);
+      }};
+      const fb = () => {{
+          const ta = document.createElement('textarea');
+          ta.value = text; ta.style.cssText = 'position:fixed;left:-9999px';
+          document.body.appendChild(ta); ta.select();
+          let c = false; try {{ c = document.execCommand('copy'); }} catch (e) {{ c = false; }}
+          document.body.removeChild(ta); return c;
+      }};
+      if (navigator.clipboard && navigator.clipboard.writeText) {{
+          navigator.clipboard.writeText(text).then(() => done(true), () => done(fb()));
+      }} else {{ done(fb()); }}
+  }}
+
+  function copyAssets(btn) {{
+      const card = document.getElementById(btn.getAttribute('data-card'));
+      const lbl = btn.querySelector('.asset-copy-label');
+      const old = lbl ? lbl.textContent : '';
+      if (!card) {{
+          btn.classList.add('is-err'); setTimeout(() => btn.classList.remove('is-err'), 1800); return;
+      }}
+      const parts = [];
+      card.querySelectorAll('.am-item').forEach((it) => {{
+          const name = it.querySelector('.am-name');
+          const spec = it.querySelector('.am-spec');
+          const payload = it.querySelector('.asset-payload');
+          if (!payload) return;
+          parts.push('### ' + (name ? name.textContent : '') + (spec ? '  [' + spec.textContent + ']' : ''));
+          const brief = it.querySelector('.am-brief');
+          if (brief && brief.textContent.trim()) parts.push(brief.textContent.trim());
+          const en = it.querySelector('.am-p.en');
+          const zh = it.querySelector('.am-p.zh');
+          const pre = it.querySelector('.am-pre');
+          if (pre) {{ parts.push(pre.textContent); }}
+          else {{
+              if (en) parts.push('[EN] ' + en.textContent.replace(/^EN\\s*/, '').trim());
+              if (zh) parts.push('[中] ' + zh.textContent.replace(/^中\\s*/, '').trim());
+          }}
+          parts.push('');
+      }});
+      const text = parts.join('\\n');
+      const done = (ok) => {{
+          btn.classList.add(ok ? 'is-ok' : 'is-err');
+          if (lbl) lbl.textContent = ok ? ('已复制 ' + parts.length + ' 段 ✓') : '复制失败';
+          setTimeout(() => {{
+              btn.classList.remove('is-ok'); btn.classList.remove('is-err');
+              if (lbl) lbl.textContent = old;
+          }}, 1800);
+      }};
+      const fb = () => {{
+          const ta = document.createElement('textarea');
+          ta.value = text; ta.style.cssText = 'position:fixed;left:-9999px';
+          document.body.appendChild(ta); ta.select();
+          let c = false; try {{ c = document.execCommand('copy'); }} catch (e) {{ c = false; }}
+          document.body.removeChild(ta); return c;
+      }};
+      if (navigator.clipboard && navigator.clipboard.writeText) {{
+          navigator.clipboard.writeText(text).then(() => done(true), () => done(fb()));
+      }} else {{ done(fb()); }}
   }}
 
   function tblText(id, mode) {{
