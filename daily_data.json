@@ -1,0 +1,208 @@
+{
+  "title": "每日热点看台",
+  "date": "2026-08-26",
+  "type": "daily",
+  "subtitle": "真实播放量来自 YouTube Data API（美国区）· 金融面板聚焦「美国人最想在 YouTube 上看的内容」· 同步覆盖 B站 / 抖音",
+  "panels": [
+    {
+      "key": "ai",
+      "label": "AI · 科技数码",
+      "handle": "@AIcheatcodeplaybook",
+      "audience": "AI/科技数码爱好者、独立开发者、用 AI 提效的创作者",
+      "items": [
+        {
+          "title": "苹果放弃扫描你照片：CSAM 计划为何反转（144.7万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Dbv1dwP4A-M",
+          "reason": "苹果隐私立场的经典反转案例，正好切中「端侧 AI 内容审核 vs 用户隐私」的争议点，适合做「大厂到底有没有在偷看你照片」观点视频。",
+          "metric": "144.7万播放",
+          "references": [
+            {"title": "Apple 隐私官网", "url": "https://www.apple.com/privacy/"},
+            {"title": "维基：Apple–FBI 加密争议", "url": "https://en.wikipedia.org/wiki/Apple%E2%80%93FBI_encryption_dispute"}
+          ]
+        },
+        {
+          "title": "PC Parts have arrived 💀 装机开箱梗（7214.7万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=8Dzp5oAb5WI",
+          "reason": "硬件开箱类 Shorts 病毒式爆火（7200万+），说明「硬件到货开箱+梗」是流量密码，可借鉴其节奏做 AI PC / 显卡选题。",
+          "metric": "7214.7万播放",
+          "references": [
+            {"title": "维基：图形处理器 GPU", "url": "https://en.wikipedia.org/wiki/Graphics_processing_unit"}
+          ]
+        },
+        {
+          "title": "Would You Use FUZZY AirPods?? 概念整活硬件（529.4万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=m9Rha7QEC88",
+          "reason": "概念/整活硬件自带传播力，适合做「离谱科技产品盘点」类轻松选题，引流效果好且不挑受众。",
+          "metric": "529.4万播放",
+          "references": [
+            {"title": "维基：Apple AirPods", "url": "https://en.wikipedia.org/wiki/Apple_AirPods"}
+          ]
+        },
+        {
+          "title": "SHE SAT ON HER IPAD?! 数码意外搞笑（459.5万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=q3P2HbYgl8c",
+          "reason": "数码意外/搞笑类病毒内容，轻量易跟风，可作为频道「轻松一刻」固定栏目素材，提升完播与互动。",
+          "metric": "459.5万播放",
+          "references": [
+            {"title": "Apple iPad 官网", "url": "https://www.apple.com/ipad/"}
+          ]
+        },
+        {
+          "title": "Is THIS The END of Police Surveillance? 无人机监控（63.5万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=KAemd-I0_tQ",
+          "reason": "无人机+监控+隐私的深度议题，契合 AI 伦理/治理热点，可做有信息量的长视频建立专业人设。",
+          "metric": "63.5万播放",
+          "references": [
+            {"title": "维基： Surveillance 监控", "url": "https://en.wikipedia.org/wiki/Surveillance"}
+          ]
+        },
+        {
+          "title": "How To Find A Lock's Hidden Code 生活黑客（716.4万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=AgVk31-3LeI",
+          "reason": "生活黑客/安全科普，高完播，「隐藏机关」类内容极具传播性，可迁移到「AI 破解/自动化」趣味演示。",
+          "metric": "716.4万播放",
+          "references": [
+            {"title": "维基：密码锁 Combination lock", "url": "https://en.wikipedia.org/wiki/Combination_lock"}
+          ]
+        },
+        {
+          "title": "The Moment Apple Lost Billions In Seconds 商业时事（458.9万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=a_CTi6NLp6c",
+          "reason": "苹果市值/商业时事，是 AI 叙事之外的高关注商业选题，适合做「科技股为啥波动」解读。",
+          "metric": "458.9万播放",
+          "references": [
+            {"title": "Apple Newsroom", "url": "https://www.apple.com/newsroom/"},
+            {"title": "维基：Apple Inc.", "url": "https://en.wikipedia.org/wiki/Apple_Inc."}
+          ]
+        },
+        {
+          "title": "Flock values their privacy 自动车牌识别讽刺（203.5万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=GQoQkeMdvQM",
+          "reason": "自动车牌识别公司 Flock 的隐私讽刺梗，surveillance vs privacy 持续热点，与 AI 监控治理强相关。",
+          "metric": "203.5万播放",
+          "references": [
+            {"title": "Flock 官网", "url": "https://www.flock.com/"},
+            {"title": "EFF 电子前哨基金会", "url": "https://www.eff.org/"}
+          ]
+        },
+        {
+          "title": "AI 每日早报｜2026.08.23 八大 AI 领域一日速览",
+          "platform": "Bilibili",
+          "url": "https://www.bilibili.com/video/BV1VX8p6cEcc/",
+          "reason": "B站 AI 区日更早报类内容走红，说明「AI 信息降噪」是刚需，可对标做频道固定栏目，也可作为你自己的选题雷达。",
+          "metric": "B站 AI 区日更",
+          "references": [
+            {"title": "B站热门视频日榜（飞瓜数据）", "url": "https://bz.feigua.cn/ranking/DailyHotVideo"}
+          ]
+        },
+        {
+          "title": "B站成 WAIC 官方 AI 科技视频平台，月均 1.9 亿用户消费 AI 内容",
+          "platform": "Bilibili",
+          "url": "https://www.qbitai.com/2026/07/453530.html",
+          "reason": "B站已成为 WAIC 官方 AI 科技视频平台，证明中长视频 AI 科普有强受众，可借势做「B站爆款 AI 选题拆解」。",
+          "metric": "月均 1.9 亿 AI 内容消费",
+          "references": [
+            {"title": "量子位：B站 WAIC 合作报道", "url": "https://www.qbitai.com/2026/07/453530.html"}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "finance",
+      "label": "金融 · 财经商业（美国观众）",
+      "handle": "@TheMoneyMoo",
+      "audience": "美国 YouTube 观众：个人投资者、关注美股/宏观/个人理财/退休/房产/加密的美国人",
+      "items": [
+        {
+          "title": "BREAKING：美联储取消降息，油价飙涨、股市跳水（34.0万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=wTFpxk0baZI",
+          "reason": "美联储取消降息预期、油价与股市联动，是美国观众最关心的宏观主线之一，可做「降息落空普通人怎么应对」。",
+          "metric": "34.0万播放",
+          "references": [
+            {"title": "美联储 FOMC 议息日历", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+            {"title": "美联储货币政策主页", "url": "https://www.federalreserve.gov/monetarypolicy.htm"}
+          ]
+        },
+        {
+          "title": "THE FED JUST RESET THE MARKET：股市创新高、利率飙升（41.8万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=tcUGMKt__-g",
+          "reason": "强情绪标题+宏观解读，美国散户极高点击，适合做每日市场速览类固定栏目。",
+          "metric": "41.8万播放",
+          "references": [
+            {"title": "美联储 FOMC 议息日历", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"}
+          ]
+        },
+        {
+          "title": "The Fed Meeting That Could Break the Market（2026年3月前瞻，8,105播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=pfUXFcIcdnE",
+          "reason": "FOMC 会议前瞻类深度内容，可做「下次议息前该关注什么」系列，建立专业人设。",
+          "metric": "8,105 播放",
+          "references": [
+            {"title": "美联储 FOMC 议息日历", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"}
+          ]
+        },
+        {
+          "title": "RBC 的 Cassidy：2026年6月前降息将利好银行股（3,840播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=5dVfO9LzZg4",
+          "reason": "大行观点引用（RBC），银行股受益逻辑清晰，可做「机构怎么看降息」对比解读。",
+          "metric": "3,840 播放",
+          "references": [
+            {"title": "RBC 皇家银行官网", "url": "https://www.rbc.com/"}
+          ]
+        },
+        {
+          "title": "The Market Is NOT Prepared For This Fed Meeting（2026年7月，2,315播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=BO-cnVdu2ME",
+          "reason": "逆向观点/风险预警类选题，制造「你没想到的风险」钩子，利于评论区讨论与涨粉。",
+          "metric": "2,315 播放",
+          "references": [
+            {"title": "美联储 FOMC 议息日历", "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"}
+          ]
+        },
+        {
+          "title": "沃顿教授 Jeremy Siegel 谈本次 FOMC 为何重要（3.59万播放）",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Qv12-HdtIWo",
+          "reason": "沃顿教授权威观点，机构级深度，适合做「顶尖学者怎么看这次议息」的高信任度内容。",
+          "metric": "3.59万播放",
+          "references": [
+            {"title": "维基：Jeremy Siegel（经济学家）", "url": "https://en.wikipedia.org/wiki/Jeremy_Siegel_(economist)"}
+          ]
+        },
+        {
+          "title": "抖音财经：美联储降息细节解读（竖屏切片）",
+          "platform": "抖音",
+          "url": "https://jingxuan.douyin.com/m/video/7566964289879589233",
+          "reason": "抖音财经解读类短视频高传播，降息/美联储是全民痛点，可做「30 秒讲清美联储」竖屏切片引流到长视频。",
+          "metric": "抖音财经高热",
+          "references": [
+            {"title": "抖音：美联储降息搜索", "url": "https://www.douyin.com/search/%E7%BE%8E%E8%81%94%E5%82%A8%20%E9%99%8D%E6%81%AF"}
+          ]
+        },
+        {
+          "title": "抖音热搜：美元长债遭血洗、市场为美元办「葬礼」",
+          "platform": "抖音",
+          "url": "https://www.douyin.com/search/%E7%BE%8E%E8%81%94%E5%82%A8%E8%B4%A2%E7%BB%8F%E7%83%AD%E7%82%B9",
+          "reason": "情绪化叙事极易裂变，可做「美国人在抖音怎么看美联储」对比选题，反哺你面向美国观众的内容。",
+          "metric": "抖音热搜话题",
+          "references": [
+            {"title": "抖音：美联储财经热点搜索", "url": "https://www.douyin.com/search/%E7%BE%8E%E8%81%94%E5%82%A8%E8%B4%A2%E7%BB%8F%E7%83%AD%E7%82%B9"}
+          ]
+        }
+      ]
+    }
+  ]
+}

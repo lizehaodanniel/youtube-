@@ -1,0 +1,20 @@
+# 生成产物与本地缓存
+output/daily-*.html
+site/index.html
+
+# 私有记忆与本地缓存
+.workbuddy-ai/memory/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

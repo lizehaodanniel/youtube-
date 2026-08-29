@@ -1,0 +1,31 @@
+{
+  "youtube_api_key": "AIzaSyAnDFQK6wUd4WWgj6806tKjKRsVXDiKxQs",
+  "webhook_url": "https://open.larksuite.com/open-apis/bot/v2/hook/1310d28b-d6f1-489e-842f-5cc1a55ca46f",
+  "webhook_type": "feishu",
+  "report_url": "https://183980c9ec3b421396a9f5c4be8fd28d.sg.agentos-app.run",
+  "timezone": "America/New_York",
+  "output_dir": "output",
+  "channels": {
+    "ai": {
+      "handle": "@AIcheatcodeplaybook",
+      "url": "https://www.youtube.com/@AIcheatcodeplaybook",
+      "label": "AI · 科技数码",
+      "audience": "AI/科技数码爱好者、独立开发者、用 AI 提效的创作者",
+      "interests": ["AI 新模型与工具", "科技数码", "生产力/自动化", "开发者生态", "国际科技时事", "深度观点"]
+    },
+    "finance": {
+      "handle": "@TheMoneyMoo",
+      "url": "https://www.youtube.com/@TheMoneyMoo",
+      "label": "金融 · 财经商业（美国观众）",
+      "audience": "美国 YouTube 观众（用户主要做美国人看的内容）：个人投资者、关注美股/宏观/个人理财/退休/房产/加密的美国人",
+      "interests": ["美股行情", "美联储与利率", "美国个人理财", "退休账户(IRA/401k)", "房地产投资", "加密货币", "深度宏观"]
+    }
+  },
+  "platforms": ["YouTube", "Bilibili", "抖音"],
+  "notes": {
+    "youtube_api_key": "已填入（用户于 2026-08-26 提供）。在 Google Cloud 可随时撤销/重置。留占位符则自动改用 WebSearch 兜底。",
+    "webhook_url": "飞书：群设置 → 群机器人 → 添加机器人 → 自定义机器人 → 复制 Webhook 地址（https://open.feishu.cn/open-apis/bot/v2/hook/...）填到这里。若启用签名校验需额外改 push_webhook.py。",
+    "webhook_type": "feishu（已改，原 wecom 弃用）。",
+    "timezone": "America/New_York。已验证 BYHOUR=8 对应纽约时间 08:00，无需偏移。"
+  }
+}

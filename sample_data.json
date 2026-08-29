@@ -1,0 +1,32 @@
+{
+  "title": "每日热点看台",
+  "date": "2026-08-26",
+  "type": "daily",
+  "subtitle": "示例数据（演示版式用，非真实抓取）· AI agent 周 · 全球宏观波动",
+  "panels": [
+    {
+      "key": "ai",
+      "label": "AI · 科技数码",
+      "handle": "@AIcheatcodeplaybook",
+      "audience": "AI/科技数码爱好者、独立开发者、用 AI 提效的创作者",
+      "items": [
+        {"title": "示例：某新开源 Agent 框架一天破万 Star", "platform": "GitHub/YouTube", "url": "https://www.youtube.com/@AIcheatcodeplaybook", "reason": "Agent 编排是近期最热选题，可做上手教程/对比评测。", "metric": "12万播放"},
+        {"title": "示例：旗舰手机 AI 端侧大模型实测", "platform": "Bilibili", "url": "https://www.youtube.com/@AIcheatcodeplaybook", "reason": "科技数码受众爱看真机对比，适合做横评。", "metric": "8.6万播放"},
+        {"title": "示例：用 AI 自动化一周工作的全流程", "platform": "抖音", "url": "https://www.youtube.com/@AIcheatcodeplaybook", "reason": "生产力/自动化是频道高频爆款方向。", "metric": ""},
+        {"title": "示例：大模型推理成本半年下降曲线解读", "platform": "YouTube", "url": "https://www.youtube.com/@AIcheatcodeplaybook", "reason": "深度观点类，适合做数据可视化讲解。", "metric": "5.1万播放"}
+      ]
+    },
+    {
+      "key": "finance",
+      "label": "金融 · 财经商业",
+      "handle": "@TheMoneyMoo",
+      "audience": "金融理财/财经商业人群、个人投资者",
+      "items": [
+        {"title": "示例：美联储动向对个人投资的影响拆解", "platform": "YouTube", "url": "https://www.youtube.com/@TheMoneyMoo", "reason": "宏观+个人投资衔接，受众强相关。", "metric": "21万播放"},
+        {"title": "示例：年轻人第一支基金怎么选", "platform": "Bilibili", "url": "https://www.youtube.com/@TheMoneyMoo", "reason": "理财入门爆款，互动率高。", "metric": "9.3万播放"},
+        {"title": "示例：某行业财报季超预期解读", "platform": "抖音", "url": "https://www.youtube.com/@TheMoneyMoo", "reason": "财经商业热点，可做快评。", "metric": ""},
+        {"title": "示例：全球供应链变化下的机会与风险", "platform": "YouTube", "url": "https://www.youtube.com/@TheMoneyMoo", "reason": "国际时事+深度观点，适合长视频。", "metric": "7.7万播放"}
+      ]
+    }
+  ]
+}
