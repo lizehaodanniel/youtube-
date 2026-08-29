@@ -202,14 +202,25 @@ def script_table(beats, ns="pkg"):
           <td class="img-en">{esc(b.get('img_en',''))}</td>
           <td class="img-zh">{esc(b.get('img_zh',''))}</td>
         </tr>"""
-    return f"""<div class="script-wrap"><table class="script">
-      <colgroup>
-        <col style="width:86px"><col style="width:46px"><col style="width:300px">
-        <col style="width:284px"><col style="width:132px"><col style="width:74px"><col style="width:300px"><col style="width:268px">
-      </colgroup>
-      <tr><th>时间段</th><th class="ctr">词数</th><th>英文口播(左)</th><th>中文翻译(右)</th><th>分镜/情绪</th><th class="ctr">实操卡</th><th>图片提示词·英</th><th>图片提示词·中</th></tr>
-      {rows}
-    </table></div>"""
+    return f"""<div class="tbl-block">
+      <div class="tbl-bar">
+        <span class="tbl-hint">共 {len(beats)} 行 · 复制后可直接粘贴到 Excel / Google Sheets / Notion</span>
+        <button type="button" class="tbl-copy-btn" data-tbl-id="tbl-{esc(ns)}" onclick="copyTbl(this,'tsv')">
+          <span class="tbl-copy-icon">📋</span><span class="tbl-copy-label">复制分镜脚本表</span>
+        </button>
+        <button type="button" class="tbl-copy-btn ghost" data-tbl-id="tbl-{esc(ns)}" onclick="copyTbl(this,'md')">
+          <span class="tbl-copy-label">复制 Markdown</span>
+        </button>
+      </div>
+      <div class="script-wrap"><table class="script" id="tbl-{esc(ns)}">
+        <colgroup>
+          <col style="width:86px"><col style="width:46px"><col style="width:300px">
+          <col style="width:284px"><col style="width:132px"><col style="width:74px"><col style="width:300px"><col style="width:268px">
+        </colgroup>
+        <tr><th>时间段</th><th class="ctr">词数</th><th>英文口播(左)</th><th>中文翻译(右)</th><th>分镜/情绪</th><th class="ctr">实操卡</th><th>图片提示词·英</th><th>图片提示词·中</th></tr>
+        {rows}
+      </table></div>
+    </div>"""
 
 
 def demo_summary(demo, ns="pkg"):
@@ -410,7 +421,7 @@ def package_block(pkg):
           <div class="pkg-label">🎬 完整成片包 · {label}</div>
           <div class="pkg-topic"><span class="en">{topic}</span> ／ {topic_cn}</div>
         </div>
-        <button type="button" class="pkg-copy-btn" data-pkg-id="pkg-data-{key}" onclick="copyPkg(this)">
+        <button type="button" class="pkg-copy-btn ghost" data-pkg-id="pkg-data-{key}" onclick="copyPkg(this)" title="复制整包的原始 JSON（含 hook / titles / tags 等全部字段）">
           <span class="pkg-copy-icon">📋</span><span class="pkg-copy-label">复制整包 JSON</span>
         </button>
       </div>
@@ -554,8 +565,27 @@ def render(spec, base_dir=None):
     flex-shrink:0;
   }}
   .pkg-copy-btn:hover {{ background:#1c2434; border-color:var(--c1,var(--acc)); color:var(--c1,var(--acc)); }}
+  .pkg-copy-btn.ghost {{ background:transparent; color:var(--mut); font-weight:500; font-size:11.5px; padding:5px 10px; }}
   .pkg-copy-btn:active {{ transform:scale(0.97); }}
   .pkg-copy-btn.is-ok {{ background:#152b25; border-color:#28614d; color:#8ee9bd; }}
+  .tbl-block {{ margin-top:6px; }}
+  .tbl-bar {{
+    display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:8px; margin-bottom:8px;
+  }}
+  .tbl-hint {{ margin-right:auto; font-size:11.5px; color:var(--mut); }}
+  .tbl-copy-btn {{
+    display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:8px;
+    background:var(--c1,var(--acc)); border:1px solid var(--c1,var(--acc)); color:#0b0e14;
+    font-size:12.5px; font-weight:700; cursor:pointer; transition:all .15s ease;
+  }}
+  .tbl-copy-btn:hover {{ filter:brightness(1.12); }}
+  .tbl-copy-btn:active {{ transform:scale(0.97); }}
+  .tbl-copy-btn.ghost {{
+    background:var(--panel2); border:1px solid var(--line); color:var(--txt); font-weight:600;
+  }}
+  .tbl-copy-btn.ghost:hover {{ background:#1c2434; border-color:var(--c1,var(--acc)); color:var(--c1,var(--acc)); }}
+  .tbl-copy-btn.is-ok {{ background:#152b25 !important; border-color:#28614d !important; color:#8ee9bd !important; }}
+  .tbl-copy-btn.is-err {{ background:#2a1212 !important; border-color:#7a2222 !important; color:#ff9aa2 !important; }}
   .pkg-copy-btn.is-err {{ background:#2a1212; border-color:#7a2222; color:#ff9aa2; }}
   .pkg-topic {{ font-size:14px; color:var(--mut); margin-top:4px; }}
   .pkg-topic .en {{ color:var(--txt); font-weight:700; }}
@@ -733,6 +763,54 @@ def render(spec, base_dir=None):
       }};
       if (navigator.clipboard && navigator.clipboard.writeText) {{
           navigator.clipboard.writeText(text).then(success).catch(fallback);
+      }} else {{ fallback(); }}
+  }}
+
+  function tblText(id, mode) {{
+      const tb = document.getElementById(id);
+      if (!tb) return '';
+      const clean = (s) => s.replace(/\\s+/g, ' ').trim();
+      const rows = Array.from(tb.querySelectorAll('tr')).map((tr) =>
+        Array.from(tr.children).map((cell) => clean(cell.textContent))
+      );
+      if (!rows.length) return '';
+      if (mode === 'md') {{
+        const head = rows[0];
+        const line = (r) => '| ' + r.join(' | ') + ' |';
+        const sep = '| ' + head.map(() => '---').join(' | ') + ' |';
+        return [line(head), sep].concat(rows.slice(1).map(line)).join('\\n');
+      }}
+      return rows.map((r) => r.join('\\t')).join('\\n');
+  }}
+
+  function copyTbl(btn, mode) {{
+      const text = tblText(btn.getAttribute('data-tbl-id'), mode);
+      const lbl = btn.querySelector('.tbl-copy-label');
+      const old = lbl ? lbl.textContent : '';
+      if (!text) {{
+          btn.classList.add('is-err'); if (lbl) lbl.textContent = '复制失败';
+          setTimeout(() => {{ btn.classList.remove('is-err'); if (lbl) lbl.textContent = old; }}, 1500);
+          return;
+      }}
+      const done = (ok) => {{
+          btn.classList.add(ok ? 'is-ok' : 'is-err');
+          if (lbl) lbl.textContent = ok ? ('已复制 ' + text.split('\\n').length + ' 行 ✓') : '复制失败';
+          setTimeout(() => {{
+              btn.classList.remove('is-ok'); btn.classList.remove('is-err');
+              if (lbl) lbl.textContent = old;
+          }}, 1800);
+      }};
+      const fallback = () => {{
+          const ta = document.createElement('textarea');
+          ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+          document.body.appendChild(ta); ta.select();
+          let ok = false;
+          try {{ ok = document.execCommand('copy'); }} catch (e) {{ ok = false; }}
+          document.body.removeChild(ta);
+          done(ok);
+      }};
+      if (navigator.clipboard && navigator.clipboard.writeText) {{
+          navigator.clipboard.writeText(text).then(() => done(true)).catch(fallback);
       }} else {{ fallback(); }}
   }}
   </script>
