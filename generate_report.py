@@ -404,12 +404,15 @@ def package_block(pkg):
                   f'<span class="stat">图片提示词 <b>{esc(sentence_count)}</b> 条（每句一图）</span>'
                   f'</div>')
     return f"""
-    <section class="pkg" style="--c1:{c1};--c2:{c2}">
+    <section class="pkg" id="pkg-{key}" style="--c1:{c1};--c2:{c2}">
       <div class="pkg-head">
         <div>
           <div class="pkg-label">🎬 完整成片包 · {label}</div>
           <div class="pkg-topic"><span class="en">{topic}</span> ／ {topic_cn}</div>
         </div>
+        <button type="button" class="pkg-copy-btn" data-pkg-id="pkg-data-{key}" onclick="copyPkg(this)">
+          <span class="pkg-copy-icon">📋</span><span class="pkg-copy-label">复制整包 JSON</span>
+        </button>
       </div>
       <div class="pkg-sub">Host：{host}</div>
       {f'<div class="host-note">⚠️ {host_note}</div>' if host_note else ''}
@@ -458,6 +461,17 @@ def render(spec, base_dir=None):
             except Exception:
                 packages = []
     packages_html = "\n".join(package_block(p) for p in packages) if packages else ""
+
+    # 整包 JSON 注入：每个包一份 <script type="application/json">，复制按钮读它的 textContent
+    pkg_data_blocks = ""
+    for p in packages:
+        k = p.get("channel_key", "")
+        if not k:
+            continue
+        json_str = json.dumps(p, ensure_ascii=False, indent=2)
+        # 防 </script> 提前结束标签
+        json_str = json_str.replace("</", "<\\/")
+        pkg_data_blocks += f'<script type="application/json" id="pkg-data-{k}">\n{json_str}\n</script>\n'
 
     generated = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -531,8 +545,18 @@ def render(spec, base_dir=None):
   .disc {{ background:var(--panel2); border:1px dashed var(--line); border-radius:10px; padding:14px 16px; font-size:12px; color:var(--mut); margin-top:22px; }}
   .empty {{ color:var(--mut); font-size:14px; padding:18px; text-align:center; }}
   .pkg {{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:8px 20px 22px; margin:18px 0; border-top:4px solid var(--c1, var(--acc)); }}
-  .pkg-head {{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; margin:14px 0 4px; }}
+  .pkg-head {{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin:14px 0 4px; }}
   .pkg-label {{ font-size:19px; font-weight:800; background:linear-gradient(90deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; color:transparent; }}
+  .pkg-copy-btn {{
+    display:inline-flex; align-items:center; gap:6px; padding:7px 13px; border-radius:8px;
+    background:var(--panel2); border:1px solid var(--line); color:var(--txt);
+    font-size:12.5px; font-weight:600; cursor:pointer; transition:all .15s ease;
+    flex-shrink:0;
+  }}
+  .pkg-copy-btn:hover {{ background:#1c2434; border-color:var(--c1,var(--acc)); color:var(--c1,var(--acc)); }}
+  .pkg-copy-btn:active {{ transform:scale(0.97); }}
+  .pkg-copy-btn.is-ok {{ background:#152b25; border-color:#28614d; color:#8ee9bd; }}
+  .pkg-copy-btn.is-err {{ background:#2a1212; border-color:#7a2222; color:#ff9aa2; }}
   .pkg-topic {{ font-size:14px; color:var(--mut); margin-top:4px; }}
   .pkg-topic .en {{ color:var(--txt); font-weight:700; }}
   .pkg-sub {{ font-size:12.5px; color:var(--mut); }}
@@ -679,6 +703,39 @@ def render(spec, base_dir=None):
     </div>
     <footer>由 WorkBuddy AI「每日热点看台」自动生成 · 灵感选题用途</footer>
   </div>
+
+  {pkg_data_blocks}
+
+  <script>
+  function copyPkg(btn) {{
+      const id = btn.getAttribute('data-pkg-id');
+      const data = document.getElementById(id);
+      if (!data) {{ btn.classList.add('is-err'); setTimeout(()=>btn.classList.remove('is-err'),1500); return; }}
+      const text = data.textContent;
+      const fallback = () => {{
+          const ta = document.createElement('textarea');
+          ta.value = text; ta.style.position='fixed'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.select();
+          try {{ document.execCommand('copy'); success(); }} catch(e) {{ fail(); }}
+          document.body.removeChild(ta);
+      }};
+      const success = () => {{
+          btn.classList.add('is-ok');
+          const lbl = btn.querySelector('.pkg-copy-label');
+          const old = lbl.textContent; lbl.textContent = '已复制 ✓'; btn.disabled = true;
+          setTimeout(()=>{{ btn.classList.remove('is-ok'); lbl.textContent = old; btn.disabled = false; }}, 1500);
+      }};
+      const fail = () => {{
+          btn.classList.add('is-err');
+          const lbl = btn.querySelector('.pkg-copy-label');
+          const old = lbl.textContent; lbl.textContent = '复制失败';
+          setTimeout(()=>{{ btn.classList.remove('is-err'); lbl.textContent = old; }}, 1500);
+      }};
+      if (navigator.clipboard && navigator.clipboard.writeText) {{
+          navigator.clipboard.writeText(text).then(success).catch(fallback);
+      }} else {{ fallback(); }}
+  }}
+  </script>
 </body>
 </html>"""
 
