@@ -204,11 +204,14 @@ def script_table(beats, ns="pkg"):
         </tr>"""
     return f"""<div class="tbl-block">
       <div class="tbl-bar">
-        <span class="tbl-hint">共 {len(beats)} 行 · 复制后可直接粘贴到 Excel / Google Sheets / Notion</span>
-        <button type="button" class="tbl-copy-btn" data-tbl-id="tbl-{esc(ns)}" onclick="copyTbl(this,'tsv')">
-          <span class="tbl-copy-icon">📋</span><span class="tbl-copy-label">复制分镜脚本表</span>
+        <span class="tbl-hint">共 {len(beats)} 行 · 复制后可直接粘贴到 WPS / Excel / Word / 飞书 / Notion</span>
+        <button type="button" class="tbl-copy-btn" data-tbl-id="tbl-{esc(ns)}" onclick="copyTbl(this,'html')" title="复制为带颜色和超链接的富文本表格，粘到 WPS / Word / 飞书保留样式">
+          <span class="tbl-copy-icon">📋</span><span class="tbl-copy-label">复制为表格（带样式）</span>
         </button>
-        <button type="button" class="tbl-copy-btn ghost" data-tbl-id="tbl-{esc(ns)}" onclick="copyTbl(this,'md')">
+        <button type="button" class="tbl-copy-btn ghost" data-tbl-id="tbl-{esc(ns)}" onclick="copyTbl(this,'tsv')" title="纯文本 TSV，粘到 Excel / Google Sheets 自动分列">
+          <span class="tbl-copy-label">复制纯文本（TSV）</span>
+        </button>
+        <button type="button" class="tbl-copy-btn ghost" data-tbl-id="tbl-{esc(ns)}" onclick="copyTbl(this,'md')" title="Markdown 表格，粘到 Notion / 语雀 / 飞书文档">
           <span class="tbl-copy-label">复制 Markdown</span>
         </button>
       </div>
@@ -784,34 +787,97 @@ def render(spec, base_dir=None):
   }}
 
   function copyTbl(btn, mode) {{
-      const text = tblText(btn.getAttribute('data-tbl-id'), mode);
+      const id = btn.getAttribute('data-tbl-id');
       const lbl = btn.querySelector('.tbl-copy-label');
       const old = lbl ? lbl.textContent : '';
-      if (!text) {{
-          btn.classList.add('is-err'); if (lbl) lbl.textContent = '复制失败';
-          setTimeout(() => {{ btn.classList.remove('is-err'); if (lbl) lbl.textContent = old; }}, 1500);
-          return;
-      }}
-      const done = (ok) => {{
+      const flash = (ok, n) => {{
           btn.classList.add(ok ? 'is-ok' : 'is-err');
-          if (lbl) lbl.textContent = ok ? ('已复制 ' + text.split('\\n').length + ' 行 ✓') : '复制失败';
+          if (lbl) lbl.textContent = ok ? ('已复制 ' + n + ' 行 ✓') : '复制失败';
           setTimeout(() => {{
               btn.classList.remove('is-ok'); btn.classList.remove('is-err');
               if (lbl) lbl.textContent = old;
           }}, 1800);
       }};
-      const fallback = () => {{
-          const ta = document.createElement('textarea');
-          ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
-          document.body.appendChild(ta); ta.select();
-          let ok = false;
-          try {{ ok = document.execCommand('copy'); }} catch (e) {{ ok = false; }}
-          document.body.removeChild(ta);
-          done(ok);
+      const tb = document.getElementById(id);
+      if (!tb) {{ flash(false, 0); return; }}
+      const plain = tblText(id, 'tsv');
+      const n = (plain.match(/\\n/g) || []).length + 1;
+      if (mode === 'tsv' || mode === 'md') {{
+          const text = tblText(id, mode);
+          const fb = () => {{
+              const ta = document.createElement('textarea');
+              ta.value = text; ta.style.cssText = 'position:fixed;left:-9999px';
+              document.body.appendChild(ta); ta.select();
+              let c = false; try {{ c = document.execCommand('copy'); }} catch (e) {{ c = false; }}
+              document.body.removeChild(ta); return c;
+          }};
+          if (navigator.clipboard && navigator.clipboard.writeText) {{
+              navigator.clipboard.writeText(text).then(() => flash(true, n), () => flash(fb(), n));
+          }} else {{ flash(fb(), n); }}
+          return;
+      }}
+      // mode === 'html'：复制带样式的富文本表格（兼容 WPS / Word / 飞书 / Notion）
+      const html = tblToHtml(id);
+      const fbRich = () => {{
+          const div = document.createElement('div');
+          div.contentEditable = 'true';
+          div.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0';
+          div.innerHTML = html;
+          document.body.appendChild(div);
+          const range = document.createRange();
+          range.selectNodeContents(div);
+          const sel = window.getSelection();
+          sel.removeAllRanges(); sel.addRange(range);
+          let c = false;
+          try {{ c = document.execCommand('copy'); }} catch (e) {{ c = false; }}
+          sel.removeAllRanges();
+          document.body.removeChild(div);
+          return c;
       }};
-      if (navigator.clipboard && navigator.clipboard.writeText) {{
-          navigator.clipboard.writeText(text).then(() => done(true)).catch(fallback);
-      }} else {{ fallback(); }}
+      if (navigator.clipboard && window.ClipboardItem) {{
+          const item = new ClipboardItem({{
+              'text/html': new Blob([html], {{ type: 'text/html' }}),
+              'text/plain': new Blob([plain], {{ type: 'text/plain' }})
+          }});
+          navigator.clipboard.write([item]).then(() => flash(true, n), () => flash(fbRich(), n));
+      }} else {{ flash(fbRich(), n); }}
+  }}
+
+  function tblToHtml(id) {{
+      const tb = document.getElementById(id);
+      if (!tb) return '';
+      const out = [];
+      out.push('<table style="border-collapse:collapse;width:100%;font-size:12.5px;color:#e6e9ef;background:#0e131c;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,sans-serif">');
+      let rowIdx = 0;
+      tb.querySelectorAll('tr').forEach((tr) => {{
+          const tag = (rowIdx === 0) ? 'th' : 'td';
+          const cells = Array.from(tr.children);
+          const cellsHtml = cells.map((cell) => {{
+              const cs = getComputedStyle(cell);
+              const styles = [
+                  'background-color:' + cs.backgroundColor,
+                  'color:' + cs.color,
+                  'font-weight:' + cs.fontWeight,
+                  'font-size:' + cs.fontSize,
+                  'font-family:' + cs.fontFamily,
+                  'padding:' + cs.padding,
+                  'border:1px solid ' + cs.borderTopColor,
+                  'text-align:' + (cs.textAlign || 'left'),
+                  'vertical-align:' + (cs.verticalAlign || 'top')
+              ];
+              if (cs.whiteSpace && cs.whiteSpace !== 'normal') styles.push('white-space:' + cs.whiteSpace);
+              // 把「实操卡 N」徽标的 CSS class 替换为内联样式，让 WPS/Word 看到色块+圆角+超链接
+              const inner = cell.innerHTML.replace(
+                  /<a\\s/gi,
+                  '<a style="text-decoration:none;color:#8ee9bd;background:#152b25;padding:2px 7px;border-radius:6px;display:inline-block;font-size:11px;font-weight:700;border:1px solid #28614d" '
+              );
+              return '<' + tag + ' style="' + styles.join(';') + '">' + inner + '</' + tag + '>';
+          }}).join('');
+          out.push('<tr>' + cellsHtml + '</tr>');
+          rowIdx++;
+      }});
+      out.push('</table>');
+      return out.join('');
   }}
   </script>
 </body>
