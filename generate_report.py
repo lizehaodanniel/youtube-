@@ -287,6 +287,7 @@ def demo_plan_block(cards, ns="pkg"):
         shots = esc(c.get("shots", ""))
         verify = esc(c.get("verify", ""))
         audio = esc(c.get("audio", ""))
+        note = esc(c.get("note", ""))
 
         steps_html = ""
         for i, s in enumerate(c.get("steps") or [], start=1):
@@ -307,6 +308,7 @@ def demo_plan_block(cards, ns="pkg"):
             <span class="demo-card-window">⏱ {window}</span>
           </div>
           <div class="demo-card-meta"><b>用到：</b>{software}</div>
+          {f'<div class="demo-card-note"><b>为什么这么拍：</b>{note}</div>' if note else ''}
           <div class="demo-card-shots"><b>镜头怎么拍：</b>{shots}</div>
           <table class="demo-steps">
             <tr><th class="ctr" style="width:34px">#</th><th style="width:44%">操作动作（你做什么）</th><th>画面里会出现什么（用来验收）</th></tr>
@@ -347,6 +349,7 @@ def asset_manifest_block(cards, ns="pkg"):
             spec = esc(it.get("spec", ""))
             brief = esc(it.get("brief_zh", ""))
             onimg = esc(it.get("on_image_zh", ""))
+            item_warn = esc(it.get("warn", ""))
             payload_id = f"ap-{esc(ns)}-{no}"
             # 可复制内容：image/video 主推英文提示词（生成器直接吃），doc/sheet 推全文
             if kind in ("image", "video"):
@@ -385,10 +388,12 @@ def asset_manifest_block(cards, ns="pkg"):
               </div>
               <div class="am-brief">{brief}</div>
               {f'<div class="am-onimg">🖼 图上文字：{onimg}</div>' if onimg else ''}
+              {f'<div class="am-warn">⚠️ {item_warn}</div>' if item_warn else ''}
               <div class="am-body">{body}</div>
               {payloads}
             </div>'''
         note = esc(c.get("note", ""))
+        card_warn = esc(c.get("warn", ""))
         out.append(f'''<div class="am-card" id="{esc(ns)}-assets-{cid}">
           <div class="am-card-head">
             <span class="am-card-no">实操卡 {esc(cid)}</span>
@@ -398,6 +403,7 @@ def asset_manifest_block(cards, ns="pkg"):
             </button>
           </div>
           {f'<div class="am-note">{note}</div>' if note else ''}
+          {f'<div class="am-warn card-warn">⚠️ {card_warn}</div>' if card_warn else ''}
           <div class="am-items">{items_html}</div>
         </div>''')
     return f'<div class="am-list">{"".join(out)}</div>'
@@ -771,6 +777,12 @@ def render(spec, base_dir=None):
   .am-copy.is-err, .am-copy-all.is-err {{ background:#2a1212 !important; border-color:#7a2222 !important; color:#ff9aa2 !important; }}
   .am-brief {{ font-size:12.5px; color:var(--txt); line-height:1.6; margin-bottom:7px; }}
   .am-onimg {{ font-size:12px; color:#e0c07a; background:#1f1a10; border:1px solid #4a3c12; border-radius:6px; padding:5px 9px; margin-bottom:7px; line-height:1.55; }}
+  .am-warn {{
+    font-size:12.5px; line-height:1.65; color:#ffd9a0; background:#2a1f0c;
+    border:1px solid #6b4e12; border-left:3px solid #e0a020; border-radius:6px;
+    padding:8px 11px; margin-bottom:8px;
+  }}
+  .am-warn.card-warn {{ background:#2a1212; border-color:#7a3a22; border-left-color:#e06040; color:#ffc9b0; }}
   .am-body {{ display:grid; gap:6px; }}
   .am-p {{
     font-size:12px; line-height:1.6; padding:7px 10px; border-radius:6px;
@@ -805,6 +817,11 @@ def render(spec, base_dir=None):
     font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   }}
   .demo-card-meta {{ color:#9fd0ff; font-size:12px; margin-bottom:5px; }}
+  .demo-card-note {{
+    background:#16211c; border:1px solid #274a3b; border-left:3px solid #3fb950;
+    border-radius:7px; padding:7px 10px; color:#b9d8c7;
+    font-size:12px; margin-bottom:7px; line-height:1.65;
+  }}
   .demo-card-shots {{
     background:#1b2432; border:1px solid #2f3d54; border-radius:7px;
     padding:7px 10px; color:#d7e3f2; font-size:12px; margin-bottom:8px; line-height:1.6;

@@ -48,28 +48,29 @@ VIDEOS = {
         "neg_screen": NEG_SCREEN,
         "shots": [
             {
-                "shot": "S1 · 主机位建立真实感",
+                "shot": "S1 · 举起手写的数字卡",
                 "mode": "ai-video",
                 "dur": "3s",
                 "en": _host(
-                    "sitting at the desk and picking up a folded paper credit-card statement with both hooves, "
-                    "then looking up at the camera with a serious attentive expression",
+                    "sitting at the desk and picking up a hand-lettered card with both hooves, holding it up so it "
+                    "faces the camera, then lowering it slightly and looking up with a serious attentive expression",
                     "camera slowly pushes in from a medium shot to a close-up",
                     "3",
                 ),
-                "zh": "卡通牛坐在书桌前，双手（蹄）拿起一张折过的纸质信用卡账单，抬起头看向镜头，表情认真专注。镜头从中景缓慢推近到近景。3 秒。",
+                "zh": "卡通牛坐在书桌前，双手（蹄）举起一张手写的卡片，正面朝向镜头，随后略微放下并抬起头，表情认真专注。镜头从中景缓慢推近到近景。3 秒。",
             },
             {
-                "shot": "S2 · 红框圈住 APR",
+                "shot": "S2 · 一个数字铺满全屏",
                 "mode": "screen",
                 "dur": "5s",
                 "en": _screen(
-                    "a red rectangular selection box draws itself around one interest-rate figure on a credit-card "
-                    "statement, the box snaps into place and the circled number scales up slightly with a glow",
+                    "a single large interest-rate figure scales up to fill almost the whole frame on an otherwise "
+                    "empty cream-coloured layout, a thin underline draws itself beneath it and a short caption line "
+                    "fades in below, a faint red annotation badge appears at the corner reading guaranteed not assumed",
                     "static locked-off shot, no camera movement",
                     "5",
                 ),
-                "zh": "账单上一个利率数字被红色矩形框自动圈出，框落位的瞬间该数字微微放大并发光。机位固定不动。5 秒。",
+                "zh": "一个巨大的利率数字放大到几乎铺满画面，背景是空白的奶油色版面；下方自动画出一道细下划线，再淡入一行简短说明，角落出现一枚红色批注徽标。机位固定不动。5 秒。",
             },
             {
                 "shot": "S3 · 指向三问表",

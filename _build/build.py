@@ -23,6 +23,7 @@ import fin_ch1_4, fin_ch5_6, fin_ch7_8, fin_demos      # noqa: E402
 import fin_videos                                      # noqa: E402
 import ai_videos                                       # noqa: E402
 import ai_assets                                       # noqa: E402
+import fin_assets                                      # noqa: E402
 
 # ---------------------------------------------------------------- 角色卡前缀
 HOST_PREFIX = {
@@ -225,6 +226,7 @@ def main():
     fin = by_key["finance"]
     fin["script"] = fin_script
     fin["demo_cards"] = attach_videos(fin_demos.DEMOS, fin_videos.VIDEOS)
+    fin["asset_manifest"] = fin_assets.CARDS
     # 金融包 host 改为卡通牛，全局元信息同步（character_card / host / 缩略图 / host_note）
     fin["character_card"] = (
         "虚拟主人公：3D 卡通奶牛吉祥物（皮克斯风格半写实 3D 渲染），拟人直立、以蹄为手，白毛配焦糖棕斑块，"
@@ -273,10 +275,13 @@ def main():
     fin["word_count"] = sum(r["wc"] for r in fin_script)
     fin["duration"] = "7:00"
     fin["operator_breakdown"]["retention_curve"] = (
-        "0:00–0:15 先圈出账单 APR 与 22% 的确定成本；0:15–0:30 给出三问测试；0:30–1:25 代入「投资在涨但利息更快」并区分确定与预期；"
-        "1:25–2:30 打开 G.19 与复利计算器，建立可复核性；2:30–3:45 三案例只改利率，看边界在哪；"
-        "3:45–5:00 三个陷阱并指到文件上的具体字段；5:00–6:15 401(k) match 例外与五步顺序；"
+        "0:00–0:15 开场只亮一个 22% 与「确定 vs 假设」的对照，不晒账单；0:15–0:30 给出三问测试；"
+        "0:30–1:25 代入「投资在涨但利息更快」并区分确定与预期；"
+        "1:25–2:30 打开 G.19 当期发布页（不是索引页）与复利计算器，建立可复核性；"
+        "2:30–3:45 三个人的故事，只改利率，看边界在哪；"
+        "3:45–5:00 三个陷阱，用示例文件指到具体字段；5:00–6:15 401(k) match 例外与五步顺序；"
         "6:15–7:00 可复算金句 + 三问表与 CTA。句子级配图约每 4 秒一换，避免长时间对着同一画面。"
+        "全程不出现任何真实账单、银行 App 界面或客户资料。"
     )
 
     with open(pkg_path, "w", encoding="utf-8") as f:

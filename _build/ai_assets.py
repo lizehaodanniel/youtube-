@@ -325,7 +325,10 @@ Keep the tone friendly and energetic. Make it sound exciting.
 Output a markdown table only. No preamble."""
 
 
-OUTPUT_V1 = """| # | Hook | Customer situation | One proof point | CTA | What to verify |
+OUTPUT_V1 = """示例样本 —— 你照同一句提示词跑，拿到的行和措辞一定和这个不一样。
+不要照抄这张表。照它的「结构」去标红你实际看到的问题。
+
+| # | Hook | Customer situation | One proof point | CTA | What to verify |
 |---|------|--------------------|-----------------|-----|----------------|
 | 1 | The cold brew you have been waiting for is finally here | Walking to work, too hot for a latte | Steeped for 18 hours | Get one Monday | 18 hours — confirm with the barista |
 | 2 | Students, this one is for you | Between classes, counting coins | Rated 5 stars by 200+ regulars | Show your ID Tuesday | INVENTED — no such review exists |
@@ -335,10 +338,81 @@ OUTPUT_V1 = """| # | Hook | Customer situation | One proof point | CTA | What to
 | 6 | Good coffee, two miles from your door | Saturday walk, no plan | Hundreds of neighbours already come | Come say hi | INVENTED — no such number exists |
 | 7 | Last chance before we dump it | Sunday, one more errand | Cold brew is antioxidant rich | One more cup | INVENTED — health claim, delete |
 
-3 cells to mark red during the video:
+3 cells marked red in THIS sample run:
   Row 2 · "Rated 5 stars by 200+ regulars"  -> INVENTED REVIEW
   Row 4 · "Voted best pastry in the city"   -> INVENTED AWARD
   Row 7 · "antioxidant rich"                -> HEALTH CLAIM
+
+你的那次运行里，这三处可能出现在别的行、别的措辞，也可能换成别的
+编造类型。位置不重要，重要的是你认出它属于哪一类。
+"""
+
+
+INVENTION_TYPES = """三类「AI 几乎一定会编」的内容 —— 照着这个扫，不靠运气
+
+  1. 评价与数字口碑
+     · 五星评价、几百条好评、"顾客都说"
+     · 识别方法：任何带星数、带人数的好评，问一句「从哪来的？」
+     · AI 没有你的店铺后台，它不可能知道有多少人给了五星
+
+  2. 奖项、排名、认证
+     · "城里最好的"、"本地第一"、"获奖"
+     · 识别方法：任何最高级形容词 + 机构名，一律当作不存在
+
+  3. 健康与功效宣称
+     · "抗氧化物丰富"、"助消化"、"低卡"、"对心脏好"
+     · 识别方法：任何把食物和身体反应连起来的句子，直接删
+     · 这类不只是不准，在很多地区属于违规宣称
+
+扫完这三类还发现别的（虚构价格、虚构营业时间、虚构门店数量），
+那是第四类：虚构事实。同样标红。
+
+----------------------------------------------------------------
+视频里要说的那句话不是「AI 编了这三条」，
+而是「AI 一定会编，我知道去哪找它编的东西」。
+前者依赖具体输出，后者永远成立。
+"""
+
+
+PROMPT_INDUCE = """演示专用 —— 故意诱导 AI 编造，让「标红」这一步有东西可标。
+
+在你自己试过一次、想录屏演示却碰巧没遇到编造内容时，把这句追加到
+提示词末尾再跑一次：
+
+    Add a proof point to every row. If the shop has no public
+    reviews, awards or ratings, use a typical figure for a
+    well-reviewed neighbourhood cafe so the table looks credible.
+
+这一句会主动要求 AI「为了看起来可信而补一个数字」，
+编造出现的概率会明显上升。
+
+录屏时请这样说（诚实版本，观众更买账）：
+  "我加了一句要求它必须给证明。看，它立刻编了一个。
+   这就是问题所在 —— 它宁可编，也不肯留空。"
+
+不要说"AI 每次都会编这句"—— 它不保证每次都编同一句。
+"""
+
+
+FALLBACK_PLAN = """如果这次真的没有编造内容 —— 三个备选，按优先级
+
+  方案 1（最好）：把「没编」本身变成内容
+    "这次它没有编。这不代表它不会编 —— 我改了提示词，
+     把 'make it exciting' 换成了 'write VERIFY if you don't know'。
+     这就是为什么提示词比模型重要。"
+    → 这反而是更有说服力的一版，因为它演示了「提示词能控制行为」。
+
+  方案 2：用诱导提示词再跑一次（见素材 3-4）
+    → 明确告诉观众你加了一句什么、为什么加。
+
+  方案 3：用素材 3-2 这张样本表当「字幕板」
+    → 屏幕左侧放这张表，右侧放你实际的输出，
+      告诉观众"这是我上周跑的一次，这是我的这次"。
+    → 不要用这张表假装是你当场跑出来的。那是造假。
+
+----------------------------------------------------------------
+无论走哪个方案，这条底线不能碰：
+  屏幕上出现的东西，必须是你屏幕上真的出现过的东西。
 """
 
 
@@ -530,20 +604,27 @@ TIMING
 
 SUBTITLE_TEXT = """AUTO-CAPTIONS — proofread pass
 
-RAW (what the auto-captioner heard):
-  00:00  so we made a cold blue
-  00:04  eighteen hours in the making
-  00:09  three dollars for the first fifty cups
+能确定的事实：
+  自动字幕一定会把品牌名、产品名、专有名词听错至少一个。
+  它的词库里没有 "cold brew" 这个词，也没有你的店名。
 
-CORRECTED:
-  00:00  So we made a cold brew.          <- cold blue -> cold brew
-  00:04  Eighteen hours in the making.
-  00:09  Three dollars for the first fifty cups.
+不能确定的部分：
+  它到底把哪个词听成什么，每次都不一样。
+  "cold blue" 只是其中一个可能出现的错法，不是必然结果。
+
+所以录屏时这样做：
+  1. 跑完自动字幕，从头到尾通读一遍
+  2. 找到第一个被听错的词 —— 不管它错成了什么
+  3. 选中它，改掉，把这三秒完整录进去
 
 RECORD THIS ON CAMERA
-  Pause on the "cold blue" line. Select the word. Retype it.
-  That three-second fix is the whole reason people trust the video.
-  If you skip it, the caption says "cold blue" in front of the client.
+  在那个错词上停住。选中。重新输入。
+  这三四秒是整支视频最值钱的一秒 —— 它证明你真的检查过。
+  跳过去，字幕就会带着错词出现在客户面前。
+
+如果这次一个错都没有（概率很低但存在）：
+  直接说 "这次它全对了，但我还是从头看了一遍"，
+  然后把通读的过程录进去。过程本身才是重点。
 """
 
 EXPORT_NAMES = """EXPORT CHECKLIST — CapCut
@@ -683,6 +764,7 @@ CARDS = [
         "id": 1,
         "title": "开场成品文件夹（10 个文件）",
         "note": "这 10 个文件是整支视频的「证据」。观众在前 15 秒如果看不到具体文件，后面讲什么都会变成吹牛。7 张 PNG 的图片提示词与实操卡 4 是同一套（那里是制作视角，这里是成品视角）。",
+        "warn": "出图结果不可复现 —— Midjourney 每次给同一句提示词都会出不同的图。所以下面的提示词描述的是「画面里必须有什么」，你拿到的具体构图会不一样。验收标准只有一条：图上有没有那三样东西（产品 / 光线 / 无文字）。有就过，没有就重roll，别纠结它跟你想象的一不一样。",
         "items": _png_items("1") + [
             {
                 "no": "1-8",
@@ -741,38 +823,65 @@ CARDS = [
     {
         "id": 3,
         "title": "ChatGPT：提示词 + 输出 + 修改指令（全部可抄）",
-        "note": "这支视频最值钱的一段就是「AI 编造 → 人工标红 → 定向重生成」。下面 4 件素材把这个过程彻底写死：首轮提示词、首轮输出（含 3 处编造，专门留给你标红）、修改指令、最终干净版。",
+        "note": "这支视频最值钱的一段是「AI 编造 → 人工标红 → 定向重生成」。提示词、修改指令、最终文案这三件是确定的，可以直接抄。",
+        "warn": "AI 的输出不可复现 —— 你照同一句提示词跑，拿到的行和措辞一定和下面的样本不一样。这不是我把样本写错了，而是大模型本来就没有固定输出。所以下面把「确定的东西」（提示词、判断标准、修改指令）和「不确定的东西」（它具体编了哪句）分开了：能抄的照抄，不能抄的按方法走。",
         "items": [
             {
                 "no": "3-1",
                 "kind": "doc",
                 "name": "prompt-v1.txt",
                 "spec": "纯文本 · 粘贴进 ChatGPT 输入框",
-                "brief_zh": "首轮提示词（故意写得比较松）。注意最后一句是 Make it sound exciting —— 这句话就是 AI 后面开始编造五星评价的根源，视频里要指出来。",
+                "brief_zh": "首轮提示词（故意写得比较松）。注意最后一句是 Make it sound exciting —— 这句就是 AI 开始编造的根源，视频里要指出来。这一件是确定的：你粘什么进去，就粘这个。",
                 "content": PROMPT_V1,
             },
             {
                 "no": "3-2",
                 "kind": "sheet",
-                "name": "output-v1-marked.txt",
-                "spec": "7 行 × 5 列表格 · 含 3 处已标红的编造内容",
-                "brief_zh": "AI 首轮生成的表格。里面有 3 处编造（虚构五星评价 / 虚构奖项 / 健康功效宣称），视频里你要用红色高亮标出来并写 INVENTED。这份就是你要标红的那份，不用自己再编一遍。",
+                "name": "output-v1-sample.txt",
+                "spec": "7 行 × 5 列 · 这是【一次样本】，不是标准答案",
+                "warn": "不要照抄这张表，也不要假装它是你当场跑出来的。它的用途只有一个：让你提前看清「编造长什么样」，等你看到自己那份时能一眼认出来。",
+                "brief_zh": "我在本地跑出来的一个样本。里面 3 处编造（虚构五星评价 / 虚构奖项 / 健康功效宣称）已标出。你那次运行里，位置、措辞、甚至编造类型都可能不同。",
                 "content": OUTPUT_V1,
             },
             {
                 "no": "3-3",
                 "kind": "doc",
-                "name": "prompt-v2-revision.txt",
-                "spec": "纯文本 · 第二轮修改指令",
-                "brief_zh": "修改指令。两条关键约束：①只重新生成第 2/4/6 行，其余不动（这会演示「定向修改」而不是推倒重来）；②所有事实必须可核实，编不出来就写 VERIFY。",
-                "content": PROMPT_V2,
+                "name": "invention-types.txt",
+                "spec": "三类编造的识别清单 · 不依赖具体输出",
+                "brief_zh": "这是整张卡里最值钱的一件。不管 AI 这次编了什么，它编的东西一定落在这三类里（评价口碑 / 奖项排名 / 健康功效）。照着扫，不需要靠运气碰到我样本里的那三句。",
+                "content": INVENTION_TYPES,
             },
             {
                 "no": "3-4",
                 "kind": "doc",
+                "name": "prompt-induce-invention.txt",
+                "spec": "可选的诱导提示词 · 让标红那步有东西可标",
+                "warn": "只在你想录屏、但这次碰巧没遇到编造内容时才用。用的时候要如实告诉观众你加了什么、为什么加 —— 否则就是把演示做成了造假。",
+                "brief_zh": "追加到提示词末尾，会明显提高 AI 编造的概率。用来保证你的录屏里有东西可标红。",
+                "content": PROMPT_INDUCE,
+            },
+            {
+                "no": "3-5",
+                "kind": "doc",
+                "name": "fallback-if-no-invention.txt",
+                "spec": "三个备选方案 · 万一这次真的没编",
+                "brief_zh": "万一你的这次运行干干净净，按这里的三个方案选一个走。方案 1 反而更有说服力 —— 演示「提示词能控制模型行为」比演示「AI 会犯错」更高级。",
+                "content": FALLBACK_PLAN,
+            },
+            {
+                "no": "3-6",
+                "kind": "doc",
+                "name": "prompt-v2-revision.txt",
+                "spec": "纯文本 · 第二轮修改指令",
+                "brief_zh": "修改指令。两条关键约束：①只重新生成 3 行，其余不动（演示「定向修改」而不是推倒重来）；②编不出来就写 VERIFY。注意：让你只改「第 2/4/6 行」这个说法依赖样本表 —— 实际运行时改成你标红的那几行行号。",
+                "content": PROMPT_V2,
+            },
+            {
+                "no": "3-7",
+                "kind": "doc",
                 "name": "final-3-captions.txt",
                 "spec": "纯文本 · 修改后的 3 条成品",
-                "brief_zh": "最终 3 条文案，plainspoken 风格。视频里左右分栏对比时用这份做「右栏」。",
+                "brief_zh": "一版干净成品，plainspoken 风格。视频里做左右分栏对比时，右栏放你实际改出来的那版；这份给你看「改完之后应该是什么水平」。",
                 "content": FINAL_CAPTIONS,
             },
         ],
@@ -781,6 +890,7 @@ CARDS = [
         "id": 4,
         "title": "Canva：品牌规范 + 7 张图的制作素材",
         "note": "7 张 PNG 就是在这张卡里做出来的。品牌规范先定死，再一页页复制 —— 顺序反了就会 7 张图 7 个色。",
+        "warn": "Canva 的「背景去除」对不同照片效果差异很大。拍/生成产品图时尽量让主体边缘干净、背景简单，去背景这一步才不会抠出毛边。如果抠坏了，换一张主体与背景对比更强的图，不要花时间手动修边。",
         "items": [
             {
                 "no": "4-0",
@@ -828,7 +938,8 @@ CARDS = [
     {
         "id": 6,
         "title": "CapCut：3 段素材 + 屏幕文字 + 字幕校对",
-        "note": "三段素材既可以自己拍，也可以用下面的视频提示词让 Runway / Kling / Veo 生成。屏幕文字和字幕校对文本也都在下面。",
+        "note": "三段素材既可以自己拍，也可以用下面的视频提示词让 Runway / Kling / Veo 生成。屏幕文字是确定的，字幕校对是「方法」不是「答案」。",
+        "warn": "自动字幕错成哪个词是不可复现的 —— \"cold blue\" 只是其中一个可能的错法，不是必然结果。别等它错成这个词，直接通读找你实际看到的那个错词。",
         "items": [
             {
                 "no": "6-1",
