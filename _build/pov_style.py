@@ -10,19 +10,25 @@
 
 四条铁律（每个镜头都必须遵守）：
 
-1. **不出脸**。所有画面只出现「手 / 背影 / 后脑勺 / 纯物件」。
-   这是 POV 频道能做长片、跨镜头不串脸的唯一工程前提。
+1. **人物必须在画面里**。
+   注意：这条在 2026-08-30 被推翻重写过。原来的写法是「不出脸，只拍手 / 背影 / 纯物件」，
+   结果 102 个镜头生出来全是静物，一个人物都没有 —— 因为角色卡只说「如果出现人就长这样」，
+   而镜头主体写的是「一张黑桌子」，模型不会凭空加人进去。
+   **角色卡 ≠ 让角色出现。每一个镜头都必须显式写出「她在哪里、在做什么、脸朝哪边」。**
+   两个频道的差别只在「露不露脸」，不在「有没有人」：
+   - AI 频道：约四成镜头是能看清脸的肖像（脸占画面上三分之一），其余是过肩 / 侧脸 / 低头 / 手部特写
+   - 金融频道：继续保持 POV 惯例不露脸，但**手必须是她的手**，镜头里必须有她的身体姿态
 2. **不烧字**。图里不出现任何文字、数字、logo、界面。
    所有文字都在 Remotion 里用真字体叠加 —— 又快又准，还能随时改。
-3. **同一个人看镜头**。CHARACTER_BLOCK 在每个有人的镜头里都嵌入——
-   同一件衣服、同一种肤色、同一对没有装饰的手。
+3. **同一个人看镜头**。SHARED_FACE 在**每一条**提示词里都嵌入——
+   同一张脸、同一种发色、同一种肤色、同一双手。
 4. **一条光**。每场戏只有一个可见光源，色温固定。
    这是让一组 AI 图看起来像「同一部片」成本最低的方法。
 
 prompt 组成：
-    img_en = CHARACTER_BLOCK + IMG_HEAD + <镜头专属描述 img_core> + IMG_TAIL
-    vid_en = CHARACTER_BLOCK + VID_HEAD + <镜头专属运动 vid_core> + VID_TAIL
-每条图片提示词约 250–350 词，可直接整段复制喂给生图工具。
+    img_en = SHARED_FACE + CHARACTER + ON_CAMERA + <镜头专属: 她在哪 she> + <镜头专属: 场景 core> + IMG_TAIL
+    vid_en = SHARED_FACE + CHARACTER + ON_CAMERA + <镜头专属: 她在哪 she> + <镜头专属: 运镜 motion> + VID_TAIL
+每条图片提示词约 850–1000 词，可直接整段复制喂给生图工具。
 """
 
 # ============================================================ 通用尾巴
@@ -129,6 +135,21 @@ FIN_CHARACTER = (
     "or a windowsill, never the focal point, sometimes only an out-of-focus bokeh blob in the foreground. "
 )
 
+# 金融频道同样需要「人在场」的强制指令，只是不出脸。
+# 没有这一段，模型会把镜头画成纯静物（2026-08-30 实测 60/60 全静物）。
+FIN_ONCAMERA = (
+    "ON-CAMERA RULE (highest priority, overrides any habit toward object-only stills): "
+    "she is physically present in this frame — this is never an empty room, a pure product shot, "
+    "or a disembodied hand floating without a body behind it. "
+    "Her hands and forearms are clearly a young woman's hands and are attached to a body we can sense "
+    "just outside the crop: a sleeve edge entering frame, a shoulder line, the curve of a back, "
+    "a knee under the table, the weight of someone leaning in. "
+    "The face stays unreadable — deep shadow, turned away, cropped out, or behind her — but her "
+    "body language must carry the emotion of the shot. "
+    "The block that follows and begins with ON CAMERA states exactly where she is and what she is doing "
+    "in this specific shot — follow it literally. "
+)
+
 FIN_IMG_HEAD = (
     "Cinematic photorealistic 3D render, virtual 35mm anamorphic lens, f/1.8 shallow depth of field, "
     "subtle 35mm film grain, gentle volumetric haze, physically based rendering with ray-traced "
@@ -174,7 +195,8 @@ FIN_VID_TAIL = (
 # ============================================================ AI 频道
 AI_BIBLE = {
     "name": "暗调屏幕光 · Dark Screen Glow",
-    "signature": "近黑背景 + 青紫双色屏幕反光；不出脸；所有界面元素由 Remotion 后叠，图里一律不画。",
+    "signature": "近黑背景 + 青紫双色屏幕反光；她本人出现在每一个镜头里（约四成露脸）；"
+                 "所有界面元素由 Remotion 后叠，图里一律不画。",
     "palette": [
         ("底色 Base", "#0B0E14", "近黑，占画面 60% 以上"),
         ("主光 Key", "#22D3EE", "青色，屏幕边缘光"),
@@ -182,8 +204,9 @@ AI_BIBLE = {
         ("点缀 Accent", "#F5D67B", "暖黄，只用在「顿悟」镜头"),
     ],
     "lens": "虚拟 40mm，f/2.0，重暗角，屏幕反射作为唯一光源，轻微色散。",
-    "motif": "桌面永远有一只黑色棒球帽和一副大耳罩耳机（不戴在人头上，只是摆在那），"
-             "是频道的固定签名物。",
+    "motif": "她本人的三件套固定摆在桌面上，是频道的签名物：一只白色陶瓷马克杯（杯壁常留一圈干掉的咖啡渍）、"
+             "一叠空白的厚索引卡、一支细哑光银戒（不戴时搁在杯托旁）。"
+             "注意：旧的「黑色棒球帽 + 大耳罩耳机」签名物已随旧 host 一起废弃，任何地方都不要再说。",
     "arc": "S1–S2 冷青（信息过载）→ S3–S5 青紫交替（拆解）→ S6 暖黄（跑通）→ S7 青（警示）→ S8 暖黄收尾。",
 }
 
@@ -192,6 +215,10 @@ AI_CHARACTER = (
     + "AI-channel framing: unlike the finance channel, her face IS shown here — a clean portrait is allowed "
     "and encouraged, occupying at most the upper third of the frame; when only body language is needed, "
     "show her from the neck down or from behind. "
+    "AI-channel screen-light rule specific to her face: when a screen is the light source, it must light "
+    "HER face from the front — cyan climbing one cheek, violet tracing the opposite jawline and the edge "
+    "of her hair. Her face is never in silhouette and never turned fully away from camera for more than "
+    "one shot in a row. "
     "AI-channel wardrobe — the only outfits she wears in this channel, rotate between them, "
     "never invent new ones: "
     "a matte-white wide-strap cotton camisole with thin spaghetti straps and a softly scooped neckline; "
@@ -200,6 +227,32 @@ AI_CHARACTER = (
     "Minimal jewelry only: one thin matte-silver chain with a tiny round pendant at the collarbone, "
     "small thin silver hoops in both ears, plus the thin matte-silver band on her right fourth finger. "
     "Reference vibe: the still photography of Petra Collins meets the muted color palette of Sofia Coppola. "
+)
+
+# ---------------------------------------------------------------------------
+# 强制出镜指令块。
+#
+# 这一块是 2026-08-30 补的，原因是一个很蠢但很致命的 bug：
+# 角色卡写得很详细，但它说的是「如果出现人，就长这样」。而每个镜头的主体描述写的是
+# 「一张黑桌子」「一只手」「一条传送带」——模型不会凭空加人进去，于是 102 个镜头
+# 生出来全是静物，观众全程看不到人。
+#
+# 修法有两部分，缺一不可：
+#   1. 这一段 ON_CAMERA 指令：把「她必须在场」从条件句改成祈使句
+#   2. 每个镜头专属的 "ON CAMERA:" 段（在 pov_ai.py / pov_fin.py 的 she 字段里），
+#      写明她在这个镜头里的确切位置、姿态、脸朝哪边
+# 只写 1 不写 2 = 模型还是不知道她该站在哪；只写 2 不写 1 = 模型可能把她当背景元素。
+# ---------------------------------------------------------------------------
+AI_ONCAMERA = (
+    "ON-CAMERA RULE (highest priority, overrides any habit toward object-only stills): "
+    "she is physically present in this frame — she is not an optional element, not a reflection, "
+    "not a shadow off-screen, and not implied by a lone hand floating in darkness. "
+    "Her body occupies the frame with the scene: at minimum her hands and forearms are clearly hers and "
+    "readable as a woman's hands, and wherever the shot allows, her shoulders, her hair, her jawline or "
+    "her full face are in the composition. "
+    "Never render this as an empty room or a product shot with no person in it. "
+    "The block that follows and begins with ON CAMERA states exactly where she is and what she is doing "
+    "in this specific shot — follow it literally. "
 )
 
 AI_IMG_HEAD = (
@@ -278,8 +331,12 @@ THUMB_RULES = """缩略图的三条硬规则（这是点击率的主要变量，
 2. **文字是给眼睛的钩子，不是给内容的摘要。** 缩略图文字只负责制造「问题感」，
    答案在视频里。禁止把标题原文搬上去（标题栏就在旁边，重复 = 浪费）。
 
-3. **人脸不是必须的，情绪是必须的。** 本频道不出脸，靠三件事替代人脸的吸引力：
-   高对比色块、指向性构图（箭头 / 视线 / 手指方向）、以及一个「不该出现的东西」。
+3. **AI 频道缩略图必须有人脸，而且要有情绪。**
+   这一条在 2026-08-30 改过：原来写的是「本频道不出脸」，那是从「跨镜头串脸」这个顾虑推导出来的，
+   但它牺牲的是点击率——人脸是 YouTube 缩略图最强的点击变量，没有之一。
+   现在频道有人物形象了，缩略图就让她的脸占画面 40%–60%，配一个大表情
+   （皱眉 / 愣住 / 无奈地笑），再用高对比色块和指向性构图兜底。
+   串脸的顾虑用「参考图垫图 + 后期统一」解决，不用「不出脸」这个自断一臂的办法。
 """
 
 THUMB_HEAD = (
@@ -290,15 +347,32 @@ THUMB_HEAD = (
 )
 
 THUMB_TAIL = (
-    "No human face. No brand logos. No watermarks. No photorealistic readable paragraphs. "
+    "No brand logos. No watermarks. No photorealistic readable paragraphs. "
+    "Leave the top-left corner and the bottom-right corner relatively clear, YouTube overlays sit there. "
+    "Slightly oversaturated and punchier than the in-video frames — thumbnails must survive being shrunk."
+)
+
+# AI 频道缩略图：她要出脸，占画面 40%–60%，配一个大表情。
+# （金融频道继续不出脸，用 THUMB_TAIL 的默认版本即可。）
+THUMB_TAIL_FACE = (
+    "Her face is in frame and clearly readable, filling 40 to 60 percent of the composition, "
+    "with one legible emotion on it — frowning, caught off guard, or a resigned half-smile. "
+    "Front-lit so both eyes are visible, eyes looking at the camera, no hair across the face. "
+    "No brand logos. No watermarks. No photorealistic readable paragraphs. "
     "Leave the top-left corner and the bottom-right corner relatively clear, YouTube overlays sit there. "
     "Slightly oversaturated and punchier than the in-video frames — thumbnails must survive being shrunk."
 )
 
 
-def build_prompts(bible_head, bible_tail, vid_head, vid_tail, character, core, motion_core):
-    """把「镜头专属描述」拼成完整提示词。"""
+def build_prompts(bible_head, bible_tail, vid_head, vid_tail,
+                  character, oncamera, she, core, motion_core):
+    """把「镜头专属描述」拼成完整提示词。
+
+    she 是「她在这个镜头里的位置 / 姿态 / 脸朝哪边」——这一项不能为空。
+    没有它，角色卡只是一句「如果出现人就长这样」，模型会把镜头画成纯静物。
+    """
+    she_img = ("ON CAMERA: " + she.strip() + " ").rstrip() + " "
     return {
-        "img_en": (character + " " + bible_head + core + " " + bible_tail).strip(),
-        "vid_en": (character + " " + vid_head + motion_core + " " + vid_tail).strip(),
+        "img_en": (character + " " + oncamera + she_img + bible_head + core + " " + bible_tail).strip(),
+        "vid_en": (character + " " + oncamera + she_img + vid_head + motion_core + " " + vid_tail).strip(),
     }

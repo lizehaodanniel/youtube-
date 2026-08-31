@@ -14,7 +14,8 @@ Remotion 叠加字幕与数字。
 """
 
 from pov_style import (FIN_IMG_HEAD, FIN_IMG_TAIL, FIN_VID_HEAD, FIN_VID_TAIL,
-                       FIN_CHARACTER, FIN_BIBLE, THUMB_HEAD, THUMB_TAIL)
+                       FIN_CHARACTER, FIN_ONCAMERA, FIN_BIBLE,
+                       THUMB_HEAD, THUMB_TAIL, build_prompts)
 
 CHANNEL_KEY = "finance"
 CHANNEL_LABEL = "金融 · 财经商业（美国观众）(@TheMoneyMoo)"
@@ -768,13 +769,229 @@ _SHOTS = [
  "说完立刻收。不要加片尾卡。",
  "hold",
  "The same dark room seen through the window, but the desk lamp has just gone out, leaving only a faint residual warm glow on the desk surface that is already fading. The room is now almost entirely blue-black. The window frame is barely visible. Nothing moves. The image is on the edge of total darkness.",
- "hold the camera completely still as the last of the warm glow fades to black"),
+  "hold the camera completely still as the last of the warm glow fades to black"),
 ]
+
+# ============================================================ 她在哪（每个镜头必填）
+#
+# 和 AI 频道同一天补的，原因一样：只有角色卡、没有「她在这一镜里在哪」，
+# 模型就会把镜头画成静物或一只飘在黑暗里的手。
+#
+# 金融频道的分寸和 AI 频道不同，这里是 POV 惯例：**人在场，脸不出**。
+# 每一条都要做到两件事：
+#   1. 让观众感觉到一个身体在画面后面（袖口、肩线、背影、膝盖、重心）
+#   2. 脸始终不可读（深阴影、转开、出画、或从背后拍）
+# 如果一条描述同时满足不了这两点，重写，不要将就。
+#
+# 服装只有一件：暖灰色棉质圆领毛衣（heather-grey cotton crewneck sweater）。
+SHE = [
+    # ---- S1 设局 ----
+    ("hands", "She sits at the kitchen table in the heather-grey crewneck sweater, both hands wrapped "
+              "around the cold ceramic mug. Her forearms rest on the table edge, cuffs pushed to the "
+              "wrist. Her head is bowed and cropped out at the top of the frame; the back of her "
+              "platinum hair is just visible as a soft shape in the dim light."),
+    ("hands", "Her hands and forearms from the wrist down, the cuffs of the heather-grey sweater "
+              "visible, arranging the row of cream envelopes. Her shoulders are a soft dark mass at "
+              "the top of the frame. Her face is not in the composition."),
+    ("back", "She stands at the minimal desk, seen from behind and slightly above, one hand resting "
+             "flat beside the curling calendar corner. Her back and the crown of her platinum head "
+             "fill the lower third of the frame. No face."),
+    ("silhouette", "She stands in the dark hallway beside the ajar door, a silhouette facing away from "
+                   "camera toward the blade of amber light. Her shoulder and the edge of her sweater "
+                   "sleeve catch a thin amber rim. Her face is turned into the doorway and unreadable."),
+    ("hands", "Her hands from the wrist down hold the blank sheet of cream paper up toward the camera. "
+              "The heather-grey cuffs are visible at both wrists, the thin matte-silver band on her "
+              "right fourth finger. Her torso is a soft dark shape behind the paper; her face is "
+              "hidden by the sheet."),
+    ("hands", "She sits at the empty desk, both hands resting flat on its surface at the near edge, "
+              "fingers spread slightly. The heather-grey cuffs sit at her wrists. Her shoulders and the "
+              "base of her throat are a dark mass at the top of frame; her face is cropped out."),
+    ("hands", "Extreme close on her right index finger tapping the paper. Only the fingertip and the "
+              "first knuckle are in frame, the heather-grey cuff a soft blur far behind. Her face is "
+              "not in the composition."),
+    ("hands", "Her right hand turns the sheet face-down, caught mid-motion. Forearm enters from the "
+              "right, heather-grey cuff pushed back, silver band visible. Her torso is an out-of-focus "
+              "dark shape above; no face."),
+    ("back", "Seen from above and behind, she sits at the small café table, her shoulders and the back "
+             "of her platinum head in the upper frame, hands resting on the table around the three "
+             "objects. Her face is turned down and away."),
+    ("silhouette", "She stands at the open refrigerator in side silhouette, the cool white interior "
+                   "light rimming the front of her body — her shoulder, her forearm reaching in, the "
+                   "edge of her platinum hair. Her face is turned into the fridge and unreadable."),
+    ("hands", "She crouches beside the copper pipe joint, her right hand reaching in from the lower "
+              "right to touch the seeping thread of water. The heather-grey cuff is pushed back, the "
+              "silver band catching a glint. Her shoulder and the side of her torso fill the right "
+              "third of frame; her head is cropped out above."),
+    ("back", "She stands at the shelf, seen from behind, her back and shoulders filling the lower "
+             "third of the frame as she looks at the three glass jars. The crown of her platinum head "
+             "is level with the middle shelf. No face."),
+
+    # ---- S2 诊断 ----
+    ("back", "She stands at the shelf in the same position, now leaning slightly toward the single lit "
+             "jar. Her back, shoulder line and the back of her head are readable; her face stays "
+             "turned away into shadow."),
+    ("hands", "Extreme close on her fingertip touching the glass of the lit jar. Her other fingers "
+              "curl softly behind it, heather-grey cuff a blur at the edge of frame. Her face is not "
+              "in the composition."),
+    ("hands", "Her hands from the wrist down open the heavy bound report on the wide desk, both palms "
+              "flat on the cream paper. Heather-grey cuffs at both wrists, silver band on the right "
+              "fourth finger. Her shoulders are a dark mass at the top of frame; her face is cropped "
+              "out."),
+    ("back", "Seen from above and behind, she sits at the desk with the two documents in front of her, "
+             "head bowed, one forearm resting on the table's near edge. Her back and the crown of her "
+             "head fill the upper frame. No face."),
+    ("hands", "Her right index finger traces down the left margin of the printed table. Forearm enters "
+              "from the lower right, heather-grey cuff pushed to the elbow, the page's shadow falling "
+              "across her knuckles. Her face is not in the composition."),
+    ("hands", "Extreme close on her fingertip resting at the end of the ruled row. The heather-grey "
+              "cuff is a soft blur at the bottom of frame. Her face is not in the composition."),
+    ("hands", "Her right hand has just released the upright coin, fingers still curved from the motion, "
+              "the heather-grey cuff at the wrist. Her torso is a dark shape behind and above, out of "
+              "focus; her face is not readable."),
+    ("hands", "Her hand enters from the right and rests on the stack of banknotes, fingers splayed "
+              "slightly. The heather-grey cuff is pushed back, the silver band catching the warm light. "
+              "Her shoulder is a dark curve at the top of the frame; no face."),
+    ("hands", "Her right hand pushes the white takeaway cup toward the frame edge, the heather-grey "
+              "cuff visible, the silver band on her fourth finger. Her forearm and shoulder fill the "
+              "right third of the composition; her head is cropped out."),
+
+    # ---- S3 三条路 ----
+    ("back", "She stands at the window with her back to camera, one hand resting on the sill. Her "
+             "silhouette and the crown of her platinum head are readable against the pale grey-blue "
+             "sky. Her face is turned to the glass and unreadable."),
+    ("hands", "Her two hands hold the three sheets of frosted glass upright from below, fingers "
+              "visible through the frosted surface as soft shapes. Heather-grey cuffs at both wrists. "
+              "Her shoulders are a dark mass above; her face is cropped out."),
+    ("back", "Seen from above and behind, she leans over the dark stone surface, both palms flat on "
+             "it, looking down at the three objects. Her back and the back of her platinum head fill "
+             "the upper frame. No face."),
+    ("silhouette", "She stands in the dark room facing the white wall, a full-body silhouette against "
+                   "the projected band of cyan light. Her shape is clear — shoulders, the fall of her "
+                   "hair, her posture — but her face is in shadow and unreadable."),
+    ("silhouette", "She stands in the same spot facing the wall, now with the straight amber line "
+                   "crossing at her shoulder height. Her silhouette is sharper, the amber line cutting "
+                   "across her sweater. Her face stays in shadow."),
+    ("hands", "Her two hands steady the balance scale on the stone table, one on each side of its "
+              "base. Heather-grey cuffs at both wrists, silver band visible on the right. Her "
+              "shoulders are a dark mass at the top of frame; her face is cropped out."),
+    ("silhouette", "She stands back from the wall, arms crossed loosely, looking at the kinked amber "
+                   "line. Her silhouette is readable from behind — the set of her shoulders is doing "
+                   "the acting. Her face is turned away."),
+    ("hands", "Her hands from the wrist down rest flat on the dark tabletop on either side of the "
+              "three blank index cards. Heather-grey cuffs, silver band on the right fourth finger. "
+              "Her torso is a soft dark shape above; no face."),
+    ("back", "Seen from above and behind, she leans over the three objects on the dark surface, "
+             "weight on her forearms. Her back and the crown of her head fill the upper frame. No "
+             "face."),
+    ("hands", "Her right hand lays the row of twenty coins out along the dark wood, fingers guiding "
+              "each one into place. The heather-grey cuff is pushed back. Her forearm and shoulder "
+              "occupy the right third; her head is cropped out."),
+    ("hands", "Her two hands hover above the two piles of coins, comparing them, palms down and "
+              "fingers spread. Heather-grey cuffs at both wrists. Her shoulders are a dark mass at "
+              "the top of frame; her face is not in the composition."),
+
+    # ---- S4 选择 ----
+    ("silhouette", "She stands at the mouth of the corridor where it forks, seen from behind, her "
+                   "silhouette small against the two diverging passages. Her posture is still, "
+                   "weighing. Her face is turned away down the corridor."),
+    ("hands", "Her two hands hold the shallow wooden tray of twenty coins, one at each end, thumbs "
+              "visible on the rim. Heather-grey cuffs at both wrists. Her torso is a dark shape "
+              "behind; her face is cropped out."),
+    ("hands", "Her right hand stacks coins into the tall column on the left pan of the scale, "
+              "movements small and careful. The heather-grey cuff is pushed to the wrist, the silver "
+              "band catching the light. Her shoulder fills the right third; no face."),
+    ("silhouette", "She stands beside the tipped balance scale, seen from behind and slightly to the "
+                   "side, head tilted toward the lower pan. Her silhouette reads clearly, her face "
+                   "does not."),
+    ("silhouette", "She stands beside the now-level scale in the same position, her shoulders dropping "
+                   "a little. Seen from behind; her face stays unreadable."),
+    ("silhouette", "She stands beside the scale tipped the other way, seen from behind, one hand "
+                   "resting on the stone table's edge. Her silhouette carries the reaction. No face."),
+    ("silhouette", "She stands at the fork where the third passage has appeared, seen from behind, "
+                   "turned slightly toward it. Her silhouette and the fall of her platinum hair are "
+                   "readable; her face is in shadow."),
+    ("back", "Seen from above and behind, she sits at the walnut desk with the open benefits document "
+             "in front of her, one forearm on the desk's near edge. Her back and the crown of her head "
+             "fill the upper frame. No face."),
+
+    # ---- S5 落地 ----
+    ("hands", "Her right hand has just released the coin above the open cash box, fingers still open. "
+              "The heather-grey cuff is visible, the silver band catching the hard light. Her forearm "
+              "and shoulder fill the upper right; her head is cropped out."),
+    ("hands", "Extreme close on her finger resting between the two blank ruled lines. The heather-grey "
+              "cuff is a soft blur at the bottom of frame. Her face is not in the composition."),
+    ("hands", "Her two hands enter from opposite sides of the frame, each placing a stack of "
+              "banknotes into the same open container. Heather-grey cuffs at both wrists, the silver "
+              "band on her right fourth finger. Her torso is a dark mass above; no face."),
+    ("hands", "Her two hands hold the four-compartment glass jar steady on the dark surface, one on "
+              "each side. Heather-grey cuffs pushed to the wrists. Her shoulders are a soft dark shape "
+              "at the top of frame; her face is cropped out."),
+    ("hands", "Her right index finger rests on the long wooden measuring scale, tracing its length "
+              "into the shadow. The heather-grey cuff is pushed back, the silver band visible. Her "
+              "forearm occupies the lower right; her face is not in the composition."),
+    ("hands", "Her right hand closes the bound benefits document and pushes it away across the walnut "
+              "desk, the motion final. The heather-grey cuff is visible at the wrist. Her shoulder and "
+              "the side of her torso fill the right third; her head is cropped out."),
+
+    # ---- S6 结果 ----
+    ("hands", "She sits at the empty walnut table, both hands resting palms-down on its surface just "
+              "outside the warm pool of light. The heather-grey cuffs sit at her wrists, the silver "
+              "band catching one warm glint. Her shoulders are a dark mass at the top of frame; her "
+              "face is cropped out."),
+    ("hands", "She sits at the same table, hands resting on its surface, her right index finger "
+              "extended along the line of bright light. Heather-grey cuff pushed back. Her shoulders "
+              "are a soft dark shape above; no face."),
+    ("hands", "She sits at the table in near-total darkness, only her two hands and the heather-grey "
+              "cuffs visible in the line of light. The silver band on her right fourth finger catches "
+              "the only highlight. Her face is entirely lost in the dark."),
+    ("hands", "She sits at the table, both hands resting flat on the dark surface, her right index "
+              "finger pointing along the line toward the three glowing nodes. Heather-grey cuffs "
+              "visible. Her shoulders are a dark mass at the top of frame; her face is cropped out."),
+    ("hands", "Her right hand rests open beside the first glowing node, palm up, the heather-grey cuff "
+              "catching the node's light. Her forearm enters from the lower right. Her face is not in "
+              "the composition."),
+    ("hands", "Her right hand rests beside the second glowing node with its small stack of banknotes, "
+              "fingers relaxed. The heather-grey cuff is pushed back, the silver band visible. Her "
+              "shoulder fills the right third; no face."),
+    ("hands", "Her right hand rests beside the third and brightest node, the light climbing her "
+              "knuckles. Heather-grey cuff at the wrist. Her forearm and shoulder occupy the lower "
+              "right of frame; her head is cropped out."),
+    ("hands", "She sits at the table exactly as before, both hands palms-down on the dark wood outside "
+              "the round pool of warm light. The heather-grey cuffs and the silver band are the only "
+              "warm highlights on her. Her face is cropped out."),
+    ("hands", "Her right index finger rests at the start of the long strip of small marks, ready to "
+              "trace along it. The heather-grey cuff is pushed back. Her forearm enters from the "
+              "lower right; her face is not in the composition."),
+    ("hands", "Her right hand has just released the coin above the small open container, fingers still "
+              "curved. The heather-grey cuff is visible at the wrist. Her forearm and shoulder fill "
+              "the upper right; her head is cropped out."),
+    ("hands", "Her right index finger rests at the last of the twenty marks, having traced the whole "
+              "strip. The heather-grey cuff is pushed to the wrist. Her forearm occupies the lower "
+              "right; her face is not in the composition."),
+    ("hands", "Her right hand rests flat on the dark surface beside the single coin, fingers relaxed "
+              "and still. The heather-grey cuff catches the hard shaft of warm light, the silver band "
+              "glinting. Her shoulder is a dark curve at the top of frame; no face."),
+
+    # ---- S7 收尾 ----
+    ("silhouette", "Seen through the window from outside, she sits at the desk inside, a warm silhouette "
+                   "against the dim room — the shape of her shoulders, the fall of her platinum hair, "
+                   "the curve of her back as she leans toward the lamp. Her face is turned away and "
+                   "unreadable."),
+    ("silhouette", "Seen through the same window, she is still in the chair but the lamp has gone out. "
+                   "She is now only a darker shape within the dark — the outline of her head and "
+                   "shoulders against the last residual glow. Her face is not readable; the image is "
+                   "on the edge of total darkness."),
+]
+assert len(SHE) == len(_SHOTS), f"SHE {len(SHE)} 条 / _SHOTS {len(_SHOTS)} 条 —— 必须一一对应"
+
 
 # ============================================================ 组装
 def shots():
     out = []
     for i, (sec, win, en, zh, vis, emo, mot, img_core, vid_core) in enumerate(_SHOTS, 1):
+        kind, she = SHE[i - 1]
+        p = build_prompts(FIN_IMG_HEAD, FIN_IMG_TAIL, FIN_VID_HEAD, FIN_VID_TAIL,
+                          FIN_CHARACTER, FIN_ONCAMERA, she, img_core, vid_core)
         out.append({
             "id": f"F{i:02d}",
             "sec": sec,
@@ -784,8 +1001,10 @@ def shots():
             "visual": vis,
             "emotion": emo,
             "motion": mot,
-            "img_en": FIN_CHARACTER + " " + FIN_IMG_HEAD + img_core + " " + FIN_IMG_TAIL,
-            "vid_en": FIN_CHARACTER + " " + FIN_VID_HEAD + vid_core + " " + FIN_VID_TAIL,
+            "cam": kind,          # hands / back / silhouette
+            "she": she,           # 她在画面里的确切位置，报告里单列一栏给用户看
+            "img_en": p["img_en"],
+            "vid_en": p["vid_en"],
         })
     return out
 
