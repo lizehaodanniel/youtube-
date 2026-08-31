@@ -26,13 +26,75 @@ prompt 组成：
 """
 
 # ============================================================ 通用尾巴
-_COMMON_NEG = (
+# ---------------------------------------------------------------------------
+# 单帧铁律：Midjourney 等工具默认一次吐 2x2 四宫格，必须在正负两侧同时压掉。
+# 正面说「只出一张」，负面把各种网格/分镜说法全列一遍，双保险。
+# ---------------------------------------------------------------------------
+_SINGLE_FRAME_POS = (
+    "IMPORTANT FRAMING RULE: this is ONE single frame — a single still from a film, "
+    "photographed from ONE camera angle at ONE moment in time. "
+    "Output exactly one image. "
+)
+_SINGLE_FRAME_NEG = (
+    "split screen, split-screen panels, panel grid, storyboard layout, contact sheet, "
+    "film strip, multiple panels, four-image grid, 2x2 grid, quad grid, diptych, triptych, "
+    "collage, image borders, panel dividers, thumbnails, duplicate variations of the same scene, "
+    "before-and-after comparison layout, multiple views of the same subject."
+)
+
+_NEG_BASE = (
     "Do NOT include: any text, letters, numbers, words, signage with readable type, "
-    "logos, brand names, watermarks, UI screenshots, charts, graphs, human faces, "
+    "logos, brand names, watermarks, UI screenshots, charts, graphs, "
     "readable fine print, distorted hands, extra fingers, melted objects, "
     "warped perspective, oversaturated colors, lens flare abuse, plastic-looking skin, "
     "bad anatomy, low resolution, painterly stylization, anime stylization, "
     "cartoon outline edges, watercolor bleed, moiré patterns."
+)
+
+# 金融频道：继续「不出脸」，负面词里保留禁人脸。
+FIN_NEG = _NEG_BASE[:-1] + ", " + (
+    "human faces, visible faces, recognizable facial features, "
+    "a clearly identifiable person, frontal portraits."
+) + " " + _SINGLE_FRAME_NEG + "."
+
+# AI 频道：允许女主角本人出脸，但除了她之外不能出现任何第二个人。
+AI_NEG = _NEG_BASE[:-1] + ", " + (
+    "any face other than the character's, a second person, another woman, another man, "
+    "a crowd, bystanders, extra people in the background, "
+    "a changed or inconsistent face, a different woman than the character reference card."
+) + " " + _SINGLE_FRAME_NEG + "."
+
+# ---------------------------------------------------------------------------
+# 共用面孔：两个频道是同一个人。脸 / 发色 / 肤色 / 五官写死，
+# 只有「服装」和「出镜方式」按频道分开，这样跨频道也是同一张脸。
+# ---------------------------------------------------------------------------
+SHARED_FACE = (
+    "Character reference card (use this whenever a person appears in frame). "
+    "The SAME woman appears in every shot of both channels — identical face, identical hair, "
+    "identical skin tone, never a different person, never a man. "
+    "Photorealistic East-Asian woman, age 24 to 28, the quiet-muse / clean-girl look. "
+    "Face: oval with a softly rounded jaw, fair warm-toned skin with a natural dewy finish, "
+    "no heavy makeup, no contour, no dramatic highlights — just healthy skin with one soft highlight "
+    "on the cheekbone. "
+    "Eyes: almond-shaped, double-lid, dark brown iris, calmly half-lidded, looking just past the camera, "
+    "no mascara, no eyeliner, no eyeshadow. "
+    "Eyebrows: naturally thick but groomed straight, soft dark brown, no arch, no filler. "
+    "Nose: small with a straight bridge and a softly rounded tip, never sharp or sculptural. "
+    "Lips: full and softly defined with a clear cupid's bow, natural pink-nude, one layer of clear gloss, "
+    "no overline, no lipstick color. "
+    "Hair: platinum ash-blonde with slightly darker natural roots for depth, no bangs, smooth and silky "
+    "with a single soft highlight where the key light hits, never oily, never frizzy. "
+    "Two interchangeable lengths — pick one per shot and do not mix within the same shot: "
+    "(A) chin-length soft blunt bob with a gentle outward flick at the ends, or "
+    "(B) long straight hair falling to mid-chest. "
+    "Hands: slim fingers, short unpolished nails, a thin matte-silver band on the right fourth finger. "
+    "Body language: unhurried, grounded, the posture of someone who has spent the afternoon reading; "
+    "shoulders relaxed, slight inward curl, never posed, never smiling broadly, "
+    "expression neutral or one faint closed-mouth smile. "
+    "Camera relationship: a soft 45-degree key light from camera-left, gentle window fill from above, "
+    "never from below, never a hard shadow under the chin, never a beauty-ring reflection in the iris. "
+    "Cohesion rule: even if every other detail changes, her face, hair color, skin tone and hands "
+    "must read as the same woman across all shots and both channels. "
 )
 
 # ============================================================ 金融频道
@@ -54,16 +116,15 @@ FIN_BIBLE = {
 # 跨镜头人物一致性卡——每个有人的镜头里都嵌入这段
 # 这是「最后呈现的图片或者视频人物保持一致」的核心
 FIN_CHARACTER = (
-    "Character reference card (use this whenever a person appears in frame): "
-    "an unspecified adult, late twenties to mid thirties, fair to medium skin with neutral warmth, "
-    "seen only as hands from the wrist down, or as a figure from behind, or as a soft silhouette "
-    "with the face in deep shadow and never visible; posture unhurried and slightly slumped, "
-    "the body language of someone who has been awake too long thinking about money; "
-    "clothing: a soft cotton crewneck sweater in warm heather grey with a visible fine weave, no logos, "
-    "no prints, no graphics, the same sweater in every shot it appears; "
-    "hands are unadorned except for a single thin brushed-steel band on the fourth finger of the left hand; "
-    "fingernails short and unpolished; "
-    "signature object appearing in roughly 40 percent of shots: a five-centimeter polished brass cow "
+    SHARED_FACE
+    + "Finance-channel framing: she is seen only as hands from the wrist down, or as a figure from behind, "
+    "or as a soft silhouette with the face in deep shadow and never readable — this channel keeps the "
+    "POV convention, so show her body language and her hands, not a clean portrait. "
+    "Finance-channel wardrobe, the only outfit she wears in this channel: a soft cotton crewneck sweater "
+    "in warm heather grey with a visible fine weave, no logos, no prints, no graphics. "
+    "Minimal jewelry only: one thin matte-silver chain with a tiny round pendant at the collarbone, "
+    "small thin silver hoops in both ears, plus the thin matte-silver band on her right fourth finger. "
+    "Signature object appearing in roughly 40 percent of shots: a five-centimeter polished brass cow "
     "figurine with a soft amber sheen, placed unobtrusively on a shelf, a tabletop corner, "
     "or a windowsill, never the focal point, sometimes only an out-of-focus bokeh blob in the foreground. "
 )
@@ -88,9 +149,10 @@ FIN_IMG_TAIL = (
     "the suggestion of time passing but no visible clocks or calendars. "
     "Technical: ultra-sharp where the eye lands, soft and creamy where it does not, "
     "no halation, no bloom abuse, no vignette so heavy it crushes the corners. "
-    "Horizontal 16:9 composition, native 1920x1080 (or up to 3840x2160 for 4K export), "
+    "Horizontal 16:9 composition, native 1920x1080, "
     "high dynamic range with detail preserved in both shadows and highlights. "
-    + _COMMON_NEG
+    + _SINGLE_FRAME_POS
+    + FIN_NEG
 )
 
 FIN_VID_HEAD = (
@@ -105,7 +167,8 @@ FIN_VID_TAIL = (
     "color temperature, no new elements entering frame, no subject deformation. "
     "Ambient life only: dust motes drifting, a curtain breathing, steam rising from a mug, "
     "a shadow slowly lengthening, the brass cow figurine catching a single glint as the light moves. "
-    + _COMMON_NEG
+    + _SINGLE_FRAME_POS
+    + FIN_NEG
 )
 
 # ============================================================ AI 频道
@@ -125,39 +188,17 @@ AI_BIBLE = {
 }
 
 AI_CHARACTER = (
-    "Character reference card (use this whenever a person appears in frame). "
-    "Same face, same body, same clothing in every single shot. "
-    "Photorealistic East-Asian woman, age 24 to 28, the quiet-muse / clean-girl look. "
-    "Face: oval with a softly rounded jaw, fair warm-toned skin with a natural dewy finish, "
-    "no heavy makeup, no contour, no dramatic highlights — just healthy skin with one soft highlight on the cheekbone. "
-    "Eyes: almond-shaped, double-lid, dark brown iris, calmly half-lidded, looking just past the camera "
-    "as if reading a screen, no mascara, no eyeliner. "
-    "Eyebrows: naturally thick but groomed straight, soft dark brown, no arch, no filler. "
-    "Nose: small with a straight bridge and a softly rounded tip, never sharp or sculptural. "
-    "Lips: full and softly defined with a clear cupid's bow, natural pink-nude, one layer of clear gloss, "
-    "no overline, no lipstick color. "
-    "Hair (two interchangeable looks — pick one per shot, do not mix within the same shot): "
-    "(A) chin-length soft blunt bob with a gentle outward flick at the ends, or "
-    "(B) long straight hair falling to mid-chest, both in the same platinum ash-blonde color "
-    "with slightly darker natural roots for depth, no bangs, never oily, never frizzy, "
-    "with a single soft highlight where the key light hits. "
-    "Wardrobe — these are the only outfits she ever wears, rotate between them, never invent new ones: "
+    SHARED_FACE
+    + "AI-channel framing: unlike the finance channel, her face IS shown here — a clean portrait is allowed "
+    "and encouraged, occupying at most the upper third of the frame; when only body language is needed, "
+    "show her from the neck down or from behind. "
+    "AI-channel wardrobe — the only outfits she wears in this channel, rotate between them, "
+    "never invent new ones: "
     "a matte-white wide-strap cotton camisole with thin spaghetti straps and a softly scooped neckline; "
     "a loose white linen button-up shirt half-tucked into high-waisted cream trousers; "
     "or an oversized oatmeal-cream knit cardigan over the camisole. No logos, no prints, no graphics. "
-    "Minimal jewelry only: one thin matte-silver chain necklace with a tiny round pendant resting at the collarbone, "
-    "small thin silver hoop earrings in both ears, and a thin matte-silver band on the right fourth finger. "
-    "Hands: slim fingers, short unpolished nails, a thin matte-silver band on the right fourth finger, "
-    "no other rings, no watches. "
-    "Body language: unhurried, grounded, the posture of someone who has spent the afternoon reading; "
-    "shoulders relaxed, slight inward curl, never posed, never smiling broadly, "
-    "expression neutral or one faint closed-mouth smile. "
-    "Framing: when the face is shown, it occupies at most the upper third of the frame; "
-    "when only the body language is needed, show her from the neck down or from behind. "
-    "Camera relationship: a soft 45-degree key light from camera-left, gentle window fill from above, "
-    "never from below, never a hard shadow under the chin, never a beauty-ring reflection in the iris. "
-    "Cohesion rule: even if every other detail changes, her face, hair color, skin tone, and the three outfit "
-    "options must read as the same person across all shots. "
+    "Minimal jewelry only: one thin matte-silver chain with a tiny round pendant at the collarbone, "
+    "small thin silver hoops in both ears, plus the thin matte-silver band on her right fourth finger. "
     "Reference vibe: the still photography of Petra Collins meets the muted color palette of Sofia Coppola. "
 )
 
@@ -183,12 +224,13 @@ AI_IMG_TAIL = (
     "premium tech-product aesthetic, clean and uncluttered, no cyberpunk cliches, "
     "no neon signs, no rain, no graffiti, no skyline in the background. "
     "Atmosphere: a fan spinning almost imperceptibly, a cursor blinking, dust drifting through "
-    "the single light beam, the faintest reflection of the screen on the matte surface of the cap. "
+    "the single light beam, the faintest reflection of the screen on the matte desk surface. "
     "Technical: ultra-sharp where the eye lands, no halation on the cyan, no bloom that washes out text edges, "
     "no vignette so heavy it crushes the subject. "
-    "Horizontal 16:9 composition, native 1920x1080 (or up to 3840x2160 for 4K export), "
+    "Horizontal 16:9 composition, native 1920x1080, "
     "high dynamic range with detail preserved in both shadows and the cyan highlights. "
-    + _COMMON_NEG
+    + _SINGLE_FRAME_POS
+    + AI_NEG
 )
 
 AI_VID_HEAD = (
@@ -203,8 +245,9 @@ AI_VID_TAIL = (
     "color temperature, no new elements entering frame, no subject deformation. "
     "Ambient life only: a cursor blinking, a fan spinning, a progress bar filling, "
     "the cyan glow pulsing almost imperceptibly, dust drifting through the light, "
-    "the cap and headphones remaining perfectly still. "
-    + _COMMON_NEG
+    "the silver pendant at her collarbone catching a single glint as she breathes. "
+    + _SINGLE_FRAME_POS
+    + AI_NEG
 )
 
 # ============================================================ Remotion 动效预设
