@@ -10,24 +10,29 @@
 
 四条铁律（每个镜头都必须遵守）：
 
-1. **人物必须在画面里**。
-   注意：这条在 2026-08-30 被推翻重写过。原来的写法是「不出脸，只拍手 / 背影 / 纯物件」，
-   结果 102 个镜头生出来全是静物，一个人物都没有 —— 因为角色卡只说「如果出现人就长这样」，
-   而镜头主体写的是「一张黑桌子」，模型不会凭空加人进去。
-   **角色卡 ≠ 让角色出现。每一个镜头都必须显式写出「她在哪里、在做什么、脸朝哪边」。**
-   两个频道的差别只在「露不露脸」，不在「有没有人」：
-   - AI 频道：约四成镜头是能看清脸的肖像（脸占画面上三分之一），其余是过肩 / 侧脸 / 低头 / 手部特写
-   - 金融频道：继续保持 POV 惯例不露脸，但**手必须是她的手**，镜头里必须有她的身体姿态
+1. **她必须在画面里，而且脸要能拍**。
+   注意这条被推翻过两次，别再走回头路：
+   - 第一次（2026-08-30 早）：写「不出脸，只拍手 / 背影 / 纯物件」→ 102 镜全静物。
+     因为角色卡只是条件句「如果出现人就长这样」，镜头主体写「一张黑桌子」模型不会凭空加人。
+   - 第二次（2026-08-30 晚）：改成「人在场，但金融频道脸永不露出」→ 人物被写死成
+     「只有手腕以下的手 / 裁掉脸的后脑勺 / 深阴影剪影」，姿态压抑、画面阴郁，
+     用户直接反馈「不仅把人脸写没了，还把人物写得极其压抑」「观众看了不舒服」。
+   - 现在（2026-08-31）：**用户有参考图，跨镜头人脸一致性由「垫图 + 后期统一」保证，
+     不需要靠「不露脸」来规避串脸风险。** 两个频道都正常拍她，脸可以正对镜头，
+     表情跟着剧情走。唯一禁止的是「把她拍成无脸的躯干」。
+   **角色卡 ≠ 让角色出现。每一个镜头都必须显式写出「她在哪里、在做什么、什么表情」。**
 2. **不烧字**。图里不出现任何文字、数字、logo、界面。
    所有文字都在 Remotion 里用真字体叠加 —— 又快又准，还能随时改。
 3. **同一个人看镜头**。SHARED_FACE 在**每一条**提示词里都嵌入——
    同一张脸、同一种发色、同一种肤色、同一双手。
-4. **一条光**。每场戏只有一个可见光源，色温固定。
-   这是让一组 AI 图看起来像「同一部片」成本最低的方法。
+4. **一条光，但别把画面压死**。
+   每场戏只有一个**可见**光源，色温固定，这是让一组 AI 图看起来像「同一部片」成本最低的方法。
+   但「暗调」不等于「压黑」：阴影必须有细节、皮肤必须是暖的、背景必须有质感。
+   曾经的调色（青蓝阴影 + 压黑 + 琥珀高光）被用户判为「观众看了不舒服」，已全换。
 
 prompt 组成：
-    img_en = SHARED_FACE + CHARACTER + ON_CAMERA + <镜头专属: 她在哪 she> + <镜头专属: 场景 core> + IMG_TAIL
-    vid_en = SHARED_FACE + CHARACTER + ON_CAMERA + <镜头专属: 她在哪 she> + <镜头专属: 运镜 motion> + VID_TAIL
+    img_en = SHARED_FACE + CHARACTER + PRESENCE + <镜头专属: 她在哪 she> + <风格段> + <场景 core> + IMG_TAIL
+    vid_en = SHARED_FACE + CHARACTER + PRESENCE + <镜头专属: 她在哪 she> + <运镜> + <场景 motion> + VID_TAIL
 每条图片提示词约 850–1000 词，可直接整段复制喂给生图工具。
 """
 
@@ -54,21 +59,19 @@ _NEG_BASE = (
     "readable fine print, distorted hands, extra fingers, melted objects, "
     "warped perspective, oversaturated colors, lens flare abuse, plastic-looking skin, "
     "bad anatomy, low resolution, painterly stylization, anime stylization, "
-    "cartoon outline edges, watercolor bleed, moiré patterns."
+    "cartoon outline edges, watercolor bleed, moiré patterns, "
+    "crushed blacks, pure-void black backgrounds, cold-only teal lighting."
 )
 
-# 金融频道：继续「不出脸」，负面词里保留禁人脸。
+# 两个频道都是同一位女主，跨镜头人脸一致性由参考图垫图 + 后期统一保证，
+# 不靠「不露脸」来规避。两个频道的负面词统一为「禁第二个人，禁换脸」。
 FIN_NEG = _NEG_BASE[:-1] + ", " + (
-    "human faces, visible faces, recognizable facial features, "
-    "a clearly identifiable person, frontal portraits."
-) + " " + _SINGLE_FRAME_NEG + "."
-
-# AI 频道：允许女主角本人出脸，但除了她之外不能出现任何第二个人。
-AI_NEG = _NEG_BASE[:-1] + ", " + (
     "any face other than the character's, a second person, another woman, another man, "
     "a crowd, bystanders, extra people in the background, "
     "a changed or inconsistent face, a different woman than the character reference card."
 ) + " " + _SINGLE_FRAME_NEG + "."
+
+AI_NEG = FIN_NEG
 
 # ---------------------------------------------------------------------------
 # 共用面孔：两个频道是同一个人。脸 / 发色 / 肤色 / 五官写死，
@@ -80,23 +83,44 @@ SHARED_FACE = (
     "identical skin tone, never a different person, never a man. "
     "Photorealistic East-Asian woman, age 24 to 28, the quiet-muse / clean-girl look. "
     "Face: oval with a softly rounded jaw, fair warm-toned skin with a natural dewy finish, "
-    "no heavy makeup, no contour, no dramatic highlights — just healthy skin with one soft highlight "
-    "on the cheekbone. "
-    "Eyes: almond-shaped, double-lid, dark brown iris, calmly half-lidded, looking just past the camera, "
+    "healthy skin with one soft highlight on the cheekbone — no heavy makeup, no contour, no "
+    "dramatic highlights. "
+    "Eyes: almond-shaped, double-lid, warm dark brown iris, naturally expressive — her gaze "
+    "follows the scene (sometimes to camera, sometimes down at her hands, sometimes off-frame), "
     "no mascara, no eyeliner, no eyeshadow. "
     "Eyebrows: naturally thick but groomed straight, soft dark brown, no arch, no filler. "
     "Nose: small with a straight bridge and a softly rounded tip, never sharp or sculptural. "
-    "Lips: full and softly defined with a clear cupid's bow, natural pink-nude, one layer of clear gloss, "
-    "no overline, no lipstick color. "
-    "Hair: platinum ash-blonde with slightly darker natural roots for depth, no bangs, smooth and silky "
-    "with a single soft highlight where the key light hits, never oily, never frizzy. "
+    "Lips: full and softly defined with a clear cupid's bow, natural pink-nude, one layer of "
+    "clear gloss, no overline, no lipstick color — a small genuine smile, a soft exhale, "
+    "or a quietly thoughtful look are all welcome; never a frozen model blank. "
+    "Hair: platinum ash-blonde with slightly darker natural roots for depth, no bangs, smooth "
+    "and silky with a single soft highlight where the key light hits, never oily, never frizzy. "
     "Two interchangeable lengths — pick one per shot and do not mix within the same shot: "
     "(A) chin-length soft blunt bob with a gentle outward flick at the ends, or "
-    "(B) long straight hair falling to mid-chest. "
+    "(B) long straight hair falling to mid-chest, as in the reference photos. "
     "Hands: slim fingers, short unpolished nails, a thin matte-silver band on the right fourth finger. "
-    "Body language: unhurried, grounded, the posture of someone who has spent the afternoon reading; "
-    "shoulders relaxed, slight inward curl, never posed, never smiling broadly, "
-    "expression neutral or one faint closed-mouth smile. "
+
+    "Body language: natural and grounded, but not frozen — she can be curious, tired, amused, "
+    "relieved, focused, gently skeptical. A real expression that matches the scene is always "
+    "better than a posed model blank stare. Shoulders relaxed, never rigid, never posing for "
+    "the camera. "
+
+    "Wardrobe — her personal style is minimalist, soft, and naturally feminine; no logos, "
+    "no prints, no graphics, no loud colors. Pick from this drawer, do not invent anything else, "
+    "do not lock her into one outfit per channel: "
+    "1. a soft cotton or cashmere crewneck sweater in warm heather grey, oatmeal, or cream; "
+    "2. a loose white or oatmeal linen button-up shirt, sometimes half-tucked; "
+    "3. a matte-white wide-strap cotton camisole with thin spaghetti straps; "
+    "4. an oversized oatmeal-cream knit cardigan, usually worn open over the camisole; "
+    "5. high-waisted cream, beige, or oat trousers — soft wool or cotton, slightly tapered; "
+    "6. a simple slip dress in white or oat silk-satin with thin spaghetti straps (her "
+    "\"dressed up\" option for evening or formal scenes). "
+    "Minimal jewelry only: a thin matte-silver chain with a tiny round pendant at the collarbone, "
+    "small thin silver hoops in both ears, plus the thin matte-silver band on her right fourth finger. "
+    "Pick the outfit to match the scene's mood — kitchen and cafe scenes lean warm and soft; "
+    "desk scenes can use the camisole with sleeves pushed up; evening scenes get the slip dress. "
+    "Never put her in black, neon, athletic wear, prints, branded items, or anything graphic. "
+
     "Camera relationship: a soft 45-degree key light from camera-left, gentle window fill from above, "
     "never from below, never a hard shadow under the chin, never a beauty-ring reflection in the iris. "
     "Cohesion rule: even if every other detail changes, her face, hair color, skin tone and hands "
@@ -105,42 +129,43 @@ SHARED_FACE = (
 
 # ============================================================ 金融频道
 FIN_BIBLE = {
-    "name": "安静的现实主义 · Quiet Realism",
-    "signature": "青蓝阴影 + 琥珀高光；每场只有一个可见光源；不出脸；画面下三分之一留白给字幕。",
+    "name": "暖日常现实主义 · Warm Everyday Realism",
+    "signature": "暖燕麦 / 米色中间调 + 蜜光高光；阴影保留细节不压黑；"
+                 "她就是这部片的主角，脸该看就看（手部和物件特写时镜头可以自然地不拍脸，"
+                 "但不是规则、不是 POV 铁律）。所有界面元素由 Remotion 后叠，图里一律不画。",
     "palette": [
-        ("阴影 Shadow", "#16232B", "冷青蓝，压住画面四角"),
-        ("中间调 Midtone", "#4A5C63", "灰蓝墙面 / 木质家具"),
-        ("高光 Highlight", "#E8A54B", "琥珀色，只出现在光源附近"),
-        ("点缀 Accent", "#7FD1C1", "极少量，只用在「希望感」镜头"),
+        ("阴影 Shadow", "#2E3A42", "柔和深灰蓝，保留细节，不压黑"),
+        ("中间调 Midtone", "#C9BCA8", "温暖燕麦/米色，画面主体色"),
+        ("高光 Highlight", "#F2D9A8", "柔和蜜光，光源附近、皮肤上"),
+        ("点缀 Accent", "#8FC7B5", "极少量，只用在「希望感」镜头"),
     ],
-    "lens": "虚拟 35mm 变形镜头，f/1.8 浅景深，轻微胶片颗粒，体积雾。",
-    "motif": "一只巴掌大的黄铜奶牛小摆件，随意出现在约 40% 的镜头里（书架、窗台、桌面角落）。"
+    "lens": "虚拟 35mm 变形镜头，f/1.8 浅景深，轻微胶片颗粒，少量体积雾。",
+    "motif": "一只巴掌大的黄铜奶牛小摆件，随意出现在约 30% 的镜头里（书架、窗台、桌面角落）。"
              "这是频道的品牌签名，不占主体、不抢戏。",
-    "arc": "全片色温跟随情绪：S1–S2 冷灰蓝 → S3–S4 冷到发青 → S5 回暖 → S6–S8 琥珀主导。",
+    "arc": "全片色温跟随情绪：S1–S2 暖燕麦 → S3–S4 略加深但仍暖 → S5–S8 蜜光主导（'家里亮起来了'）。",
 }
 
-# 跨镜头人物一致性卡——每个有人的镜头里都嵌入这段
-# 这是「最后呈现的图片或者视频人物保持一致」的核心
+# 跨镜头人物一致性卡——不再锁死「不露脸 / 只拍手」。
+# 用户有参考图（jimeng-2026-08-30-2282.png / 4463.png），跨镜头人脸一致性由垫图 + 后期统一保证。
+# 服装也从 SHARED_FACE 的共用衣柜里挑，不再写死一件暖灰毛衣。
 FIN_CHARACTER = (
     SHARED_FACE
-    + "Finance-channel framing: she is seen only as hands from the wrist down, or as a figure from behind, "
-    "or as a soft silhouette with the face in deep shadow and never readable — this channel keeps the "
-    "POV convention, so show her body language and her hands, not a clean portrait. "
-    "Finance-channel wardrobe, the only outfit she wears in this channel: a soft cotton crewneck sweater "
-    "in warm heather grey with a visible fine weave, no logos, no prints, no graphics. "
-    "Minimal jewelry only: one thin matte-silver chain with a tiny round pendant at the collarbone, "
-    "small thin silver hoops in both ears, plus the thin matte-silver band on her right fourth finger. "
-    "Signature object appearing in roughly 40 percent of shots: a five-centimeter polished brass cow "
-    "figurine with a soft amber sheen, placed unobtrusively on a shelf, a tabletop corner, "
+    + "Finance-channel framing: she is filmed naturally — a clean portrait is welcome when "
+    "the shot calls for it, her face can meet the camera or look off-frame as the scene demands. "
+    "When the moment is about her hands, the camera may close on her hands from the wrist down "
+    "with the rest of her body in soft focus; when the moment is about her back, the camera may "
+    "frame her from behind. There is NO rule against showing her face — the only rule is that "
+    "the framing must serve the scene. "
+    "Signature object appearing in roughly 30 percent of shots: a five-centimeter polished brass "
+    "cow figurine with a soft amber sheen, placed unobtrusively on a shelf, a tabletop corner, "
     "or a windowsill, never the focal point, sometimes only an out-of-focus bokeh blob in the foreground. "
+    "Reference vibe: the warm domestic cinematography of Wong Kar-wai's \"In the Mood for Love\" "
+    "meets the quiet restraint of Autumn Durald Arkapaw. "
 )
 
-# 金融频道同样需要「人在场」的保险，但不出脸。
-# 没有这一段，模型会把镜头画成纯静物（2026-08-30 实测 60/60 全静物）。
-# 同样只保留一句话，不喧宾夺主。
+# 金融频道的 PRESENCE：她就是这部片的主角。不再写「脸永不展示」。
 FIN_PRESENCE = (
-    "The same woman described above is present in every shot of this film, "
-    "though her face is never shown — only her body, her hands, and her shadow."
+    "The same woman described above is the subject of every shot in this film."
 )
 
 FIN_IMG_HEAD = (
@@ -150,15 +175,20 @@ FIN_IMG_HEAD = (
     "true 8K material micro-detail on wood grain, fabric weave, condensation droplets, "
     "fingerprint smudges on glass, dust on surfaces. "
     "Exactly one visible practical light source inside the frame; mood comes from that one source alone. "
-    "Color grade: desaturated teal-blue shadows, warm amber highlights, muted midtones, "
-    "slightly crushed blacks, clean highlight roll-off, a faint Kodak Vision3 5219  film stock feel. "
+    "Color grade: warm, breathable, easy on the eyes — soft window daylight or warm practical lamp "
+    "as the key, creamy oatmeal and honey midtones, gentle amber highlights, shadows lifted and open "
+    "with visible detail rather than crushed, low-to-medium contrast, skin rendered warm and healthy, "
+    "a whisper of Kodak Portra 400 grain. "
+    "Explicitly avoid: teal-and-orange grading, crushed blacks, cold blue casts, heavy desaturation, "
+    "muddy grey skin. "
     "Composition rule: the lower third of the frame is kept visually quiet and uncluttered for caption overlay. "
-    "Visual reference: the still life cinematography of Roger Deakins meets the color restraint of "
-    "Autumn Durald Arkapaw. "
+    "Visual reference: the warm domestic cinematography of Wong Kar-wai's \"In the Mood for Love\" "
+    "meets the quiet restraint of Autumn Durald Arkapaw. "
 )
 
 FIN_IMG_TAIL = (
-    "Mood: quiet, unhurried, observational, faintly melancholic but never grim, never poverty porn. "
+    "Mood: warm, observational, quietly hopeful — the feeling of a Sunday morning kitchen, "
+    "or a late afternoon when the light comes in golden. Never grim, never poverty porn, never bleak. "
     "Atmosphere: a barely-there breath of dust drifting in the light, the faintest possible haze, "
     "the suggestion of time passing but no visible clocks or calendars. "
     "Technical: ultra-sharp where the eye lands, soft and creamy where it does not, "
@@ -179,46 +209,44 @@ FIN_VID_TAIL = (
     "Everything in the frame stays perfectly stable and consistent across all five seconds: "
     "no morphing, no flicker, no object appearing or disappearing, no change in lighting or "
     "color temperature, no new elements entering frame, no subject deformation. "
-    "Ambient life only: dust motes drifting, a curtain breathing, steam rising from a mug, "
-    "a shadow slowly lengthening, the brass cow figurine catching a single glint as the light moves. "
+    "Ambient life only: a curl of steam rising from a mug, dust motes drifting, a curtain "
+    "breathing in a draft, the brass cow figurine catching a single glint as the light moves. "
     + _SINGLE_FRAME_POS
     + FIN_NEG
 )
 
 # ============================================================ AI 频道
 AI_BIBLE = {
-    "name": "暗调屏幕光 · Dark Screen Glow",
-    "signature": "近黑背景 + 青紫双色屏幕反光；她本人出现在每一个镜头里（约四成露脸）；"
+    "name": "深夜屏幕光 · Late-Night Screen Glow",
+    "signature": "深炭蓝背景（不是纯黑）+ 青/暖双色光；她就是这部片的主角，"
+                 "脸该看就看，特写手部时可以自然不拍脸（不是规则，是叙事需要）；"
                  "所有界面元素由 Remotion 后叠，图里一律不画。",
     "palette": [
-        ("底色 Base", "#0B0E14", "近黑，占画面 60% 以上"),
-        ("主光 Key", "#22D3EE", "青色，屏幕边缘光"),
-        ("副光 Rim", "#7C5CFF", "紫色，轮廓补光"),
-        ("点缀 Accent", "#F5D67B", "暖黄，只用在「顿悟」镜头"),
+        ("底色 Base", "#141A24", "深炭蓝，占画面 50–60%，保留纹理"),
+        ("主光 Key", "#38D9F0", "青色，屏幕边缘光"),
+        ("暖光 Warm", "#FFB86B", "暖橙，台灯补光，救阴影、暖皮肤"),
+        ("点缀 Accent", "#A78BFA", "紫色，轮廓补光"),
     ],
-    "lens": "虚拟 40mm，f/2.0，重暗角，屏幕反射作为唯一光源，轻微色散。",
+    "lens": "虚拟 40mm，f/2.0，中等暗角（不重压），屏幕 + 台灯组合光源，浅胶片颗粒。",
     "motif": "她本人的三件套固定摆在桌面上，是频道的签名物：一只白色陶瓷马克杯（杯壁常留一圈干掉的咖啡渍）、"
              "一叠空白的厚索引卡、一支细哑光银戒（不戴时搁在杯托旁）。"
              "注意：旧的「黑色棒球帽 + 大耳罩耳机」签名物已随旧 host 一起废弃，任何地方都不要再说。",
-    "arc": "S1–S2 冷青（信息过载）→ S3–S5 青紫交替（拆解）→ S6 暖黄（跑通）→ S7 青（警示）→ S8 暖黄收尾。",
+    "arc": "S1–S2 冷青（信息过载）→ S3–S5 青暖交替（拆解中渐渐回暖）→ S6 暖橙（跑通）→ S7 冷青（警示）→ S8 暖橙收尾。",
 }
 
 AI_CHARACTER = (
     SHARED_FACE
-    + "AI-channel framing: unlike the finance channel, her face IS shown here — a clean portrait is allowed "
-    "and encouraged, occupying at most the upper third of the frame; when only body language is needed, "
-    "show her from the neck down or from behind. "
-    "AI-channel screen-light rule specific to her face: when a screen is the light source, it must light "
-    "HER face from the front — cyan climbing one cheek, violet tracing the opposite jawline and the edge "
-    "of her hair. Her face is never in silhouette and never turned fully away from camera for more than "
-    "one shot in a row. "
-    "AI-channel wardrobe — the only outfits she wears in this channel, rotate between them, "
-    "never invent new ones: "
-    "a matte-white wide-strap cotton camisole with thin spaghetti straps and a softly scooped neckline; "
-    "a loose white linen button-up shirt half-tucked into high-waisted cream trousers; "
-    "or an oversized oatmeal-cream knit cardigan over the camisole. No logos, no prints, no graphics. "
-    "Minimal jewelry only: one thin matte-silver chain with a tiny round pendant at the collarbone, "
-    "small thin silver hoops in both ears, plus the thin matte-silver band on her right fourth finger. "
+    + "AI-channel framing: she is filmed naturally — a clean portrait is welcome when the shot calls "
+    "for it, her face may meet the camera, look down at the screen, or look off-frame as the scene "
+    "demands. Her face may turn, look down, look away — but she is the subject, not a prop; when "
+    "the framing cuts the face out, the rest of her body still carries the scene. There is no rule "
+    "forcing her face into every shot — only that the framing serves the story. "
+    "AI-channel screen-light rule: when a screen is the dominant light source, it lights her face "
+    "from the front — cool cyan climbing one cheek, a warm practical lamp or amber rim tracing the "
+    "opposite jawline. The face is never lost in total darkness. "
+    "AI-channel wardrobe — picked from the shared wardrobe drawer (linen shirt / oatmeal cardigan / "
+    "matte-white camisole / slip dress), rotate naturally, never invent new silhouettes, never put "
+    "her in black, neon, athletic wear, prints, or branded items. "
     "Reference vibe: the still photography of Petra Collins meets the muted color palette of Sofia Coppola. "
 )
 
@@ -241,29 +269,35 @@ AI_PRESENCE = (
 
 AI_IMG_HEAD = (
     "Cinematic photorealistic 3D render, virtual 40mm lens, f/2.0 with shallow focus, "
-    "heavy vignette, slight chromatic aberration on bright edges, "
+    "moderate vignette (not crushing, just framing), subtle chromatic aberration on bright edges, "
     "physically based rendering with ray-traced global illumination, "
-    "screen-glow as the only light source in every shot, soft bloom on emissive surfaces, "
-    "subtle film grain, true 8K material micro-detail on keycap texture, cable braiding, "
-    "fingerprint smudges on glass, dust in the light beam. "
-    "The environment is dark and controlled; all brightness comes from screens, indicator LEDs, "
-    "and one dim practical lamp. "
-    "Color grade: near-black background occupying most of the frame, cool cyan as the key light from a screen, "
-    "violet rim light separating the subject from the background, no other hue allowed. "
+    "screen-glow as the key light plus a warm practical lamp filling the shadows, "
+    "soft bloom on emissive surfaces, subtle film grain, true 8K material micro-detail on "
+    "keycap texture, cable braiding, fingerprint smudges on glass, dust in the light beam. "
+    "The environment is a late-night room that still breathes — a deep charcoal-blue background "
+    "rather than a black void, the background always retains some visible texture (book spines, "
+    "a window outline, the faint pattern of a wall). Brightness comes from a screen as the key, "
+    "indicator LEDs, and one warm practical lamp that lifts the shadows. "
+    "Color grade: cool cyan screen glow as the key, paired with a warm amber practical lamp so "
+    "the shadows keep detail, a soft violet rim separating the subject from the background, "
+    "skin tones stay warm and healthy against the cool light. "
+    "Explicitly avoid: pure black backgrounds, crushed blacks, cold-only teal lighting, "
+    "heavy desaturation, muddy grey skin. "
     "Composition: keep the lower third visually quiet for caption overlay, "
     "keep the center-left area clear so a floating UI panel can be composited later. "
-    "Visual reference: the product cinematography of Apple keynote mixed with the dark-room "
-    "working aesthetic of Wong Kar-wai. "
+    "Visual reference: the product cinematography of Apple keynote mixed with the warm late-night "
+    "working aesthetic of Wong Kar-wai's \"In the Mood for Love\". "
 )
 
 AI_IMG_TAIL = (
-    "Mood: focused, late-night, precise, the feeling of building something at one in the morning, "
-    "premium tech-product aesthetic, clean and uncluttered, no cyberpunk cliches, "
-    "no neon signs, no rain, no graffiti, no skyline in the background. "
+    "Mood: focused, late-night, precise, but warm and human — the feeling of building something "
+    "at one in the morning with a desk lamp on, premium tech-product aesthetic, clean and uncluttered, "
+    "no cyberpunk cliches, no neon signs, no rain, no graffiti, no skyline in the background. "
     "Atmosphere: a fan spinning almost imperceptibly, a cursor blinking, dust drifting through "
-    "the single light beam, the faintest reflection of the screen on the matte desk surface. "
-    "Technical: ultra-sharp where the eye lands, no halation on the cyan, no bloom that washes out text edges, "
-    "no vignette so heavy it crushes the subject. "
+    "the light beam, the faintest reflection of the screen on the matte desk surface, the silver "
+    "pendant at her collarbone catching a single glint as she breathes. "
+    "Technical: ultra-sharp where the eye lands, no halation on the cyan, no bloom that washes out "
+    "text edges, no vignette so heavy it crushes the subject. "
     "Horizontal 16:9 composition, native 1920x1080, "
     "high dynamic range with detail preserved in both shadows and the cyan highlights. "
     + _SINGLE_FRAME_POS
@@ -316,11 +350,12 @@ THUMB_RULES = """缩略图的三条硬规则（这是点击率的主要变量，
    答案在视频里。禁止把标题原文搬上去（标题栏就在旁边，重复 = 浪费）。
 
 3. **AI 频道缩略图必须有人脸，而且要有情绪。**
-   这一条在 2026-08-30 改过：原来写的是「本频道不出脸」，那是从「跨镜头串脸」这个顾虑推导出来的，
-   但它牺牲的是点击率——人脸是 YouTube 缩略图最强的点击变量，没有之一。
-   现在频道有人物形象了，缩略图就让她的脸占画面 40%–60%，配一个大表情
-   （皱眉 / 愣住 / 无奈地笑），再用高对比色块和指向性构图兜底。
-   串脸的顾虑用「参考图垫图 + 后期统一」解决，不用「不出脸」这个自断一臂的办法。
+   人脸是 YouTube 缩略图最强的点击变量，没有之一。
+   缩略图让她的脸占画面 40%–60%，配一个大表情（皱眉 / 愣住 / 无奈地笑），
+   再用高对比色块和指向性构图兜底。
+   串脸的顾虑由「参考图垫图 + 后期统一」解决，不靠「不露脸」。
+   （这条 2026-08-30 改过一次「必须露脸」，2026-08-31 又改了一次：不是规则层强制，
+   而是 AI 频道的缩略图因为点击率需要把脸当作主视觉；正片镜头里是「该看就看」。）
 """
 
 THUMB_HEAD = (
@@ -337,7 +372,7 @@ THUMB_TAIL = (
 )
 
 # AI 频道缩略图：她要出脸，占画面 40%–60%，配一个大表情。
-# （金融频道继续不出脸，用 THUMB_TAIL 的默认版本即可。）
+# 金融频道缩略图也允许她出脸（用户有参考图，脸不是问题），但更克制，多用场景元素而不是脸。
 THUMB_TAIL_FACE = (
     "Her face is in frame and clearly readable, filling 40 to 60 percent of the composition, "
     "with one legible emotion on it — frowning, caught off guard, or a resigned half-smile. "

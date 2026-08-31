@@ -786,202 +786,80 @@ _SHOTS = [
 # 服装只有一件：暖灰色棉质圆领毛衣（heather-grey cotton crewneck sweater）。
 SHE = [
     # ---- S1 设局 ----
-    "She sits at the kitchen table in the heather-grey crewneck sweater, both hands wrapped "
-              "around the cold ceramic mug. Her forearms rest on the table edge, cuffs pushed to the "
-              "wrist. Her head is bowed and cropped out at the top of the frame; the back of her "
-              "platinum hair is just visible as a soft shape in the dim light.",
-    "Her hands and forearms from the wrist down, the cuffs of the heather-grey sweater "
-              "visible, arranging the row of cream envelopes. Her shoulders are a soft dark mass at "
-              "the top of the frame. Her face is not in the composition.",
-    "She stands at the minimal desk, seen from behind and slightly above, one hand resting "
-             "flat beside the curling calendar corner. Her back and the crown of her platinum head "
-             "fill the lower third of the frame. No face.",
-    "She stands in the dark hallway beside the ajar door, a silhouette facing away from "
-                   "camera toward the blade of amber light. Her shoulder and the edge of her sweater "
-                   "sleeve catch a thin amber rim. Her face is turned into the doorway and unreadable.",
-    "Her hands from the wrist down hold the blank sheet of cream paper up toward the camera. "
-              "The heather-grey cuffs are visible at both wrists, the thin matte-silver band on her "
-              "right fourth finger. Her torso is a soft dark shape behind the paper; her face is "
-              "hidden by the sheet.",
-    "She sits at the empty desk, both hands resting flat on its surface at the near edge, "
-              "fingers spread slightly. The heather-grey cuffs sit at her wrists. Her shoulders and the "
-              "base of her throat are a dark mass at the top of frame; her face is cropped out.",
-    "Extreme close on her right index finger tapping the paper. Only the fingertip and the "
-              "first knuckle are in frame, the heather-grey cuff a soft blur far behind. Her face is "
-              "not in the composition.",
-    "Her right hand turns the sheet face-down, caught mid-motion. Forearm enters from the "
-              "right, heather-grey cuff pushed back, silver band visible. Her torso is an out-of-focus "
-              "dark shape above; no face.",
-    "Seen from above and behind, she sits at the small café table, her shoulders and the back "
-             "of her platinum head in the upper frame, hands resting on the table around the three "
-             "objects. Her face is turned down and away.",
-    "She stands at the open refrigerator in side silhouette, the cool white interior "
-                   "light rimming the front of her body — her shoulder, her forearm reaching in, the "
-                   "edge of her platinum hair. Her face is turned into the fridge and unreadable.",
-    "She crouches beside the copper pipe joint, her right hand reaching in from the lower "
-              "right to touch the seeping thread of water. The heather-grey cuff is pushed back, the "
-              "silver band catching a glint. Her shoulder and the side of her torso fill the right "
-              "third of frame; her head is cropped out above.",
-    "She stands at the shelf, seen from behind, her back and shoulders filling the lower "
-             "third of the frame as she looks at the three glass jars. The crown of her platinum head "
-             "is level with the middle shelf. No face.",
+    "She sits at the kitchen table in the soft cashmere crewneck sweater, both hands wrapped around the cold ceramic mug. Her forearms rest on the table edge, cuffs pushed to the wrist. She looks directly into the camera with a quiet, slightly skeptical expression — a half-raised eyebrow, lips closed but not pressed, the look of someone being told something they suspect is wrong.",
+    "Her hands and forearms from the wrist down arrange the row of cream envelopes on the wood table, the cashmere cuff at the right wrist visible, the thin matte-silver band catching the warm light. Her shoulders are softly out of focus above. She is wearing the oatmeal knit cardigan.",
+    "She stands at the minimal desk, seen from behind and slightly above, one hand resting flat beside the curling calendar corner. Her back and the crown of her platinum head fill the lower third of the frame; the soft afternoon light catches the fall of her hair. She wears the linen button-up.",
+    "She steps into the dark hallway beside the ajar door, a three-quarter silhouette facing the blade of amber light spilling from the next room. A quiet, curious expression on her face — mouth slightly open, eyes lit by the amber line, one hand on the doorframe.",
+    "Her hands from the wrist down hold the blank sheet of cream paper up toward the camera, the cashmere cuffs visible at both wrists, the thin matte-silver band on her right fourth finger. Her torso is a soft dark shape behind the paper. She wears the oatmeal knit cardigan.",
+    "She sits at the empty desk, both hands resting flat on its surface at the near edge, fingers spread slightly. She looks up at the camera with a focused, attentive expression — a small inhale, eyes open and clear, the calm of someone about to be shown something.",
+    "Extreme close on her right index finger tapping the paper, the cashmere cuff a soft blur far behind, the thin matte-silver band on the fourth finger catching a sliver of light. The matte-white camisole strap is just visible at the edge of frame.",
+    "Her right hand turns the sheet face-down, caught mid-motion. Forearm enters from the right, cashmere cuff pushed back, silver band visible. Her torso is an out-of-focus soft shape above. She wears the linen shirt with sleeves pushed to the elbows.",
+    "She sits at the small café table seen from over her shoulder, her shoulders and the side of her platinum hair in the upper frame. The three objects sit on the table in front of her. She looks down at them with a soft, considering expression — lips closed, eyes half-lit, the small frown of someone doing mental arithmetic.",
+    "She stands at the open refrigerator in side silhouette, the cool white interior light rimming the front of her body — her shoulder, her forearm reaching in, the edge of her platinum hair. She looks into the fridge with a neutral, almost bored expression — the look of someone who already knows it is empty.",
+    "She crouches beside the copper pipe joint, her right hand reaching in from the lower right to touch the seeping thread of water. The cashmere cuff is pushed back, the silver band catching a glint. Her shoulder and the side of her torso fill the right third of frame; her chin is tilted down, focused on the pipe. She wears the linen shirt.",
+    "She stands at the shelf, seen from behind, her back and shoulders filling the lower third of the frame as she looks at the three glass jars. The crown of her platinum head is level with the middle shelf. She wears the linen shirt. The small brass cow figurine sits on the shelf just below her hand.",
 
     # ---- S2 诊断 ----
-    "She stands at the shelf in the same position, now leaning slightly toward the single lit "
-             "jar. Her back, shoulder line and the back of her head are readable; her face stays "
-             "turned away into shadow.",
-    "Extreme close on her fingertip touching the glass of the lit jar. Her other fingers "
-              "curl softly behind it, heather-grey cuff a blur at the edge of frame. Her face is not "
-              "in the composition.",
-    "Her hands from the wrist down open the heavy bound report on the wide desk, both palms "
-              "flat on the cream paper. Heather-grey cuffs at both wrists, silver band on the right "
-              "fourth finger. Her shoulders are a dark mass at the top of frame; her face is cropped "
-              "out.",
-    "Seen from above and behind, she sits at the desk with the two documents in front of her, "
-             "head bowed, one forearm resting on the table's near edge. Her back and the crown of her "
-             "head fill the upper frame. No face.",
-    "Her right index finger traces down the left margin of the printed table. Forearm enters "
-              "from the lower right, heather-grey cuff pushed to the elbow, the page's shadow falling "
-              "across her knuckles. Her face is not in the composition.",
-    "Extreme close on her fingertip resting at the end of the ruled row. The heather-grey "
-              "cuff is a soft blur at the bottom of frame. Her face is not in the composition.",
-    "Her right hand has just released the upright coin, fingers still curved from the motion, "
-              "the heather-grey cuff at the wrist. Her torso is a dark shape behind and above, out of "
-              "focus; her face is not readable.",
-    "Her hand enters from the right and rests on the stack of banknotes, fingers splayed "
-              "slightly. The heather-grey cuff is pushed back, the silver band catching the warm light. "
-              "Her shoulder is a dark curve at the top of the frame; no face.",
-    "Her right hand pushes the white takeaway cup toward the frame edge, the heather-grey "
-              "cuff visible, the silver band on her fourth finger. Her forearm and shoulder fill the "
-              "right third of the composition; her head is cropped out.",
+    "She stands at the shelf in the same position, now leaning slightly toward the single lit jar. Her back, shoulder line and the back of her head are readable; one hand hovers an inch from the jar. She wears the linen shirt. The room is quiet, her posture focused.",
+    "Extreme close on her fingertip touching the glass of the lit jar, the cashmere cuff a soft blur at the edge of frame. The skin on her finger glows warm in the jar's light. A second hand hovers behind the jar, out of focus.",
+    "Her hands from the wrist down open the heavy bound report on the wide desk, both palms flat on the cream paper. Cashmere cuffs at both wrists, silver band on the right fourth finger. Her shoulders are softly out of focus above. She wears the oatmeal knit cardigan.",
+    "She sits at the desk with the two documents in front of her, head bowed, one forearm resting on the table's near edge. Seen from above and slightly behind. Her back and the crown of her head fill the upper frame. She wears the linen shirt.",
+    "Her right index finger traces down the left margin of the printed table. Forearm enters from the lower right, the linen sleeve pushed to the elbow, the page's shadow falling across her knuckles. Her eyes (off-frame, slightly above) are tracking the line downward.",
+    "Extreme close on her fingertip resting at the end of the ruled row. The cashmere cuff is a soft blur at the bottom of frame. The thin matte-silver band on the right fourth finger catches a single glint of light.",
+    "Her right hand has just released the upright coin, fingers still curved from the motion, the cashmere cuff at the wrist. Her torso is a dark shape behind and above, out of focus; she is leaning slightly forward.",
+    "Her hand enters from the right and rests on the stack of banknotes, fingers splayed slightly. The linen sleeve is pushed back, the silver band catching the warm light. Her shoulder is a soft dark curve at the top of the frame.",
+    "Her right hand pushes the white takeaway cup toward the frame edge, the cashmere cuff visible, the silver band on her fourth finger. Her forearm and shoulder fill the right third of the composition. She wears the oatmeal knit cardigan.",
 
     # ---- S3 三条路 ----
-    "She stands at the window with her back to camera, one hand resting on the sill. Her "
-             "silhouette and the crown of her platinum head are readable against the pale grey-blue "
-             "sky. Her face is turned to the glass and unreadable.",
-    "Her two hands hold the three sheets of frosted glass upright from below, fingers "
-              "visible through the frosted surface as soft shapes. Heather-grey cuffs at both wrists. "
-              "Her shoulders are a dark mass above; her face is cropped out.",
-    "Seen from above and behind, she leans over the dark stone surface, both palms flat on "
-             "it, looking down at the three objects. Her back and the back of her platinum head fill "
-             "the upper frame. No face.",
-    "She stands in the dark room facing the white wall, a full-body silhouette against "
-                   "the projected band of cyan light. Her shape is clear — shoulders, the fall of her "
-                   "hair, her posture — but her face is in shadow and unreadable.",
-    "She stands in the same spot facing the wall, now with the straight amber line "
-                   "crossing at her shoulder height. Her silhouette is sharper, the amber line cutting "
-                   "across her sweater. Her face stays in shadow.",
-    "Her two hands steady the balance scale on the stone table, one on each side of its "
-              "base. Heather-grey cuffs at both wrists, silver band visible on the right. Her "
-              "shoulders are a dark mass at the top of frame; her face is cropped out.",
-    "She stands back from the wall, arms crossed loosely, looking at the kinked amber "
-                   "line. Her silhouette is readable from behind — the set of her shoulders is doing "
-                   "the acting. Her face is turned away.",
-    "Her hands from the wrist down rest flat on the dark tabletop on either side of the "
-              "three blank index cards. Heather-grey cuffs, silver band on the right fourth finger. "
-              "Her torso is a soft dark shape above; no face.",
-    "Seen from above and behind, she leans over the three objects on the dark surface, "
-             "weight on her forearms. Her back and the crown of her head fill the upper frame. No "
-             "face.",
-    "Her right hand lays the row of twenty coins out along the dark wood, fingers guiding "
-              "each one into place. The heather-grey cuff is pushed back. Her forearm and shoulder "
-              "occupy the right third; her head is cropped out.",
-    "Her two hands hover above the two piles of coins, comparing them, palms down and "
-              "fingers spread. Heather-grey cuffs at both wrists. Her shoulders are a dark mass at "
-              "the top of frame; her face is not in the composition.",
+    "She stands at the window with her back to camera, one hand resting on the sill. Her silhouette and the crown of her platinum head are readable against the pale grey-blue sky. She wears the linen shirt. The pose is unhurried — looking out, not waiting.",
+    "Her two hands hold the three sheets of frosted glass upright from below, fingers visible through the frosted surface as soft shapes. Cashmere cuffs at both wrists. Her shoulders are a dark mass above; she is breathing slowly.",
+    "She leans over the dark stone surface, both palms flat on it, looking down at the three objects. Seen from above and behind. Her back and the back of her platinum head fill the upper frame. She wears the oatmeal knit cardigan.",
+    "She stands in the dark room facing the white wall, a full-body silhouette against the projected band of cyan light. Her shape is clear — shoulders, the fall of her hair, her posture. She wears the linen shirt with the sleeves pushed to the elbows. Her face is in cool light, profile readable, a quiet open-mouth expression of mild surprise.",
+    "She stands in the same spot facing the wall, now with the straight amber line crossing at her shoulder height. Her profile is sharper in the amber light, the line cutting across her sweater. She wears the linen shirt. Her expression is steady, considering.",
+    "Her two hands steady the balance scale on the stone table, one on each side of its base. Cashmere cuffs at both wrists, silver band visible on the right. Her shoulders are a soft dark shape at the top of frame; she is leaning slightly forward.",
+    "She stands back from the wall, arms crossed loosely, looking at the kinked amber line. Her silhouette is readable from behind — the set of her shoulders doing the acting. The linen shirt falls softly around her frame.",
+    "Her hands from the wrist down rest flat on the dark tabletop on either side of the three blank index cards. Cashmere cuffs, silver band on the right fourth finger. Her torso is a soft dark shape above.",
+    "She leans over the three objects on the dark surface, weight on her forearms. Seen from above and behind. Her back and the crown of her head fill the upper frame. She wears the oatmeal knit cardigan.",
+    "Her right hand lays the row of twenty coins out along the dark wood, fingers guiding each one into place. The linen cuff is pushed back. Her forearm and shoulder occupy the right third; her head is just out of frame at the top.",
+    "Her two hands hover above the two piles of coins, comparing them, palms down and fingers spread. Cashmere cuffs at both wrists. Her shoulders are a soft dark shape at the top of frame.",
 
     # ---- S4 选择 ----
-    "She stands at the mouth of the corridor where it forks, seen from behind, her "
-                   "silhouette small against the two diverging passages. Her posture is still, "
-                   "weighing. Her face is turned away down the corridor.",
-    "Her two hands hold the shallow wooden tray of twenty coins, one at each end, thumbs "
-              "visible on the rim. Heather-grey cuffs at both wrists. Her torso is a dark shape "
-              "behind; her face is cropped out.",
-    "Her right hand stacks coins into the tall column on the left pan of the scale, "
-              "movements small and careful. The heather-grey cuff is pushed to the wrist, the silver "
-              "band catching the light. Her shoulder fills the right third; no face.",
-    "She stands beside the tipped balance scale, seen from behind and slightly to the "
-                   "side, head tilted toward the lower pan. Her silhouette reads clearly, her face "
-                   "does not.",
-    "She stands beside the now-level scale in the same position, her shoulders dropping "
-                   "a little. Seen from behind; her face stays unreadable.",
-    "She stands beside the scale tipped the other way, seen from behind, one hand "
-                   "resting on the stone table's edge. Her silhouette carries the reaction. No face.",
-    "She stands at the fork where the third passage has appeared, seen from behind, "
-                   "turned slightly toward it. Her silhouette and the fall of her platinum hair are "
-                   "readable; her face is in shadow.",
-    "Seen from above and behind, she sits at the walnut desk with the open benefits document "
-             "in front of her, one forearm on the desk's near edge. Her back and the crown of her head "
-             "fill the upper frame. No face.",
+    "She stands at the mouth of the corridor where it forks, seen from behind, her silhouette small against the two diverging passages. She wears the linen shirt. Her posture is still, weighing — one hand raised to the doorframe.",
+    "Her two hands hold the shallow wooden tray of twenty coins, one at each end, thumbs visible on the rim. Cashmere cuffs at both wrists. Her torso is a soft dark shape behind.",
+    "Her right hand stacks coins into the tall column on the left pan of the scale, movements small and careful. The cashmere cuff is pushed to the wrist, the silver band catching the light. Her shoulder fills the right third.",
+    "She stands beside the tipped balance scale, seen from behind and slightly to the side, head tilted toward the lower pan. Her silhouette reads clearly. She wears the linen shirt. The brass cow figurine sits on the table just out of focus.",
+    "She stands beside the now-level scale in the same position, her shoulders dropping a little. Seen from behind. She wears the linen shirt.",
+    "She stands beside the scale tipped the other way, seen from behind, one hand resting on the stone table's edge. Her silhouette carries the reaction. She wears the linen shirt.",
+    "She stands at the fork where the third passage has appeared, seen from behind, turned slightly toward it. Her silhouette and the fall of her platinum hair are readable. She wears the linen shirt.",
+    "She sits at the walnut desk with the open benefits document in front of her, one forearm on the desk's near edge. Seen from above and behind. Her back and the crown of her head fill the upper frame. She wears the oatmeal knit cardigan.",
 
     # ---- S5 落地 ----
-    "Her right hand has just released the coin above the open cash box, fingers still open. "
-              "The heather-grey cuff is visible, the silver band catching the hard light. Her forearm "
-              "and shoulder fill the upper right; her head is cropped out.",
-    "Extreme close on her finger resting between the two blank ruled lines. The heather-grey "
-              "cuff is a soft blur at the bottom of frame. Her face is not in the composition.",
-    "Her two hands enter from opposite sides of the frame, each placing a stack of "
-              "banknotes into the same open container. Heather-grey cuffs at both wrists, the silver "
-              "band on her right fourth finger. Her torso is a dark mass above; no face.",
-    "Her two hands hold the four-compartment glass jar steady on the dark surface, one on "
-              "each side. Heather-grey cuffs pushed to the wrists. Her shoulders are a soft dark shape "
-              "at the top of frame; her face is cropped out.",
-    "Her right index finger rests on the long wooden measuring scale, tracing its length "
-              "into the shadow. The heather-grey cuff is pushed back, the silver band visible. Her "
-              "forearm occupies the lower right; her face is not in the composition.",
-    "Her right hand closes the bound benefits document and pushes it away across the walnut "
-              "desk, the motion final. The heather-grey cuff is visible at the wrist. Her shoulder and "
-              "the side of her torso fill the right third; her head is cropped out.",
+    "Her right hand has just released the coin above the open cash box, fingers still open. The cashmere cuff is visible, the silver band catching the hard light. Her forearm and shoulder fill the upper right.",
+    "Extreme close on her finger resting between the two blank ruled lines. The cashmere cuff is a soft blur at the bottom of frame.",
+    "Her two hands enter from opposite sides of the frame, each placing a stack of banknotes into the same open container. Cashmere cuffs at both wrists, the silver band on her right fourth finger. Her torso is a soft dark shape above.",
+    "Her two hands hold the four-compartment glass jar steady on the dark surface, one on each side. Cashmere cuffs pushed to the wrists. Her shoulders are a soft dark shape at the top of frame.",
+    "Her right index finger rests on the long wooden measuring scale, tracing its length into the shadow. The linen sleeve is pushed back, the silver band visible. Her forearm occupies the lower right.",
+    "Her right hand closes the bound benefits document and pushes it away across the walnut desk, the motion final. The linen cuff is visible at the wrist. Her shoulder and the side of her torso fill the right third.",
 
     # ---- S6 结果 ----
-    "She sits at the empty walnut table, both hands resting palms-down on its surface just "
-              "outside the warm pool of light. The heather-grey cuffs sit at her wrists, the silver "
-              "band catching one warm glint. Her shoulders are a dark mass at the top of frame; her "
-              "face is cropped out.",
-    "She sits at the same table, hands resting on its surface, her right index finger "
-              "extended along the line of bright light. Heather-grey cuff pushed back. Her shoulders "
-              "are a soft dark shape above; no face.",
-    "She sits at the table in near-total darkness, only her two hands and the heather-grey "
-              "cuffs visible in the line of light. The silver band on her right fourth finger catches "
-              "the only highlight. Her face is entirely lost in the dark.",
-    "She sits at the table, both hands resting flat on the dark surface, her right index "
-              "finger pointing along the line toward the three glowing nodes. Heather-grey cuffs "
-              "visible. Her shoulders are a dark mass at the top of frame; her face is cropped out.",
-    "Her right hand rests open beside the first glowing node, palm up, the heather-grey cuff "
-              "catching the node's light. Her forearm enters from the lower right. Her face is not in "
-              "the composition.",
-    "Her right hand rests beside the second glowing node with its small stack of banknotes, "
-              "fingers relaxed. The heather-grey cuff is pushed back, the silver band visible. Her "
-              "shoulder fills the right third; no face.",
-    "Her right hand rests beside the third and brightest node, the light climbing her "
-              "knuckles. Heather-grey cuff at the wrist. Her forearm and shoulder occupy the lower "
-              "right of frame; her head is cropped out.",
-    "She sits at the table exactly as before, both hands palms-down on the dark wood outside "
-              "the round pool of warm light. The heather-grey cuffs and the silver band are the only "
-              "warm highlights on her. Her face is cropped out.",
-    "Her right index finger rests at the start of the long strip of small marks, ready to "
-              "trace along it. The heather-grey cuff is pushed back. Her forearm enters from the "
-              "lower right; her face is not in the composition.",
-    "Her right hand has just released the coin above the small open container, fingers still "
-              "curved. The heather-grey cuff is visible at the wrist. Her forearm and shoulder fill "
-              "the upper right; her head is cropped out.",
-    "Her right index finger rests at the last of the twenty marks, having traced the whole "
-              "strip. The heather-grey cuff is pushed to the wrist. Her forearm occupies the lower "
-              "right; her face is not in the composition.",
-    "Her right hand rests flat on the dark surface beside the single coin, fingers relaxed "
-              "and still. The heather-grey cuff catches the hard shaft of warm light, the silver band "
-              "glinting. Her shoulder is a dark curve at the top of frame; no face.",
+    "She sits at the empty walnut table, both hands resting palms-down on its surface just outside the warm pool of light. The cashmere cuffs sit at her wrists, the silver band catching one warm glint. She wears the oatmeal knit cardigan. Her shoulders are softly out of focus above; her face is relaxed, watching the light.",
+    "She sits at the same table, hands resting on its surface, her right index finger extended along the line of bright light. Linen cuff pushed back. Her shoulders are a soft dark shape above; her gaze (off-frame, slightly above) is tracking the line.",
+    "She sits at the table in warm dim light, her face visible in three-quarter profile in the amber pool, an unhurried small smile on her lips, the look of someone who has just understood the math. She wears the oatmeal knit cardigan. Her hands rest open on the dark wood.",
+    "She sits at the table, both hands resting flat on the dark surface, her right index finger pointing along the line toward the three glowing nodes. Cashmere cuffs visible. Her shoulders are a soft dark shape above; her face is softly lit, eyes following the line.",
+    "Her right hand rests open beside the first glowing node, palm up, the cashmere cuff catching the node's light. Her forearm enters from the lower right.",
+    "Her right hand rests beside the second glowing node with its small stack of banknotes, fingers relaxed. The linen sleeve is pushed back, the silver band visible. Her shoulder fills the right third.",
+    "Her right hand rests beside the third and brightest node, the light climbing her knuckles. Linen cuff at the wrist. Her forearm and shoulder occupy the lower right of frame.",
+    "She sits at the table exactly as before, both hands palms-down on the dark wood outside the round pool of warm light. The cashmere cuffs and the silver band are the only warm highlights on her. She wears the oatmeal knit cardigan. Her face is relaxed, faintly smiling — the look of someone who has done the math.",
+    "Her right index finger rests at the start of the long strip of small marks, ready to trace along it. The linen cuff is pushed back. Her forearm enters from the lower right.",
+    "Her right hand has just released the coin above the small open container, fingers still curved. The linen cuff is visible at the wrist. Her forearm and shoulder fill the upper right.",
+    "Her right index finger rests at the last of the twenty marks, having traced the whole strip. The linen cuff is pushed to the wrist. Her forearm occupies the lower right.",
+    "Her right hand rests flat on the dark surface beside the single coin, fingers relaxed and still. The linen cuff catches the hard shaft of warm light, the silver band glinting. Her shoulder is a soft dark curve at the top of frame.",
 
     # ---- S7 收尾 ----
-    "Seen through the window from outside, she sits at the desk inside, a warm silhouette "
-                   "against the dim room — the shape of her shoulders, the fall of her platinum hair, "
-                   "the curve of her back as she leans toward the lamp. Her face is turned away and "
-                   "unreadable.",
-    "Seen through the same window, she is still in the chair but the lamp has gone out. "
-                   "She is now only a darker shape within the dark — the outline of her head and "
-                   "shoulders against the last residual glow. Her face is not readable; the image is "
-                   "on the edge of total darkness.",
+    "She sits at the desk inside, framed through the window from outside — her face visible in warm three-quarter profile, a quiet, decided expression, the small smile of someone who knows what they are going to do tomorrow. She wears the oatmeal knit cardigan. The brass cow figurine is on the desk just behind the lamp.",
+    "She is still in the chair but the lamp has gone out, framed through the same window. Only the faintest outline of her head and shoulders against the last residual glow. The room is quiet; her face is barely readable in profile, eyes still open.",
 ]
+assert len(SHE) == len(_SHOTS), f"SHE {len(SHE)} 条 / _SHOTS {len(_SHOTS)} 条 —— 必须一一对应"
 assert len(SHE) == len(_SHOTS), f"SHE {len(SHE)} 条 / _SHOTS {len(_SHOTS)} 条 —— 必须一一对应"
 
 

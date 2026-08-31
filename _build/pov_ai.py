@@ -642,26 +642,26 @@ SHE = [
     # ---- S1 设局：先让人看见她，再讲处境 ----
     "She sits at the dark desk in the camisole, her face in the upper third of the frame in "
              "three-quarter view, lit only by the thin cyan seam of the closed laptop. Her right hand "
-             "hovers a few centimetres above the trackpad. Her expression is blank and tired, eyes "
+             "hovers a few centimetres above the trackpad. Her expression is calm and quietly tired, eyes "
              "half-lidded, looking at the dark screen rather than at the camera. Her chin-length "
-             "platinum bob falls forward slightly.",
+             "platinum bob falls forward softly.",
     "Her hands and forearms enter from the lower right, pushing the stack of index "
                       "cards off the near edge of the desk. Her shoulder and the line of her jaw are "
                       "visible at the bottom edge of the frame, cropped just below her nose. She wears "
                       "the linen shirt with the sleeves pushed to the elbow. Her head is tilted down "
-                      "toward the cards so her face is not readable.",
+                      "toward the cards the camera is below her face, only her jawline and lips in frame.",
     "She leans over the desk from the right side, both forearms resting on its edge, looking "
              "down at the scattered components. Her face is in the upper right in three-quarter view, "
-             "lit cool cyan from the left, expression flat and assessing. Her long platinum hair falls "
+             "lit cool cyan from the left, expression thoughtful, taking it in. Her long platinum hair falls "
              "forward over one shoulder. She wears the camisole.",
     "Seen from behind and slightly above, she sits at the desk in the cardigan, her "
                       "back and the crown of her platinum head in the lower third of the frame, the "
                       "glowing window at the far end behind her. Only the back of her head and her "
-                      "shoulders are readable — no face.",
+                      "shoulders are visible — she is facing the glowing window.",
     "Close on her hands from the wrist down: her right hand holds the pen, lifted and still, "
               "above the notebook. The cuff of the cardigan is visible at both wrists, and the thin "
               "matte-silver band is on her right fourth finger. Her torso is a soft out-of-focus mass "
-              "in the upper frame; her face is not readable.",
+              "in the upper frame; her face is out of frame.",
     "She stands at the near end of the conveyor belt in left profile, body turned "
                 "three-quarters away from camera, her face in profile in the upper third of frame, "
                 "watching the boxes pass. She wears the linen shirt. Her right hand is still unwrapping "
@@ -674,7 +674,7 @@ SHE = [
     "Her hands from the wrist down, placing a blank card into the accordion folder. The cuff "
               "of the cardigan shows at both wrists, the silver band on her right fourth finger catching "
               "a single cyan glint. Her shoulders and the base of her throat are a soft dark shape at "
-              "the top of the frame; her face is cropped out.",
+              "the top of the frame; her face is out of frame, the marker in close-up.",
 
     # ---- S2 机制 ----
     "Seen over her shoulder from behind and slightly to the right: she sits at the "
@@ -700,11 +700,11 @@ SHE = [
                       "are visible where she turns to watch the tower. She wears the cardigan.",
     "She sits back on her heels in right profile, having pulled away from the collapsed "
                 "tower, her face in profile in the upper third, looking down at the scattered blocks. "
-                "Her expression is flat, unsurprised, faintly disappointed. The violet rim light "
+                "Her expression is steady, a small quiet disappointment around the mouth. The violet rim light "
                 "separates her jaw from the dark. She wears the linen shirt.",
     "Her right hand rests flat against one of the load-bearing columns, feeling its weight. "
               "The cuff of the cardigan is visible at the wrist. Her shoulder and the side of her "
-              "torso are a solid dark shape occupying the left half of the frame, her head cropped out "
+              "torso are a solid dark shape occupying the left half of the frame, her head tilted forward "
               "above the shoulder line.",
 
     # ---- S3 三问测试 ----
@@ -715,15 +715,15 @@ SHE = [
     "Her right hand, index finger extended, points at one node on the glowing process line. "
               "Forearm enters from the lower right in three-quarter view, the cuff of the linen shirt "
               "pushed back, the silver band on her fourth finger catching the cyan node light. Her "
-              "torso is a dark mass at the top of frame; her face is not readable.",
+              "torso is a dark mass at the top of frame; her face is out of frame.",
     "Over her left shoulder: she sits at the desk, her back and the crown of her head "
                       "in the right third of the frame, her hands straightening the messy papers on the "
                       "left. Her head is bowed slightly so the nape of her neck and the edge of her "
                       "platinum hair are clear. She wears the cardigan.",
     "She leans in close over the sheet of output paper, her face in the upper third in "
              "three-quarter view, eyes narrowed at the defect near the bottom edge. The hard cyan light "
-             "from the page throws her cheekbones into relief and leaves her eye sockets in shadow — "
-             "the light is unforgiving and so is what she is looking at. Her mouth is a flat line. She "
+             "from the page throws her cheekbones into relief and gives her eyes a focused, "
+             "slightly narrowed look. Her lips are softly closed. She "
              "wears the camisole.",
     "She stands over the open matte-black box in left profile, looking down into the tangle "
                 "of cables. Her face is in profile in the upper third, lit from below by a faint cyan "
@@ -762,14 +762,14 @@ SHE = [
              "expression is alert, already planning. She wears the camisole.",
     "Her right hand is pressed flat against the dark door, pushing with real effort; her "
               "right shoulder and the side of her torso are jammed against the doorframe, occupying the "
-              "right third of the frame, her head turned away and in deep shadow against the door. The "
+              "right third of the frame, her head turned slightly, hair falling forward. The "
               "thin cyan line along the floor edge lights her shoes. She wears the linen shirt.",
 
     # ---- S5 三个坑 ----
     "Over her left shoulder: she sits at the desk looking down at the beautifully "
                       "formatted document. Her shoulder and the crown of her platinum head fill the "
                       "left third of frame, the hard white light from the page catching the top of her "
-                      "hair and the curve of her ear. Her face is turned down and away — not readable. "
+                      "hair and the curve of her ear. Her face is turned down toward the document. "
                       "She wears the cardigan.",
     "She stands in the doorway in right profile, having just released the sheet of paper, "
                 "watching it slide away across the desk and under the door. Her face is in profile in "
@@ -783,7 +783,7 @@ SHE = [
     "Her hands from the wrist down hover above the schematic, the right index finger tracing "
               "the clean single route while the left rests flat on the surface. Cuffs of the linen "
               "shirt pushed back, silver band visible. Her torso is a dark mass at the top of frame; "
-              "her face is cropped out.",
+              "her face is out of frame.",
     "Over her right shoulder: she leans over the glowing process line, her right hand "
                       "resting on the surface beside the three diamond markers. Her shoulder, the back "
                       "of her head and a sliver of her cheek fill the right third of frame. She wears "
@@ -791,7 +791,7 @@ SHE = [
     "She stands at the desk in left profile, her right hand hovering indecisively above the "
                 "row of near-identical objects. Her face is in profile in the upper third, brow very "
                 "slightly furrowed, mouth closed, eyes moving along the row without settling. Cool cyan "
-                "edge light from the left leaves most of her face in shadow. She wears the linen shirt.",
+                "edge light from the left traces her jaw and the bridge of her nose. She wears the linen shirt.",
     "She sits at the desk working, her face and shoulders filling the lower-left two-thirds of "
              "the frame in three-quarter view, both hands moving fluidly across the two familiar tools. "
              "Her expression is the most relaxed in the whole film: focused, unhurried, competent, a "

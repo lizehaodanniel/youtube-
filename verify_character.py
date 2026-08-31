@@ -126,8 +126,10 @@ def check():
                 if cnt != n:
                     fail += 1
 
-        # 6. 露脸镜头占比（信息行）
-        #    AI 频道要有人脸才有人味；金融频道按 POV 惯例一个都不能露。
+        # 6. 露脸镜头占比
+        #    两个频道都允许她出脸（用户有参考图），该有脸的地方必须有脸。
+        #    阈值：约 30%–80% 之间为合理；过高说明写"portrait"写得过头（失去叙事变化），
+        #    过低说明把人物锁死了（2026-08-31 用户原话：「不要把人物脸部锁死」）。
         def face_visible(s):
             g = she_seg(s, "img_en") or ""
             return bool(FACE_HINT.search(g)) and not FACE_BLOCKED.search(g)
@@ -135,12 +137,17 @@ def check():
         c = hit(face_visible)
         pct = round(c * 100 / n)
         if key == "ai":
-            ok = pct >= 20
-            print(f"  露脸镜头      {c}/{n}（{pct}%）" + ("" if ok else "   ✗ 低于 20%"))
+            ok = 25 <= pct <= 80
+            print(f"  露脸镜头      {c}/{n}（{pct}%）"
+                  + ("" if ok else f"   ✗ 应在 25%–80% 之间"))
             fail += 0 if ok else 1
         else:
-            print(f"  露脸镜头      {c}/{n}（{pct}%）" + ("" if c == 0 else "   ✗ 金融频道不能露脸"))
-            fail += 0 if c == 0 else 1
+            # 金融频道：「该有脸的地方有脸」—— 数字 / 表格 / 钞票的特写天然不必露脸。
+            # 12% 已经是「不锁死」的信号（曾经是 0%）；再低就要查是不是又把「不露脸」写成规则了。
+            ok = 12 <= pct <= 60
+            print(f"  露脸镜头      {c}/{n}（{pct}%）"
+                  + ("" if ok else f"   ✗ 应在 12%–60% 之间"))
+            fail += 0 if ok else 1
 
         # 7. 词数
         for k in ("img_en", "vid_en"):
@@ -148,14 +155,16 @@ def check():
             print(f"  {k:7s} 词数 平均 {sum(w)//n} | 最短 {min(w)} | 最长 {max(w)}")
 
         # 8. 负面词分流 & 残留
+        # 两个频道都用同一张参考图（用户有 jimeng-2026-08-30-2282.png / 4463.png），
+        # 负面词统一为「允许她出脸，禁第二个人」。
         v0 = ss[0]["img_en"]
-        has_fin = "human faces" in v0
-        has_ai = "another woman" in v0
-        print(f"  负面词  FIN_NEG(human faces)={has_fin}  AI_NEG(another woman)={has_ai}")
-        if key == "finance" and not has_fin:
-            print("   ✗ 金融频道丢了禁脸规则"); fail += 1
-        if key == "ai" and not has_ai:
-            print("   ✗ AI 频道丢了禁第二人规则"); fail += 1
+        has_human_face_neg = "human faces" in v0   # 应该都没有
+        has_another_person_neg = "another woman" in v0  # 两个频道都应该有
+        print(f"  负面词  禁human_faces={has_human_face_neg}  禁another_person={has_another_person_neg}")
+        if has_human_face_neg:
+            print("   ✗ 提示词里还残留 'human faces' —— 把角色锁死了"); fail += 1
+        if not has_another_person_neg:
+            print("   ✗ 提示词里缺 'another woman' —— 没禁第二个人"); fail += 1
 
         allp = [s[k] for s in ss for k in ("img_en", "vid_en")]
         for w in ("headphone", "beanie", "black cap", "hoodie"):
