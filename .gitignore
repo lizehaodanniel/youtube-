@@ -18,3 +18,11 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Remotion
+# node_modules 589M，npm install 即可还原
+remotion/node_modules/
+# 渲染出来的 mp4 / 静帧
+remotion/out/
+# 占位图，跑 make_placeholders.py 自动生成
+remotion/public/*/*.svg
