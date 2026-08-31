@@ -75,7 +75,7 @@ AI_NEG = _NEG_BASE[:-1] + ", " + (
 # 只有「服装」和「出镜方式」按频道分开，这样跨频道也是同一张脸。
 # ---------------------------------------------------------------------------
 SHARED_FACE = (
-    "Character reference card (use this whenever a person appears in frame). "
+    "Character reference card — this woman is the subject of this shot, she is in the frame. "
     "The SAME woman appears in every shot of both channels — identical face, identical hair, "
     "identical skin tone, never a different person, never a man. "
     "Photorealistic East-Asian woman, age 24 to 28, the quiet-muse / clean-girl look. "
@@ -135,19 +135,12 @@ FIN_CHARACTER = (
     "or a windowsill, never the focal point, sometimes only an out-of-focus bokeh blob in the foreground. "
 )
 
-# 金融频道同样需要「人在场」的强制指令，只是不出脸。
+# 金融频道同样需要「人在场」的保险，但不出脸。
 # 没有这一段，模型会把镜头画成纯静物（2026-08-30 实测 60/60 全静物）。
-FIN_ONCAMERA = (
-    "ON-CAMERA RULE (highest priority, overrides any habit toward object-only stills): "
-    "she is physically present in this frame — this is never an empty room, a pure product shot, "
-    "or a disembodied hand floating without a body behind it. "
-    "Her hands and forearms are clearly a young woman's hands and are attached to a body we can sense "
-    "just outside the crop: a sleeve edge entering frame, a shoulder line, the curve of a back, "
-    "a knee under the table, the weight of someone leaning in. "
-    "The face stays unreadable — deep shadow, turned away, cropped out, or behind her — but her "
-    "body language must carry the emotion of the shot. "
-    "The block that follows and begins with ON CAMERA states exactly where she is and what she is doing "
-    "in this specific shot — follow it literally. "
+# 同样只保留一句话，不喧宾夺主。
+FIN_PRESENCE = (
+    "The same woman described above is present in every shot of this film, "
+    "though her face is never shown — only her body, her hands, and her shadow."
 )
 
 FIN_IMG_HEAD = (
@@ -230,29 +223,20 @@ AI_CHARACTER = (
 )
 
 # ---------------------------------------------------------------------------
-# 强制出镜指令块。
+# 「她在画面里」—— 一句话的 framing 上下文，2026-08-30 补，2026-08-31 改写法。
 #
-# 这一块是 2026-08-30 补的，原因是一个很蠢但很致命的 bug：
-# 角色卡写得很详细，但它说的是「如果出现人，就长这样」。而每个镜头的主体描述写的是
-# 「一张黑桌子」「一只手」「一条传送带」——模型不会凭空加人进去，于是 102 个镜头
-# 生出来全是静物，观众全程看不到人。
+# 背景：角色卡（SHARED_FACE + CHARACTER）只说「如果出现人，就长这样」；
+# 镜头主体写的是「一张黑桌子」「一只手」——模型不会凭空加人，会全部画成静物。
 #
-# 修法有两部分，缺一不可：
-#   1. 这一段 ON_CAMERA 指令：把「她必须在场」从条件句改成祈使句
-#   2. 每个镜头专属的 "ON CAMERA:" 段（在 pov_ai.py / pov_fin.py 的 she 字段里），
-#      写明她在这个镜头里的确切位置、姿态、脸朝哪边
-# 只写 1 不写 2 = 模型还是不知道她该站在哪；只写 2 不写 1 = 模型可能把她当背景元素。
+# 修法是给每条提示词补一段人物描述（写在 pov_ai.py / pov_fin.py 的 SHE 列表里），
+# 直接拼到场景描述前面，作为整段故事的第一句。**不再单独成段、不再用
+# 「ON CAMERA:」这种工程化标识**——用户要的是「根据口播讲故事的图片提示词」，
+# 那些大写英文标签读起来像施工告示，不像剧本。
+#
+# 这一句 PRESENCE 只剩一句：作为保险提醒模型「她在场」，不喧宾夺主。
 # ---------------------------------------------------------------------------
-AI_ONCAMERA = (
-    "ON-CAMERA RULE (highest priority, overrides any habit toward object-only stills): "
-    "she is physically present in this frame — she is not an optional element, not a reflection, "
-    "not a shadow off-screen, and not implied by a lone hand floating in darkness. "
-    "Her body occupies the frame with the scene: at minimum her hands and forearms are clearly hers and "
-    "readable as a woman's hands, and wherever the shot allows, her shoulders, her hair, her jawline or "
-    "her full face are in the composition. "
-    "Never render this as an empty room or a product shot with no person in it. "
-    "The block that follows and begins with ON CAMERA states exactly where she is and what she is doing "
-    "in this specific shot — follow it literally. "
+AI_PRESENCE = (
+    "The same woman described above is on camera in every shot of this film."
 )
 
 AI_IMG_HEAD = (
@@ -365,14 +349,20 @@ THUMB_TAIL_FACE = (
 
 
 def build_prompts(bible_head, bible_tail, vid_head, vid_tail,
-                  character, oncamera, she, core, motion_core):
+                  character, presence, she, core, motion_core):
     """把「镜头专属描述」拼成完整提示词。
 
     she 是「她在这个镜头里的位置 / 姿态 / 脸朝哪边」——这一项不能为空。
     没有它，角色卡只是一句「如果出现人就长这样」，模型会把镜头画成纯静物。
+    拼装方式：character + presence(一句话) + she(场景第一句) + 风格 + core + tail。
+    she 直接融入正文，不再单独成段、不再用 ON CAMERA 标签——读起来像剧本，不像施工告示。
     """
-    she_img = ("ON CAMERA: " + she.strip() + " ").rstrip() + " "
+    head = character
+    if presence:
+        head = head + " " + presence
+    if she:
+        head = head + " " + she.strip() + " "
     return {
-        "img_en": (character + " " + oncamera + she_img + bible_head + core + " " + bible_tail).strip(),
-        "vid_en": (character + " " + oncamera + she_img + vid_head + motion_core + " " + vid_tail).strip(),
+        "img_en": (head + bible_head + core + " " + bible_tail).strip(),
+        "vid_en": (head + vid_head + motion_core + " " + vid_tail).strip(),
     }

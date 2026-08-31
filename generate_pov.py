@@ -111,12 +111,8 @@ padding:1px 6px;border-radius:4px;background:rgba(94,230,168,.13);margin-left:5p
 .sh .zh{color:var(--mut);font-size:12.5px;line-height:1.55}
 .sh .vi{color:var(--dim);font-size:12px}
 .sh .mo{font-size:11.5px;color:var(--mut);white-space:nowrap}
-.sh .pr{font:11.5px/1.55 ui-monospace,Menlo,monospace;color:#b9c4d8;max-width:330px}
+.sh .pr{font:11.5px/1.55 ui-monospace,Menlo,monospace;color:#b9c4d8;max-width:360px}
 .sh .pr div{max-height:112px;overflow:auto;white-space:pre-wrap;word-break:break-word}
-.sh .cam{max-width:250px}
-.campill{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.3px;
-  border:1px solid;border-radius:20px;padding:1px 8px;margin-bottom:5px}
-.she{font-size:11.5px;line-height:1.5;color:#8fa0bb;white-space:normal}
 .mini{background:#1e2534;border:1px solid var(--line);color:var(--mut);border-radius:5px;
 padding:1px 7px;font-size:11px;cursor:pointer;margin-top:5px;display:inline-block}
 .mini:hover{color:var(--tx)}
@@ -381,16 +377,6 @@ def thumbs_block(thumbs):
     return out + "</div>"
 
 
-CAM_LABEL = {
-    "face":          ("露脸", "#5ee6a8", "能看清她的脸，占画面上三分之一"),
-    "profile":       ("侧脸", "#5ee6a8", "侧脸可读，身体转向一侧"),
-    "over-shoulder": ("过肩", "#f0a94b", "从她肩后拍，能看到肩线、后脑或下颌边"),
-    "hands":         ("手部", "#6b7891", "只有手和前臂，身体在画外但能感觉到"),
-    "back":          ("背影", "#f0a94b", "从背后拍，看得到背和后脑"),
-    "silhouette":    ("剪影", "#f0a94b", "逆光轮廓，脸在阴影里不可读"),
-}
-
-
 def shots_block(shots, ns):
     """开头 = 分镜表的前 N 行（按 sec==1 自动判定）。不再单独渲染，保留表格加高亮。"""
     hook_ids = {s["id"] for s in shots if s["sec"] == 1}
@@ -398,18 +384,12 @@ def shots_block(shots, ns):
     for s in shots:
         is_hook = s["id"] in hook_ids
         cls = " hook" if is_hook else ""
-        kind = s.get("cam", "hands")
-        label, color, hint = CAM_LABEL.get(kind, CAM_LABEL["hands"])
-        cam_cell = (f'<span class="campill" title="{esc(hint)}" '
-                    f'style="color:{color};border-color:{color}44">{label}</span>'
-                    f'<div class="she">{esc(s.get("she", ""))}</div>')
         rows += f'''<tr class="{cls.strip()}">
           <td class="id">{esc(s["id"])}{'<span class="hooktag">开头</span>' if is_hook else ''}</td>
           <td class="win">{esc(s["window"])}</td>
           <td class="en">{esc(s["en"])}<div class="zh">{esc(s["zh"])}</div></td>
           <td class="vi">{esc(s["visual"])}<div style="margin-top:4px;color:#5b6880">{esc(s["emotion"])}</div></td>
           <td class="mo">{esc(s["motion"])}</td>
-          <td class="cam">{cam_cell}</td>
           <td class="pr"><div>{esc(s["img_en"])}</div>
             <button class="mini" data-text="{esc(s['img_en'])}" data-label="图片提示词 · {esc(s['id'])}">复制图片</button></td>
           <td class="pr"><div>{esc(s["vid_en"])}</div>
@@ -417,7 +397,7 @@ def shots_block(shots, ns):
         </tr>'''
     return f'''<table class="sh" id="shots-{ns}"><thead><tr>
       <th>镜号</th><th>时间</th><th>口播 英文 / 中文</th><th>画面 / 节奏</th><th>动效</th>
-      <th>她在画面里</th><th>图片提示词</th><th>视频提示词</th></tr></thead><tbody>{rows}</tbody></table>'''
+      <th>图片提示词</th><th>视频提示词</th></tr></thead><tbody>{rows}</tbody></table>'''
 
 
 def framework_block(p):
