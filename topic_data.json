@@ -1,227 +1,242 @@
 {
   "title": "每日热点看台 · 选题推荐",
-  "date": "2026-08-28",
+  "date": "2026-09-03",
   "type": "daily",
-  "subtitle": "今日实时抓取 YouTube Autocomplete（美国区）+ 当前宏观/产品信号；直接告诉你该做哪种视频 · AI + 美国个人金融",
+  "subtitle": "本期为『重筛版』。上一版把 Autocomplete 的默认下拉当成了选题池，结果全是被做烂的大词——本期反过来用：默认下拉只作『红海证据』，真正选题来自长尾与情绪词（种子词 + a–z 后缀 + how/why/is/worth/actually 等修饰词扇出，AI 侧 2996 条去重、金融侧 3246 条，再按 scam / trap / lie / hidden / worth it / no cash flow 等张力词过滤）。抓取时间 2026-09-03 16:48 EDT · AI + 美国个人金融",
   "panels": [
     {
       "key": "ai",
       "label": "AI · 科技数码",
       "handle": "@AIcheatcodeplaybook",
-      "audience": "AI/科技数码爱好者、独立开发者、用 AI 提效的创作者、想把工具变成交付物的人",
+      "audience": "AI/科技数码爱好者、独立开发者、用 AI 提效的创作者、已经在付费但怀疑自己买错档位的人",
       "signals": [
         {
-          "topic": "AI 工具：商业/内容/变现场景",
-          "tags": [
-            "常青",
-            "升温"
-          ],
+          "topic": "『该不该付费』判决簇（本期最强信号）",
+          "tags": ["升温", "判决型", "长尾"],
           "items": [
-            "ai tools for business",
-            "ai tools to make money",
-            "ai tools for content creation",
-            "ai tools for video editing"
+            "chatgpt worth it",
+            "chatgpt pro worth it",
+            "chatgpt 200 worth it",
+            "is chatgpt worth it",
+            "is chatgpt pro worth it for coding",
+            "chatgpt worth paying for",
+            "is prompt engineering worth it",
+            "are ai agents worth it",
+            "is ai automation worth it"
           ],
-          "insight": "真实下拉把泛“AI 工具”快速分流到商业、赚钱、内容和视频编辑；建议做“完成一个交付物”的实测，而不是工具清单。"
+          "insight": "这九条今天全部在线。注意它们的形状：不是『怎么用』，是『值不值』。观众手上已经有卡，正在付款页面犹豫。这类查询的观众不需要又一个教程，需要一个能让他关掉页面的判决。全网做这个的人极少，因为大多数人只做『怎么用』。"
         },
         {
-          "topic": "ChatGPT / Agent / Work 对比",
-          "tags": [
-            "升温",
-            "事件驱动"
+          "topic": "『值不值』长尾全量（23 条）",
+          "tags": ["升温", "长尾"],
+          "items": [
+            "ai coding worth it",
+            "ai tools worth paying for",
+            "chatgpt 5 worth it",
+            "chatgpt 5 plus worth it",
+            "chatgpt 5 pro worth it",
+            "chatgpt premium worth it",
+            "chatgpt upgrade worth it",
+            "chatgpt business plan worth it",
+            "chatgpt team worth it",
+            "is ai automation agency worth it"
           ],
+          "insight": "23 条里覆盖了 Free 以上的每一个档位名。也就是说，观众不是笼统地问『AI 值不值』，而是在逐个档位地问。这给了我们一个天然的影片结构：一档一档地给结论，而不是讲一个泛泛的『AI 很强大』。"
+        },
+        {
+          "topic": "故障与崩溃簇（被严重低估的痛点）",
+          "tags": ["痛点", "常青", "长尾"],
+          "items": [
+            "chatgpt keeps crashing",
+            "chatgpt keeps freezing",
+            "chatgpt keeps closing",
+            "chatgpt gone wrong",
+            "chatgpt is not working",
+            "chatgpt not working today",
+            "chatgpt limit problem",
+            "chatgpt mistakes",
+            "ai video fails"
+          ],
+          "insight": "这一簇和『值不值』簇是同一批人：正因为在用、在付费，才会搜『又崩了』。做故障排查内容的转化极高，但需要当天真的复现——不能凭想象写原因，必须自己跑到报错为止。"
+        },
+        {
+          "topic": "概念辨析簇（红海警示）",
+          "tags": ["红海", "警示"],
+          "items": [
+            "ai agent vs workflow",
+            "ai automation vs ai agent",
+            "ai agent vs rag",
+            "ai agent vs mcp",
+            "ai agents vs agentic ai",
+            "ai agent vs rpa",
+            "ai coding vs vibe coding"
+          ],
+          "insight": "光是『A vs B』形状的长尾就挖到 69 条。这说明供给端已经极度拥挤：每个 AI 频道都在做概念对比。这类题有搜索量，但新频道进去就是第 500 个讲同样内容的号。本期明确否决。"
+        },
+        {
+          "topic": "Agency 变现簇（有量但需警惕）",
+          "tags": ["升温", "变现", "争议"],
+          "items": [
+            "ai automation agency how to get clients",
+            "ai automation agency first client",
+            "how to find clients for ai automation agency",
+            "ai automation agency cold call",
+            "ai automation agency sales call",
+            "ai automation agency full course 2026"
+          ],
+          "insight": "agency 相关长尾多达 157 条，且已经细分到 cold call / sales call / first client。需求真实，但这类内容极易滑向『跟我学月入过万』。除非能拿出自己的真实获客记录，否则不要碰。"
+        },
+        {
+          "topic": "大词饱和证据（只作反证用）",
+          "tags": ["红海", "反证"],
+          "items": [
+            "ai tools for business / to make money / tutorial / for video editing",
+            "ai automation agency / business / full course / for beginners",
+            "prompt engineering full course / for beginners / course / tutorial",
+            "ai agents explained / tutorial / full course / for beginners"
+          ],
+          "insight": "这是四个种子词的默认下拉。注意它们几乎全是 for beginners / full course / tutorial——这是『供给已经饱和』的形状，不是『需求正在发生』的形状。上一期我把这类大词直接当成选题，这是错的。"
+        },
+        {
+          "topic": "ChatGPT 产品线（大词里的新面孔）",
+          "tags": ["升温", "事件驱动"],
           "items": [
             "chatgpt 5",
             "chatgpt work",
             "chatgpt agent",
-            "chatgpt vs claude",
-            "chatgpt vs gemini"
+            "chatgpt atlas",
+            "chatgpt in minecraft"
           ],
-          "insight": "Autocomplete 同时出现 chatgpt work、agent 和竞品对比；产品能力与名称变化快，适合做“同一任务实测+失败复盘”，发布前必须回 OpenAI/官方产品页核对。"
-        },
-        {
-          "topic": "AI 自动化落地",
-          "tags": [
-            "升温"
-          ],
-          "items": [
-            "ai automation for beginners",
-            "ai automation business",
-            "ai automation tools",
-            "ai automation for small business"
-          ],
-          "insight": "用户想从入门教程走到商业结果，原创空间在“一个小企业任务的前后对比、人工兜底和成本”，不是再讲一遍自动化概念。"
-        },
-        {
-          "topic": "AI 编程 Agent 工作流",
-          "tags": [
-            "常青",
-            "升温"
-          ],
-          "items": [
-            "ai coding for beginners",
-            "ai coding tools",
-            "ai coding agent",
-            "ai coding workflow",
-            "ai coding assistant"
-          ],
-          "insight": "搜索建议同时覆盖新手、工具、Agent 和 workflow；建议做“一个真实 bug/小功能从 issue 到测试”的录屏，显示哪些步骤仍需人工。"
-        },
-        {
-          "topic": "AI 视频生成/编辑",
-          "tags": [
-            "升温"
-          ],
-          "items": [
-            "ai video generator",
-            "ai videos that look real",
-            "ai video editing",
-            "ai video generator free"
-          ],
-          "insight": "“像真的”“免费”“编辑”是明确点击承诺；适合做同一镜头跨工具盲测，并标注工具版本、额度、版权与水印。"
-        },
-        {
-          "topic": "Prompt engineering 争议",
-          "tags": [
-            "升温",
-            "争议"
-          ],
-          "items": [
-            "prompt engineering for beginners",
-            "prompt engineering tutorial",
-            "prompt engineering is dead",
-            "prompt engineering for developers"
-          ],
-          "insight": "“prompt 已死”与入门教程并存，反差很适合观点视频；直接推荐“什么时候该写 prompt、什么时候该给上下文/文件/测试”，不要只做口号。"
+          "insight": "work / atlas 这类产品名出现在默认下拉，说明新产品线在推。能力边界必须回 OpenAI 官方页面核对后再讲，不能凭社区传言。"
         }
       ],
       "trends": [
         {
-          "topic": "AI 工具变成可售交付物",
-          "signal": "ai tools for business / to make money / content creation / video editing",
-          "type": "Rising / 升温",
-          "note": "竞争高，但“具体交付物+耗时+修改边界”能形成原创解释；推荐做实操型案例视频。"
+          "topic": "从『怎么用』转向『值不值』",
+          "signal": "23 条 worth it 类长尾今天全部在线，覆盖 Free 以上每个档位",
+          "type": "Rising / 结构性转向",
+          "note": "这是本期最重要的判断：观众已经过了尝鲜期，进入了付费决策期。谁先给出可执行的分档判决，谁就吃到这一波。判决必须有依据，不能是主观打分。"
         },
         {
-          "topic": "ChatGPT Work / Agent / 竞品横评",
-          "signal": "chatgpt work / chatgpt agent / chatgpt vs claude / vs gemini",
+          "topic": "订阅疲劳与用量焦虑",
+          "signal": "chatgpt keeps crashing / gone wrong / limit problem / mistakes 并存",
+          "type": "常青 + 升温",
+          "note": "付费用户在抱怨的是『我用不到我买的东西』，而不是『AI 不行』。这是极好的切入点，但必须当天实测复现，不能转述别人的报错。"
+        },
+        {
+          "topic": "概念辨析类内容供给过剩",
+          "signal": "69 条 A vs B 形状长尾",
+          "type": "饱和 / 回避",
+          "note": "搜索量高但同质化严重，新号进去几乎不可能出头。除非能给出别人没有的实测数据，否则不做。"
+        },
+        {
+          "topic": "Agency 赛道持续升温",
+          "signal": "ai automation agency how to get clients / first client / cold call / sales call",
+          "type": "Rising / 高风险",
+          "note": "需求真实，但内容极易变成卖课。有真实获客记录可以做，没有就不做。"
+        },
+        {
+          "topic": "产品线扩张（work / atlas / agent）",
+          "signal": "chatgpt work / atlas / agent 进入默认下拉",
           "type": "Rising / 事件驱动",
-          "note": "Autocomplete 是真实需求信号；产品名称与能力需要发布前回官方一手页面复核，当前动态为近似判断。"
+          "note": "有流量窗口，但能力边界必须回官网逐字核对。上一期我因为只查到中文博客就否掉了真实存在的产品版本名，这是方法论错误，本期已改为直接抓官网。"
         },
         {
-          "topic": "AI 自动化小企业落地",
-          "signal": "ai automation for beginners / business / small business",
-          "type": "Rising / 升温",
-          "note": "做单一流程前后对比比“十大工具”更有内容；必须展示失败、权限和人工兜底。"
-        },
-        {
-          "topic": "AI 编程 Agent",
-          "signal": "ai coding agent / workflow / assistant",
-          "type": "常青+升温",
-          "note": "开发者长期有需求，建议用一个真实仓库任务做可复现录屏，避免只念榜单。"
-        },
-        {
-          "topic": "AI 视频“以假乱真”与免费方案",
-          "signal": "ai videos that look real / ai video generator free",
-          "type": "Rising / 升温",
-          "note": "强视觉但迭代快，必须标注测试日期、模型版本、生成额度和版权边界。"
-        },
-        {
-          "topic": "Prompt engineering 是否过时",
-          "signal": "prompt engineering is dead / for beginners / for developers",
-          "type": "Rising / 争议",
-          "note": "可做反常识解释：prompt 不是消失，而是和上下文、工具调用、评测一起升级；观点需给实测证据。"
+          "topic": "入门教程类需求仍在但已被瓜分",
+          "signal": "for beginners / full course / tutorial 占据所有大词默认下拉",
+          "type": "常青 / 高度饱和",
+          "note": "不是没需求，是供给太多。新号用入门教程起量几乎不可能，除非有极强的个人风格或完全不同的切入角度。"
         }
       ],
       "painpoints": {
-        "headline": "“我已经订阅很多 AI 工具，但还是交付不出一个客户明天能用的结果。”",
+        "headline": "『我每个月都在为 AI 付钱，但我说不清我买到了什么——而且我怀疑我买错了档。』",
         "points": [
-          "下拉同时出现 ai tools for business、ai tools to make money、ai tools for content creation，说明观众要的是结果路径，不只是工具名称。",
-          "ai automation / ai coding / ai video 的搜索都带有 for beginners、workflow、free 等词，观众在意“我能不能照着做、成本多少、失败怎么办”。",
-          "评论区常见未完成问题可转成原创角度：同一 brief 如何从 AI 初稿变成可交付文件？哪些地方必须人工检查？一个月订阅费到底值不值？"
+          "23 条『worth it』长尾覆盖了从 Free 到 Pro 的每一个档位名，说明犹豫是具体的、逐档发生的，不是泛泛的『AI 有没有用』。",
+          "'chatgpt keeps crashing'、'chatgpt limit problem'、'chatgpt gone wrong' 和『值不值』簇是同一批人——已经在付费、在用、才会搜崩了。",
+          "A vs B 形状的长尾有 69 条，说明观众被概念名词淹没了。他们真正想要的不是再一个名词对比，是『那我到底该怎么做』。"
         ],
         "angles": [
           {
-            "problem": "“我有 ChatGPT/Canva，但说不出卖给客户什么。”",
-            "idea": "用 3 个大众工具完成 7 张社媒图、7 条文案、1 条短视频，展示 brief、改稿、导出、计时和报价边界。",
-            "title": "I Used 3 AI Tools to Build a $100 Client Package (Exact Workflow)"
+            "problem": "『Pro 卖 $200，我到底在为什么付钱？』",
+            "idea": "直接打开 OpenAI 官方定价页与帮助中心，逐字抄下功能阶梯和两档 Pro 的差别说明，然后给一个四步自测：你的瓶颈是用量、上下文、功能闸门还是模型档位，分别对应哪一档。",
+            "title": "ChatGPT Pro Is $200 — OpenAI's Own Help Page Says Both Pro Tiers Are Identical"
           },
           {
-            "problem": "“AI 自动化看起来很强，但我不知道它能否稳定跑完一个真实任务。”",
-            "idea": "选一个小企业线索整理或内容交付流程，展示输入、自动化、失败样本、人工复核和成本。",
-            "title": "I Built One Small-Business AI Workflow — Then Tested Every Failure"
+            "problem": "『我付了钱，但它一直在崩 / 一直撞额度，我是不是白买了？』",
+            "idea": "当天实测：从零开始跑到真的撞上限，记录撞上限的具体操作、报错原文、恢复时间，再讲哪些用法最容易提前耗额度。",
+            "title": "I Hit ChatGPT's Limit on Purpose — Here's Exactly What Triggered It"
           },
           {
-            "problem": "“Prompt engineering 到底还值不值得学？”",
-            "idea": "用同一任务对比短 prompt、带上下文的 brief、带测试的工作流，展示输出差异。",
-            "title": "Prompt Engineering Isn’t Dead — Your Workflow Is Just Too Thin"
+            "problem": "『Agent、Workflow、RPA、MCP 这些词我越看越乱。』",
+            "idea": "不做名词对比。用一个真实任务，把四种做法各跑一遍，只比较『能不能跑完、跑完要多久、错了怎么兜底』。",
+            "title": "I Ran One Real Task Four Ways — Agent, Workflow, Automation, Script"
           }
         ]
       },
       "screening": [
         {
-          "topic": "用 ChatGPT + Canva + CapCut 做一个 $100 社媒服务包（全流程实操）",
-          "source": "Autocomplete: ai tools for business/to make money + 交付痛点",
+          "topic": "分档判决：你买 AI 到底在买什么（四步自测 + OpenAI 官方页面逐字核对）",
+          "source": "长尾: chatgpt worth it(13条) / chatgpt pro worth it(5) / chatgpt 200 worth it(2) / is prompt engineering worth it / are ai agents worth it / is ai automation worth it",
           "hot": "是",
           "pain": "是",
           "original": "是",
-          "verdict": "做"
+          "verdict": "做 · 本期首选，答案来自官方一手页面，别人抄不走"
         },
         {
-          "topic": "一个小企业 AI 自动化流程：输入→失败→人工兜底→交付",
-          "source": "Autocomplete: ai automation for small business/business",
+          "topic": "故意跑到撞上限：记录触发操作、报错原文与恢复时间",
+          "source": "长尾: chatgpt keeps crashing(5) / chatgpt gone wrong(11) / chatgpt limit problem / chatgpt mistakes",
           "hot": "是",
           "pain": "是",
           "original": "是",
-          "verdict": "做"
+          "verdict": "做 · 需当天真机复现，不能转述"
         },
         {
-          "topic": "Prompt engineering vs context：同一任务三轮实测",
-          "source": "Autocomplete: prompt engineering is dead/for beginners",
-          "hot": "是",
-          "pain": "是",
-          "original": "是",
-          "verdict": "做"
-        },
-        {
-          "topic": "AI coding agent 修一个真实 bug（含测试与回滚）",
-          "source": "Autocomplete: ai coding agent/workflow",
-          "hot": "是",
-          "pain": "是",
-          "original": "是",
-          "verdict": "做"
-        },
-        {
-          "topic": "ChatGPT Work/Agent vs Claude/Gemini：同一任务盲测",
-          "source": "Autocomplete: chatgpt work/agent vs claude/gemini + 产品动态",
-          "hot": "是",
-          "pain": "是",
-          "original": "是",
-          "verdict": "做·发布前核实版本"
-        },
-        {
-          "topic": "AI 视频生成器免费版盲测（版权/水印/额度一起算）",
-          "source": "Autocomplete: ai video generator free/that look real",
-          "hot": "是",
-          "pain": "是",
-          "original": "是",
-          "verdict": "做·需版本复核"
-        },
-        {
-          "topic": "十几个 AI 工具推荐清单（不展示结果）",
-          "source": "泛工具标题",
+          "topic": "同一真实任务四种做法横评（只比能否跑完与兜底，不做名词科普）",
+          "source": "长尾: ai automation vs ai agent(5) / ai agent vs workflow(6)",
           "hot": "中",
-          "pain": "弱",
-          "original": "弱",
-          "verdict": "不做"
+          "pain": "是",
+          "original": "是",
+          "verdict": "做 · 前提是必须真跑四种，不能只讲概念"
         },
         {
-          "topic": "某 AI 工具保证让你月入过万",
-          "source": "夸张收益标题",
+          "topic": "AI Agent vs Workflow vs RPA vs MCP 概念对比讲解",
+          "source": "长尾: 69 条 A vs B 形状查询",
+          "hot": "是",
+          "pain": "中",
+          "original": "弱",
+          "verdict": "不做 · 供给端已极度拥挤，新号排不进去"
+        },
+        {
+          "topic": "AI 自动化 Agency 从零到月入过万",
+          "source": "长尾: ai automation agency 相关 157 条",
+          "hot": "是",
+          "pain": "中",
+          "original": "弱",
+          "verdict": "不做 · 无真实获客记录，必然滑向卖课"
+        },
+        {
+          "topic": "2026 年十大 AI 工具推荐清单",
+          "source": "大词默认下拉: ai tools / ai tools 2026",
           "hot": "是",
           "pain": "弱",
           "original": "否",
-          "verdict": "不做"
+          "verdict": "不做 · 上一期已踩过，纯清单无壁垒"
+        },
+        {
+          "topic": "Prompt Engineering 入门完整课程",
+          "source": "大词默认下拉: prompt engineering full course / for beginners",
+          "hot": "中",
+          "pain": "中",
+          "original": "弱",
+          "verdict": "不做 · for beginners 是饱和信号，不是机会信号"
+        },
+        {
+          "topic": "AI 视频生成器免费版大盘点",
+          "source": "大词默认下拉: ai video generator / ai video generator free",
+          "hot": "中",
+          "pain": "中",
+          "original": "弱",
+          "verdict": "不做 · 版本三天一变，做完即过期"
         }
       ],
       "ratio": {
@@ -229,24 +244,24 @@
           {
             "pct": "60%",
             "name": "常青需求",
-            "items": "AI 工具实测 / 编程提效 / 自动化工作流 / Prompt 与上下文基础"
+            "items": "分档怎么选 / 撞上限怎么办 / 提效实操录屏 / 从初稿到可交付文件"
           },
           {
             "pct": "25%",
             "name": "热点解释",
-            "items": "新模型/Agent/Work 更新 / AI 视频新能力 / 竞品版本变化"
+            "items": "ChatGPT 新产品线（work / atlas / agent）能力边界 / 档位与价格变动"
           },
           {
             "pct": "15%",
             "name": "反常识 / 钱心理",
-            "items": "Prompt 已死真相 / AI 工具智商税 / 自动化不能替代哪一步"
+            "items": "你买的是用量不是智商 / 订阅疲劳 / 什么时候该降级而不是升级"
           }
         ],
         "compliance": [
-          "工具价格、能力、版本、额度、版权与隐私回官网/官方文档核实，发布前重新测试。",
-          "明确标注教育/演示内容，不承诺收益，不把一次成功演示包装成稳定商业结果。",
-          "不上传客户隐私或未授权素材；展示失败、人工复核和数据来源。",
-          "GPT-5.6/ChatGPT Work 等当前动态若无官方一手公告，只写“近似判断需一手复核”，不当作已确认事实。"
+          "档位价格、功能清单、用量倍数必须回 openai.com 官方定价页与 help.openai.com 帮助中心逐字核对，并在影片里写明抓取日期；价格会随地区与货币变动。",
+          "本期『两档 Pro 核心能力相同、差别仅在用量（$100 为 5 倍、$200 为 20 倍）』一句，逐字来自 OpenAI 帮助中心《About ChatGPT Pro tiers》（页面标注 Updated 9 天前，抓取于 2026-09-03）。",
+          "定价页的具体价格数字由页面脚本按地区注入，本次抓取未能取到；涉及金额处一律标注『以官网实时显示为准』，不得写死。",
+          "不承诺收益，不把『能省时间』包装成『能赚钱』；演示内容若含失败与人工兜底，必须原样保留，不得剪掉。"
         ]
       }
     },
@@ -254,224 +269,220 @@
       "key": "finance",
       "label": "金融 · 财经商业（美国观众）",
       "handle": "@TheMoneyMoo",
-      "audience": "美国 YouTube 观众：个人投资者、背负信用卡债务的人、关注退休/401(k)/利率与市场解释的美国人",
+      "audience": "美国 YouTube 观众：背负信用卡债务的人、怀疑自己退休账户被收费的人、在『要不要动 401(k)』之间犹豫的普通上班族",
       "signals": [
         {
-          "topic": "新手投资 / 小额起步",
-          "tags": [
-            "常青"
-          ],
+          "topic": "401(k) 掏钱簇（大词，本期新发现）",
+          "tags": ["升温", "高风险决策", "大词"],
           "items": [
-            "how to invest in stocks for beginners",
-            "how to invest for beginners",
-            "how to invest in s&p 500",
-            "how to invest money",
-            "how to invest in fidelity"
-          ],
-          "insight": "“beginner / little money / specific account”是高意图常青需求；建议做数字计算与决策框架，避免泛泛报产品。"
-        },
-        {
-          "topic": "信用卡债务",
-          "tags": [
-            "升温",
-            "痛点"
-          ],
-          "items": [
-            "credit card debt is exploding",
-            "credit card debt payoff strategy",
-            "credit card debt relief best strategy",
-            "credit card debt consolidation",
-            "credit card debt explained"
-          ],
-          "insight": "下拉同时出现“exploding”和 payoff/relief/strategy，情绪与行动需求叠加；适合做“账单字段+计算器+还款顺序”，发布前回 Fed G.19/NY Fed。"
-        },
-        {
-          "topic": "退休储蓄按年龄",
-          "tags": [
-            "常青",
-            "焦虑升温"
-          ],
-          "items": [
-            "retirement savings by age",
-            "retirement savings crisis",
-            "retirement savings at 40",
-            "retirement savings at 50",
-            "retirement savings at 60"
-          ],
-          "insight": "年龄分层让观众能自我代入；原创角度是把基准、储蓄率、时间和缺口拆开，不能用一条“你应该有多少”吓人。"
-        },
-        {
-          "topic": "美联储降息 / 股市影响",
-          "tags": [
-            "升温",
-            "事件驱动"
-          ],
-          "items": [
-            "fed rate cut",
-            "fed rate decision",
-            "fed rate cut explained",
-            "fed rate cut impact on stock market",
-            "fed rate hike"
-          ],
-          "insight": "事件型搜索会在 FOMC 前后放大；建议做“普通人三张账单/三个账户会怎么受影响”，数字回 FOMC/FRED 核对。"
-        },
-        {
-          "topic": "401(k) 贷款/取款/配比",
-          "tags": [
-            "常青",
-            "交叉痛点"
-          ],
-          "items": [
+            "401k loan to buy a house",
             "401k withdrawal to pay off debt",
             "401k loan to pay off credit cards",
             "401k loan strategy",
-            "401k is a scam that won’t benefit",
-            "401k age 55 rule"
+            "401k millionaire"
           ],
-          "insight": "债务与退休账户交叉问题具体、焦虑强；适合讲 match、税、罚款、归属期和机会成本，不能给个人化指令。"
+          "insight": "这是本期最大的发现：401k 这个大词的默认下拉，已经从『要不要存』整体转向了『能不能掏出来』。上一期我完全没看到这个转向。问『能不能掏』的人不是在做资产配置，是在解燃眉之急——这是情绪浓度最高的时刻，也是内容最容易帮到人的时刻。"
         },
         {
-          "topic": "指数基金 / 股息 / 被动收入",
-          "tags": [
-            "常青"
-          ],
+          "topic": "401(k) 愤怒簇（长尾）",
+          "tags": ["情绪", "长尾", "争议"],
           "items": [
-            "index funds vs etf",
-            "index funds vs mutual funds vs etf",
-            "dividend etf",
-            "dividend investing",
-            "passive income ideas 2026"
+            "401k is a scam that won't benefit",
+            "401k is a trap",
+            "401k lies",
+            "401k truth",
+            "401k hidden fees",
+            "401k mistakes that could cost you millions"
           ],
-          "insight": "对比和“月股息/被动收入”是稳定搜索入口；原创空间在费用、税、总回报和现金流幻觉，而非列基金代码。"
+          "insight": "这六条今天全部在线。它们的语气不是提问，是控诉。做这类题的正确姿势不是站到对面去『辟谣』——那只会激怒观众。正确姿势是先承认哪几条指控是真的（费率确实存在、确实藏在披露文件里），再指出结论错在哪里（多数情况下雇主配比的价值大于费率）。"
+        },
+        {
+          "topic": "无现金流还债簇（长尾，被彻底误读的一群人）",
+          "tags": ["痛点", "长尾", "高情绪"],
+          "items": [
+            "how to pay off credit card debt with no cash flow",
+            "how to pay off credit card debt with no money",
+            "how to pay off credit card debt with low income",
+            "how to pay off credit card debt fast with low income",
+            "get rid of credit card debt without paying",
+            "how to get out of credit card debt without paying"
+          ],
+          "insight": "这一簇直接推翻了上一期的前提。上一期我做了『雪崩 vs 雪球先还哪张卡』——那默认了观众手里有盈余可以分配。但真实长尾显示，搜债务的人问的是『我根本没有现金流』。对一个余额在上涨的人讲还款顺序，是答非所问。"
+        },
+        {
+          "topic": "被动收入与股息幻灭簇（长尾）",
+          "tags": ["反常识", "长尾", "争议"],
+          "items": [
+            "passive income is a lie",
+            "passive income lie",
+            "dividend trap",
+            "dividend yield trap",
+            "passive income with no money",
+            "passive income no money"
+          ],
+          "insight": "在 861 条被动收入/股息长尾的汪洋里，这几条是逆流的。逆流查询通常来自已经上当、正在找说法的人，情绪浓度远高于正向查询。做『为什么你的月股息不等于收益』能精准命中这批人。"
+        },
+        {
+          "topic": "股灾与 401(k) 焦虑簇",
+          "tags": ["事件驱动", "焦虑", "长尾"],
+          "items": [
+            "401k and stock market crash",
+            "401k market crash",
+            "stock market 2026 crash",
+            "how to invest during a market crash",
+            "how to invest without losing money",
+            "is 401k safe"
+          ],
+          "insight": "『how to invest without losing money』和『how to invest without risk』同时在线，说明一部分观众在寻找一个不存在的东西。这是很好的纠正型选题，但必须讲清『没有无风险收益』，不能顺势迎合。"
+        },
+        {
+          "topic": "大词饱和证据（只作反证用）",
+          "tags": ["红海", "反证"],
+          "items": [
+            "credit card debt: is exploding / payoff strategy / relief best strategy / consolidation",
+            "index funds: vs etf / vs mutual funds / for beginners / explained",
+            "how to invest: in stocks for beginners / in s&p 500 / in crypto",
+            "dividend: investing / stocks / portfolio / etf"
+          ],
+          "insight": "这四个大词的默认下拉，上一期我几乎全标了『做』。它们是全美国个人理财赛道最卷的四个入口。搜索量大不等于机会——恰恰相反，默认下拉里排名越靠前的词，说明已经有越多频道在为它生产内容。"
+        },
+        {
+          "topic": "联邦利率与退休储蓄（大词）",
+          "tags": ["常青", "事件驱动"],
+          "items": [
+            "fed rate cut / decision / cut news / cut live",
+            "retirement savings by age / crisis / at 40 / at 50 / at 60"
+          ],
+          "insight": "利率类带 live / today，事件窗口敏感；退休储蓄按年龄是稳定的自我代入入口。两者的具体数字都必须回 FOMC / FRED 原始页核对。"
         }
       ],
       "trends": [
         {
-          "topic": "信用卡债务规模与脱债策略",
-          "signal": "Autocomplete: credit card debt is exploding / payoff strategy；NY Fed Q2 2026 报告显示家庭债务总额约 $18.8T，媒体引用信用卡余额约 $1.26T",
-          "type": "Rising / 热点+常青",
-          "note": "规模数字与具体利率是强原创素材；金额来自当前公开报告/二手摘要的近似判断，发布前必须回 NY Fed 原始 PDF 和 Fed G.19 复核。"
+          "topic": "401(k) 从『存钱工具』变成『应急取款口』",
+          "signal": "401k 默认下拉: loan to buy a house / withdrawal to pay off debt / loan to pay off credit cards / loan strategy",
+          "type": "Rising / 结构性转向",
+          "note": "本期最重要判断。这个转向意味着现金流压力已经传导到了退休账户。做这个题必须同时给出规则和风险，不能只讲『别动它』。"
         },
         {
-          "topic": "新手投资与 S&P 500",
-          "signal": "how to invest for beginners / in stocks / in S&P 500 / little money",
-          "type": "常青高位",
-          "note": "需求稳定但高度饱和；推荐做“每月金额在不同费用/时间下的结果”，不要做又一个泛入门。"
+          "topic": "对退休账户的不信任上升",
+          "signal": "401k is a scam that won't benefit / is a trap / lies / hidden fees / truth",
+          "type": "Rising / 情绪型",
+          "note": "先认账再纠正。费率与披露的问题是真实存在的，直接否认会失去观众；正确做法是把指控拆开，逐条说哪些成立、哪些不成立。"
         },
         {
-          "topic": "退休储蓄危机与按年龄自查",
-          "signal": "retirement savings by age / crisis / at 40/50/60",
-          "type": "焦虑升温+常青",
-          "note": "年龄框架容易点击；要展示假设、通胀、储蓄率和区间，不制造“一刀切”的羞耻感。"
+          "topic": "债务内容的受众前提被普遍写错",
+          "signal": "how to pay off credit card debt with no cash flow / no money / low income / without paying",
+          "type": "常青 / 认知纠偏",
+          "note": "主流内容默认观众有盈余可分配，真实长尾显示很多人没有。这是内容供给的空白区，也是合规风险最高的一块——必须引导到非营利信用顾问，不能给个人化指令。"
         },
         {
-          "topic": "Fed rate 对普通人的传导",
-          "signal": "fed rate cut / decision / explained / impact on stock market",
-          "type": "Rising / 事件驱动",
-          "note": "FOMC 前后是流量窗口；当前具体政策区间和 effective rate 不在本报告硬写，发布前回 FOMC 与 FRED DFF 一手页面。"
+          "topic": "被动收入叙事开始反噬",
+          "signal": "passive income is a lie / passive income lie / dividend trap / dividend yield trap",
+          "type": "Rising / 反常识",
+          "note": "逆流查询来自已上当人群，转化与完播都好。要讲清现金流与总回报的区别，不能只是泼冷水。"
         },
         {
-          "topic": "401(k) match 与债务冲突",
-          "signal": "401k withdrawal/loan to pay off credit cards / 401k loan strategy",
-          "type": "常青+交叉痛点",
-          "note": "适合做决策树：现金缓冲→拿满 match→高息债→低息债/投资；计划条款不同，必须提示读自己的 plan document。"
+          "topic": "股灾焦虑与『无风险收益』幻想",
+          "signal": "401k and stock market crash / how to invest without losing money / how to invest without risk / is 401k safe",
+          "type": "事件驱动 + 焦虑",
+          "note": "要纠正『无风险高收益』的不存在性，不能迎合。涉及市场预测一律标注为情景假设。"
         },
         {
-          "topic": "指数基金、ETF、股息与现金流",
-          "signal": "index funds vs etf vs mutual funds / dividend etf / passive income ideas 2026",
-          "type": "常青",
-          "note": "稳定但拥挤；原创角度应是总回报、费用、税和现金流再投资的可复算比较。"
+          "topic": "入门与对比类供给饱和",
+          "signal": "index funds vs etf / how to invest in stocks for beginners / credit card debt payoff strategy",
+          "type": "饱和 / 回避",
+          "note": "这些词在默认下拉里越靠前，说明供给越多。上一期把这类词当机会是判断错误，本期全部否决。"
         }
       ],
       "painpoints": {
-        "headline": "“投资账户在涨，但信用卡利息、退休焦虑和利率变化让我不知道下一步先做什么。”",
+        "headline": "『我不是在做资产配置——我是想把这笔信用卡债弄走，而我手上根本没有余钱。』",
         "points": [
-          "Autocomplete 直接出现 credit card debt is exploding、payoff strategy、401k loan to pay off credit cards，说明观众要的是顺序和行动，而不是宏观新闻复述。",
-          "NY Fed Q2 2026 家庭债务报告和 Federal Reserve G.19 都提供可复核的一手入口；当前报告摘要中的金额只作为近似信号，发布前必须回原始页面。",
-          "评论区可转成原创问题：APR 多高时先还债？有 employer match 时顺序怎么变？0% 促销、应急金和低息贷款会不会改变答案？"
+          "'how to pay off credit card debt with no cash flow'、'with low income'、'get rid of credit card debt without paying' 今天全部在线——问这些问题的人没有可分配的盈余，主流『先还哪张卡』的内容对他们无效。",
+          "'401k loan to pay off credit cards'、'401k withdrawal to pay off debt' 已经进入 401k 大词的默认下拉，说明压力已经从月度账单传导到了退休账户。",
+          "'401k is a scam that won't benefit'、'401k is a trap'、'401k hidden fees' 是控诉语气的查询。观众的愤怒有真实依据，直接辟谣会适得其反。"
         ],
         "angles": [
           {
-            "problem": "“先还债还是先投资？我每月只有一点额外现金。”",
-            "idea": "用 APR、月现金流和 employer match 三个数字跑 3 个案例，区分确定的利息节省与不确定的市场回报。",
-            "title": "Pay Off Debt or Invest First? Put Your Numbers in This 3-Step Test"
+            "problem": "『我想用 401(k) 贷款把信用卡清掉，这样到底划不划算？』",
+            "idea": "不站队。把五笔真实成本逐项摊开：负摊销、断供损失的雇主配比、离职时的 QPLO 悬崖与 20% 强制预扣、五年还款时钟、以及费率拖累。数字全部来自可重跑脚本，规则逐字引用 IRS 页面。",
+            "title": "You Want to Raid Your 401(k) to Kill Credit Card Debt — Price These 5 Costs First"
           },
           {
-            "problem": "“我想用 401(k) 贷款清掉信用卡，真的划算吗？”",
-            "idea": "打开示例计划文件，逐项展示 match、税、罚款、归属期和离职风险，不把一个人的条款套给所有人。",
-            "title": "Should You Use a 401(k) Loan to Kill Credit Card Debt?"
+            "problem": "『401(k) 是不是个骗局？我到底被收了多少钱？』",
+            "idea": "先认账：费率真实存在，而且藏在披露文件里。再纠正：用可重算的复利脚本展示拖累到底有多大，以及雇主配比在多数情况下如何盖过它。",
+            "title": "Your 401(k) Isn't a Scam — But Nobody Showed You the Fee Line"
           },
           {
-            "problem": "“按年龄退休储蓄不达标，是不是已经来不及？”",
-            "idea": "把年龄基准改成缺口计算：当前余额、月投入、时间、通胀与不同回报假设，给可复算而非恐吓。",
-            "title": "Retirement Savings by Age Is Misleading — Run Your Own Gap Test"
+            "problem": "『我一分余钱都没有，那些还款法我一个都用不上。』",
+            "idea": "面对负摊销讲真话：先算清最低还款为何让余额上涨，再讲在零现金流时的合法选项与非营利信用顾问入口，不卖方案、不给个人化指令。",
+            "title": "When You Have No Cash Flow, Payoff Order Doesn't Matter — Here's What Does"
           }
         ]
       },
       "screening": [
         {
-          "topic": "信用卡债务 vs 投资：先还债还是先投资（含 401k match 例外）",
-          "source": "Autocomplete + 评论痛点 + Fed/NY Fed 一手入口",
+          "topic": "掏 401(k) 还信用卡债：五笔真实成本（负摊销 / 断供配比 / QPLO 悬崖 / 五年时钟 / 费率拖累）",
+          "source": "大词: 401k loan to pay off credit cards / 401k withdrawal to pay off debt / 401k loan strategy + 长尾: 401k is a trap / 401k hidden fees",
           "hot": "是",
           "pain": "是",
           "original": "是",
-          "verdict": "做"
+          "verdict": "做 · 本期首选，规则逐字来自 IRS 一手页面，数字来自可重跑脚本"
         },
         {
-          "topic": "信用卡债务为何被说“爆炸”：规模、APR 与还款计算器",
-          "source": "Autocomplete + NY Fed Q2 2026 / Fed G.19",
+          "topic": "401(k) 不是骗局，但没人指给你看费率那一行",
+          "source": "长尾: 401k is a scam that won't benefit / 401k is a trap / 401k lies / 401k hidden fees",
           "hot": "是",
           "pain": "是",
           "original": "是",
-          "verdict": "做·发布前复核数字"
+          "verdict": "做 · 先认账再纠正，配比重算脚本"
         },
         {
-          "topic": "401(k) 贷款还信用卡：match/税/罚款/归属期决策树",
-          "source": "Autocomplete: 401k loan/withdrawal to pay off debt",
+          "topic": "零现金流时，还款顺序根本不是重点",
+          "source": "长尾: how to pay off credit card debt with no cash flow / no money / low income / without paying",
           "hot": "是",
           "pain": "是",
           "original": "是",
-          "verdict": "做"
+          "verdict": "做 · 必须引导 NFCC，不得给个人化指令"
         },
         {
-          "topic": "美联储降息如何传到信用卡、房贷、储蓄和股市",
-          "source": "Autocomplete: fed rate cut explained/impact + FOMC/FRED",
-          "hot": "是",
-          "pain": "是",
-          "original": "是",
-          "verdict": "做·事件后更新"
-        },
-        {
-          "topic": "退休储蓄按 40/50/60 岁：从基准到个人缺口计算",
-          "source": "Autocomplete: retirement savings by age/crisis",
-          "hot": "是",
-          "pain": "是",
-          "original": "是",
-          "verdict": "做"
-        },
-        {
-          "topic": "指数基金 vs ETF vs 共同基金：费用/税/总回报对比",
-          "source": "Autocomplete: index funds vs etf/mutual funds",
+          "topic": "信用卡债务雪崩法 vs 雪球法，先还哪张卡？",
+          "source": "大词默认下拉: credit card debt payoff strategy / relief best strategy",
           "hot": "是",
           "pain": "中",
-          "original": "是",
-          "verdict": "做·避免列荐基金"
+          "original": "弱",
+          "verdict": "不做 · 上一期已踩：默认观众有盈余，而真实长尾显示没有"
         },
         {
-          "topic": "月股息 ETF / 被动收入组合（只看现金流不看总回报）",
-          "source": "Autocomplete: dividend etf / passive income ideas 2026",
+          "topic": "先还债还是先投资？（含 401k match 例外）",
+          "source": "大词默认下拉: how to invest / credit card debt",
           "hot": "是",
-          "pain": "是",
-          "original": "中",
-          "verdict": "做·先讲现金流幻觉"
+          "pain": "中",
+          "original": "弱",
+          "verdict": "不做 · 个人理财赛道最卷的入口之一，无新论据不宜再进"
         },
         {
-          "topic": "某只股票/币必涨或“无风险高收益”",
-          "source": "夸张标题",
+          "topic": "指数基金 vs ETF vs 共同基金对比",
+          "source": "大词默认下拉: index funds vs etf（排第二位）",
           "hot": "是",
           "pain": "弱",
+          "original": "弱",
+          "verdict": "不做 · 默认下拉越靠前说明供给越多，属红海证据"
+        },
+        {
+          "topic": "月股息 ETF 被动收入组合",
+          "source": "大词默认下拉: dividend / passive income ideas 2026",
+          "hot": "是",
+          "pain": "中",
+          "original": "弱",
+          "verdict": "不做 · 正向叙事已饱和；若要改做『dividend trap』反转版需另立选题"
+        },
+        {
+          "topic": "如何无风险投资 / 稳赚不赔的方法",
+          "source": "长尾: how to invest without risk / without losing money",
+          "hot": "中",
+          "pain": "中",
           "original": "否",
-          "verdict": "不做"
+          "verdict": "不做 · 迎合不存在的产品，合规红线"
         }
       ],
       "ratio": {
@@ -479,24 +490,25 @@
           {
             "pct": "60%",
             "name": "常青需求",
-            "items": "脱债计划 / 新手投资 / 指数基金 / 按年龄退休缺口 / 401(k) 基础"
+            "items": "401(k) 规则与费用 / 债务的真实数学 / 负摊销与最低还款 / 退休缺口自查"
           },
           {
             "pct": "25%",
             "name": "热点解释",
-            "items": "信用卡债务数据 / FOMC 与利率变化 / 401(k) 规则变化"
+            "items": "FOMC 与利率传导 / 401(k) 规则变动 / 市场波动下的账户行为"
           },
           {
             "pct": "15%",
             "name": "钱心理 / 反常识",
-            "items": "先还债还是先投资 / 401(k) 是否该动 / 被动收入现金流幻觉"
+            "items": "401(k) 骗局论拆条 / 被动收入现金流幻觉 / 零现金流时的真实选项"
           }
         ],
         "compliance": [
-          "所有利率、债务规模、政策日期与税务规则回 Federal Reserve、NY Fed、FRED、SEC/Investor.gov、IRS 或计划文件核对。",
-          "明确标注“教育内容，不构成个别投资建议”；示例回报是情景假设，不是保证。",
-          "当前搜索与新闻信号只证明需求与可能趋势；“近似判断需一手复核”，不把二手报道当最终数字。",
-          "不推荐个股/币必涨，不使用观众隐私账单；录屏示例必须打码，成片包发布前更新所有数字。"
+          "本期全部税务与计划贷款规则逐字引用 IRS 官方页面（Retirement plans FAQs regarding loans、Plan loan offsets），抓取于 2026-09-03；IRS 页面未显示最后更新日期，涉及具体条款以 IRS 现行页面为准。",
+          "影片中『两档 Pro 核心能力相同』等 AI 侧结论逐字来自 help.openai.com；金融侧所有金额由 _build/finance_math_2026_09_03.py 计算，改输入重跑即可复现，不得手改。",
+          "明确标注『教育内容，不构成税务或投资建议』；税法适用因人而异，401(k) 条款因计划而异，必须提示观众查阅自己的 plan document 并咨询专业人士。",
+          "涉及『双重征税』这类流传说法时，如实说明存在争议（The Finance Buff 等来源认为是被夸大的迷思），不得当作既定事实陈述。",
+          "若观众只还得起最低还款、或余额仍在上涨，明确引导其联系非营利信用顾问（美国可用 NFCC），不售卖方案、不承诺结果。"
         ]
       }
     }
